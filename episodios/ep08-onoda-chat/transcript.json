@@ -1,0 +1,788 @@
+[
+ {
+  "id": "w0",
+  "text": "¿Qué",
+  "start": 0.15,
+  "end": 0.218
+ },
+ {
+  "id": "w1",
+  "text": "harías",
+  "start": 0.258,
+  "end": 0.698
+ },
+ {
+  "id": "w2",
+  "text": "si",
+  "start": 0.778,
+  "end": 0.938
+ },
+ {
+  "id": "w3",
+  "text": "nadie",
+  "start": 0.998,
+  "end": 1.258
+ },
+ {
+  "id": "w4",
+  "text": "te",
+  "start": 1.285,
+  "end": 1.338
+ },
+ {
+  "id": "w5",
+  "text": "avisa…",
+  "start": 1.391,
+  "end": 2.058
+ },
+ {
+  "id": "w6",
+  "text": "que",
+  "start": 2.098,
+  "end": 2.218
+ },
+ {
+  "id": "w7",
+  "text": "la",
+  "start": 2.245,
+  "end": 2.298
+ },
+ {
+  "id": "w8",
+  "text": "guerra",
+  "start": 2.355,
+  "end": 2.698
+ },
+ {
+  "id": "w9",
+  "text": "ya",
+  "start": 2.778,
+  "end": 2.938
+ },
+ {
+  "id": "w10",
+  "text": "terminó?",
+  "start": 2.995,
+  "end": 3.578
+ },
+ {
+  "id": "w11",
+  "text": "Mil",
+  "start": 3.811,
+  "end": 3.826
+ },
+ {
+  "id": "w12",
+  "text": "novecientos",
+  "start": 3.879,
+  "end": 4.386
+ },
+ {
+  "id": "w13",
+  "text": "cuarenta",
+  "start": 4.439,
+  "end": 4.826
+ },
+ {
+  "id": "w14",
+  "text": "y",
+  "start": 4.846,
+  "end": 4.866
+ },
+ {
+  "id": "w15",
+  "text": "cuatro.",
+  "start": 4.9,
+  "end": 5.426
+ },
+ {
+  "id": "w16",
+  "text": "Japón",
+  "start": 5.506,
+  "end": 5.826
+ },
+ {
+  "id": "w17",
+  "text": "manda",
+  "start": 5.866,
+  "end": 6.066
+ },
+ {
+  "id": "w18",
+  "text": "al",
+  "start": 6.093,
+  "end": 6.146
+ },
+ {
+  "id": "w19",
+  "text": "teniente",
+  "start": 6.186,
+  "end": 6.626
+ },
+ {
+  "id": "w20",
+  "text": "Hiroo",
+  "start": 6.706,
+  "end": 7.106
+ },
+ {
+  "id": "w21",
+  "text": "Onoda",
+  "start": 7.186,
+  "end": 7.586
+ },
+ {
+  "id": "w22",
+  "text": "a",
+  "start": 7.666,
+  "end": 7.746
+ },
+ {
+  "id": "w23",
+  "text": "una",
+  "start": 7.806,
+  "end": 7.986
+ },
+ {
+  "id": "w24",
+  "text": "isla",
+  "start": 8.039,
+  "end": 8.306
+ },
+ {
+  "id": "w25",
+  "text": "de",
+  "start": 8.333,
+  "end": 8.386
+ },
+ {
+  "id": "w26",
+  "text": "Filipinas,",
+  "start": 8.439,
+  "end": 9.186
+ },
+ {
+  "id": "w27",
+  "text": "con",
+  "start": 9.226,
+  "end": 9.346
+ },
+ {
+  "id": "w28",
+  "text": "una",
+  "start": 9.386,
+  "end": 9.506
+ },
+ {
+  "id": "w29",
+  "text": "orden:",
+  "start": 9.573,
+  "end": 10.226
+ },
+ {
+  "id": "w30",
+  "text": "nunca",
+  "start": 10.279,
+  "end": 10.546
+ },
+ {
+  "id": "w31",
+  "text": "rendirse.",
+  "start": 10.594,
+  "end": 11.266
+ },
+ {
+  "id": "w32",
+  "text": "En",
+  "start": 11.446,
+  "end": 11.457
+ },
+ {
+  "id": "w33",
+  "text": "mil",
+  "start": 11.517,
+  "end": 11.697
+ },
+ {
+  "id": "w34",
+  "text": "novecientos",
+  "start": 11.75,
+  "end": 12.257
+ },
+ {
+  "id": "w35",
+  "text": "cuarenta",
+  "start": 12.284,
+  "end": 12.577
+ },
+ {
+  "id": "w36",
+  "text": "y",
+  "start": 12.617,
+  "end": 12.657
+ },
+ {
+  "id": "w37",
+  "text": "cinco",
+  "start": 12.697,
+  "end": 12.897
+ },
+ {
+  "id": "w38",
+  "text": "la",
+  "start": 12.977,
+  "end": 13.137
+ },
+ {
+  "id": "w39",
+  "text": "guerra",
+  "start": 13.171,
+  "end": 13.377
+ },
+ {
+  "id": "w40",
+  "text": "termina…",
+  "start": 13.446,
+  "end": 14.057
+ },
+ {
+  "id": "w41",
+  "text": "y",
+  "start": 14.077,
+  "end": 14.097
+ },
+ {
+  "id": "w42",
+  "text": "lo",
+  "start": 14.124,
+  "end": 14.177
+ },
+ {
+  "id": "w43",
+  "text": "anuncian",
+  "start": 14.23,
+  "end": 14.577
+ },
+ {
+  "id": "w44",
+  "text": "con",
+  "start": 14.617,
+  "end": 14.737
+ },
+ {
+  "id": "w45",
+  "text": "volantes",
+  "start": 14.777,
+  "end": 15.217
+ },
+ {
+  "id": "w46",
+  "text": "en",
+  "start": 15.244,
+  "end": 15.297
+ },
+ {
+  "id": "w47",
+  "text": "la",
+  "start": 15.324,
+  "end": 15.377
+ },
+ {
+  "id": "w48",
+  "text": "selva.",
+  "start": 15.437,
+  "end": 15.857
+ },
+ {
+  "id": "w49",
+  "text": "¿Y",
+  "start": 16.553,
+  "end": 16.873
+ },
+ {
+  "id": "w50",
+  "text": "Onoda?",
+  "start": 16.913,
+  "end": 17.513
+ },
+ {
+  "id": "w51",
+  "text": "Pensó",
+  "start": 17.569,
+  "end": 17.873
+ },
+ {
+  "id": "w52",
+  "text": "que",
+  "start": 17.893,
+  "end": 17.953
+ },
+ {
+  "id": "w53",
+  "text": "eran",
+  "start": 17.98,
+  "end": 18.113
+ },
+ {
+  "id": "w54",
+  "text": "una",
+  "start": 18.153,
+  "end": 18.273
+ },
+ {
+  "id": "w55",
+  "text": "trampa",
+  "start": 18.326,
+  "end": 18.673
+ },
+ {
+  "id": "w56",
+  "text": "del",
+  "start": 18.693,
+  "end": 18.753
+ },
+ {
+  "id": "w57",
+  "text": "enemigo…",
+  "start": 18.806,
+  "end": 19.473
+ },
+ {
+  "id": "w58",
+  "text": "y",
+  "start": 19.513,
+  "end": 19.553
+ },
+ {
+  "id": "w59",
+  "text": "siguió",
+  "start": 19.613,
+  "end": 19.953
+ },
+ {
+  "id": "w60",
+  "text": "escondido.",
+  "start": 20.006,
+  "end": 20.593
+ },
+ {
+  "id": "w61",
+  "text": "Pasaron",
+  "start": 20.801,
+  "end": 21.133
+ },
+ {
+  "id": "w62",
+  "text": "diez,",
+  "start": 21.173,
+  "end": 21.693
+ },
+ {
+  "id": "w63",
+  "text": "veinte…",
+  "start": 21.746,
+  "end": 22.412
+ },
+ {
+  "id": "w64",
+  "text": "¡veintinueve",
+  "start": 22.413,
+  "end": 23.053
+ },
+ {
+  "id": "w65",
+  "text": "años!",
+  "start": 23.133,
+  "end": 23.533
+ },
+ {
+  "id": "w66",
+  "text": "Sus",
+  "start": 23.613,
+  "end": 23.853
+ },
+ {
+  "id": "w67",
+  "text": "compañeros",
+  "start": 23.899,
+  "end": 24.413
+ },
+ {
+  "id": "w68",
+  "text": "se",
+  "start": 24.44,
+  "end": 24.493
+ },
+ {
+  "id": "w69",
+  "text": "rindieron",
+  "start": 24.533,
+  "end": 24.973
+ },
+ {
+  "id": "w70",
+  "text": "o",
+  "start": 25.013,
+  "end": 25.053
+ },
+ {
+  "id": "w71",
+  "text": "murieron…",
+  "start": 25.093,
+  "end": 25.693
+ },
+ {
+  "id": "w72",
+  "text": "y",
+  "start": 25.733,
+  "end": 25.773
+ },
+ {
+  "id": "w73",
+  "text": "él,",
+  "start": 25.853,
+  "end": 26.253
+ },
+ {
+  "id": "w74",
+  "text": "solito,",
+  "start": 26.293,
+  "end": 26.893
+ },
+ {
+  "id": "w75",
+  "text": "seguía",
+  "start": 26.941,
+  "end": 27.213
+ },
+ {
+  "id": "w76",
+  "text": "en",
+  "start": 27.24,
+  "end": 27.293
+ },
+ {
+  "id": "w77",
+  "text": "guerra.",
+  "start": 27.339,
+  "end": 27.832
+ },
+ {
+  "id": "w78",
+  "text": "Hasta",
+  "start": 27.972,
+  "end": 28.136
+ },
+ {
+  "id": "w79",
+  "text": "que",
+  "start": 28.156,
+  "end": 28.216
+ },
+ {
+  "id": "w80",
+  "text": "en",
+  "start": 28.243,
+  "end": 28.296
+ },
+ {
+  "id": "w81",
+  "text": "mil",
+  "start": 28.336,
+  "end": 28.456
+ },
+ {
+  "id": "w82",
+  "text": "novecientos",
+  "start": 28.509,
+  "end": 29.016
+ },
+ {
+  "id": "w83",
+  "text": "setenta",
+  "start": 29.056,
+  "end": 29.336
+ },
+ {
+  "id": "w84",
+  "text": "y",
+  "start": 29.376,
+  "end": 29.416
+ },
+ {
+  "id": "w85",
+  "text": "cuatro,",
+  "start": 29.462,
+  "end": 29.976
+ },
+ {
+  "id": "w86",
+  "text": "un",
+  "start": 30.003,
+  "end": 30.056
+ },
+ {
+  "id": "w87",
+  "text": "joven",
+  "start": 30.123,
+  "end": 30.456
+ },
+ {
+  "id": "w88",
+  "text": "aventurero,",
+  "start": 30.496,
+  "end": 31.256
+ },
+ {
+  "id": "w89",
+  "text": "Norio",
+  "start": 31.316,
+  "end": 31.576
+ },
+ {
+  "id": "w90",
+  "text": "Suzuki,",
+  "start": 31.656,
+  "end": 32.296
+ },
+ {
+  "id": "w91",
+  "text": "lo",
+  "start": 32.323,
+  "end": 32.376
+ },
+ {
+  "id": "w92",
+  "text": "encontró.",
+  "start": 32.426,
+  "end": 33.062
+ },
+ {
+  "id": "w93",
+  "text": "Pero",
+  "start": 33.295,
+  "end": 33.316
+ },
+ {
+  "id": "w94",
+  "text": "Onoda",
+  "start": 33.396,
+  "end": 33.716
+ },
+ {
+  "id": "w95",
+  "text": "le",
+  "start": 33.769,
+  "end": 33.876
+ },
+ {
+  "id": "w96",
+  "text": "dijo:",
+  "start": 33.94,
+  "end": 34.516
+ },
+ {
+  "id": "w97",
+  "text": "sin",
+  "start": 34.596,
+  "end": 34.836
+ },
+ {
+  "id": "w98",
+  "text": "orden",
+  "start": 34.876,
+  "end": 35.076
+ },
+ {
+  "id": "w99",
+  "text": "de",
+  "start": 35.103,
+  "end": 35.156
+ },
+ {
+  "id": "w100",
+  "text": "mi",
+  "start": 35.209,
+  "end": 35.316
+ },
+ {
+  "id": "w101",
+  "text": "comandante,",
+  "start": 35.356,
+  "end": 36.036
+ },
+ {
+  "id": "w102",
+  "text": "no",
+  "start": 36.169,
+  "end": 36.436
+ },
+ {
+  "id": "w103",
+  "text": "me",
+  "start": 36.463,
+  "end": 36.516
+ },
+ {
+  "id": "w104",
+  "text": "rindo.",
+  "start": 36.596,
+  "end": 37.076
+ },
+ {
+  "id": "w105",
+  "text": "Así",
+  "start": 37.291,
+  "end": 37.392
+ },
+ {
+  "id": "w106",
+  "text": "que",
+  "start": 37.432,
+  "end": 37.552
+ },
+ {
+  "id": "w107",
+  "text": "trajeron",
+  "start": 37.6,
+  "end": 37.952
+ },
+ {
+  "id": "w108",
+  "text": "a",
+  "start": 37.992,
+  "end": 38.032
+ },
+ {
+  "id": "w109",
+  "text": "su",
+  "start": 38.059,
+  "end": 38.112
+ },
+ {
+  "id": "w110",
+  "text": "antiguo",
+  "start": 38.165,
+  "end": 38.512
+ },
+ {
+  "id": "w111",
+  "text": "comandante,",
+  "start": 38.552,
+  "end": 39.152
+ },
+ {
+  "id": "w112",
+  "text": "que",
+  "start": 39.192,
+  "end": 39.312
+ },
+ {
+  "id": "w113",
+  "text": "ya",
+  "start": 39.365,
+  "end": 39.472
+ },
+ {
+  "id": "w114",
+  "text": "era",
+  "start": 39.512,
+  "end": 39.632
+ },
+ {
+  "id": "w115",
+  "text": "librero…",
+  "start": 39.68,
+  "end": 40.272
+ },
+ {
+  "id": "w116",
+  "text": "a",
+  "start": 40.312,
+  "end": 40.352
+ },
+ {
+  "id": "w117",
+  "text": "darle",
+  "start": 40.432,
+  "end": 40.752
+ },
+ {
+  "id": "w118",
+  "text": "la",
+  "start": 40.805,
+  "end": 40.912
+ },
+ {
+  "id": "w119",
+  "text": "orden",
+  "start": 40.965,
+  "end": 41.232
+ },
+ {
+  "id": "w120",
+  "text": "en",
+  "start": 41.259,
+  "end": 41.312
+ },
+ {
+  "id": "w121",
+  "text": "persona.",
+  "start": 41.362,
+  "end": 41.792
+ },
+ {
+  "id": "w122",
+  "text": "Y",
+  "start": 42.43,
+  "end": 42.59
+ },
+ {
+  "id": "w123",
+  "text": "por",
+  "start": 42.63,
+  "end": 42.75
+ },
+ {
+  "id": "w124",
+  "text": "fin,",
+  "start": 42.83,
+  "end": 43.23
+ },
+ {
+  "id": "w125",
+  "text": "veintinueve",
+  "start": 43.283,
+  "end": 43.87
+ },
+ {
+  "id": "w126",
+  "text": "años",
+  "start": 43.95,
+  "end": 44.27
+ },
+ {
+  "id": "w127",
+  "text": "tarde…",
+  "start": 44.323,
+  "end": 44.99
+ },
+ {
+  "id": "w128",
+  "text": "¡leyó",
+  "start": 45.03,
+  "end": 45.47
+ },
+ {
+  "id": "w129",
+  "text": "el",
+  "start": 45.497,
+  "end": 45.55
+ },
+ {
+  "id": "w130",
+  "text": "mensaje!",
+  "start": 45.62,
+  "end": 46.27
+ }
+]

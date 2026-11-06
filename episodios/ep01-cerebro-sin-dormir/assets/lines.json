@@ -1,0 +1,58 @@
+[
+ {
+  "id": "l0",
+  "speaker": "neuro",
+  "text": "¡¿Quién no sacó la basura anoche?!",
+  "start": 0.15,
+  "end": 2.486
+ },
+ {
+  "id": "l1",
+  "speaker": "glia",
+  "text": "Tú, jefe. No dormiste… y la limpieza fuerte se hace de noche.",
+  "start": 2.706,
+  "end": 7.358
+ },
+ {
+  "id": "l2",
+  "speaker": "neuro",
+  "text": "¿Limpieza? ¿De qué basura hablas?",
+  "start": 7.578,
+  "end": 10.328
+ },
+ {
+  "id": "l3",
+  "speaker": "glia",
+  "text": "La que dejan tus neuronas al trabajar. Una se llama beta amiloide.",
+  "start": 10.548,
+  "end": 14.967
+ },
+ {
+  "id": "l4",
+  "speaker": "neuro",
+  "text": "Eso suena… peligroso.",
+  "start": 15.187,
+  "end": 18.336
+ },
+ {
+  "id": "l5",
+  "speaker": "glia",
+  "text": "En 2018, un estudio midió que una sola noche sin dormir la sube un cinco por ciento.",
+  "start": 18.556,
+  "end": 23.663
+ },
+ {
+  "id": "l6",
+  "speaker": "neuro",
+  "text": "Con razón hoy no encuentro ni las llaves…",
+  "start": 23.883,
+  "end": 26.95
+ },
+ {
+  "id": "l7",
+  "speaker": "glia",
+  "text": "Entonces, jefe… ¿esta noche vas a dormir?",
+  "start": 27.17,
+  "end": 29.885
+ }
+]

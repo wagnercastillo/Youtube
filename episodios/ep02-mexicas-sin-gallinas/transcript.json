@@ -1,0 +1,656 @@
+[
+ {
+  "id": "w0",
+  "text": "¡Llegué",
+  "start": 0.12,
+  "end": 0.278
+ },
+ {
+  "id": "w1",
+  "text": "a",
+  "start": 0.318,
+  "end": 0.358
+ },
+ {
+  "id": "w2",
+  "text": "Tenochtitlan,",
+  "start": 0.398,
+  "end": 1.238
+ },
+ {
+  "id": "w3",
+  "text": "año",
+  "start": 1.298,
+  "end": 1.478
+ },
+ {
+  "id": "w4",
+  "text": "1500!",
+  "start": 1.558,
+  "end": 2.518
+ },
+ {
+  "id": "w5",
+  "text": "A",
+  "start": 2.638,
+  "end": 2.758
+ },
+ {
+  "id": "w6",
+  "text": "ver,",
+  "start": 2.798,
+  "end": 3.158
+ },
+ {
+  "id": "w7",
+  "text": "unos",
+  "start": 3.206,
+  "end": 3.398
+ },
+ {
+  "id": "w8",
+  "text": "huevos",
+  "start": 3.438,
+  "end": 3.638
+ },
+ {
+  "id": "w9",
+  "text": "de",
+  "start": 3.665,
+  "end": 3.718
+ },
+ {
+  "id": "w10",
+  "text": "gallina",
+  "start": 3.766,
+  "end": 4.038
+ },
+ {
+  "id": "w11",
+  "text": "para",
+  "start": 4.086,
+  "end": 4.278
+ },
+ {
+  "id": "w12",
+  "text": "desayunar.",
+  "start": 4.318,
+  "end": 4.883
+ },
+ {
+  "id": "w13",
+  "text": "¿Gallina?",
+  "start": 5.524,
+  "end": 6.584
+ },
+ {
+  "id": "w14",
+  "text": "Aquí",
+  "start": 6.654,
+  "end": 6.984
+ },
+ {
+  "id": "w15",
+  "text": "no",
+  "start": 7.024,
+  "end": 7.104
+ },
+ {
+  "id": "w16",
+  "text": "hay.",
+  "start": 7.204,
+  "end": 7.505
+ },
+ {
+  "id": "w17",
+  "text": "Las",
+  "start": 8.12,
+  "end": 8.144
+ },
+ {
+  "id": "w18",
+  "text": "gallinas",
+  "start": 8.192,
+  "end": 8.704
+ },
+ {
+  "id": "w19",
+  "text": "llegan",
+  "start": 8.752,
+  "end": 9.024
+ },
+ {
+  "id": "w20",
+  "text": "con",
+  "start": 9.064,
+  "end": 9.184
+ },
+ {
+  "id": "w21",
+  "text": "los",
+  "start": 9.204,
+  "end": 9.264
+ },
+ {
+  "id": "w22",
+  "text": "españoles…",
+  "start": 9.344,
+  "end": 10.224
+ },
+ {
+  "id": "w23",
+  "text": "en",
+  "start": 10.251,
+  "end": 10.304
+ },
+ {
+  "id": "w24",
+  "text": "veinte",
+  "start": 10.384,
+  "end": 10.784
+ },
+ {
+  "id": "w25",
+  "text": "años.",
+  "start": 10.912,
+  "end": 11.584
+ },
+ {
+  "id": "w26",
+  "text": "¿Y",
+  "start": 11.704,
+  "end": 11.978
+ },
+ {
+  "id": "w27",
+  "text": "entonces",
+  "start": 12.009,
+  "end": 12.258
+ },
+ {
+  "id": "w28",
+  "text": "qué",
+  "start": 12.298,
+  "end": 12.418
+ },
+ {
+  "id": "w29",
+  "text": "huevos",
+  "start": 12.478,
+  "end": 12.818
+ },
+ {
+  "id": "w30",
+  "text": "comen",
+  "start": 12.858,
+  "end": 13.058
+ },
+ {
+  "id": "w31",
+  "text": "aquí?",
+  "start": 13.138,
+  "end": 13.591
+ },
+ {
+  "id": "w32",
+  "text": "Los",
+  "start": 13.933,
+  "end": 13.978
+ },
+ {
+  "id": "w33",
+  "text": "míos,",
+  "start": 14.058,
+  "end": 14.458
+ },
+ {
+  "id": "w34",
+  "text": "mi",
+  "start": 14.485,
+  "end": 14.538
+ },
+ {
+  "id": "w35",
+  "text": "rey.",
+  "start": 14.618,
+  "end": 15.218
+ },
+ {
+  "id": "w36",
+  "text": "En",
+  "start": 15.311,
+  "end": 15.498
+ },
+ {
+  "id": "w37",
+  "text": "náhuatl,",
+  "start": 15.551,
+  "end": 16.258
+ },
+ {
+  "id": "w38",
+  "text": "huevo",
+  "start": 16.398,
+  "end": 16.858
+ },
+ {
+  "id": "w39",
+  "text": "se",
+  "start": 16.911,
+  "end": 17.018
+ },
+ {
+  "id": "w40",
+  "text": "dice",
+  "start": 17.082,
+  "end": 17.338
+ },
+ {
+  "id": "w41",
+  "text": "totoltetl:",
+  "start": 17.418,
+  "end": 18.458
+ },
+ {
+  "id": "w42",
+  "text": "piedra",
+  "start": 18.522,
+  "end": 18.858
+ },
+ {
+  "id": "w43",
+  "text": "de",
+  "start": 18.911,
+  "end": 19.018
+ },
+ {
+  "id": "w44",
+  "text": "guajolota.",
+  "start": 19.045,
+  "end": 20.018
+ },
+ {
+  "id": "w45",
+  "text": "Porque",
+  "start": 20.088,
+  "end": 20.378
+ },
+ {
+  "id": "w46",
+  "text": "parece",
+  "start": 20.435,
+  "end": 20.778
+ },
+ {
+  "id": "w47",
+  "text": "piedrita.",
+  "start": 20.826,
+  "end": 21.498
+ },
+ {
+  "id": "w48",
+  "text": "¡Perfecto!",
+  "start": 21.95,
+  "end": 22.198
+ },
+ {
+  "id": "w49",
+  "text": "Me",
+  "start": 22.278,
+  "end": 22.438
+ },
+ {
+  "id": "w50",
+  "text": "das",
+  "start": 22.478,
+  "end": 22.598
+ },
+ {
+  "id": "w51",
+  "text": "dos,",
+  "start": 22.638,
+  "end": 22.838
+ },
+ {
+  "id": "w52",
+  "text": "¿no?",
+  "start": 22.878,
+  "end": 23.112
+ },
+ {
+  "id": "w53",
+  "text": "¡Ni",
+  "start": 23.258,
+  "end": 23.348
+ },
+ {
+  "id": "w54",
+  "text": "lo",
+  "start": 23.401,
+  "end": 23.508
+ },
+ {
+  "id": "w55",
+  "text": "sueñes!",
+  "start": 23.628,
+  "end": 24.468
+ },
+ {
+  "id": "w56",
+  "text": "Si",
+  "start": 24.548,
+  "end": 24.708
+ },
+ {
+  "id": "w57",
+  "text": "tienes",
+  "start": 24.765,
+  "end": 25.108
+ },
+ {
+  "id": "w58",
+  "text": "hambre,",
+  "start": 25.148,
+  "end": 25.588
+ },
+ {
+  "id": "w59",
+  "text": "ve",
+  "start": 25.641,
+  "end": 25.748
+ },
+ {
+  "id": "w60",
+  "text": "al",
+  "start": 25.801,
+  "end": 25.908
+ },
+ {
+  "id": "w61",
+  "text": "lago:",
+  "start": 25.948,
+  "end": 26.388
+ },
+ {
+  "id": "w62",
+  "text": "hay",
+  "start": 26.548,
+  "end": 27.028
+ },
+ {
+  "id": "w63",
+  "text": "ahuautle,",
+  "start": 27.068,
+  "end": 27.988
+ },
+ {
+  "id": "w64",
+  "text": "huevos",
+  "start": 28.068,
+  "end": 28.468
+ },
+ {
+  "id": "w65",
+  "text": "de",
+  "start": 28.495,
+  "end": 28.548
+ },
+ {
+  "id": "w66",
+  "text": "chinche",
+  "start": 28.596,
+  "end": 28.948
+ },
+ {
+  "id": "w67",
+  "text": "de",
+  "start": 29.001,
+  "end": 29.108
+ },
+ {
+  "id": "w68",
+  "text": "agua.",
+  "start": 29.172,
+  "end": 29.588
+ },
+ {
+  "id": "w69",
+  "text": "¿Huevos",
+  "start": 29.708,
+  "end": 29.913
+ },
+ {
+  "id": "w70",
+  "text": "de",
+  "start": 29.94,
+  "end": 29.993
+ },
+ {
+  "id": "w71",
+  "text": "insecto?",
+  "start": 30.062,
+  "end": 30.633
+ },
+ {
+  "id": "w72",
+  "text": "¡Guácala!",
+  "start": 30.793,
+  "end": 31.593
+ },
+ {
+  "id": "w73",
+  "text": "Guácala",
+  "start": 31.808,
+  "end": 32.324
+ },
+ {
+  "id": "w74",
+  "text": "nada.",
+  "start": 32.436,
+  "end": 33.164
+ },
+ {
+  "id": "w75",
+  "text": "Hoy",
+  "start": 33.234,
+  "end": 33.444
+ },
+ {
+  "id": "w76",
+  "text": "le",
+  "start": 33.471,
+  "end": 33.524
+ },
+ {
+  "id": "w77",
+  "text": "dicen",
+  "start": 33.584,
+  "end": 33.844
+ },
+ {
+  "id": "w78",
+  "text": "caviar",
+  "start": 33.884,
+  "end": 34.244
+ },
+ {
+  "id": "w79",
+  "text": "mexicano,",
+  "start": 34.304,
+  "end": 35.084
+ },
+ {
+  "id": "w80",
+  "text": "y",
+  "start": 35.184,
+  "end": 35.284
+ },
+ {
+  "id": "w81",
+  "text": "el",
+  "start": 35.337,
+  "end": 35.444
+ },
+ {
+  "id": "w82",
+  "text": "kilo",
+  "start": 35.524,
+  "end": 35.844
+ },
+ {
+  "id": "w83",
+  "text": "cuesta",
+  "start": 35.884,
+  "end": 36.164
+ },
+ {
+  "id": "w84",
+  "text": "unos",
+  "start": 36.228,
+  "end": 36.484
+ },
+ {
+  "id": "w85",
+  "text": "cincuenta",
+  "start": 36.524,
+  "end": 37.124
+ },
+ {
+  "id": "w86",
+  "text": "dólares.",
+  "start": 37.204,
+  "end": 37.844
+ },
+ {
+  "id": "w87",
+  "text": "Mmm…",
+  "start": 38.0,
+  "end": 38.33
+ },
+ {
+  "id": "w88",
+  "text": "mejor",
+  "start": 38.383,
+  "end": 38.65
+ },
+ {
+  "id": "w89",
+  "text": "los",
+  "start": 38.69,
+  "end": 38.81
+ },
+ {
+  "id": "w90",
+  "text": "tuyos.",
+  "start": 38.87,
+  "end": 39.41
+ },
+ {
+  "id": "w91",
+  "text": "Total,",
+  "start": 39.869,
+  "end": 40.016
+ },
+ {
+  "id": "w92",
+  "text": "eres",
+  "start": 40.069,
+  "end": 40.256
+ },
+ {
+  "id": "w93",
+  "text": "una",
+  "start": 40.296,
+  "end": 40.416
+ },
+ {
+  "id": "w94",
+  "text": "gallina,",
+  "start": 40.48,
+  "end": 40.936
+ },
+ {
+  "id": "w95",
+  "text": "¿no?",
+  "start": 40.956,
+  "end": 41.45
+ },
+ {
+  "id": "w96",
+  "text": "¡Eso",
+  "start": 41.57,
+  "end": 41.806
+ },
+ {
+  "id": "w97",
+  "text": "mismo",
+  "start": 41.873,
+  "end": 42.206
+ },
+ {
+  "id": "w98",
+  "text": "dijeron",
+  "start": 42.246,
+  "end": 42.606
+ },
+ {
+  "id": "w99",
+  "text": "los",
+  "start": 42.646,
+  "end": 42.766
+ },
+ {
+  "id": "w100",
+  "text": "españoles!",
+  "start": 42.833,
+  "end": 43.846
+ },
+ {
+  "id": "w101",
+  "text": "Gallina",
+  "start": 44.126,
+  "end": 44.526
+ },
+ {
+  "id": "w102",
+  "text": "de",
+  "start": 44.579,
+  "end": 44.686
+ },
+ {
+  "id": "w103",
+  "text": "la",
+  "start": 44.713,
+  "end": 44.766
+ },
+ {
+  "id": "w104",
+  "text": "tierra.",
+  "start": 44.846,
+  "end": 45.566
+ },
+ {
+  "id": "w105",
+  "text": "¡Qué",
+  "start": 45.913,
+  "end": 45.973
+ },
+ {
+  "id": "w106",
+  "text": "falta",
+  "start": 46.066,
+  "end": 46.533
+ },
+ {
+  "id": "w107",
+  "text": "de",
+  "start": 46.56,
+  "end": 46.613
+ },
+ {
+  "id": "w108",
+  "text": "respeto!",
+  "start": 46.673,
+  "end": 48.366
+ }
+]

@@ -1,0 +1,990 @@
+{
+  "ok": false,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 2,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "composition_file_too_large",
+        "severity": "warning",
+        "message": "This HTML composition file has 321 lines. Smaller sub-compositions are easier to read, iterate on, and diff.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "C:\\Users\\Cristhoper\\Documents\\GitHub\\YouTube\\episodios\\ep02-mexicas-sin-gallinas\\compositions\\captions.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Split this sub-composition further into smaller .html files, then mount them from the parent with data-composition-src so each file stays small enough to inspect, revise, and validate independently."
+      },
+      {
+        "code": "composition_file_too_large",
+        "severity": "warning",
+        "message": "This HTML composition file has 553 lines. Smaller sub-compositions are easier to read, iterate on, and diff.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "C:\\Users\\Cristhoper\\Documents\\GitHub\\YouTube\\episodios\\ep02-mexicas-sin-gallinas\\compositions\\stage.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Split this sub-composition further into smaller .html files, then mount them from the parent with data-composition-src so each file stays small enough to inspect, revise, and validate independently."
+      }
+    ],
+    "filesScanned": 3
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 10,
+    "infoCount": 5,
+    "findings": [
+      {
+        "code": "container_overflow",
+        "severity": "warning",
+        "time": 2.778,
+        "selector": "#st-world",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 0,
+          "top": -85.6,
+          "right": 1209.6,
+          "bottom": 2064.8,
+          "width": 1209.6,
+          "height": 2150.4
+        },
+        "containerSelector": "#stage > div:nth-of-type(1)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "right": 129.6,
+          "top": 85.6,
+          "bottom": 144.8
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/stage.html",
+        "bbox": {
+          "x": 0,
+          "y": -85.6,
+          "width": 1209.6,
+          "height": 2150.4
+        },
+        "firstSeen": 2.778,
+        "lastSeen": 47.222,
+        "occurrences": 6,
+        "heldMs": 0,
+        "times": [
+          2.778,
+          8.333,
+          19.444,
+          30.556,
+          41.667,
+          47.222
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "warning",
+        "time": 2.778,
+        "selector": "#st-ship",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 1080,
+          "top": 0,
+          "right": 2160,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "containerSelector": "#stage > div:nth-of-type(1)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "right": 1080
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/stage.html",
+        "bbox": {
+          "x": 1080,
+          "y": 0,
+          "width": 1080,
+          "height": 1920
+        },
+        "firstSeen": 2.778,
+        "lastSeen": 47.222,
+        "occurrences": 8,
+        "heldMs": 0,
+        "times": [
+          2.778,
+          13.889,
+          19.444,
+          25,
+          30.556,
+          36.111,
+          41.667,
+          47.222
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "warning",
+        "time": 2.778,
+        "selector": "#st-world > svg:nth-of-type(1) > path:nth-of-type(1)",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -44.8,
+          "top": 610.82,
+          "right": 470.4,
+          "bottom": 765.6,
+          "width": 515.2,
+          "height": 154.78
+        },
+        "containerSelector": "#st-world > svg:nth-of-type(1)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": -85.6,
+          "right": 1209.6,
+          "bottom": 2064.8,
+          "width": 1209.6,
+          "height": 2150.4
+        },
+        "overflow": {
+          "left": 44.8
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/stage.html",
+        "bbox": {
+          "x": -44.8,
+          "y": 610.82,
+          "width": 515.2,
+          "height": 154.78
+        },
+        "firstSeen": 2.778,
+        "lastSeen": 47.222,
+        "occurrences": 9,
+        "heldMs": 0,
+        "times": [
+          2.778,
+          8.333,
+          13.889,
+          19.444,
+          25,
+          30.556,
+          36.111,
+          41.667,
+          47.222
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "warning",
+        "time": 2.778,
+        "selector": "svg.st-full > rect:nth-of-type(2)",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -22.4,
+          "top": 743.2,
+          "right": 1232,
+          "bottom": 900,
+          "width": 1254.4,
+          "height": 156.8
+        },
+        "containerSelector": "#st-world > svg:nth-of-type(1)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": -85.6,
+          "right": 1209.6,
+          "bottom": 2064.8,
+          "width": 1209.6,
+          "height": 2150.4
+        },
+        "overflow": {
+          "left": 22.4,
+          "right": 22.4
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/stage.html",
+        "bbox": {
+          "x": -22.4,
+          "y": 743.2,
+          "width": 1254.4,
+          "height": 156.8
+        },
+        "firstSeen": 2.778,
+        "lastSeen": 47.222,
+        "occurrences": 9,
+        "heldMs": 0,
+        "times": [
+          2.778,
+          8.333,
+          13.889,
+          19.444,
+          25,
+          30.556,
+          36.111,
+          41.667,
+          47.222
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "warning",
+        "time": 2.778,
+        "selector": "svg.st-full > rect:nth-of-type(3)",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -22.4,
+          "top": 900,
+          "right": 1232,
+          "bottom": 1236,
+          "width": 1254.4,
+          "height": 336
+        },
+        "containerSelector": "#st-world > svg:nth-of-type(1)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": -85.6,
+          "right": 1209.6,
+          "bottom": 2064.8,
+          "width": 1209.6,
+          "height": 2150.4
+        },
+        "overflow": {
+          "left": 22.4,
+          "right": 22.4
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/stage.html",
+        "bbox": {
+          "x": -22.4,
+          "y": 900,
+          "width": 1254.4,
+          "height": 336
+        },
+        "firstSeen": 2.778,
+        "lastSeen": 47.222,
+        "occurrences": 9,
+        "heldMs": 0,
+        "times": [
+          2.778,
+          8.333,
+          13.889,
+          19.444,
+          25,
+          30.556,
+          36.111,
+          41.667,
+          47.222
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "warning",
+        "time": 2.778,
+        "selector": "svg.st-full > rect:nth-of-type(4)",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -22.4,
+          "top": 1236,
+          "right": 1232,
+          "bottom": 2087.2,
+          "width": 1254.4,
+          "height": 851.2
+        },
+        "containerSelector": "#st-world > svg:nth-of-type(1)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": -85.6,
+          "right": 1209.6,
+          "bottom": 2064.8,
+          "width": 1209.6,
+          "height": 2150.4
+        },
+        "overflow": {
+          "left": 22.4,
+          "right": 22.4,
+          "bottom": 22.4
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/stage.html",
+        "bbox": {
+          "x": -22.4,
+          "y": 1236,
+          "width": 1254.4,
+          "height": 851.2
+        },
+        "firstSeen": 2.778,
+        "lastSeen": 47.222,
+        "occurrences": 9,
+        "heldMs": 0,
+        "times": [
+          2.778,
+          8.333,
+          13.889,
+          19.444,
+          25,
+          30.556,
+          36.111,
+          41.667,
+          47.222
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "warning",
+        "time": 2.778,
+        "selector": "#st-world > svg:nth-of-type(2) > g:nth-of-type(1)",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -44.8,
+          "top": 832.8,
+          "right": 1254.4,
+          "bottom": 1034.4,
+          "width": 1299.2,
+          "height": 201.6
+        },
+        "containerSelector": "#st-world > svg:nth-of-type(2)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": -85.6,
+          "right": 1209.6,
+          "bottom": 2064.8,
+          "width": 1209.6,
+          "height": 2150.4
+        },
+        "overflow": {
+          "left": 44.8,
+          "right": 44.8
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/stage.html",
+        "bbox": {
+          "x": -44.8,
+          "y": 832.8,
+          "width": 1299.2,
+          "height": 201.6
+        },
+        "firstSeen": 2.778,
+        "lastSeen": 47.222,
+        "occurrences": 9,
+        "heldMs": 0,
+        "times": [
+          2.778,
+          8.333,
+          13.889,
+          19.444,
+          25,
+          30.556,
+          36.111,
+          41.667,
+          47.222
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "warning",
+        "time": 2.778,
+        "selector": "#st-ship > svg:nth-of-type(1) > rect:nth-of-type(1)",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 1060,
+          "top": 1080,
+          "right": 2180,
+          "bottom": 1980,
+          "width": 1120,
+          "height": 900
+        },
+        "containerSelector": "#st-ship > svg:nth-of-type(1)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 1080,
+          "top": 0,
+          "right": 2160,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 20,
+          "right": 20,
+          "bottom": 60
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/stage.html",
+        "bbox": {
+          "x": 1060,
+          "y": 1080,
+          "width": 1120,
+          "height": 900
+        },
+        "firstSeen": 2.778,
+        "lastSeen": 47.222,
+        "occurrences": 9,
+        "heldMs": 0,
+        "times": [
+          2.778,
+          8.333,
+          13.889,
+          19.444,
+          25,
+          30.556,
+          36.111,
+          41.667,
+          47.222
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "warning",
+        "time": 8.333,
+        "selector": "#st-hdr",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 0,
+          "top": -520,
+          "right": 1080,
+          "bottom": -50,
+          "width": 1080,
+          "height": 470
+        },
+        "containerSelector": "#stage > div:nth-of-type(1)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "top": 520
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/stage.html",
+        "bbox": {
+          "x": 0,
+          "y": -520,
+          "width": 1080,
+          "height": 470
+        },
+        "firstSeen": 8.333,
+        "lastSeen": 36.111,
+        "occurrences": 4,
+        "heldMs": 0,
+        "times": [
+          8.333,
+          25,
+          30.556,
+          36.111
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "warning",
+        "time": 19.444,
+        "selector": "#st-wave",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 1060,
+          "top": 1065,
+          "right": 2260,
+          "bottom": 1095,
+          "width": 1200,
+          "height": 30
+        },
+        "containerSelector": "#st-ship > svg:nth-of-type(1)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 1080,
+          "top": 0,
+          "right": 2160,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 20,
+          "right": 100
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/stage.html",
+        "bbox": {
+          "x": 1060,
+          "y": 1065,
+          "width": 1200,
+          "height": 30
+        },
+        "firstSeen": 2.778,
+        "lastSeen": 47.222,
+        "occurrences": 9,
+        "heldMs": 0,
+        "times": [
+          2.778,
+          8.333,
+          13.889,
+          19.444,
+          25,
+          30.556,
+          36.111,
+          41.667,
+          47.222
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 8.333,
+        "selector": "#st-hdr1 > span:nth-of-type(1)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": 160.03,
+          "top": -324,
+          "right": 919.95,
+          "bottom": -200,
+          "width": 759.92,
+          "height": 124
+        },
+        "containerSelector": "#root",
+        "text": "¿LOS MEXICAS",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "top": 324
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/stage.html",
+        "bbox": {
+          "x": 160.03,
+          "y": -324,
+          "width": 759.92,
+          "height": 124
+        },
+        "firstSeen": 8.333,
+        "lastSeen": 36.111,
+        "occurrences": 4,
+        "heldMs": 0,
+        "times": [
+          8.333,
+          25,
+          30.556,
+          36.111
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 8.333,
+        "selector": "#st-hdr2 > span:nth-of-type(1)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": 146.92,
+          "top": -196,
+          "right": 933.06,
+          "bottom": -72,
+          "width": 786.14,
+          "height": 124
+        },
+        "containerSelector": "#root",
+        "text": "SIN GALLINAS?",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "top": 196
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/stage.html",
+        "bbox": {
+          "x": 146.92,
+          "y": -196,
+          "width": 786.14,
+          "height": 124
+        },
+        "firstSeen": 8.333,
+        "lastSeen": 36.111,
+        "occurrences": 4,
+        "heldMs": 0,
+        "times": [
+          8.333,
+          25,
+          30.556,
+          36.111
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 13.889,
+        "selector": "#st-imp > span:nth-of-type(1)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": -895.63,
+          "top": 226.6,
+          "right": -183.95,
+          "bottom": 416.39,
+          "width": 711.68,
+          "height": 189.79
+        },
+        "containerSelector": "#root",
+        "text": "IMPORTADAS",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 895.63
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/stage.html",
+        "bbox": {
+          "x": -895.63,
+          "y": 226.6,
+          "width": 711.68,
+          "height": 189.79
+        },
+        "firstSeen": 13.889,
+        "lastSeen": 41.667,
+        "occurrences": 5,
+        "heldMs": 0,
+        "times": [
+          13.889,
+          25,
+          30.556,
+          36.111,
+          41.667
+        ]
+      },
+      {
+        "code": "escaped_container",
+        "severity": "info",
+        "time": 30.556,
+        "selector": "#st-world",
+        "message": "Positioned element renders far outside its offset parent — its coordinates were likely computed in a different frame (canvas/viewport pixels).",
+        "rect": {
+          "left": 0,
+          "top": -621,
+          "right": 2106,
+          "bottom": 3123,
+          "width": 2106,
+          "height": 3744
+        },
+        "containerSelector": "#stage > div:nth-of-type(1)",
+        "text": "? ? ! ! ?",
+        "fixHint": "Compute left/top in the offset parent's frame (subtract its rect), or mark intentional placement with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/stage.html",
+        "bbox": {
+          "x": 0,
+          "y": -621,
+          "width": 2106,
+          "height": 3744
+        },
+        "firstSeen": 30.556,
+        "lastSeen": 30.556,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          30.556
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 41.667,
+        "selector": "#c-q > text:nth-of-type(1)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": -112.53,
+          "top": 519.63,
+          "right": -34.79,
+          "bottom": 667.47,
+          "width": 77.74,
+          "height": 147.84
+        },
+        "containerSelector": "#root",
+        "text": "?",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 112.53
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/stage.html",
+        "bbox": {
+          "x": -112.53,
+          "y": 519.63,
+          "width": 77.74,
+          "height": 147.84
+        },
+        "firstSeen": 41.667,
+        "lastSeen": 41.667,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          41.667
+        ]
+      }
+    ],
+    "duration": 50,
+    "samples": [
+      2.778,
+      8.333,
+      13.889,
+      19.444,
+      25,
+      30.556,
+      36.111,
+      41.667,
+      47.222
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 15,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": false,
+    "errorCount": 2,
+    "warningCount": 2,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "contrast_aa_failure",
+        "severity": "error",
+        "message": "Contrast is 2.65:1; WCAG AA requires 3:1.",
+        "text": "!",
+        "fg": "rgb(230,57,70)",
+        "bg": "rgb(142,217,240)",
+        "ratio": 2.65,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(213,53,65)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(1) > svg > g > g > g:nth-of-type(3) > g:nth-of-type(6) > text:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/stage.html",
+        "bbox": {
+          "x": 65.18763732910156,
+          "y": 457.0765686035156,
+          "width": 45.864524841308594,
+          "height": 181.57119750976562
+        },
+        "time": 2.778,
+        "times": [
+          2.778,
+          25,
+          36.111,
+          47.222
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "error",
+        "message": "Contrast is 1.3:1; WCAG AA requires 3:1.",
+        "text": "!",
+        "fg": "rgb(230,57,70)",
+        "bg": "rgb(43,108,176)",
+        "ratio": 1.3,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(245,175,180)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(1) > svg > g > g > g:nth-of-type(3) > g:nth-of-type(6) > text:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/stage.html",
+        "bbox": {
+          "x": 481.6000061035156,
+          "y": 441.9200134277344,
+          "width": 44.764984130859375,
+          "height": 180.32003784179688
+        },
+        "time": 25,
+        "times": [
+          2.778,
+          25,
+          36.111,
+          47.222
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.09:1; WCAG AA requires 3:1.",
+        "text": "?",
+        "fg": "rgb(255,210,63)",
+        "bg": "rgb(142,217,240)",
+        "ratio": 1.09,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(136,112,34)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(1) > svg > g > g > g:nth-of-type(3) > g:nth-of-type(5) > text:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/stage.html",
+        "bbox": {
+          "x": 11.032672882080078,
+          "y": 517.5803833007812,
+          "width": 78.61976623535156,
+          "height": 144.23272705078125
+        },
+        "time": 13.889,
+        "times": [
+          13.889
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.09:1; WCAG AA requires 3:1.",
+        "text": "?",
+        "fg": "rgb(255,210,63)",
+        "bg": "rgb(142,217,240)",
+        "ratio": 1.09,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(136,112,34)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(1) > svg > g > g > g:nth-of-type(3) > g:nth-of-type(5) > text:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/stage.html",
+        "bbox": {
+          "x": 351.8808288574219,
+          "y": 448.08056640625,
+          "width": 78.61978149414062,
+          "height": 144.2327880859375
+        },
+        "time": 13.889,
+        "times": [
+          13.889
+        ]
+      }
+    ],
+    "enabled": true,
+    "samples": [
+      2.778,
+      13.889,
+      25,
+      36.111,
+      47.222
+    ],
+    "checked": 32,
+    "passed": 22
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "step": 0.125,
+    "samples": 400
+  },
+  "audio": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  },
+  "saved": {
+    "id": "1af71681-4559-43d3-b106-6d5a87d2cc5b",
+    "revision": "689a674f-5392-4c9a-9d3d-552611fa3acf",
+    "report": "C:\\Users\\Cristhoper\\Documents\\GitHub\\YouTube\\episodios\\ep02-mexicas-sin-gallinas\\.hyperframes\\artifacts\\checks\\1af71681-4559-43d3-b106-6d5a87d2cc5b.json",
+    "attribution": "recorded-revision"
+  },
+  "_meta": {
+    "version": "0.9.17",
+    "latestVersion": "0.9.17",
+    "updateAvailable": false,
+    "checkedAt": "2026-11-05T23:09:37.558Z",
+    "skillsOutdated": 3,
+    "skillsMissing": 0
+  }
+}

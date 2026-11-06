@@ -1,0 +1,542 @@
+[
+  {
+    "id": "w0",
+    "text": "Oye,",
+    "start": 0,
+    "end": 0.96
+  },
+  {
+    "id": "w1",
+    "text": "en",
+    "start": 0.96,
+    "end": 1.28
+  },
+  {
+    "id": "w2",
+    "text": "todo",
+    "start": 1.28,
+    "end": 1.52
+  },
+  {
+    "id": "w3",
+    "text": "Tenoctitán",
+    "start": 1.76,
+    "end": 2.96
+  },
+  {
+    "id": "w4",
+    "text": "no",
+    "start": 3.04,
+    "end": 3.28
+  },
+  {
+    "id": "w5",
+    "text": "hay",
+    "start": 3.28,
+    "end": 3.52
+  },
+  {
+    "id": "w6",
+    "text": "ni",
+    "start": 3.52,
+    "end": 3.76
+  },
+  {
+    "id": "w7",
+    "text": "una",
+    "start": 3.76,
+    "end": 4
+  },
+  {
+    "id": "w8",
+    "text": "sola",
+    "start": 4,
+    "end": 4.32
+  },
+  {
+    "id": "w9",
+    "text": "gallina.",
+    "start": 4.32,
+    "end": 5.44
+  },
+  {
+    "id": "w10",
+    "text": "Claro",
+    "start": 5.44,
+    "end": 5.92
+  },
+  {
+    "id": "w11",
+    "text": "que",
+    "start": 5.92,
+    "end": 6.16
+  },
+  {
+    "id": "w12",
+    "text": "no.",
+    "start": 6.16,
+    "end": 6.8
+  },
+  {
+    "id": "w13",
+    "text": "Las",
+    "start": 6.8,
+    "end": 6.96
+  },
+  {
+    "id": "w14",
+    "text": "gallinas",
+    "start": 6.96,
+    "end": 7.6
+  },
+  {
+    "id": "w15",
+    "text": "llegaron",
+    "start": 7.6,
+    "end": 8.08
+  },
+  {
+    "id": "w16",
+    "text": "con",
+    "start": 8.08,
+    "end": 8.24
+  },
+  {
+    "id": "w17",
+    "text": "los",
+    "start": 8.24,
+    "end": 8.4
+  },
+  {
+    "id": "w18",
+    "text": "españoles.",
+    "start": 8.4,
+    "end": 9.28
+  },
+  {
+    "id": "w19",
+    "text": "¿Y",
+    "start": 9.6,
+    "end": 9.76
+  },
+  {
+    "id": "w20",
+    "text": "entonces",
+    "start": 10,
+    "end": 10.32
+  },
+  {
+    "id": "w21",
+    "text": "de",
+    "start": 10.48,
+    "end": 10.56
+  },
+  {
+    "id": "w22",
+    "text": "dónde",
+    "start": 10.72,
+    "end": 11.04
+  },
+  {
+    "id": "w23",
+    "text": "sacaban",
+    "start": 11.04,
+    "end": 11.52
+  },
+  {
+    "id": "w24",
+    "text": "los",
+    "start": 11.52,
+    "end": 11.68
+  },
+  {
+    "id": "w25",
+    "text": "huevos?",
+    "start": 11.68,
+    "end": 12.56
+  },
+  {
+    "id": "w26",
+    "text": "De",
+    "start": 12.8,
+    "end": 13.04
+  },
+  {
+    "id": "w27",
+    "text": "mí,",
+    "start": 13.04,
+    "end": 13.52
+  },
+  {
+    "id": "w28",
+    "text": "mi",
+    "start": 13.52,
+    "end": 13.76
+  },
+  {
+    "id": "w29",
+    "text": "rey.",
+    "start": 13.76,
+    "end": 14.4
+  },
+  {
+    "id": "w30",
+    "text": "En",
+    "start": 14.4,
+    "end": 14.56
+  },
+  {
+    "id": "w31",
+    "text": "Náhuatl,",
+    "start": 14.56,
+    "end": 15.52
+  },
+  {
+    "id": "w32",
+    "text": "huevo",
+    "start": 15.52,
+    "end": 15.84
+  },
+  {
+    "id": "w33",
+    "text": "se",
+    "start": 15.92,
+    "end": 16.08
+  },
+  {
+    "id": "w34",
+    "text": "dice",
+    "start": 16.08,
+    "end": 16.32
+  },
+  {
+    "id": "w35",
+    "text": "Totoltel,",
+    "start": 16.32,
+    "end": 17.6
+  },
+  {
+    "id": "w36",
+    "text": "piedra",
+    "start": 17.6,
+    "end": 17.92
+  },
+  {
+    "id": "w37",
+    "text": "de",
+    "start": 17.92,
+    "end": 18.08
+  },
+  {
+    "id": "w38",
+    "text": "Guajolota.",
+    "start": 18.08,
+    "end": 19.52
+  },
+  {
+    "id": "w39",
+    "text": "¿Piedra",
+    "start": 19.76,
+    "end": 20.32
+  },
+  {
+    "id": "w40",
+    "text": "de",
+    "start": 20.32,
+    "end": 20.48
+  },
+  {
+    "id": "w41",
+    "text": "Guajolota?",
+    "start": 20.48,
+    "end": 21.36
+  },
+  {
+    "id": "w42",
+    "text": "¿En",
+    "start": 21.36,
+    "end": 21.68
+  },
+  {
+    "id": "w43",
+    "text": "serio?",
+    "start": 21.68,
+    "end": 22.16
+  },
+  {
+    "id": "w44",
+    "text": "Y",
+    "start": 22.16,
+    "end": 22.32
+  },
+  {
+    "id": "w45",
+    "text": "del",
+    "start": 22.32,
+    "end": 22.48
+  },
+  {
+    "id": "w46",
+    "text": "lago",
+    "start": 22.56,
+    "end": 22.96
+  },
+  {
+    "id": "w47",
+    "text": "sacaban",
+    "start": 22.96,
+    "end": 23.44
+  },
+  {
+    "id": "w48",
+    "text": "huevos",
+    "start": 23.44,
+    "end": 23.84
+  },
+  {
+    "id": "w49",
+    "text": "de",
+    "start": 23.84,
+    "end": 24
+  },
+  {
+    "id": "w50",
+    "text": "un",
+    "start": 24,
+    "end": 24.16
+  },
+  {
+    "id": "w51",
+    "text": "insecto",
+    "start": 24.16,
+    "end": 24.64
+  },
+  {
+    "id": "w52",
+    "text": "de",
+    "start": 24.64,
+    "end": 24.72
+  },
+  {
+    "id": "w53",
+    "text": "agua,",
+    "start": 24.72,
+    "end": 25.04
+  },
+  {
+    "id": "w54",
+    "text": "el",
+    "start": 25.2,
+    "end": 25.36
+  },
+  {
+    "id": "w55",
+    "text": "Ahuautle.",
+    "start": 25.36,
+    "end": 26.24
+  },
+  {
+    "id": "w56",
+    "text": "¿Comían",
+    "start": 26.24,
+    "end": 26.72
+  },
+  {
+    "id": "w57",
+    "text": "huevos",
+    "start": 26.72,
+    "end": 27.04
+  },
+  {
+    "id": "w58",
+    "text": "de",
+    "start": 27.04,
+    "end": 27.2
+  },
+  {
+    "id": "w59",
+    "text": "insecto?",
+    "start": 27.2,
+    "end": 27.76
+  },
+  {
+    "id": "w60",
+    "text": "Hoy",
+    "start": 27.76,
+    "end": 28
+  },
+  {
+    "id": "w61",
+    "text": "le",
+    "start": 28,
+    "end": 28.16
+  },
+  {
+    "id": "w62",
+    "text": "dicen",
+    "start": 28.16,
+    "end": 29.2
+  },
+  {
+    "id": "w63",
+    "text": "mexicano,",
+    "start": 29.2,
+    "end": 30
+  },
+  {
+    "id": "w64",
+    "text": "y",
+    "start": 30,
+    "end": 30.24
+  },
+  {
+    "id": "w65",
+    "text": "el",
+    "start": 30.24,
+    "end": 30.4
+  },
+  {
+    "id": "w66",
+    "text": "kilo",
+    "start": 30.4,
+    "end": 31.04
+  },
+  {
+    "id": "w67",
+    "text": "cuesta",
+    "start": 31.04,
+    "end": 31.52
+  },
+  {
+    "id": "w68",
+    "text": "unos",
+    "start": 31.52,
+    "end": 31.84
+  },
+  {
+    "id": "w69",
+    "text": "50",
+    "start": 31.92,
+    "end": 32.4
+  },
+  {
+    "id": "w70",
+    "text": "dólares.",
+    "start": 32.4,
+    "end": 33.44
+  },
+  {
+    "id": "w71",
+    "text": "¿Y",
+    "start": 33.76,
+    "end": 33.92
+  },
+  {
+    "id": "w72",
+    "text": "qué",
+    "start": 34.16,
+    "end": 34.4
+  },
+  {
+    "id": "w73",
+    "text": "dijeron",
+    "start": 34.72,
+    "end": 35.28
+  },
+  {
+    "id": "w74",
+    "text": "los",
+    "start": 35.28,
+    "end": 35.44
+  },
+  {
+    "id": "w75",
+    "text": "españoles",
+    "start": 35.44,
+    "end": 36.08
+  },
+  {
+    "id": "w76",
+    "text": "cuando",
+    "start": 36.08,
+    "end": 36.32
+  },
+  {
+    "id": "w77",
+    "text": "te",
+    "start": 36.32,
+    "end": 36.56
+  },
+  {
+    "id": "w78",
+    "text": "vieron?",
+    "start": 36.56,
+    "end": 37.04
+  },
+  {
+    "id": "w79",
+    "text": "Me",
+    "start": 37.04,
+    "end": 37.2
+  },
+  {
+    "id": "w80",
+    "text": "llamaron",
+    "start": 37.2,
+    "end": 37.68
+  },
+  {
+    "id": "w81",
+    "text": "gallina",
+    "start": 37.68,
+    "end": 38.32
+  },
+  {
+    "id": "w82",
+    "text": "de",
+    "start": 38.32,
+    "end": 38.4
+  },
+  {
+    "id": "w83",
+    "text": "la",
+    "start": 38.4,
+    "end": 38.56
+  },
+  {
+    "id": "w84",
+    "text": "tierra.",
+    "start": 38.56,
+    "end": 39.2
+  },
+  {
+    "id": "w85",
+    "text": "¡Gallina,",
+    "start": 39.28,
+    "end": 40.24
+  },
+  {
+    "id": "w86",
+    "text": "qué",
+    "start": 40.32,
+    "end": 40.48
+  },
+  {
+    "id": "w87",
+    "text": "falta",
+    "start": 40.56,
+    "end": 40.88
+  },
+  {
+    "id": "w88",
+    "text": "de",
+    "start": 40.88,
+    "end": 41.04
+  },
+  {
+    "id": "w89",
+    "text": "respeto?",
+    "start": 41.04,
+    "end": 41.84
+  }
+]

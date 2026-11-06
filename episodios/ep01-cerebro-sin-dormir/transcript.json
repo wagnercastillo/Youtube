@@ -1,0 +1,404 @@
+[
+  {
+    "id": "w0",
+    "text": "¿Quién",
+    "start": 0,
+    "end": 0.48
+  },
+  {
+    "id": "w1",
+    "text": "no",
+    "start": 0.48,
+    "end": 0.72
+  },
+  {
+    "id": "w2",
+    "text": "sacó",
+    "start": 0.72,
+    "end": 1.12
+  },
+  {
+    "id": "w3",
+    "text": "la",
+    "start": 1.12,
+    "end": 1.28
+  },
+  {
+    "id": "w4",
+    "text": "basura",
+    "start": 1.28,
+    "end": 1.76
+  },
+  {
+    "id": "w5",
+    "text": "anoche?",
+    "start": 1.76,
+    "end": 2.64
+  },
+  {
+    "id": "w6",
+    "text": "Tú,",
+    "start": 2.64,
+    "end": 3.12
+  },
+  {
+    "id": "w7",
+    "text": "jefe.",
+    "start": 3.12,
+    "end": 4.08
+  },
+  {
+    "id": "w8",
+    "text": "No",
+    "start": 4.16,
+    "end": 4.48
+  },
+  {
+    "id": "w9",
+    "text": "dormiste,",
+    "start": 4.48,
+    "end": 5.28
+  },
+  {
+    "id": "w10",
+    "text": "y",
+    "start": 5.28,
+    "end": 5.44
+  },
+  {
+    "id": "w11",
+    "text": "la",
+    "start": 5.44,
+    "end": 5.52
+  },
+  {
+    "id": "w12",
+    "text": "limpieza",
+    "start": 5.52,
+    "end": 6.08
+  },
+  {
+    "id": "w13",
+    "text": "fuerte",
+    "start": 6.08,
+    "end": 6.4
+  },
+  {
+    "id": "w14",
+    "text": "se",
+    "start": 6.4,
+    "end": 6.56
+  },
+  {
+    "id": "w15",
+    "text": "hace",
+    "start": 6.56,
+    "end": 6.88
+  },
+  {
+    "id": "w16",
+    "text": "de",
+    "start": 6.88,
+    "end": 7.04
+  },
+  {
+    "id": "w17",
+    "text": "noche.",
+    "start": 7.04,
+    "end": 7.44
+  },
+  {
+    "id": "w18",
+    "text": "¿Limpieza?",
+    "start": 7.52,
+    "end": 8.4
+  },
+  {
+    "id": "w19",
+    "text": "¿De",
+    "start": 8.4,
+    "end": 8.72
+  },
+  {
+    "id": "w20",
+    "text": "qué",
+    "start": 8.72,
+    "end": 8.96
+  },
+  {
+    "id": "w21",
+    "text": "basura",
+    "start": 8.96,
+    "end": 9.44
+  },
+  {
+    "id": "w22",
+    "text": "hablas?",
+    "start": 9.44,
+    "end": 10.08
+  },
+  {
+    "id": "w23",
+    "text": "La",
+    "start": 10.4,
+    "end": 10.64
+  },
+  {
+    "id": "w24",
+    "text": "que",
+    "start": 10.64,
+    "end": 10.8
+  },
+  {
+    "id": "w25",
+    "text": "dejan",
+    "start": 10.8,
+    "end": 11.2
+  },
+  {
+    "id": "w26",
+    "text": "tus",
+    "start": 11.2,
+    "end": 11.36
+  },
+  {
+    "id": "w27",
+    "text": "neuronas",
+    "start": 11.36,
+    "end": 11.92
+  },
+  {
+    "id": "w28",
+    "text": "al",
+    "start": 11.92,
+    "end": 12.08
+  },
+  {
+    "id": "w29",
+    "text": "trabajar.",
+    "start": 12.08,
+    "end": 13.12
+  },
+  {
+    "id": "w30",
+    "text": "Una",
+    "start": 13.12,
+    "end": 13.44
+  },
+  {
+    "id": "w31",
+    "text": "se",
+    "start": 13.44,
+    "end": 13.6
+  },
+  {
+    "id": "w32",
+    "text": "llama",
+    "start": 13.6,
+    "end": 13.92
+  },
+  {
+    "id": "w33",
+    "text": "beta-amiloide.",
+    "start": 13.92,
+    "end": 15.28
+  },
+  {
+    "id": "w34",
+    "text": "Eso",
+    "start": 15.28,
+    "end": 15.52
+  },
+  {
+    "id": "w35",
+    "text": "suena,",
+    "start": 15.52,
+    "end": 16
+  },
+  {
+    "id": "w36",
+    "text": "peligroso.",
+    "start": 16,
+    "end": 17.28
+  },
+  {
+    "id": "w37",
+    "text": "En",
+    "start": 18.24,
+    "end": 18.56
+  },
+  {
+    "id": "w38",
+    "text": "2018,",
+    "start": 18.56,
+    "end": 19.68
+  },
+  {
+    "id": "w39",
+    "text": "un",
+    "start": 19.68,
+    "end": 19.84
+  },
+  {
+    "id": "w40",
+    "text": "estudio",
+    "start": 19.84,
+    "end": 20.24
+  },
+  {
+    "id": "w41",
+    "text": "midio",
+    "start": 20.24,
+    "end": 20.72
+  },
+  {
+    "id": "w42",
+    "text": "que",
+    "start": 20.72,
+    "end": 20.88
+  },
+  {
+    "id": "w43",
+    "text": "una",
+    "start": 20.88,
+    "end": 21.04
+  },
+  {
+    "id": "w44",
+    "text": "sola",
+    "start": 21.04,
+    "end": 21.28
+  },
+  {
+    "id": "w45",
+    "text": "noche",
+    "start": 21.28,
+    "end": 21.6
+  },
+  {
+    "id": "w46",
+    "text": "sin",
+    "start": 21.6,
+    "end": 21.76
+  },
+  {
+    "id": "w47",
+    "text": "dormir",
+    "start": 21.76,
+    "end": 22.16
+  },
+  {
+    "id": "w48",
+    "text": "la",
+    "start": 22.16,
+    "end": 22.32
+  },
+  {
+    "id": "w49",
+    "text": "sube",
+    "start": 22.32,
+    "end": 22.72
+  },
+  {
+    "id": "w50",
+    "text": "un",
+    "start": 22.72,
+    "end": 22.88
+  },
+  {
+    "id": "w51",
+    "text": "5%.",
+    "start": 22.88,
+    "end": 23.6
+  },
+  {
+    "id": "w52",
+    "text": "Con",
+    "start": 23.92,
+    "end": 24.16
+  },
+  {
+    "id": "w53",
+    "text": "razón,",
+    "start": 24.16,
+    "end": 24.8
+  },
+  {
+    "id": "w54",
+    "text": "hoy",
+    "start": 24.8,
+    "end": 25.2
+  },
+  {
+    "id": "w55",
+    "text": "no",
+    "start": 25.2,
+    "end": 25.44
+  },
+  {
+    "id": "w56",
+    "text": "encuentro",
+    "start": 25.44,
+    "end": 26.08
+  },
+  {
+    "id": "w57",
+    "text": "ni",
+    "start": 26.08,
+    "end": 26.32
+  },
+  {
+    "id": "w58",
+    "text": "las",
+    "start": 26.32,
+    "end": 26.48
+  },
+  {
+    "id": "w59",
+    "text": "llaves.",
+    "start": 26.48,
+    "end": 27.12
+  },
+  {
+    "id": "w60",
+    "text": "Entonces,",
+    "start": 27.12,
+    "end": 27.84
+  },
+  {
+    "id": "w61",
+    "text": "jefe,",
+    "start": 27.84,
+    "end": 28.4
+  },
+  {
+    "id": "w62",
+    "text": "¿esta",
+    "start": 28.4,
+    "end": 28.64
+  },
+  {
+    "id": "w63",
+    "text": "noche",
+    "start": 28.72,
+    "end": 29.04
+  },
+  {
+    "id": "w64",
+    "text": "vas",
+    "start": 29.12,
+    "end": 29.36
+  },
+  {
+    "id": "w65",
+    "text": "a",
+    "start": 29.36,
+    "end": 29.52
+  },
+  {
+    "id": "w66",
+    "text": "dormir?",
+    "start": 29.52,
+    "end": 30.4
+  }
+]

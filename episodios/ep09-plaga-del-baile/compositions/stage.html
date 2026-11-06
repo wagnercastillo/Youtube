@@ -1,0 +1,213 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: #1A1033; font-family: "Archivo Black", sans-serif; }
+    #px { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; image-rendering: pixelated; }
+    .ban { position: absolute; left: 0; top: 330px; width: 1080px; text-align: center; clip-path: inset(-30px 1200px -30px -30px); }
+    .ban span { display: inline-block; max-width: 980px; font-size: 50px; line-height: 1.1; padding: 14px 26px 8px; background: #1B1B2F; color: #FFE14D;
+      border: 8px solid #FFFFFF; box-shadow: 8px 8px 0 #000000; letter-spacing: 1px; }
+    #b4b span, #b5 span { color: #7CFFB0; }
+    #b8 span { color: #FF6B8B; }
+    #hook { position: absolute; left: 0; top: 560px; width: 1080px; }
+    .tags { width: 1080px; text-align: center; margin-bottom: 26px; }
+    .tags span { display: inline-block; white-space: nowrap; font-size: 70px; line-height: 1; padding: 16px 30px 10px; color: #1B1B2F;
+      border: 8px solid #1B1B2F; box-shadow: 8px 8px 0 #000000; }
+    #h1 span { background: #FFFFFF; } #h2 span { background: #FFE14D; }
+    #h2 { clip-path: inset(-30px 1200px -30px -30px); }
+    #cont { position: absolute; left: 0; top: 1150px; width: 1080px; text-align: center; opacity: 0; }
+    #cont span { display: inline-block; font-size: 64px; padding: 14px 30px 8px; background: #000000; color: #FFFFFF; border: 8px solid #FFE14D; }
+  </style>
+  <div id="root" data-composition-id="stage" data-width="1080" data-height="1920">
+    <canvas id="px" width="180" height="320"></canvas>
+    <div id="b1" class="ban"><span>NIVEL 1 · ESTRASBURGO 1518</span></div>
+    <div id="b2" class="ban"><span>JUGADORA 1: FRAU TROFFEA</span></div>
+    <div id="b4" class="ban"><span>DIAGNÓSTICO: «SANGRE CALIENTE»</span></div>
+    <div id="b4b" class="ban"><span>CURA: ¡BAILAR MÁS! 🎶</span></div>
+    <div id="b5" class="ban"><span>POWER-UP: MÚSICOS + ESCENARIO</span></div>
+    <div id="b7" class="ban"><span>NIVEL FINAL: SANTUARIO DE SAN VITO</span></div>
+    <div id="b8" class="ban"><span>CAUSA: ??? · NADIE LO SABE</span></div>
+    <div id="hook">
+      <div id="h1" class="tags"><span>¿Y SI NO PUDIERAS</span></div>
+      <div id="h2" class="tags"><span>DEJAR DE BAILAR?</span></div>
+    </div>
+    <div id="cont"><span>¿CONTINUAR? ▶ SÍ</span></div>
+  </div>
+  <script>
+    const C = {"l1": 3.539, "troffea": 7.715, "bailar1": 10.359, "l2": 11.075, "dias": 15.168, "l3": 15.932, "decenas": 16.886, "agosto": 17.955, "cuatro": 20.389, "l4": 22.426, "sangre": 24.986, "mas": 28.726, "l5": 29.434, "musicos": 32.234, "escenario": 34.454, "l6": 35.334, "agotados": 37.589, "desmayados": 38.496, "l7": 39.756, "santuario": 41.26, "septiembre": 43.884, "apago": 45.543, "l8": 46.136, "nadie": 48.356, "end": 51.23};
+    const cv = document.getElementById("px"), g = cv.getContext("2d");
+    g.imageSmoothingEnabled = false;
+    const clamp = (k) => Math.min(Math.max(k, 0), 1);
+    const smooth = (k) => { k = clamp(k); return k * k * (3 - 2 * k); };
+    const lerp = (a, b, k) => a + (b - a) * k;
+    const since = (t, a) => t - a;
+    const BEAT = 0.5;  // 120 bpm
+    function track(keys, t) {
+      let i = 0;
+      while (i + 1 < keys.length && t >= keys[i + 1][0]) i++;
+      if (i === 0) return keys[0].slice(2);
+      const cur = keys[i], prev = keys[i - 1], k = smooth((t - cur[0]) / cur[1]);
+      return cur.slice(2).map((v, j) => lerp(prev[j + 2], v, k));
+    }
+    function R(x, y, w, h, c) { g.fillStyle = c; g.fillRect(Math.round(x), Math.round(y), w, h); }
+
+    // tiny 3×5 pixel font for the HUD
+    const FONT = { "0": "111101101101111", "1": "010110010010111", "2": "111001111100111", "3": "111001111001111", "4": "101101111001001",
+      "5": "111100111001111", "6": "111100111101111", "7": "111001001001001", "8": "111101111101111", "9": "111101111001111",
+      "A": "010101111101101", "B": "110101110101110", "C": "011100100100011", "D": "110101101101110", "E": "111100110100111",
+      "F": "111100110100100", "G": "011100101101011", "I": "111010010010111", "L": "100100100100111", "N": "101111111111101",
+      "O": "010101101101010", "P": "110101110100100", "R": "110101110101101", "S": "011100010001110", "T": "111010010010010",
+      "V": "101101101101010", "Y": "101101010010010", "M": "101111111101101", "U": "101101101101111", "K": "101101110101101",
+      "!": "010010010000010", ":": "000010000010000", " ": "000000000000000", "?": "110001010000010", "X": "101101010101101", "H": "101101111101101" };
+    function text(s, x, y, c, sc) {
+      sc = sc || 1;
+      for (const ch of s) { const f = FONT[ch] || FONT[" "]; for (let i = 0; i < 15; i++) if (f[i] === "1") R(x + (i % 3) * sc, y + Math.floor(i / 3) * sc, sc, sc, c); x += 4 * sc; }
+    }
+
+    // a dancer: rectangles, two poses keyed to the beat; tired = slumped, out = lying down
+    function dancer(x, y, col, ph, tired, out) {
+      const skin = "#F2C9A0", ink = "#1B1B2F";
+      if (out) { R(x - 5, y - 3, 10, 3, col); R(x + 5, y - 3, 3, 3, skin); R(x - 7, y - 2, 2, 2, ink); return; }
+      const up = ph % 2 === 0, b = tired ? 1 : (up ? -1 : 0);
+      R(x - 2, y - 13 + b, 4, 4, skin); R(x - 2, y - 14 + b, 4, 1, "#6D4C2F");
+      R(x - 3, y - 9 + b, 6, 6, col);
+      if (tired) { R(x - 4, y - 7, 1, 4, skin); R(x + 3, y - 7, 1, 4, skin); }
+      else if (up) { R(x - 4, y - 13 + b, 1, 4, skin); R(x + 3, y - 13 + b, 1, 4, skin); }
+      else { R(x - 5, y - 8, 2, 1, skin); R(x + 3, y - 10, 2, 1, skin); }
+      if (up && !tired) { R(x - 3, y - 3, 1, 3, ink); R(x + 2, y - 4, 2, 2, ink); } else { R(x - 2, y - 3, 1, 3, ink); R(x + 1, y - 3, 1, 3, ink); }
+    }
+
+    const COLS = ["#E63946", "#2C7FB8", "#2BB673", "#F2B33D", "#9B5DE5", "#FF6B8B", "#00BBF9", "#F15BB5"];
+    // camera x (world 0..420) and zoom
+    const CAM = [[0, 1, 30, 1.3], [C.l1, 0.8, 0, 1], [C.troffea, 0.6, 0, 2.4], [C.l3, 0.8, 60, 1], [C.l5, 0.9, 200, 1], [C.l7, 0.9, 240, 1], [C.l8, 0.8, 120, 1]];
+
+    function count(t) {
+      if (t < C.bailar1) return 0;
+      if (t < C.decenas) return 1;
+      if (t < C.agosto) return Math.round(lerp(1, 40, smooth(since(t, C.decenas) / 1.2)));
+      if (t < C.santuario) return Math.round(lerp(40, 400, smooth(since(t, C.cuatro) / 1.0)));
+      return Math.round(lerp(400, 0, smooth(since(t, C.apago) / 1.2)));
+    }
+
+    function world(t, cx, z) {
+      const beat = Math.floor(t / BEAT), ph = beat;
+      const dancing = t >= C.bailar1 && t < C.apago;
+      const tired = t >= C.agotados && t < C.santuario;
+      g.save();
+      g.translate(90, 230); g.scale(z, z); g.translate(-90 - cx, -230);
+      // sky + cathedral spire (parallax)
+      R(cx - 60, -40, 400, 300, "#2B1E5C");
+      for (let i = 0; i < 30; i++) R(((i * 37) % 400) + cx * 0.5 - 40, 50 + (i * 23) % 60, 1, 1, "#FFE14D");
+      R(cx * 0.6 + 120, 70, 14, 160, "#4A3B7A"); R(cx * 0.6 + 124, 40, 6, 30, "#4A3B7A"); R(cx * 0.6 + 126, 30, 2, 10, "#4A3B7A");
+      // half-timbered houses
+      for (let i = -1; i < 12; i++) {
+        const hx = i * 44, hh = 70 + (i % 3) * 14;
+        R(hx, 230 - hh, 40, hh, i % 2 ? "#F3E6C4" : "#E9D3A6");
+        R(hx, 230 - hh, 40, 3, "#5A3A22"); R(hx, 230 - hh / 2, 40, 2, "#5A3A22"); R(hx + 19, 230 - hh, 2, hh, "#5A3A22");
+        for (let k = 0; k < 6; k++) R(hx + 4 + k * 6, 230 - hh - 6 + Math.abs(3 - k) * 2, 6, 6 - Math.abs(3 - k) * 2, "#B5452A");
+        R(hx + 6, 230 - hh + 10, 8, 8, (t > C.l4 && t < C.l7 && (i + beat) % 3 === 0) ? "#FFE14D" : "#2C3E66");
+        R(hx + 26, 230 - hh + 10, 8, 8, "#2C3E66");
+      }
+      // cobblestones
+      R(cx - 60, 230, 400, 90, "#6B6478");
+      for (let i = 0; i < 80; i++) R((i * 13) % 400 + Math.floor(cx / 400) * 400 - 40, 234 + (i * 7) % 20, 5, 2, "#7D7590");
+      // stage → chapel of St Vitus (the stage morphs into the chapel)
+      const st = smooth(since(t, C.escenario) / 0.5), ch = smooth(since(t, C.santuario) / 0.6);
+      if (st > 0) {
+        const sx = 250, sw = 70;
+        if (ch < 1) { R(sx, 230 - 14 * st, sw, 14 * st, "#8A5A2B"); R(sx, 230 - 14 * st, sw, 2, "#5A3A22"); }
+        if (ch > 0) {
+          const hh = 60 * ch;
+          R(sx + 5, 230 - hh, sw - 10, hh, "#D9D2C3");
+          for (let r = 0; r < 14; r++) R(sx + 2 + r * 2.2, 230 - hh - r * 2 * ch, sw - 4 - r * 4.4, 2, "#8C3B2E");
+          R(sx + sw / 2 - 1, 230 - hh - 34 * ch, 2, 10, "#FFE14D"); R(sx + sw / 2 - 4, 230 - hh - 31 * ch, 8, 2, "#FFE14D");
+          R(sx + sw / 2 - 6, 230 - 22 * ch, 12, 22 * ch, "#5A3A22");
+        }
+        if (ch < 0.5 && t >= C.musicos) for (let m = 0; m < 3; m++) {  // musicians on the stage
+          const mx = sx + 14 + m * 20, my = 230 - 14;
+          R(mx - 2, my - 12, 4, 4, "#F2C9A0"); R(mx - 3, my - 8, 6, 8, ["#7B1E1E", "#1E4D7B", "#2E6B2E"][m]);
+          if (m === 0) R(mx + 3, my - 6 + (beat % 2), 4, 4, "#C9A13B");
+          if (m === 1) R(mx + 3, my - 10, 6, 1, "#E9E2CF");
+          if (m === 2) R(mx - 7, my - 6, 4, 5, "#8A5A2B");
+        }
+      }
+      // dancers
+      const n = count(t), shown = Math.max(Math.min(n, 44), t >= C.l1 ? 1 : 0);
+      for (let k = 0; k < shown; k++) {
+        const row = Math.floor(k / 11), col = k % 11;
+        const x = k === 0 ? 90 : 40 + col * 22 + (row % 2) * 11 + row * 6, y = 238 + row * 6;
+        const toChapel = smooth(since(t, C.santuario) / 1.5);
+        const fx = lerp(x, 265 + (k % 6) * 8, toChapel * (k < 18 ? 1 : 0));
+        if (k >= 18 && toChapel > 0.5) continue;
+        const out = tired && t >= C.desmayados && k % 3 === 1;
+        dancer(fx, y, COLS[k % COLS.length], dancing ? ph + (k % 2) : 1, tired || !dancing, out);
+      }
+      g.restore();
+    }
+
+    function hud(t) {
+      R(0, 0, 180, 30, "#000000"); R(0, 30, 180, 1, "#FFFFFF");
+      text("BAILARINES:", 4, 4, "#FFFFFF"); text(String(count(t)), 50, 4, "#FFE14D");
+      let e = 1;
+      if (t >= C.l6) e = lerp(1, 0.08, smooth(since(t, C.l6) / 2.2));
+      if (t >= C.santuario) e = lerp(0.08, 1, smooth(since(t, C.santuario) / 1.5));
+      text("ENERGIA", 4, 14, "#FFFFFF");
+      R(34, 14, 60, 6, "#3A3A44"); R(34, 14, Math.round(58 * e), 6, e < 0.3 ? "#E63946" : "#2BB673");
+      text("1518", 150, 4, "#7CFFB0");
+      const lvl = t < C.l3 ? "1" : t < C.l5 ? "2" : t < C.l7 ? "3" : "X";
+      text("NIVEL " + lvl, 130, 14, "#FFFFFF");
+    }
+
+    // rhythm arrows rise to the target row while people dance
+    const DIRS = ["#FF6B8B", "#00BBF9", "#7CFFB0", "#FFE14D"];
+    function arrow(x, y, d, c) {
+      const pts = [[0, -3], [-3, 0], [3, 0], [-1, 0], [1, 0]];
+      if (d === 0) { R(x - 1, y - 3, 3, 7, c); R(x - 3, y - 1, 7, 2, c); R(x - 2, y - 2, 5, 1, c); }
+      if (d === 1) { R(x - 1, y - 3, 3, 7, c); R(x - 3, y + 1, 7, 2, c); R(x - 2, y + 3, 5, 1, c); }
+      if (d === 2) { R(x - 3, y - 1, 7, 3, c); R(x - 3, y - 3, 2, 7, c); }
+      if (d === 3) { R(x - 3, y - 1, 7, 3, c); R(x + 2, y - 3, 2, 7, c); }
+    }
+    function rhythm(t) {
+      if (t < C.bailar1 || t >= C.apago) return;
+      const ty = 44;
+      for (let d = 0; d < 4; d++) { R(52 + d * 22 - 5, ty - 5, 11, 11, "#1B1B2F"); arrow(52 + d * 22, ty, d, "#555577"); }
+      const b0 = Math.floor(t / BEAT);
+      for (let k = b0 - 1; k < b0 + 6; k++) {
+        const d = (k * 7 + 3) % 4, y = ty + (k * BEAT - t) * 60;
+        if (y < ty - 2 || y > 220) continue;
+        arrow(52 + d * 22, y, d, DIRS[d]);
+      }
+      const hit = t - b0 * BEAT;
+      if (hit < 0.22) { const words = t > C.l6 && t < C.santuario ? "MISS" : (b0 % 3 ? "PERFECT!" : "GREAT!"); text(words, 70, 56, t > C.l6 && t < C.santuario ? "#E63946" : "#FFE14D"); }
+    }
+
+    function draw(t) {
+      g.clearRect(0, 0, 180, 320);
+      const [cx, z] = track(CAM, t);
+      world(t, cx, z);
+      rhythm(t);
+      hud(t);
+      if (t >= C.nadie) { const q = Math.floor(t * 6) % 2; text("???", 66, 120, q ? "#FF6B8B" : "#FFE14D", 4); }
+    }
+    draw(0);
+    window.addEventListener("hf-seek", (e) => draw(e.detail.time));
+
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#h2", { clipPath: "inset(-30px 1200px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px -30px)", duration: 0.3, ease: "power3.out" }, 0.05);
+    tl.fromTo("#hook", { clipPath: "inset(-30px -30px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px 1200px)", duration: 0.3, ease: "power3.in", immediateRender: false }, 3.339);
+    tl.fromTo("#b1", { clipPath: "inset(-30px 1200px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px -30px)", duration: 0.32, ease: "power3.out" }, 3.639);
+    tl.fromTo("#b1", { clipPath: "inset(-30px -30px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px 1200px)", duration: 0.22, ease: "power3.in", immediateRender: false }, 10.975);
+    tl.fromTo("#b2", { clipPath: "inset(-30px 1200px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px -30px)", duration: 0.32, ease: "power3.out" }, 7.715);
+    tl.fromTo("#b2", { clipPath: "inset(-30px -30px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px 1200px)", duration: 0.22, ease: "power3.in", immediateRender: false }, 15.832);
+    tl.fromTo("#b4", { clipPath: "inset(-30px 1200px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px -30px)", duration: 0.32, ease: "power3.out" }, 24.986);
+    tl.fromTo("#b4", { clipPath: "inset(-30px -30px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px 1200px)", duration: 0.22, ease: "power3.in", immediateRender: false }, 28.626);
+    tl.fromTo("#b4b", { clipPath: "inset(-30px 1200px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px -30px)", duration: 0.32, ease: "power3.out" }, 28.726);
+    tl.fromTo("#b4b", { clipPath: "inset(-30px -30px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px 1200px)", duration: 0.22, ease: "power3.in", immediateRender: false }, 30.034);
+    tl.fromTo("#b5", { clipPath: "inset(-30px 1200px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px -30px)", duration: 0.32, ease: "power3.out" }, 32.234);
+    tl.fromTo("#b5", { clipPath: "inset(-30px -30px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px 1200px)", duration: 0.22, ease: "power3.in", immediateRender: false }, 35.334);
+    tl.fromTo("#b7", { clipPath: "inset(-30px 1200px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px -30px)", duration: 0.32, ease: "power3.out" }, 41.26);
+    tl.fromTo("#b7", { clipPath: "inset(-30px -30px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px 1200px)", duration: 0.22, ease: "power3.in", immediateRender: false }, 46.136);
+    tl.fromTo("#b8", { clipPath: "inset(-30px 1200px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px -30px)", duration: 0.32, ease: "power3.out" }, 48.356);
+    tl.fromTo("#b8", { clipPath: "inset(-30px -30px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px 1200px)", duration: 0.22, ease: "power3.in", immediateRender: false }, 51.08);
+    tl.fromTo("#cont", { opacity: 0, scale: 2 }, { opacity: 1, scale: 1, duration: 0.25, ease: "back.out(2)" }, 48.756);
+    window.__timelines["stage"] = tl;
+  </script>
+</template>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1920px; overflow: hidden; font-family: "Archivo Black", "Arial Black", sans-serif; background: #2B1E5C; position: relative; }
+  #bg { position: absolute; inset: 0; width: 1080px; height: 1920px; image-rendering: pixelated; }
+  .hud { position: absolute; left: 0; top: 0; width: 1080px; height: 190px; background: #000; border-bottom: 8px solid #FFF; color: #FFF;
+    font-family: "Courier New", monospace; font-weight: 900; font-size: 64px; padding: 30px 40px; line-height: 1.1; }
+  .hud b { color: #FFE14D; } .bar { display: inline-block; width: 360px; height: 44px; background: #3A3A44; vertical-align: middle; }
+  .bar i { display: block; width: 8%; height: 100%; background: #E63946; }
+  .t1 { position: absolute; left: 0; top: 330px; width: 1080px; text-align: center; }
+  .t1 span { display: inline-block; white-space: nowrap; font-size: 100px; line-height: 1; background: #FFE14D; color: #1B1B2F; padding: 22px 36px 10px; border: 12px solid #1B1B2F; box-shadow: 14px 14px 0 #000; transform: rotate(-3deg); }
+  .t2 { position: absolute; left: 0; top: 560px; width: 1080px; text-align: center; font-size: 96px; line-height: 1.05; color: #FFF; -webkit-text-stroke: 18px #1B1B2F; paint-order: stroke fill; }
+  .over { position: absolute; left: 0; top: 1560px; width: 1080px; text-align: center; }
+  .over span { display: inline-block; font-size: 84px; background: #000; color: #FF6B8B; border: 10px solid #FFE14D; padding: 16px 34px 8px; }
+</style></head>
+<body>
+  <canvas id="bg" width="180" height="320"></canvas>
+  <div class="hud">BAILARINES: <b>400</b><br>ENERGÍA <span class="bar"><i></i></span></div>
+  <div class="t1"><span>NO PODÍAN PARAR</span></div>
+  <div class="t2">BAILARON<br>SEMANAS 😵‍💫<br>EN 1518</div>
+  <div class="over"><span>GAME OVER?</span></div>
+<script>
+  const g = document.getElementById("bg").getContext("2d");
+  const R = (x, y, w, h, c) => { g.fillStyle = c; g.fillRect(x, y, w, h); };
+  R(0, 0, 180, 320, "#2B1E5C");
+  for (let i = -1; i < 6; i++) { const hx = i * 44, hh = 70 + (i % 3) * 14; R(hx, 230 - hh, 40, hh, i % 2 ? "#F3E6C4" : "#E9D3A6"); R(hx, 230 - hh / 2, 40, 2, "#5A3A22"); R(hx + 19, 230 - hh, 2, hh, "#5A3A22"); R(hx + 6, 230 - hh + 10, 8, 8, "#FFE14D"); }
+  R(0, 230, 180, 90, "#6B6478");
+  const cols = ["#E63946", "#2C7FB8", "#2BB673", "#F2B33D", "#9B5DE5", "#FF6B8B"];
+  for (let k = 0; k < 24; k++) { const x = 10 + (k % 8) * 22 + (Math.floor(k / 8) % 2) * 11, y = 252 + Math.floor(k / 8) * 14, up = k % 2;
+    R(x - 3, y - 18, 6, 6, "#F2C9A0"); R(x - 4, y - 12, 8, 9, cols[k % 6]);
+    if (up) { R(x - 6, y - 19, 2, 7, "#F2C9A0"); R(x + 4, y - 19, 2, 7, "#F2C9A0"); } else { R(x - 8, y - 10, 4, 2, "#F2C9A0"); R(x + 4, y - 13, 4, 2, "#F2C9A0"); }
+    R(x - 3, y - 3, 2, 4, "#1B1B2F"); R(x + 1, y - 3 - up, 2, 4, "#1B1B2F"); }
+</script>
+</body></html>

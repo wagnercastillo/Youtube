@@ -1,0 +1,776 @@
+{
+  "ok": true,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 11,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "duplicate_audio_track",
+        "severity": "warning",
+        "message": "Multiple audible <audio>/<video> elements on track 4 overlap (assets/sfx/impact-bass-1.mp3 at 0-31.5s, assets/sfx/pop.mp3 at 2.53-31.5s). This causes layered audio playback.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Use non-overlapping time windows or different track indices."
+      },
+      {
+        "code": "duplicate_audio_track",
+        "severity": "warning",
+        "message": "Multiple audible <audio>/<video> elements on track 4 overlap (assets/sfx/impact-bass-1.mp3 at 0-31.5s, assets/sfx/pop.mp3 at 13.8-31.5s). This causes layered audio playback.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Use non-overlapping time windows or different track indices."
+      },
+      {
+        "code": "duplicate_audio_track",
+        "severity": "warning",
+        "message": "Multiple audible <audio>/<video> elements on track 4 overlap (assets/sfx/impact-bass-1.mp3 at 0-31.5s, assets/sfx/ping.mp3 at 22.86-31.5s). This causes layered audio playback.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Use non-overlapping time windows or different track indices."
+      },
+      {
+        "code": "duplicate_audio_track",
+        "severity": "warning",
+        "message": "Multiple audible <audio>/<video> elements on track 4 overlap (assets/sfx/impact-bass-1.mp3 at 0-31.5s, assets/sfx/sparkle.mp3 at 27.85-31.5s). This causes layered audio playback.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Use non-overlapping time windows or different track indices."
+      },
+      {
+        "code": "duplicate_audio_track",
+        "severity": "warning",
+        "message": "Multiple audible <audio>/<video> elements on track 4 overlap (assets/sfx/pop.mp3 at 2.53-31.5s, assets/sfx/pop.mp3 at 13.8-31.5s). This causes layered audio playback.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Use non-overlapping time windows or different track indices."
+      },
+      {
+        "code": "duplicate_audio_track",
+        "severity": "warning",
+        "message": "Multiple audible <audio>/<video> elements on track 4 overlap (assets/sfx/pop.mp3 at 2.53-31.5s, assets/sfx/ping.mp3 at 22.86-31.5s). This causes layered audio playback.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Use non-overlapping time windows or different track indices."
+      },
+      {
+        "code": "duplicate_audio_track",
+        "severity": "warning",
+        "message": "Multiple audible <audio>/<video> elements on track 4 overlap (assets/sfx/pop.mp3 at 2.53-31.5s, assets/sfx/sparkle.mp3 at 27.85-31.5s). This causes layered audio playback.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Use non-overlapping time windows or different track indices."
+      },
+      {
+        "code": "duplicate_audio_track",
+        "severity": "warning",
+        "message": "Multiple audible <audio>/<video> elements on track 4 overlap (assets/sfx/pop.mp3 at 13.8-31.5s, assets/sfx/ping.mp3 at 22.86-31.5s). This causes layered audio playback.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Use non-overlapping time windows or different track indices."
+      },
+      {
+        "code": "duplicate_audio_track",
+        "severity": "warning",
+        "message": "Multiple audible <audio>/<video> elements on track 4 overlap (assets/sfx/pop.mp3 at 13.8-31.5s, assets/sfx/sparkle.mp3 at 27.85-31.5s). This causes layered audio playback.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Use non-overlapping time windows or different track indices."
+      },
+      {
+        "code": "duplicate_audio_track",
+        "severity": "warning",
+        "message": "Multiple audible <audio>/<video> elements on track 4 overlap (assets/sfx/ping.mp3 at 22.86-31.5s, assets/sfx/sparkle.mp3 at 27.85-31.5s). This causes layered audio playback.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Use non-overlapping time windows or different track indices."
+      },
+      {
+        "code": "composition_file_too_large",
+        "severity": "warning",
+        "message": "This HTML composition file has 390 lines. Smaller sub-compositions are easier to read, iterate on, and diff.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "C:\\Users\\Cristhoper\\Documents\\GitHub\\YouTube\\episodios\\ep01-cerebro-sin-dormir\\compositions\\stage.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Split this sub-composition further into smaller .html files, then mount them from the parent with data-composition-src so each file stays small enough to inspect, revise, and validate independently."
+      }
+    ],
+    "filesScanned": 3
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 8,
+    "infoCount": 2,
+    "findings": [
+      {
+        "code": "container_overflow",
+        "severity": "warning",
+        "time": 1.75,
+        "selector": "#st-world > svg:nth-of-type(1) > g:nth-of-type(1)",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -40,
+          "top": 239.77,
+          "right": 1120,
+          "bottom": 1057.92,
+          "width": 1160,
+          "height": 818.16
+        },
+        "containerSelector": "#st-world > svg:nth-of-type(1)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 40,
+          "right": 40
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/stage.html",
+        "bbox": {
+          "x": -40,
+          "y": 239.77,
+          "width": 1160,
+          "height": 818.16
+        },
+        "firstSeen": 1.75,
+        "lastSeen": 29.75,
+        "occurrences": 9,
+        "heldMs": 0,
+        "times": [
+          1.75,
+          5.25,
+          8.75,
+          12.25,
+          15.75,
+          19.25,
+          22.75,
+          26.25,
+          29.75
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "warning",
+        "time": 1.75,
+        "selector": "#st-world > svg:nth-of-type(1) > rect:nth-of-type(1)",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -20,
+          "top": 1150,
+          "right": 1100,
+          "bottom": 1950,
+          "width": 1120,
+          "height": 800
+        },
+        "containerSelector": "#st-world > svg:nth-of-type(1)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 20,
+          "right": 20,
+          "bottom": 30
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/stage.html",
+        "bbox": {
+          "x": -20,
+          "y": 1150,
+          "width": 1120,
+          "height": 800
+        },
+        "firstSeen": 1.75,
+        "lastSeen": 29.75,
+        "occurrences": 9,
+        "heldMs": 0,
+        "times": [
+          1.75,
+          5.25,
+          8.75,
+          12.25,
+          15.75,
+          19.25,
+          22.75,
+          26.25,
+          29.75
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "warning",
+        "time": 1.75,
+        "selector": "#st-world > svg:nth-of-type(2) > use:nth-of-type(4)",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 944.27,
+          "top": 1033.82,
+          "right": 1085.73,
+          "bottom": 1187.33,
+          "width": 141.46,
+          "height": 153.51
+        },
+        "containerSelector": "#st-world > svg:nth-of-type(2)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "right": 5.73
+        },
+        "dataAttributes": {
+          "data-hf-svg-reference-aliases": "[{\"name\":\"href\",\"localName\":\"href\",\"namespaceURI\":null,\"before\":\"#st-bag\",\"after\":\"#st-bag\"}]"
+        },
+        "sourceFile": "compositions/stage.html",
+        "bbox": {
+          "x": 944.27,
+          "y": 1033.82,
+          "width": 141.46,
+          "height": 153.51
+        },
+        "firstSeen": 1.75,
+        "lastSeen": 29.75,
+        "occurrences": 9,
+        "heldMs": 0,
+        "times": [
+          1.75,
+          5.25,
+          8.75,
+          12.25,
+          15.75,
+          19.25,
+          22.75,
+          26.25,
+          29.75
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "warning",
+        "time": 1.75,
+        "selector": "#st-world > svg:nth-of-type(3) > use:nth-of-type(1)",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": -6.79,
+          "top": 1168.91,
+          "right": 186.79,
+          "bottom": 1378.98,
+          "width": 193.57,
+          "height": 210.07
+        },
+        "containerSelector": "#st-world > svg:nth-of-type(3)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "left": 6.79
+        },
+        "dataAttributes": {
+          "data-hf-svg-reference-aliases": "[{\"name\":\"href\",\"localName\":\"href\",\"namespaceURI\":null,\"before\":\"#st-bag\",\"after\":\"#st-bag\"}]"
+        },
+        "sourceFile": "compositions/stage.html",
+        "bbox": {
+          "x": -6.79,
+          "y": 1168.91,
+          "width": 193.57,
+          "height": 210.07
+        },
+        "firstSeen": 1.75,
+        "lastSeen": 29.75,
+        "occurrences": 9,
+        "heldMs": 0,
+        "times": [
+          1.75,
+          5.25,
+          8.75,
+          12.25,
+          15.75,
+          19.25,
+          22.75,
+          26.25,
+          29.75
+        ]
+      },
+      {
+        "code": "container_overflow",
+        "severity": "warning",
+        "time": 19.25,
+        "selector": "#st-hdr",
+        "message": "Element extends outside a clipping layout container.",
+        "rect": {
+          "left": 0,
+          "top": -520,
+          "right": 1080,
+          "bottom": -50,
+          "width": 1080,
+          "height": 470
+        },
+        "containerSelector": "#stage > div:nth-of-type(1)",
+        "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "top": 520
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/stage.html",
+        "bbox": {
+          "x": 0,
+          "y": -520,
+          "width": 1080,
+          "height": 470
+        },
+        "firstSeen": 19.25,
+        "lastSeen": 22.75,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          19.25,
+          22.75
+        ]
+      },
+      {
+        "code": "rotation_pivot_drift",
+        "severity": "warning",
+        "time": 29.75,
+        "selector": "#n-armL",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 94.27,
+          "y": 877.02,
+          "width": 101.9,
+          "height": 142.98
+        },
+        "rect": {
+          "left": 94.27,
+          "top": 877.02,
+          "right": 196.17000000000002,
+          "bottom": 1020,
+          "width": 101.9,
+          "height": 142.98
+        },
+        "message": "Rotating element's bounding-box center drifts 369px across rotation — it is not spinning about its own center (check transformOrigin/svgOrigin).",
+        "fixHint": "The bounding-box center should stay fixed while the element spins; check its transformOrigin/svgOrigin so rotation pivots about the element's own center rather than a point in a coordinate space it was resized out of.",
+        "firstSeen": 29.75,
+        "lastSeen": 29.75,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          29.75
+        ]
+      },
+      {
+        "code": "rotation_pivot_drift",
+        "severity": "warning",
+        "time": 29.75,
+        "selector": "#n-armR",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 464.03000000000003,
+          "y": 877.5450000000001,
+          "width": 101.66,
+          "height": 142.81
+        },
+        "rect": {
+          "left": 464.03000000000003,
+          "top": 877.5450000000001,
+          "right": 565.69,
+          "bottom": 1020.355,
+          "width": 101.66,
+          "height": 142.81
+        },
+        "message": "Rotating element's bounding-box center drifts 172px across rotation — it is not spinning about its own center (check transformOrigin/svgOrigin).",
+        "fixHint": "The bounding-box center should stay fixed while the element spins; check its transformOrigin/svgOrigin so rotation pivots about the element's own center rather than a point in a coordinate space it was resized out of.",
+        "firstSeen": 29.75,
+        "lastSeen": 29.75,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          29.75
+        ]
+      },
+      {
+        "code": "off_pivot_rotation",
+        "severity": "warning",
+        "time": 29.75,
+        "selector": "#g-broom > path:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 1002,
+          "y": 832,
+          "width": 8,
+          "height": 282
+        },
+        "rect": {
+          "left": 1002,
+          "top": 832,
+          "right": 1010,
+          "bottom": 1114,
+          "width": 8,
+          "height": 282
+        },
+        "message": "Gauge/dial pointer rotates about a point 1735px from the dial hub — its center-of-rotation is off the hub, so it points wrong or overshoots the track (check the rotating group's pivot: translate to the hub before rotate, or set svgOrigin/transform-origin to the hub).",
+        "fixHint": "The pointer's center-of-rotation must coincide with the dial hub. Rotate the group about the hub (e.g. transform-origin/svgOrigin set to the hub center, or translate the group so its rotation pivot lands on the hub) rather than about the element's own bbox center.",
+        "firstSeen": 29.75,
+        "lastSeen": 29.75,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          29.75
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 19.25,
+        "selector": "#st-hdr1 > span:nth-of-type(1)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": 191.52,
+          "top": -325,
+          "right": 888.48,
+          "bottom": -196,
+          "width": 696.96,
+          "height": 129
+        },
+        "containerSelector": "#root",
+        "text": "TU CEREBRO",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "top": 325
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/stage.html",
+        "bbox": {
+          "x": 191.52,
+          "y": -325,
+          "width": 696.96,
+          "height": 129
+        },
+        "firstSeen": 19.25,
+        "lastSeen": 22.75,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          19.25,
+          22.75
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 19.25,
+        "selector": "#st-hdr2 > span:nth-of-type(1)",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": 214.7,
+          "top": -193,
+          "right": 865.3,
+          "bottom": -64,
+          "width": 650.6,
+          "height": 129
+        },
+        "containerSelector": "#root",
+        "text": "SIN DORMIR",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1080,
+          "bottom": 1920,
+          "width": 1080,
+          "height": 1920
+        },
+        "overflow": {
+          "top": 193
+        },
+        "dataAttributes": {},
+        "sourceFile": "compositions/stage.html",
+        "bbox": {
+          "x": 214.7,
+          "y": -193,
+          "width": 650.6,
+          "height": 129
+        },
+        "firstSeen": 19.25,
+        "lastSeen": 22.75,
+        "occurrences": 2,
+        "heldMs": 0,
+        "times": [
+          19.25,
+          22.75
+        ]
+      }
+    ],
+    "duration": 31.5,
+    "samples": [
+      1.75,
+      5.25,
+      8.75,
+      12.25,
+      15.75,
+      19.25,
+      22.75,
+      26.25,
+      29.75
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 10,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 2,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.1:1; WCAG AA requires 3:1.",
+        "text": "?",
+        "fg": "rgb(255,210,63)",
+        "bg": "rgb(255,214,224)",
+        "ratio": 1.1,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(152,125,38)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(1) > svg > g > g > g > g:nth-of-type(11) > text:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/stage.html",
+        "bbox": {
+          "x": 66.43212127685547,
+          "y": 552.25341796875,
+          "width": 77.37198638916016,
+          "height": 144.5177001953125
+        },
+        "time": 8.75,
+        "times": [
+          8.75
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 1.1:1; WCAG AA requires 3:1.",
+        "text": "?",
+        "fg": "rgb(255,210,63)",
+        "bg": "rgb(255,214,224)",
+        "ratio": 1.1,
+        "requiredRatio": 3,
+        "suggestedColor": "rgb(152,125,38)",
+        "large": true,
+        "selector": "div > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(1) > svg > g > g > g > g:nth-of-type(11) > text:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/stage.html",
+        "bbox": {
+          "x": 417.5828857421875,
+          "y": 489.4661560058594,
+          "width": 77.37200927734375,
+          "height": 144.51773071289062
+        },
+        "time": 8.75,
+        "times": [
+          8.75
+        ]
+      }
+    ],
+    "enabled": true,
+    "samples": [
+      1.75,
+      8.75,
+      15.75,
+      22.75,
+      29.75
+    ],
+    "checked": 24,
+    "passed": 22
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "step": 0.125,
+    "samples": 252
+  },
+  "audio": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  },
+  "saved": {
+    "id": "4f0abdd5-1579-42e5-99d6-ce3162314806",
+    "revision": "19f8478b-4653-4bb7-999e-355f68f57a69",
+    "report": "C:\\Users\\Cristhoper\\Documents\\GitHub\\YouTube\\episodios\\ep01-cerebro-sin-dormir\\.hyperframes\\artifacts\\checks\\4f0abdd5-1579-42e5-99d6-ce3162314806.json",
+    "attribution": "recorded-revision"
+  },
+  "_meta": {
+    "version": "0.9.17",
+    "latestVersion": "0.9.17",
+    "updateAvailable": false,
+    "checkedAt": "2026-11-05T21:01:50.141Z"
+  }
+}

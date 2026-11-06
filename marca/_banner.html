@@ -1,0 +1,70 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Nunito:wght@800;900&display=swap">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;width:2560px;height:1440px;overflow:hidden}
+body{position:relative;background:#E23E8B;font-family:"Archivo Black",sans-serif;color:#1B1B2F}
+.dots{position:absolute;inset:0;background-image:radial-gradient(#1B1B2F 3px,transparent 3.5px);background-size:34px 34px;opacity:.12}
+.wall{position:absolute;left:0;right:0;top:880px;bottom:0;background:#FFD23F;border-top:14px solid #1B1B2F}
+.bricks{position:absolute;left:0;right:0;top:894px;bottom:0;
+  background:
+   repeating-linear-gradient(90deg,transparent 0 196px,#1B1B2F40 196px 206px) 0 0/100% 90px no-repeat,
+   repeating-linear-gradient(90deg,transparent 0 196px,#1B1B2F40 196px 206px) 103px 100px/100% 90px no-repeat,
+   repeating-linear-gradient(90deg,transparent 0 196px,#1B1B2F40 196px 206px) 0 200px/100% 90px no-repeat,
+   repeating-linear-gradient(90deg,transparent 0 196px,#1B1B2F40 196px 206px) 103px 300px/100% 90px no-repeat,
+   repeating-linear-gradient(90deg,transparent 0 196px,#1B1B2F40 196px 206px) 0 400px/100% 90px no-repeat,
+   repeating-linear-gradient(180deg,transparent 0 90px,#1B1B2F40 90px 100px);}
+.peek{position:absolute}
+.title{position:absolute;left:900px;top:540px;width:1160px}
+.title h1{margin:0;font-size:140px;line-height:.9;letter-spacing:-2px;white-space:nowrap;color:#FFD23F;
+  -webkit-text-stroke:12px #1B1B2F;paint-order:stroke fill;text-shadow:12px 12px 0 #1B1B2F}
+.title p{margin:24px 0 0;font-family:"Nunito",sans-serif;font-weight:900;font-size:52px;line-height:1.1;color:#FFFFFF;
+  -webkit-text-stroke:8px #1B1B2F;paint-order:stroke fill}
+.pill{position:absolute;left:900px;top:790px;background:#1B1B2F;color:#FFD23F;font-size:38px;padding:14px 30px;border-radius:999px;transform:rotate(-2deg)}
+.bub{position:absolute;background:#fff;border:10px solid #1B1B2F;border-radius:46px;padding:24px 40px;font-size:60px;box-shadow:12px 12px 0 #1B1B2F;white-space:nowrap}
+.bub::after{content:"";position:absolute;width:44px;height:44px;background:#fff;border-right:10px solid #1B1B2F;border-bottom:10px solid #1B1B2F;bottom:-28px;transform:rotate(45deg)}
+.b1{left:120px;top:250px;transform:rotate(-6deg)} .b1::after{left:120px}
+.b2{left:1880px;top:200px;transform:rotate(5deg)} .b2::after{right:120px}
+.b3{left:1890px;top:1080px;transform:rotate(-4deg);font-size:50px} .b3::after{left:60px;top:-30px;bottom:auto;transform:rotate(225deg)}
+.b4{left:110px;top:1110px;transform:rotate(4deg);font-size:50px} .b4::after{right:80px;top:-30px;bottom:auto;transform:rotate(225deg)}
+</style></head><body>
+<div class="dots"></div>
+
+<svg width="0" height="0" style="position:absolute"><defs>
+  <g id="eyes">
+    <ellipse cx="76" cy="108" rx="20" ry="25" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="6"/>
+    <ellipse cx="124" cy="108" rx="20" ry="25" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="6"/>
+    <circle cx="86" cy="106" r="9" fill="#1B1B2F"/><circle cx="134" cy="106" r="9" fill="#1B1B2F"/>
+    <path d="M56 70 Q72 54 92 64 M108 76 L144 76" fill="none" stroke="#1B1B2F" stroke-width="7" stroke-linecap="round"/>
+  </g>
+  <g id="eyesL">
+    <ellipse cx="76" cy="108" rx="20" ry="25" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="6"/>
+    <ellipse cx="124" cy="108" rx="20" ry="25" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="6"/>
+    <circle cx="66" cy="106" r="9" fill="#1B1B2F"/><circle cx="114" cy="106" r="9" fill="#1B1B2F"/>
+    <path d="M56 76 L92 76 M108 64 Q128 54 144 70" fill="none" stroke="#1B1B2F" stroke-width="7" stroke-linecap="round"/>
+  </g>
+</defs></svg>
+
+<!-- protagonista: ojos grandes junto al título (zona segura) -->
+<svg class="peek" style="left:480px;top:545px" width="420" height="420" viewBox="40 40 120 90"><use href="#eyes"/></svg>
+<!-- vecinos chismosos fuera de la zona segura (solo TV/escritorio ancho) -->
+<svg class="peek" style="left:20px;top:720px" width="240" height="240" viewBox="40 40 120 90"><use href="#eyes"/></svg>
+<svg class="peek" style="left:2300px;top:720px" width="240" height="240" viewBox="40 40 120 90"><use href="#eyesL"/></svg>
+<svg class="peek" style="left:270px;top:800px" width="150" height="150" viewBox="40 40 120 90"><use href="#eyes"/></svg>
+<svg class="peek" style="left:2150px;top:800px" width="150" height="150" viewBox="40 40 120 90"><use href="#eyesL"/></svg>
+
+<div class="wall"></div>
+<div class="bricks"></div>
+
+<div class="title">
+  <h1>PURO CHISME</h1>
+  <p>La historia que no te contaron en la escuela</p>
+</div>
+<div class="pill">Shorts nuevos · lun · mié · vie</div>
+
+<div class="bub b1">¿¡NETA!?</div>
+<div class="bub b2">NO MANCHES…</div>
+<div class="bub b3">Y eso no es todo…</div>
+<div class="bub b4">¡Cuéntamelo todo!</div>
+</body></html>

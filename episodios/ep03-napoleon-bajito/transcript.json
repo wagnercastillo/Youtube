@@ -1,0 +1,620 @@
+[
+ {
+  "id": "w0",
+  "text": "¡¿Otra",
+  "start": 0.263,
+  "end": 0.403
+ },
+ {
+  "id": "w1",
+  "text": "vez",
+  "start": 0.463,
+  "end": 0.643
+ },
+ {
+  "id": "w2",
+  "text": "me",
+  "start": 0.696,
+  "end": 0.803
+ },
+ {
+  "id": "w3",
+  "text": "dibujaste",
+  "start": 0.843,
+  "end": 1.363
+ },
+ {
+  "id": "w4",
+  "text": "chiquito,",
+  "start": 1.416,
+  "end": 2.083
+ },
+ {
+  "id": "w5",
+  "text": "Gillray?!",
+  "start": 2.147,
+  "end": 2.883
+ },
+ {
+  "id": "w6",
+  "text": "Ay,",
+  "start": 3.307,
+  "end": 3.503
+ },
+ {
+  "id": "w7",
+  "text": "Napoleón…",
+  "start": 3.543,
+  "end": 4.303
+ },
+ {
+  "id": "w8",
+  "text": "mides",
+  "start": 4.343,
+  "end": 4.703
+ },
+ {
+  "id": "w9",
+  "text": "cinco",
+  "start": 4.77,
+  "end": 5.103
+ },
+ {
+  "id": "w10",
+  "text": "pies",
+  "start": 5.183,
+  "end": 5.503
+ },
+ {
+  "id": "w11",
+  "text": "con",
+  "start": 5.563,
+  "end": 5.743
+ },
+ {
+  "id": "w12",
+  "text": "dos",
+  "start": 5.783,
+  "end": 5.903
+ },
+ {
+  "id": "w13",
+  "text": "pulgadas.",
+  "start": 5.983,
+  "end": 6.703
+ },
+ {
+  "id": "w14",
+  "text": "Lo",
+  "start": 6.756,
+  "end": 6.863
+ },
+ {
+  "id": "w15",
+  "text": "dijo",
+  "start": 6.911,
+  "end": 7.103
+ },
+ {
+  "id": "w16",
+  "text": "tu",
+  "start": 7.183,
+  "end": 7.343
+ },
+ {
+  "id": "w17",
+  "text": "propio",
+  "start": 7.389,
+  "end": 7.663
+ },
+ {
+  "id": "w18",
+  "text": "médico.",
+  "start": 7.723,
+  "end": 8.303
+ },
+ {
+  "id": "w19",
+  "text": "¡Pulgadas",
+  "start": 8.573,
+  "end": 9.083
+ },
+ {
+  "id": "w20",
+  "text": "francesas!",
+  "start": 9.11,
+  "end": 9.963
+ },
+ {
+  "id": "w21",
+  "text": "La",
+  "start": 9.99,
+  "end": 10.043
+ },
+ {
+  "id": "w22",
+  "text": "nuestra",
+  "start": 10.103,
+  "end": 10.523
+ },
+ {
+  "id": "w23",
+  "text": "mide",
+  "start": 10.563,
+  "end": 10.763
+ },
+ {
+  "id": "w24",
+  "text": "casi",
+  "start": 10.811,
+  "end": 11.003
+ },
+ {
+  "id": "w25",
+  "text": "tres",
+  "start": 11.051,
+  "end": 11.243
+ },
+ {
+  "id": "w26",
+  "text": "centímetros.",
+  "start": 11.307,
+  "end": 12.203
+ },
+ {
+  "id": "w27",
+  "text": "La",
+  "start": 12.256,
+  "end": 12.363
+ },
+ {
+  "id": "w28",
+  "text": "tuya,",
+  "start": 12.443,
+  "end": 12.923
+ },
+ {
+  "id": "w29",
+  "text": "dos",
+  "start": 12.983,
+  "end": 13.163
+ },
+ {
+  "id": "w30",
+  "text": "y",
+  "start": 13.203,
+  "end": 13.243
+ },
+ {
+  "id": "w31",
+  "text": "medio.",
+  "start": 13.31,
+  "end": 13.963
+ },
+ {
+  "id": "w32",
+  "text": "Uy…",
+  "start": 14.481,
+  "end": 14.785
+ },
+ {
+  "id": "w33",
+  "text": "¿o",
+  "start": 14.825,
+  "end": 14.945
+ },
+ {
+  "id": "w34",
+  "text": "sea",
+  "start": 15.005,
+  "end": 15.185
+ },
+ {
+  "id": "w35",
+  "text": "que",
+  "start": 15.205,
+  "end": 15.265
+ },
+ {
+  "id": "w36",
+  "text": "en",
+  "start": 15.292,
+  "end": 15.345
+ },
+ {
+  "id": "w37",
+  "text": "realidad",
+  "start": 15.398,
+  "end": 15.825
+ },
+ {
+  "id": "w38",
+  "text": "mides…?",
+  "start": 15.905,
+  "end": 16.944
+ },
+ {
+  "id": "w39",
+  "text": "¡Un",
+  "start": 17.112,
+  "end": 17.136
+ },
+ {
+  "id": "w40",
+  "text": "metro",
+  "start": 17.203,
+  "end": 17.536
+ },
+ {
+  "id": "w41",
+  "text": "sesenta",
+  "start": 17.596,
+  "end": 18.016
+ },
+ {
+  "id": "w42",
+  "text": "y",
+  "start": 18.056,
+  "end": 18.096
+ },
+ {
+  "id": "w43",
+  "text": "ocho!",
+  "start": 18.176,
+  "end": 18.416
+ },
+ {
+  "id": "w44",
+  "text": "Normal",
+  "start": 18.496,
+  "end": 18.976
+ },
+ {
+  "id": "w45",
+  "text": "para",
+  "start": 19.008,
+  "end": 19.136
+ },
+ {
+  "id": "w46",
+  "text": "un",
+  "start": 19.163,
+  "end": 19.216
+ },
+ {
+  "id": "w47",
+  "text": "francés",
+  "start": 19.269,
+  "end": 19.696
+ },
+ {
+  "id": "w48",
+  "text": "de",
+  "start": 19.723,
+  "end": 19.776
+ },
+ {
+  "id": "w49",
+  "text": "mi",
+  "start": 19.803,
+  "end": 19.856
+ },
+ {
+  "id": "w50",
+  "text": "época.",
+  "start": 19.909,
+  "end": 20.416
+ },
+ {
+  "id": "w51",
+  "text": "Pues",
+  "start": 20.639,
+  "end": 20.673
+ },
+ {
+  "id": "w52",
+  "text": "siempre",
+  "start": 20.713,
+  "end": 20.993
+ },
+ {
+  "id": "w53",
+  "text": "andas",
+  "start": 21.073,
+  "end": 21.393
+ },
+ {
+  "id": "w54",
+  "text": "con",
+  "start": 21.433,
+  "end": 21.553
+ },
+ {
+  "id": "w55",
+  "text": "tus",
+  "start": 21.593,
+  "end": 21.713
+ },
+ {
+  "id": "w56",
+  "text": "guardias",
+  "start": 21.753,
+  "end": 22.113
+ },
+ {
+  "id": "w57",
+  "text": "gigantes.",
+  "start": 22.173,
+  "end": 22.993
+ },
+ {
+  "id": "w58",
+  "text": "Junto",
+  "start": 23.033,
+  "end": 23.233
+ },
+ {
+  "id": "w59",
+  "text": "a",
+  "start": 23.273,
+  "end": 23.313
+ },
+ {
+  "id": "w60",
+  "text": "ellos",
+  "start": 23.393,
+  "end": 23.793
+ },
+ {
+  "id": "w61",
+  "text": "pareces",
+  "start": 23.857,
+  "end": 24.353
+ },
+ {
+  "id": "w62",
+  "text": "llavero.",
+  "start": 24.38,
+  "end": 24.991
+ },
+ {
+  "id": "w63",
+  "text": "¡Ellos",
+  "start": 25.2,
+  "end": 25.394
+ },
+ {
+  "id": "w64",
+  "text": "son",
+  "start": 25.434,
+  "end": 25.554
+ },
+ {
+  "id": "w65",
+  "text": "altos,",
+  "start": 25.614,
+  "end": 25.954
+ },
+ {
+  "id": "w66",
+  "text": "no",
+  "start": 26.007,
+  "end": 26.114
+ },
+ {
+  "id": "w67",
+  "text": "yo",
+  "start": 26.167,
+  "end": 26.274
+ },
+ {
+  "id": "w68",
+  "text": "bajito!",
+  "start": 26.334,
+  "end": 26.914
+ },
+ {
+  "id": "w69",
+  "text": "Y",
+  "start": 26.954,
+  "end": 26.994
+ },
+ {
+  "id": "w70",
+  "text": "mis",
+  "start": 27.034,
+  "end": 27.154
+ },
+ {
+  "id": "w71",
+  "text": "soldados",
+  "start": 27.202,
+  "end": 27.634
+ },
+ {
+  "id": "w72",
+  "text": "me",
+  "start": 27.687,
+  "end": 27.794
+ },
+ {
+  "id": "w73",
+  "text": "dicen",
+  "start": 27.834,
+  "end": 28.114
+ },
+ {
+  "id": "w74",
+  "text": "el",
+  "start": 28.274,
+  "end": 28.434
+ },
+ {
+  "id": "w75",
+  "text": "cabito",
+  "start": 28.494,
+  "end": 28.914
+ },
+ {
+  "id": "w76",
+  "text": "de",
+  "start": 29.021,
+  "end": 29.074
+ },
+ {
+  "id": "w77",
+  "text": "cariño.",
+  "start": 29.114,
+  "end": 29.667
+ },
+ {
+  "id": "w78",
+  "text": "Bueno,",
+  "start": 30.588,
+  "end": 30.988
+ },
+ {
+  "id": "w79",
+  "text": "bueno…",
+  "start": 31.041,
+  "end": 31.548
+ },
+ {
+  "id": "w80",
+  "text": "ya",
+  "start": 31.575,
+  "end": 31.628
+ },
+ {
+  "id": "w81",
+  "text": "entendí.",
+  "start": 31.674,
+  "end": 32.188
+ },
+ {
+  "id": "w82",
+  "text": "No",
+  "start": 32.268,
+  "end": 32.428
+ },
+ {
+  "id": "w83",
+  "text": "eres",
+  "start": 32.481,
+  "end": 32.668
+ },
+ {
+  "id": "w84",
+  "text": "bajito.",
+  "start": 32.728,
+  "end": 33.548
+ },
+ {
+  "id": "w85",
+  "text": "¡Por",
+  "start": 33.769,
+  "end": 33.829
+ },
+ {
+  "id": "w86",
+  "text": "fin!",
+  "start": 33.949,
+  "end": 34.389
+ },
+ {
+  "id": "w87",
+  "text": "¿Y",
+  "start": 34.429,
+  "end": 34.629
+ },
+ {
+  "id": "w88",
+  "text": "ahora",
+  "start": 34.656,
+  "end": 34.789
+ },
+ {
+  "id": "w89",
+  "text": "qué",
+  "start": 34.829,
+  "end": 34.949
+ },
+ {
+  "id": "w90",
+  "text": "dibujas?",
+  "start": 34.989,
+  "end": 35.589
+ },
+ {
+  "id": "w91",
+  "text": "A",
+  "start": 35.787,
+  "end": 35.794
+ },
+ {
+  "id": "w92",
+  "text": "ti…",
+  "start": 35.927,
+  "end": 36.434
+ },
+ {
+  "id": "w93",
+  "text": "todavía",
+  "start": 36.474,
+  "end": 36.914
+ },
+ {
+  "id": "w94",
+  "text": "más",
+  "start": 37.014,
+  "end": 37.314
+ },
+ {
+  "id": "w95",
+  "text": "chiquito.",
+  "start": 37.367,
+  "end": 38.034
+ },
+ {
+  "id": "w96",
+  "text": "No",
+  "start": 38.501,
+  "end": 38.514
+ },
+ {
+  "id": "w97",
+  "text": "eras",
+  "start": 38.567,
+  "end": 38.834
+ },
+ {
+  "id": "w98",
+  "text": "bajito…",
+  "start": 38.894,
+  "end": 39.714
+ },
+ {
+  "id": "w99",
+  "text": "te",
+  "start": 39.741,
+  "end": 39.794
+ },
+ {
+  "id": "w100",
+  "text": "hicimos",
+  "start": 39.854,
+  "end": 40.354
+ },
+ {
+  "id": "w101",
+  "text": "bajito.",
+  "start": 40.414,
+  "end": 41.118
+ },
+ {
+  "id": "w102",
+  "text": "¡GILLRAY!",
+  "start": 41.266,
+  "end": 42.083
+ }
+]

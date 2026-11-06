@@ -1,0 +1,842 @@
+[
+ {
+  "id": "w0",
+  "text": "¡Te",
+  "start": 0.21,
+  "end": 0.23
+ },
+ {
+  "id": "w1",
+  "text": "tengo",
+  "start": 0.283,
+  "end": 0.55
+ },
+ {
+  "id": "w2",
+  "text": "un",
+  "start": 0.603,
+  "end": 0.71
+ },
+ {
+  "id": "w3",
+  "text": "chismazo",
+  "start": 0.763,
+  "end": 1.27
+ },
+ {
+  "id": "w4",
+  "text": "del",
+  "start": 1.31,
+  "end": 1.43
+ },
+ {
+  "id": "w5",
+  "text": "antiguo",
+  "start": 1.483,
+  "end": 1.83
+ },
+ {
+  "id": "w6",
+  "text": "Egipto…",
+  "start": 1.91,
+  "end": 2.63
+ },
+ {
+  "id": "w7",
+  "text": "y",
+  "start": 2.67,
+  "end": 2.71
+ },
+ {
+  "id": "w8",
+  "text": "te",
+  "start": 2.79,
+  "end": 2.95
+ },
+ {
+  "id": "w9",
+  "text": "va",
+  "start": 3.003,
+  "end": 3.11
+ },
+ {
+  "id": "w10",
+  "text": "a",
+  "start": 3.15,
+  "end": 3.19
+ },
+ {
+  "id": "w11",
+  "text": "doler",
+  "start": 3.25,
+  "end": 3.59
+ },
+ {
+  "id": "w12",
+  "text": "la",
+  "start": 3.643,
+  "end": 3.75
+ },
+ {
+  "id": "w13",
+  "text": "cabeza!",
+  "start": 3.807,
+  "end": 4.31
+ },
+ {
+  "id": "w14",
+  "text": "La",
+  "start": 4.498,
+  "end": 4.506
+ },
+ {
+  "id": "w15",
+  "text": "Gran",
+  "start": 4.554,
+  "end": 4.746
+ },
+ {
+  "id": "w16",
+  "text": "Pirámide",
+  "start": 4.806,
+  "end": 5.306
+ },
+ {
+  "id": "w17",
+  "text": "de",
+  "start": 5.333,
+  "end": 5.386
+ },
+ {
+  "id": "w18",
+  "text": "Guiza",
+  "start": 5.439,
+  "end": 5.786
+ },
+ {
+  "id": "w19",
+  "text": "se",
+  "start": 5.866,
+  "end": 6.026
+ },
+ {
+  "id": "w20",
+  "text": "terminó",
+  "start": 6.072,
+  "end": 6.426
+ },
+ {
+  "id": "w21",
+  "text": "por",
+  "start": 6.446,
+  "end": 6.506
+ },
+ {
+  "id": "w22",
+  "text": "ahí",
+  "start": 6.559,
+  "end": 6.746
+ },
+ {
+  "id": "w23",
+  "text": "del",
+  "start": 6.766,
+  "end": 6.826
+ },
+ {
+  "id": "w24",
+  "text": "año",
+  "start": 6.886,
+  "end": 7.066
+ },
+ {
+  "id": "w25",
+  "text": "dos",
+  "start": 7.106,
+  "end": 7.226
+ },
+ {
+  "id": "w26",
+  "text": "mil",
+  "start": 7.266,
+  "end": 7.386
+ },
+ {
+  "id": "w27",
+  "text": "quinientos",
+  "start": 7.413,
+  "end": 7.866
+ },
+ {
+  "id": "w28",
+  "text": "sesenta",
+  "start": 7.906,
+  "end": 8.266
+ },
+ {
+  "id": "w29",
+  "text": "antes",
+  "start": 8.346,
+  "end": 8.746
+ },
+ {
+  "id": "w30",
+  "text": "de",
+  "start": 8.799,
+  "end": 8.906
+ },
+ {
+  "id": "w31",
+  "text": "Cristo.",
+  "start": 8.959,
+  "end": 9.546
+ },
+ {
+  "id": "w32",
+  "text": "Cleopatra,",
+  "start": 9.745,
+  "end": 10.409
+ },
+ {
+  "id": "w33",
+  "text": "la",
+  "start": 10.462,
+  "end": 10.569
+ },
+ {
+  "id": "w34",
+  "text": "reina",
+  "start": 10.622,
+  "end": 10.889
+ },
+ {
+  "id": "w35",
+  "text": "más",
+  "start": 10.969,
+  "end": 11.209
+ },
+ {
+  "id": "w36",
+  "text": "famosa",
+  "start": 11.249,
+  "end": 11.609
+ },
+ {
+  "id": "w37",
+  "text": "de",
+  "start": 11.636,
+  "end": 11.689
+ },
+ {
+  "id": "w38",
+  "text": "Egipto,",
+  "start": 11.769,
+  "end": 12.409
+ },
+ {
+  "id": "w39",
+  "text": "murió",
+  "start": 12.449,
+  "end": 12.689
+ },
+ {
+  "id": "w40",
+  "text": "en",
+  "start": 12.702,
+  "end": 12.729
+ },
+ {
+  "id": "w41",
+  "text": "el",
+  "start": 12.756,
+  "end": 12.809
+ },
+ {
+  "id": "w42",
+  "text": "año",
+  "start": 12.869,
+  "end": 13.049
+ },
+ {
+  "id": "w43",
+  "text": "treinta",
+  "start": 13.109,
+  "end": 13.449
+ },
+ {
+  "id": "w44",
+  "text": "antes",
+  "start": 13.502,
+  "end": 13.769
+ },
+ {
+  "id": "w45",
+  "text": "de",
+  "start": 13.822,
+  "end": 13.929
+ },
+ {
+  "id": "w46",
+  "text": "Cristo.",
+  "start": 13.982,
+  "end": 14.527
+ },
+ {
+  "id": "w47",
+  "text": "O",
+  "start": 14.667,
+  "end": 14.686
+ },
+ {
+  "id": "w48",
+  "text": "sea,",
+  "start": 15.166,
+  "end": 15.166
+ },
+ {
+  "id": "w49",
+  "text": "entre",
+  "start": 15.206,
+  "end": 15.406
+ },
+ {
+  "id": "w50",
+  "text": "la",
+  "start": 15.433,
+  "end": 15.486
+ },
+ {
+  "id": "w51",
+  "text": "pirámide",
+  "start": 15.546,
+  "end": 15.965
+ },
+ {
+  "id": "w52",
+  "text": "y",
+  "start": 15.966,
+  "end": 15.967
+ },
+ {
+  "id": "w53",
+  "text": "Cleopatra",
+  "start": 16.006,
+  "end": 16.606
+ },
+ {
+  "id": "w54",
+  "text": "pasaron",
+  "start": 16.666,
+  "end": 17.006
+ },
+ {
+  "id": "w55",
+  "text": "unos",
+  "start": 17.054,
+  "end": 17.246
+ },
+ {
+  "id": "w56",
+  "text": "dos",
+  "start": 17.306,
+  "end": 17.486
+ },
+ {
+  "id": "w57",
+  "text": "mil",
+  "start": 17.546,
+  "end": 17.726
+ },
+ {
+  "id": "w58",
+  "text": "quinientos",
+  "start": 17.779,
+  "end": 18.286
+ },
+ {
+  "id": "w59",
+  "text": "años.",
+  "start": 18.382,
+  "end": 18.926
+ },
+ {
+  "id": "w60",
+  "text": "¿Y",
+  "start": 19.066,
+  "end": 19.07
+ },
+ {
+  "id": "w61",
+  "text": "entre",
+  "start": 19.11,
+  "end": 19.31
+ },
+ {
+  "id": "w62",
+  "text": "Cleopatra",
+  "start": 19.37,
+  "end": 20.03
+ },
+ {
+  "id": "w63",
+  "text": "y",
+  "start": 20.07,
+  "end": 20.11
+ },
+ {
+  "id": "w64",
+  "text": "la",
+  "start": 20.137,
+  "end": 20.19
+ },
+ {
+  "id": "w65",
+  "text": "llegada",
+  "start": 20.238,
+  "end": 20.59
+ },
+ {
+  "id": "w66",
+  "text": "a",
+  "start": 20.63,
+  "end": 20.67
+ },
+ {
+  "id": "w67",
+  "text": "la",
+  "start": 20.697,
+  "end": 20.75
+ },
+ {
+  "id": "w68",
+  "text": "Luna,",
+  "start": 20.814,
+  "end": 21.15
+ },
+ {
+  "id": "w69",
+  "text": "en",
+  "start": 21.203,
+  "end": 21.31
+ },
+ {
+  "id": "w70",
+  "text": "mil",
+  "start": 21.35,
+  "end": 21.47
+ },
+ {
+  "id": "w71",
+  "text": "novecientos",
+  "start": 21.523,
+  "end": 22.11
+ },
+ {
+  "id": "w72",
+  "text": "sesenta",
+  "start": 22.15,
+  "end": 22.43
+ },
+ {
+  "id": "w73",
+  "text": "y",
+  "start": 22.47,
+  "end": 22.51
+ },
+ {
+  "id": "w74",
+  "text": "nueve?",
+  "start": 22.55,
+  "end": 23.15
+ },
+ {
+  "id": "w75",
+  "text": "¡Menos",
+  "start": 23.19,
+  "end": 23.55
+ },
+ {
+  "id": "w76",
+  "text": "de",
+  "start": 23.603,
+  "end": 23.71
+ },
+ {
+  "id": "w77",
+  "text": "dos",
+  "start": 23.73,
+  "end": 23.79
+ },
+ {
+  "id": "w78",
+  "text": "mil!",
+  "start": 23.89,
+  "end": 24.35
+ },
+ {
+  "id": "w79",
+  "text": "¡Cleopatra",
+  "start": 24.49,
+  "end": 25.021
+ },
+ {
+  "id": "w80",
+  "text": "vivió",
+  "start": 25.061,
+  "end": 25.341
+ },
+ {
+  "id": "w81",
+  "text": "más",
+  "start": 25.381,
+  "end": 25.501
+ },
+ {
+  "id": "w82",
+  "text": "cerca",
+  "start": 25.541,
+  "end": 25.741
+ },
+ {
+  "id": "w83",
+  "text": "de",
+  "start": 25.768,
+  "end": 25.821
+ },
+ {
+  "id": "w84",
+  "text": "nosotros…",
+  "start": 25.892,
+  "end": 26.701
+ },
+ {
+  "id": "w85",
+  "text": "que",
+  "start": 26.721,
+  "end": 26.781
+ },
+ {
+  "id": "w86",
+  "text": "de",
+  "start": 26.808,
+  "end": 26.861
+ },
+ {
+  "id": "w87",
+  "text": "las",
+  "start": 26.901,
+  "end": 27.021
+ },
+ {
+  "id": "w88",
+  "text": "pirámides!",
+  "start": 27.081,
+  "end": 27.817
+ },
+ {
+  "id": "w89",
+  "text": "Para",
+  "start": 28.565,
+  "end": 28.757
+ },
+ {
+  "id": "w90",
+  "text": "ella,",
+  "start": 28.821,
+  "end": 29.237
+ },
+ {
+  "id": "w91",
+  "text": "la",
+  "start": 29.29,
+  "end": 29.397
+ },
+ {
+  "id": "w92",
+  "text": "pirámide",
+  "start": 29.457,
+  "end": 29.877
+ },
+ {
+  "id": "w93",
+  "text": "ya",
+  "start": 29.93,
+  "end": 30.037
+ },
+ {
+  "id": "w94",
+  "text": "era",
+  "start": 30.097,
+  "end": 30.277
+ },
+ {
+  "id": "w95",
+  "text": "tan",
+  "start": 30.317,
+  "end": 30.437
+ },
+ {
+  "id": "w96",
+  "text": "antigua",
+  "start": 30.504,
+  "end": 30.917
+ },
+ {
+  "id": "w97",
+  "text": "como",
+  "start": 30.981,
+  "end": 31.237
+ },
+ {
+  "id": "w98",
+  "text": "ella",
+  "start": 31.285,
+  "end": 31.477
+ },
+ {
+  "id": "w99",
+  "text": "lo",
+  "start": 31.53,
+  "end": 31.637
+ },
+ {
+  "id": "w100",
+  "text": "es",
+  "start": 31.69,
+  "end": 31.797
+ },
+ {
+  "id": "w101",
+  "text": "para",
+  "start": 31.829,
+  "end": 31.957
+ },
+ {
+  "id": "w102",
+  "text": "ti.",
+  "start": 32.064,
+  "end": 32.42
+ },
+ {
+  "id": "w103",
+  "text": "Y",
+  "start": 32.56,
+  "end": 32.566
+ },
+ {
+  "id": "w104",
+  "text": "espérate,",
+  "start": 32.626,
+  "end": 33.126
+ },
+ {
+  "id": "w105",
+  "text": "que",
+  "start": 33.146,
+  "end": 33.206
+ },
+ {
+  "id": "w106",
+  "text": "hay",
+  "start": 33.246,
+  "end": 33.366
+ },
+ {
+  "id": "w107",
+  "text": "más:",
+  "start": 33.446,
+  "end": 33.846
+ },
+ {
+  "id": "w108",
+  "text": "cuando",
+  "start": 33.88,
+  "end": 34.086
+ },
+ {
+  "id": "w109",
+  "text": "terminaron",
+  "start": 34.132,
+  "end": 34.566
+ },
+ {
+  "id": "w110",
+  "text": "la",
+  "start": 34.593,
+  "end": 34.646
+ },
+ {
+  "id": "w111",
+  "text": "pirámide…",
+  "start": 34.706,
+  "end": 35.286
+ },
+ {
+  "id": "w112",
+  "text": "¡todavía",
+  "start": 35.406,
+  "end": 36.086
+ },
+ {
+  "id": "w113",
+  "text": "había",
+  "start": 36.139,
+  "end": 36.406
+ },
+ {
+  "id": "w114",
+  "text": "mamuts",
+  "start": 36.466,
+  "end": 36.886
+ },
+ {
+  "id": "w115",
+  "text": "vivos!",
+  "start": 36.966,
+  "end": 37.526
+ },
+ {
+  "id": "w116",
+  "text": "Los",
+  "start": 37.741,
+  "end": 37.751
+ },
+ {
+  "id": "w117",
+  "text": "últimos",
+  "start": 37.801,
+  "end": 38.151
+ },
+ {
+  "id": "w118",
+  "text": "vivieron",
+  "start": 38.191,
+  "end": 38.551
+ },
+ {
+  "id": "w119",
+  "text": "en",
+  "start": 38.578,
+  "end": 38.631
+ },
+ {
+  "id": "w120",
+  "text": "una",
+  "start": 38.671,
+  "end": 38.791
+ },
+ {
+  "id": "w121",
+  "text": "isla",
+  "start": 38.844,
+  "end": 39.111
+ },
+ {
+  "id": "w122",
+  "text": "del",
+  "start": 39.151,
+  "end": 39.271
+ },
+ {
+  "id": "w123",
+  "text": "Ártico,",
+  "start": 39.311,
+  "end": 39.751
+ },
+ {
+  "id": "w124",
+  "text": "siglos",
+  "start": 39.791,
+  "end": 40.071
+ },
+ {
+  "id": "w125",
+  "text": "después.",
+  "start": 40.131,
+  "end": 40.693
+ },
+ {
+  "id": "w126",
+  "text": "Así",
+  "start": 40.903,
+  "end": 40.998
+ },
+ {
+  "id": "w127",
+  "text": "que",
+  "start": 41.018,
+  "end": 41.078
+ },
+ {
+  "id": "w128",
+  "text": "cuando",
+  "start": 41.112,
+  "end": 41.318
+ },
+ {
+  "id": "w129",
+  "text": "alguien",
+  "start": 41.348,
+  "end": 41.558
+ },
+ {
+  "id": "w130",
+  "text": "te",
+  "start": 41.611,
+  "end": 41.718
+ },
+ {
+  "id": "w131",
+  "text": "diga",
+  "start": 41.758,
+  "end": 41.958
+ },
+ {
+  "id": "w132",
+  "text": "eso",
+  "start": 42.198,
+  "end": 42.438
+ },
+ {
+  "id": "w133",
+  "text": "es",
+  "start": 42.491,
+  "end": 42.598
+ },
+ {
+  "id": "w134",
+  "text": "historia",
+  "start": 42.634,
+  "end": 42.918
+ },
+ {
+  "id": "w135",
+  "text": "antigua…",
+  "start": 42.971,
+  "end": 43.637
+ },
+ {
+  "id": "w136",
+  "text": "¡pregúntale:",
+  "start": 43.686,
+  "end": 44.406
+ },
+ {
+  "id": "w137",
+  "text": "¿antigua",
+  "start": 44.466,
+  "end": 45.006
+ },
+ {
+  "id": "w138",
+  "text": "para",
+  "start": 45.038,
+  "end": 45.166
+ },
+ {
+  "id": "w139",
+  "text": "quién?!",
+  "start": 45.226,
+  "end": 45.718
+ }
+]

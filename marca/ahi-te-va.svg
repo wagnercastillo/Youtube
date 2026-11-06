@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 2 196 196" width="800" height="800"><defs><clipPath id="circ"><circle cx="100" cy="100" r="92"/></clipPath></defs><g id="logoC">
+      <circle cx="100" cy="100" r="92" fill="#FFD23F"/>
+      <path d="M112 30 L60 112 L96 112 L84 170 L142 84 L104 84 Z" fill="#1B1B2F" transform="translate(7 7)" stroke="#1B1B2F" stroke-width="8" stroke-linejoin="round"/>
+      <path d="M112 30 L60 112 L96 112 L84 170 L142 84 L104 84 Z" fill="#E63946" stroke="#1B1B2F" stroke-width="8" stroke-linejoin="round"/>
+      <path d="M40 60 L56 68 M150 130 L166 138 M150 52 L162 40" stroke="#1B1B2F" stroke-width="6" stroke-linecap="round"/>
+      <circle cx="100" cy="100" r="92" fill="none" stroke="#1B1B2F" stroke-width="8"/>
+    </g></svg>

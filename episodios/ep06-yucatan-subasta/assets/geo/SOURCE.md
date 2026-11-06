@@ -1,0 +1,1 @@
+geoBoundaries gbOpen MEX ADM1 (simplified). License: Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO). Source: Instituto Nacional de Estadística y Geografía (INEGI). https://www.geoboundaries.org

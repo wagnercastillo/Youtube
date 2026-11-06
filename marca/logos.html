@@ -1,0 +1,158 @@
+<title>Logos del canal</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Nunito:wght@600;800&display=swap">
+<style>
+/* Layout: cartel de casting — 4 propuestas en rejilla, cada una con logo grande, pruebas a tamaño real y ficha */
+:root{
+  --bg:#F3EEE2; --card:#FFFFFF; --fg:#1B1B2F; --muted:#5A5870; --line:#1B1B2F;
+  --display:"Archivo Black","Arial Black",Impact,sans-serif;
+  --body:"Nunito",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#15141F;--card:#22213A;--fg:#F3EEE2;--muted:#B5B2C8;--line:#0A0A12;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#15141F;--card:#22213A;--fg:#F3EEE2;--muted:#B5B2C8;--line:#0A0A12;color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-weight:600;line-height:1.5;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:32px 48px}
+.wrap{max-width:1080px;margin:0 auto;display:grid;gap:28px}
+h1{font-family:var(--display);font-size:clamp(28px,5vw,44px);line-height:1.05;margin:0;text-wrap:balance}
+.lead{margin:0;color:var(--muted);max-width:62ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,470px),1fr));gap:24px}
+.opt{background:var(--card);border:4px solid var(--line);border-radius:18px;box-shadow:8px 8px 0 var(--line);padding:22px;display:grid;gap:16px;min-width:0}
+.top{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.logo{width:170px;height:170px;flex:none}
+.logo svg{width:100%;height:100%;display:block}
+.info{flex:1;min-width:0;display:grid;gap:6px}
+.tag{font-family:var(--display);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+h2{font-family:var(--display);font-size:26px;line-height:1.1;margin:0}
+.info p{margin:0;font-size:15px}
+.tests{display:flex;align-items:center;gap:14px;flex-wrap:wrap;border-top:3px dashed color-mix(in srgb,var(--fg) 25%,transparent);padding-top:14px}
+.tests .s48{width:48px;height:48px;flex:none}.tests .s32{width:32px;height:32px;flex:none}
+.tests svg{width:100%;height:100%;display:block}
+.chan{display:flex;flex-direction:column;min-width:0}
+.chan b{font-family:var(--display);font-weight:400;font-size:16px}
+.chan small{color:var(--muted);font-size:13px}
+.why{font-size:14px;color:var(--muted);margin:0}
+.why strong{color:var(--fg)}
+.note{font-size:14px;color:var(--muted);margin:0;max-width:75ch}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <clipPath id="circ"><circle cx="100" cy="100" r="92"/></clipPath>
+
+    <!-- A · ¿Qué Onda Con...? -->
+    <g id="logoA">
+      <circle cx="100" cy="100" r="92" fill="#2EC4B6"/>
+      <text x="106" y="114" text-anchor="middle" font-family="Archivo Black, Arial Black, sans-serif" font-size="96" fill="#1B1B2F">?</text>
+      <text x="100" y="108" text-anchor="middle" font-family="Archivo Black, Arial Black, sans-serif" font-size="96" fill="#FFD23F" stroke="#1B1B2F" stroke-width="7" paint-order="stroke">?</text>
+      <path d="M38 146 Q54 124 70 146 T102 146 T134 146 T166 146" fill="none" stroke="#1B1B2F" stroke-width="22" stroke-linecap="round" transform="translate(4 4)"/>
+      <path d="M38 146 Q54 124 70 146 T102 146 T134 146 T166 146" fill="none" stroke="#1B1B2F" stroke-width="22" stroke-linecap="round"/>
+      <path d="M38 146 Q54 124 70 146 T102 146 T134 146 T166 146" fill="none" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round"/>
+      <circle cx="100" cy="100" r="92" fill="none" stroke="#1B1B2F" stroke-width="8"/>
+    </g>
+
+    <!-- B · Puro Chisme -->
+    <g id="logoB">
+      <circle cx="100" cy="100" r="92" fill="#E23E8B"/>
+      <g clip-path="url(#circ)">
+        <ellipse cx="76" cy="108" rx="20" ry="25" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="6"/>
+        <ellipse cx="124" cy="108" rx="20" ry="25" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="6"/>
+        <circle cx="86" cy="106" r="9" fill="#1B1B2F"/><circle cx="134" cy="106" r="9" fill="#1B1B2F"/>
+        <path d="M56 70 Q72 54 92 64 M108 76 L144 76" fill="none" stroke="#1B1B2F" stroke-width="7" stroke-linecap="round"/>
+        <rect x="0" y="122" width="200" height="90" fill="#FFD23F" stroke="#1B1B2F" stroke-width="7"/>
+        <path d="M30 150 H66 M94 150 H130 M150 150 H186 M50 176 H86 M114 176 H150" stroke="#1B1B2F" stroke-width="5" stroke-linecap="round" opacity=".35"/>
+      </g>
+      <circle cx="100" cy="100" r="92" fill="none" stroke="#1B1B2F" stroke-width="8"/>
+    </g>
+
+    <!-- C · Ahí Te Va -->
+    <g id="logoC">
+      <circle cx="100" cy="100" r="92" fill="#FFD23F"/>
+      <path d="M112 30 L60 112 L96 112 L84 170 L142 84 L104 84 Z" fill="#1B1B2F" transform="translate(7 7)" stroke="#1B1B2F" stroke-width="8" stroke-linejoin="round"/>
+      <path d="M112 30 L60 112 L96 112 L84 170 L142 84 L104 84 Z" fill="#E63946" stroke="#1B1B2F" stroke-width="8" stroke-linejoin="round"/>
+      <path d="M40 60 L56 68 M150 130 L166 138 M150 52 L162 40" stroke="#1B1B2F" stroke-width="6" stroke-linecap="round"/>
+      <circle cx="100" cy="100" r="92" fill="none" stroke="#1B1B2F" stroke-width="8"/>
+    </g>
+
+    <!-- D · Ni Idea -->
+    <g id="logoD">
+      <circle cx="100" cy="100" r="92" fill="#2BB673"/>
+      <path d="M100 18 V30 M48 40 L56 48 M152 40 L144 48 M28 90 H40 M160 90 H172" stroke="#1B1B2F" stroke-width="7" stroke-linecap="round"/>
+      <circle cx="106" cy="92" r="48" fill="#1B1B2F"/>
+      <rect x="86" y="136" width="40" height="30" rx="6" fill="#1B1B2F"/>
+      <rect x="80" y="130" width="40" height="30" rx="6" fill="#D9D6E6" stroke="#1B1B2F" stroke-width="7"/>
+      <path d="M82 142 H118 M82 150 H118" stroke="#1B1B2F" stroke-width="4"/>
+      <circle cx="100" cy="86" r="48" fill="#FFD23F" stroke="#1B1B2F" stroke-width="8"/>
+      <circle cx="84" cy="82" r="7" fill="#1B1B2F"/><circle cx="116" cy="82" r="7" fill="#1B1B2F"/>
+      <circle cx="100" cy="106" r="7" fill="#1B1B2F"/>
+      <path d="M72 62 Q78 56 86 58" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+      <circle cx="100" cy="100" r="92" fill="none" stroke="#1B1B2F" stroke-width="8"/>
+    </g>
+  </defs>
+</svg>
+
+<div class="wrap">
+  <header style="display:grid;gap:10px">
+    <h1>Elige la cara del canal</h1>
+    <p class="lead">Segunda ronda: cuatro nombres nuevos para un canal de Shorts animados con temas y personajes distintos en cada video. Debajo de cada logo lo ves al tamaño real de YouTube (48 px en comentarios, 32 px en el menú).</p>
+  </header>
+
+  <section class="grid">
+    <article class="opt">
+      <div class="top">
+        <div class="logo"><svg viewBox="0 0 200 200" role="img" aria-label="Logo A: signo de pregunta sobre una onda"><use href="#logoA"/></svg></div>
+        <div class="info"><span class="tag">Opción A · pregunta mexicana</span><h2>¿Qué Onda Con…?</h2>
+          <p>Cada título completa la frase: "¿Qué onda con el hipo?", "¿Qué onda con los mexicas y las gallinas?". La onda del logo es el juego de palabras.</p></div>
+      </div>
+      <div class="tests">
+        <span class="s48"><svg viewBox="0 0 200 200"><use href="#logoA"/></svg></span>
+        <span class="s32"><svg viewBox="0 0 200 200"><use href="#logoA"/></svg></span>
+        <span class="chan"><b>¿Qué Onda Con…?</b><small>@QueOndaCon</small></span>
+      </div>
+      <p class="why"><strong>A favor:</strong> los títulos salen solos y suena natural en México. <strong>En contra:</strong> fuera de México se entiende, pero suena menos propio.</p>
+    </article>
+
+    <article class="opt">
+      <div class="top">
+        <div class="logo"><svg viewBox="0 0 200 200" role="img" aria-label="Logo B: dos ojos espiando detrás de una barda"><use href="#logoB"/></svg></div>
+        <div class="info"><span class="tag">Opción B · chisme</span><h2>Puro Chisme</h2>
+          <p>Los personajes se cuentan los datos como si fueran chisme. Los ojos detrás de la barda son el chismoso del barrio.</p></div>
+      </div>
+      <div class="tests">
+        <span class="s48"><svg viewBox="0 0 200 200"><use href="#logoB"/></svg></span>
+        <span class="s32"><svg viewBox="0 0 200 200"><use href="#logoB"/></svg></span>
+        <span class="chan"><b>Puro Chisme</b><small>@PuroChismeAnimado</small></span>
+      </div>
+      <p class="why"><strong>A favor:</strong> el chisme engancha y le da un tono a los diálogos. <strong>En contra:</strong> puede sonar a canal de farándula; conviene agregar "animado" o "histórico".</p>
+    </article>
+
+    <article class="opt">
+      <div class="top">
+        <div class="logo"><svg viewBox="0 0 200 200" role="img" aria-label="Logo C: rayo rojo"><use href="#logoC"/></svg></div>
+        <div class="info"><span class="tag">Opción C · dato rápido</span><h2>Ahí Te Va</h2>
+          <p>De "ahí te va el dato". Un rayo: el dato llega rápido y pega fuerte, como un Short.</p></div>
+      </div>
+      <div class="tests">
+        <span class="s48"><svg viewBox="0 0 200 200"><use href="#logoC"/></svg></span>
+        <span class="s32"><svg viewBox="0 0 200 200"><use href="#logoC"/></svg></span>
+        <span class="chan"><b>Ahí Te Va</b><small>@AhiTeVaElDato</small></span>
+      </div>
+      <p class="why"><strong>A favor:</strong> el logo más claro a 32 px. <strong>En contra:</strong> el nombre solo no dice que el canal es de curiosidades.</p>
+    </article>
+
+    <article class="opt">
+      <div class="top">
+        <div class="logo"><svg viewBox="0 0 200 200" role="img" aria-label="Logo D: foco sorprendido"><use href="#logoD"/></svg></div>
+        <div class="info"><span class="tag">Opción D · sorpresa</span><h2>Ni Idea</h2>
+          <p>Lo que piensa quien mira justo antes del dato. El foco sorprendido se prende cuando lo descubre.</p></div>
+      </div>
+      <div class="tests">
+        <span class="s48"><svg viewBox="0 0 200 200"><use href="#logoD"/></svg></span>
+        <span class="s32"><svg viewBox="0 0 200 200"><use href="#logoD"/></svg></span>
+        <span class="chan"><b>Ni Idea</b><small>@NiIdeaAnimado</small></span>
+      </div>
+      <p class="why"><strong>A favor:</strong> corto, gracioso y sirve para cualquier tema. <strong>En contra:</strong> es una frase común, así que costará más aparecer en la búsqueda por nombre.</p>
+    </article>
+  </section>
+
+  <p class="note">Mi voto como director: <strong>A, ¿Qué Onda Con…?</strong>, porque el nombre fabrica los títulos y suena a ti. De la ronda anterior sigue en pie <strong>Si Pudiera Hablar</strong>. Puedes mezclar el nombre de una con el logo de otra.</p>
+</div>

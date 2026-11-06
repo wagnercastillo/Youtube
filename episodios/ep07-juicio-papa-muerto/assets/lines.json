@@ -1,0 +1,79 @@
+[
+ {
+  "id": "l0",
+  "speaker": "narr",
+  "text": "¿Sabías que una vez… sentaron a un papa MUERTO en el banquillo de los acusados?",
+  "start": 0.134,
+  "end": 5.42
+ },
+ {
+  "id": "l1",
+  "speaker": "narr",
+  "text": "Roma, año ochocientos noventa y siete. El papa Esteban Sexto mandó desenterrar a Formoso… ¡que llevaba nueve meses muerto!",
+  "start": 5.545,
+  "end": 13.996
+ },
+ {
+  "id": "l2",
+  "speaker": "narr",
+  "text": "Lo vistió de papa, lo sentó en un trono… ¡y le hizo un juicio!",
+  "start": 14.121,
+  "end": 19.05
+ },
+ {
+  "id": "l3",
+  "speaker": "esteban",
+  "text": "¡Formoso! ¡Eras obispo de Porto y te hiciste papa! ¡Eso está prohibido!",
+  "start": 19.175,
+  "end": 24.461
+ },
+ {
+  "id": "l4",
+  "speaker": "narr",
+  "text": "Y como el muerto no hablaba… un diácono contestaba por él.",
+  "start": 24.586,
+  "end": 28.762
+ },
+ {
+  "id": "l5",
+  "speaker": "diacono",
+  "text": "Eh… ¿que… soy inocente?",
+  "start": 28.887,
+  "end": 31.03
+ },
+ {
+  "id": "l6",
+  "speaker": "esteban",
+  "text": "¡CULPABLE!",
+  "start": 31.155,
+  "end": 32.681
+ },
+ {
+  "id": "l7",
+  "speaker": "narr",
+  "text": "Anularon todo lo que hizo, le cortaron los tres dedos con los que bendecía… ¡y lo tiraron al río Tíber!",
+  "start": 32.806,
+  "end": 38.999
+ },
+ {
+  "id": "l8",
+  "speaker": "narr",
+  "text": "Pero Roma se indignó: ese mismo año, Esteban terminó en la cárcel… y ahí lo estrangularon.",
+  "start": 39.124,
+  "end": 45.8
+ },
+ {
+  "id": "l9",
+  "speaker": "narr",
+  "text": "¿Y Formoso? Lo rescataron del río… ¡y lo volvieron a enterrar con honores de papa!",
+  "start": 45.925,
+  "end": 51.65
+ },
+ {
+  "id": "l10",
+  "speaker": "narr",
+  "text": "En Roma, ni muerto te salvas del chisme.",
+  "start": 51.775,
+  "end": 54.343
+ }
+]

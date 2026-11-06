@@ -1,0 +1,704 @@
+[
+ {
+  "id": "w0",
+  "text": "¡Se",
+  "start": 0.207,
+  "end": 0.295
+ },
+ {
+  "id": "w1",
+  "text": "vende",
+  "start": 0.335,
+  "end": 0.615
+ },
+ {
+  "id": "w2",
+  "text": "península!",
+  "start": 0.655,
+  "end": 1.255
+ },
+ {
+  "id": "w3",
+  "text": "¿Quién",
+  "start": 1.295,
+  "end": 1.495
+ },
+ {
+  "id": "w4",
+  "text": "da",
+  "start": 1.548,
+  "end": 1.655
+ },
+ {
+  "id": "w5",
+  "text": "más",
+  "start": 1.695,
+  "end": 1.815
+ },
+ {
+  "id": "w6",
+  "text": "por",
+  "start": 1.855,
+  "end": 1.975
+ },
+ {
+  "id": "w7",
+  "text": "Yucatán?",
+  "start": 2.015,
+  "end": 2.695
+ },
+ {
+  "id": "w8",
+  "text": "En",
+  "start": 2.914,
+  "end": 2.935
+ },
+ {
+  "id": "w9",
+  "text": "mil",
+  "start": 2.955,
+  "end": 3.015
+ },
+ {
+  "id": "w10",
+  "text": "ochocientos",
+  "start": 3.075,
+  "end": 3.575
+ },
+ {
+  "id": "w11",
+  "text": "cuarenta",
+  "start": 3.602,
+  "end": 3.935
+ },
+ {
+  "id": "w12",
+  "text": "y",
+  "start": 3.955,
+  "end": 3.975
+ },
+ {
+  "id": "w13",
+  "text": "uno,",
+  "start": 4.015,
+  "end": 4.295
+ },
+ {
+  "id": "w14",
+  "text": "Yucatán",
+  "start": 4.375,
+  "end": 4.775
+ },
+ {
+  "id": "w15",
+  "text": "se",
+  "start": 4.828,
+  "end": 4.935
+ },
+ {
+  "id": "w16",
+  "text": "separó",
+  "start": 5.002,
+  "end": 5.375
+ },
+ {
+  "id": "w17",
+  "text": "de",
+  "start": 5.388,
+  "end": 5.415
+ },
+ {
+  "id": "w18",
+  "text": "México…",
+  "start": 5.495,
+  "end": 6.215
+ },
+ {
+  "id": "w19",
+  "text": "y",
+  "start": 6.255,
+  "end": 6.295
+ },
+ {
+  "id": "w20",
+  "text": "se",
+  "start": 6.348,
+  "end": 6.455
+ },
+ {
+  "id": "w21",
+  "text": "declaró",
+  "start": 6.512,
+  "end": 6.935
+ },
+ {
+  "id": "w22",
+  "text": "república.",
+  "start": 6.995,
+  "end": 7.735
+ },
+ {
+  "id": "w23",
+  "text": "Pero",
+  "start": 7.884,
+  "end": 7.897
+ },
+ {
+  "id": "w24",
+  "text": "en",
+  "start": 7.95,
+  "end": 8.057
+ },
+ {
+  "id": "w25",
+  "text": "mil",
+  "start": 8.077,
+  "end": 8.137
+ },
+ {
+  "id": "w26",
+  "text": "ochocientos",
+  "start": 8.197,
+  "end": 8.697
+ },
+ {
+  "id": "w27",
+  "text": "cuarenta",
+  "start": 8.75,
+  "end": 9.097
+ },
+ {
+  "id": "w28",
+  "text": "y",
+  "start": 9.137,
+  "end": 9.177
+ },
+ {
+  "id": "w29",
+  "text": "siete",
+  "start": 9.237,
+  "end": 9.417
+ },
+ {
+  "id": "w30",
+  "text": "estalló",
+  "start": 9.537,
+  "end": 10.137
+ },
+ {
+  "id": "w31",
+  "text": "la",
+  "start": 10.19,
+  "end": 10.297
+ },
+ {
+  "id": "w32",
+  "text": "Guerra",
+  "start": 10.377,
+  "end": 10.697
+ },
+ {
+  "id": "w33",
+  "text": "de",
+  "start": 10.724,
+  "end": 10.777
+ },
+ {
+  "id": "w34",
+  "text": "Castas,",
+  "start": 10.857,
+  "end": 11.577
+ },
+ {
+  "id": "w35",
+  "text": "y",
+  "start": 11.617,
+  "end": 11.657
+ },
+ {
+  "id": "w36",
+  "text": "los",
+  "start": 11.697,
+  "end": 11.817
+ },
+ {
+  "id": "w37",
+  "text": "rebeldes",
+  "start": 11.877,
+  "end": 12.297
+ },
+ {
+  "id": "w38",
+  "text": "mayas",
+  "start": 12.357,
+  "end": 12.697
+ },
+ {
+  "id": "w39",
+  "text": "llegaron",
+  "start": 12.761,
+  "end": 13.417
+ },
+ {
+  "id": "w40",
+  "text": "casi",
+  "start": 13.497,
+  "end": 13.817
+ },
+ {
+  "id": "w41",
+  "text": "hasta",
+  "start": 13.87,
+  "end": 14.137
+ },
+ {
+  "id": "w42",
+  "text": "Mérida.",
+  "start": 14.19,
+  "end": 14.617
+ },
+ {
+  "id": "w43",
+  "text": "Desesperado,",
+  "start": 14.939,
+  "end": 15.689
+ },
+ {
+  "id": "w44",
+  "text": "el",
+  "start": 15.716,
+  "end": 15.769
+ },
+ {
+  "id": "w45",
+  "text": "gobierno",
+  "start": 15.813,
+  "end": 16.169
+ },
+ {
+  "id": "w46",
+  "text": "yucateco",
+  "start": 16.209,
+  "end": 16.729
+ },
+ {
+  "id": "w47",
+  "text": "ofreció",
+  "start": 16.796,
+  "end": 17.209
+ },
+ {
+  "id": "w48",
+  "text": "su",
+  "start": 17.262,
+  "end": 17.369
+ },
+ {
+  "id": "w49",
+  "text": "soberanía…",
+  "start": 17.409,
+  "end": 18.169
+ },
+ {
+  "id": "w50",
+  "text": "¡a",
+  "start": 18.209,
+  "end": 18.329
+ },
+ {
+  "id": "w51",
+  "text": "Estados",
+  "start": 18.389,
+  "end": 18.809
+ },
+ {
+  "id": "w52",
+  "text": "Unidos,",
+  "start": 18.878,
+  "end": 19.369
+ },
+ {
+  "id": "w53",
+  "text": "a",
+  "start": 19.409,
+  "end": 19.449
+ },
+ {
+  "id": "w54",
+  "text": "Inglaterra",
+  "start": 19.509,
+  "end": 20.169
+ },
+ {
+  "id": "w55",
+  "text": "y",
+  "start": 20.289,
+  "end": 20.409
+ },
+ {
+  "id": "w56",
+  "text": "a",
+  "start": 20.449,
+  "end": 20.489
+ },
+ {
+  "id": "w57",
+  "text": "España!",
+  "start": 20.569,
+  "end": 21.289
+ },
+ {
+  "id": "w58",
+  "text": "¿Quién",
+  "start": 21.489,
+  "end": 21.589
+ },
+ {
+  "id": "w59",
+  "text": "da",
+  "start": 21.642,
+  "end": 21.749
+ },
+ {
+  "id": "w60",
+  "text": "más?",
+  "start": 21.829,
+  "end": 22.149
+ },
+ {
+  "id": "w61",
+  "text": "¡Inglaterra…",
+  "start": 22.229,
+  "end": 23.189
+ },
+ {
+  "id": "w62",
+  "text": "nada!",
+  "start": 23.269,
+  "end": 23.749
+ },
+ {
+  "id": "w63",
+  "text": "¡España…",
+  "start": 23.829,
+  "end": 24.629
+ },
+ {
+  "id": "w64",
+  "text": "nada!",
+  "start": 24.693,
+  "end": 24.949
+ },
+ {
+  "id": "w65",
+  "text": "Estados",
+  "start": 25.424,
+  "end": 25.494
+ },
+ {
+  "id": "w66",
+  "text": "Unidos",
+  "start": 25.551,
+  "end": 25.894
+ },
+ {
+  "id": "w67",
+  "text": "sí",
+  "start": 26.001,
+  "end": 26.214
+ },
+ {
+  "id": "w68",
+  "text": "lo",
+  "start": 26.241,
+  "end": 26.294
+ },
+ {
+  "id": "w69",
+  "text": "pensó:",
+  "start": 26.358,
+  "end": 26.934
+ },
+ {
+  "id": "w70",
+  "text": "el",
+  "start": 26.961,
+  "end": 27.014
+ },
+ {
+  "id": "w71",
+  "text": "presidente",
+  "start": 27.065,
+  "end": 27.574
+ },
+ {
+  "id": "w72",
+  "text": "Polk",
+  "start": 27.654,
+  "end": 27.974
+ },
+ {
+  "id": "w73",
+  "text": "llevó",
+  "start": 28.038,
+  "end": 28.374
+ },
+ {
+  "id": "w74",
+  "text": "el",
+  "start": 28.401,
+  "end": 28.454
+ },
+ {
+  "id": "w75",
+  "text": "tema",
+  "start": 28.486,
+  "end": 28.614
+ },
+ {
+  "id": "w76",
+  "text": "al",
+  "start": 28.641,
+  "end": 28.694
+ },
+ {
+  "id": "w77",
+  "text": "Congreso…",
+  "start": 28.742,
+  "end": 29.654
+ },
+ {
+  "id": "w78",
+  "text": "pero",
+  "start": 29.686,
+  "end": 29.814
+ },
+ {
+  "id": "w79",
+  "text": "no",
+  "start": 29.894,
+  "end": 30.054
+ },
+ {
+  "id": "w80",
+  "text": "aceptaron.",
+  "start": 30.107,
+  "end": 30.854
+ },
+ {
+  "id": "w81",
+  "text": "¡Nadie",
+  "start": 31.713,
+  "end": 32.193
+ },
+ {
+  "id": "w82",
+  "text": "quiso",
+  "start": 32.273,
+  "end": 32.593
+ },
+ {
+  "id": "w83",
+  "text": "a",
+  "start": 32.633,
+  "end": 32.673
+ },
+ {
+  "id": "w84",
+  "text": "Yucatán!",
+  "start": 32.713,
+  "end": 33.553
+ },
+ {
+  "id": "w85",
+  "text": "Así",
+  "start": 33.784,
+  "end": 33.885
+ },
+ {
+  "id": "w86",
+  "text": "que",
+  "start": 33.925,
+  "end": 34.045
+ },
+ {
+  "id": "w87",
+  "text": "en",
+  "start": 34.125,
+  "end": 34.285
+ },
+ {
+  "id": "w88",
+  "text": "agosto",
+  "start": 34.342,
+  "end": 34.685
+ },
+ {
+  "id": "w89",
+  "text": "de",
+  "start": 34.738,
+  "end": 34.845
+ },
+ {
+  "id": "w90",
+  "text": "mil",
+  "start": 34.885,
+  "end": 35.005
+ },
+ {
+  "id": "w91",
+  "text": "ochocientos",
+  "start": 35.065,
+  "end": 35.565
+ },
+ {
+  "id": "w92",
+  "text": "cuarenta",
+  "start": 35.618,
+  "end": 36.005
+ },
+ {
+  "id": "w93",
+  "text": "y",
+  "start": 36.025,
+  "end": 36.045
+ },
+ {
+  "id": "w94",
+  "text": "ocho,",
+  "start": 36.085,
+  "end": 36.405
+ },
+ {
+  "id": "w95",
+  "text": "Yucatán",
+  "start": 36.465,
+  "end": 37.085
+ },
+ {
+  "id": "w96",
+  "text": "volvió",
+  "start": 37.125,
+  "end": 37.485
+ },
+ {
+  "id": "w97",
+  "text": "con",
+  "start": 37.525,
+  "end": 37.645
+ },
+ {
+  "id": "w98",
+  "text": "México…",
+  "start": 37.714,
+  "end": 38.365
+ },
+ {
+  "id": "w99",
+  "text": "a",
+  "start": 38.405,
+  "end": 38.445
+ },
+ {
+  "id": "w100",
+  "text": "cambio",
+  "start": 38.502,
+  "end": 38.845
+ },
+ {
+  "id": "w101",
+  "text": "de",
+  "start": 38.872,
+  "end": 38.925
+ },
+ {
+  "id": "w102",
+  "text": "ayuda",
+  "start": 38.978,
+  "end": 39.245
+ },
+ {
+  "id": "w103",
+  "text": "para",
+  "start": 39.277,
+  "end": 39.405
+ },
+ {
+  "id": "w104",
+  "text": "la",
+  "start": 39.458,
+  "end": 39.565
+ },
+ {
+  "id": "w105",
+  "text": "guerra.",
+  "start": 39.611,
+  "end": 39.965
+ },
+ {
+  "id": "w106",
+  "text": "¡A",
+  "start": 40.223,
+  "end": 40.24
+ },
+ {
+  "id": "w107",
+  "text": "la",
+  "start": 40.32,
+  "end": 40.48
+ },
+ {
+  "id": "w108",
+  "text": "una,",
+  "start": 40.62,
+  "end": 41.28
+ },
+ {
+  "id": "w109",
+  "text": "a",
+  "start": 41.36,
+  "end": 41.44
+ },
+ {
+  "id": "w110",
+  "text": "las",
+  "start": 41.52,
+  "end": 41.76
+ },
+ {
+  "id": "w111",
+  "text": "dos…",
+  "start": 41.94,
+  "end": 42.72
+ },
+ {
+  "id": "w112",
+  "text": "vendida",
+  "start": 42.8,
+  "end": 43.44
+ },
+ {
+  "id": "w113",
+  "text": "a",
+  "start": 43.6,
+  "end": 43.76
+ },
+ {
+  "id": "w114",
+  "text": "su",
+  "start": 43.84,
+  "end": 44.0
+ },
+ {
+  "id": "w115",
+  "text": "dueño",
+  "start": 44.08,
+  "end": 44.4
+ },
+ {
+  "id": "w116",
+  "text": "original!",
+  "start": 44.489,
+  "end": 45.28
+ }
+]

@@ -1,0 +1,15 @@
+# secrets
+.env
+**/.env
+# dependencies / tool caches
+node_modules/
+.hyperframes/
+__pycache__/
+*.pyc
+# heavy, reproducible outputs (renders live on YouTube; caches are re-fetched from the APIs)
+renders/
+**/audio/el/
+**/audio/audition/
+**/audio/tr/
+**/manim/media/
+voz_raw.wav

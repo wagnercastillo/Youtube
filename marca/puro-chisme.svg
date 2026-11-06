@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 2 196 196" width="800" height="800"><defs><clipPath id="circ"><circle cx="100" cy="100" r="92"/></clipPath></defs><g id="logoB">
+      <circle cx="100" cy="100" r="92" fill="#E23E8B"/>
+      <g clip-path="url(#circ)">
+        <ellipse cx="76" cy="108" rx="20" ry="25" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="6"/>
+        <ellipse cx="124" cy="108" rx="20" ry="25" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="6"/>
+        <circle cx="86" cy="106" r="9" fill="#1B1B2F"/><circle cx="134" cy="106" r="9" fill="#1B1B2F"/>
+        <path d="M56 70 Q72 54 92 64 M108 76 L144 76" fill="none" stroke="#1B1B2F" stroke-width="7" stroke-linecap="round"/>
+        <rect x="0" y="122" width="200" height="90" fill="#FFD23F" stroke="#1B1B2F" stroke-width="7"/>
+        <path d="M30 150 H66 M94 150 H130 M150 150 H186 M50 176 H86 M114 176 H150" stroke="#1B1B2F" stroke-width="5" stroke-linecap="round" opacity=".35"/>
+      </g>
+      <circle cx="100" cy="100" r="92" fill="none" stroke="#1B1B2F" stroke-width="8"/>
+    </g></svg>

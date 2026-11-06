@@ -1,0 +1,7 @@
+# Imágenes (Wikimedia Commons)
+
+- pasteleria.jpg — File:Mon cher collègue, jai longtemps réflèchi si je ne prendrais pas un fond de patisserie attendu mon talent remarquable, Paris Musées 20231027144710.jpg · Pacot, Charles, dessinateur-lithographe · circa 1830date QS:P,+1830-00-00T00:00:00Z/9,P1480,Q5727902 · CC0 · https://commons.wikimedia.org/wiki/File:Mon_cher_coll%C3%A8gue,_jai_longtemps_r%C3%A9fl%C3%A8chi_si_je_ne_prendrais_pas_un_fond_de_patisserie_attendu_mon_talent_remarquable,_Paris_Mus%C3%A9es_20231027144710.jpg
+- luisfelipe.jpg — File:Franz Xaver Winterhalter King Louis Philippe.jpg · Franz Xaver Winterhalter · 1839 · Public domain · https://commons.wikimedia.org/wiki/File:Franz_Xaver_Winterhalter_King_Louis_Philippe.jpg
+- ulua.jpg — File:Prise de Saint-Jean d Ulloa en 1838 lors de l expedition Baudin.jpg · Théodore Gudin · 1839 · Public domain · https://commons.wikimedia.org/wiki/File:Prise_de_Saint-Jean_d_Ulloa_en_1838_lors_de_l_expedition_Baudin.jpg
+- veracruz.jpg — File:Attaque de Veracruz par le prince de Joinville, nuit du 5 décembre 1838.jpg · Pharamond Blanchard (1805-1873) · 1840 · Public domain · https://commons.wikimedia.org/wiki/File:Attaque_de_Veracruz_par_le_prince_de_Joinville,_nuit_du_5_d%C3%A9cembre_1838.jpg
+- santaanna.jpg — File:Presidente Antonio López de Santa Anna.jpg · Manuel Paris · 19th centurydate QS:P571,+1850-00-00T00:00:00Z/7 · Public domain · https://commons.wikimedia.org/wiki/File:Presidente_Antonio_L%C3%B3pez_de_Santa_Anna.jpg

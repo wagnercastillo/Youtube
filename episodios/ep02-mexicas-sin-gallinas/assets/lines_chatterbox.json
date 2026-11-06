@@ -1,0 +1,72 @@
+[
+ {
+  "id": "l0",
+  "speaker": "crono",
+  "text": "¡Oye! ¡En todo Tenochtitlan no hay ni una sola gallina!",
+  "start": 0.12,
+  "end": 5.458
+ },
+ {
+  "id": "l1",
+  "speaker": "totola",
+  "text": "Claro que no. Las gallinas llegaron con los españoles.",
+  "start": 5.578,
+  "end": 9.73
+ },
+ {
+  "id": "l2",
+  "speaker": "crono",
+  "text": "¿Y entonces de dónde sacaban los huevos?",
+  "start": 9.85,
+  "end": 12.76
+ },
+ {
+  "id": "l3",
+  "speaker": "totola",
+  "text": "De mí, mi rey. En náhuatl, huevo se dice totoltetl: piedra de guajolota.",
+  "start": 12.88,
+  "end": 20.011
+ },
+ {
+  "id": "l4",
+  "speaker": "crono",
+  "text": "¿Piedra de guajolota? ¿En serio?",
+  "start": 20.131,
+  "end": 22.154
+ },
+ {
+  "id": "l5",
+  "speaker": "totola",
+  "text": "Y del lago sacaban huevos de un insecto de agua: el ahuautle.",
+  "start": 22.274,
+  "end": 26.184
+ },
+ {
+  "id": "l6",
+  "speaker": "crono",
+  "text": "¿Comían huevos de insecto?",
+  "start": 26.304,
+  "end": 27.668
+ },
+ {
+  "id": "l7",
+  "speaker": "totola",
+  "text": "Hoy le dicen caviar mexicano. Y el kilo cuesta unos cincuenta dólares.",
+  "start": 27.788,
+  "end": 33.908
+ },
+ {
+  "id": "l8",
+  "speaker": "crono",
+  "text": "¿Y qué dijeron los españoles cuando te vieron?",
+  "start": 34.028,
+  "end": 36.956
+ },
+ {
+  "id": "l9",
+  "speaker": "totola",
+  "text": "Me llamaron gallina de la tierra. ¡Gallina! ¡Qué falta de respeto!",
+  "start": 37.076,
+  "end": 41.532
+ }
+]

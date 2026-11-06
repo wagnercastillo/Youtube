@@ -1,0 +1,72 @@
+[
+ {
+  "id": "l0",
+  "speaker": "crono",
+  "text": "¡Llegué a Tenochtitlan, año 1500! A ver, unos huevos de gallina para desayunar.",
+  "start": 0.12,
+  "end": 4.883
+ },
+ {
+  "id": "l1",
+  "speaker": "totola",
+  "text": "¿Gallina? Aquí no hay. Las gallinas llegan con los españoles… en veinte años.",
+  "start": 5.003,
+  "end": 11.584
+ },
+ {
+  "id": "l2",
+  "speaker": "crono",
+  "text": "¿Y entonces qué huevos comen aquí?",
+  "start": 11.704,
+  "end": 13.591
+ },
+ {
+  "id": "l3",
+  "speaker": "totola",
+  "text": "Los míos, mi rey. En náhuatl, huevo se dice totoltetl: piedra de guajolota. Porque parece piedrita.",
+  "start": 13.711,
+  "end": 21.498
+ },
+ {
+  "id": "l4",
+  "speaker": "crono",
+  "text": "¡Perfecto! Me das dos, ¿no?",
+  "start": 21.618,
+  "end": 23.112
+ },
+ {
+  "id": "l5",
+  "speaker": "totola",
+  "text": "¡Ni lo sueñes! Si tienes hambre, ve al lago: hay ahuautle, huevos de chinche de agua.",
+  "start": 23.232,
+  "end": 29.588
+ },
+ {
+  "id": "l6",
+  "speaker": "crono",
+  "text": "¿Huevos de insecto? ¡Guácala!",
+  "start": 29.708,
+  "end": 31.593
+ },
+ {
+  "id": "l7",
+  "speaker": "totola",
+  "text": "Guácala nada. Hoy le dicen caviar mexicano, y el kilo cuesta unos cincuenta dólares.",
+  "start": 31.713,
+  "end": 37.844
+ },
+ {
+  "id": "l8",
+  "speaker": "crono",
+  "text": "Mmm… mejor los tuyos. Total, eres una gallina, ¿no?",
+  "start": 37.964,
+  "end": 41.45
+ },
+ {
+  "id": "l9",
+  "speaker": "totola",
+  "text": "¡Eso mismo dijeron los españoles! Gallina de la tierra. ¡Qué falta de respeto!",
+  "start": 41.57,
+  "end": 48.366
+ }
+]

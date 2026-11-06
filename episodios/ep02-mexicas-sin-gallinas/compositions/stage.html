@@ -1,0 +1,638 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: #8ED9F0; font-family: "Archivo Black", sans-serif; }
+    #st-world { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; transform-origin: 0 0; }
+    .st-full { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+    #crono { position: absolute; left: 60px; top: 545px; width: 420px; height: 640px; }
+    #totola { position: absolute; left: 560px; top: 570px; width: 460px; height: 620px; }
+    #crono svg, #totola svg { width: 100%; height: 100%; overflow: visible; }
+
+    .st-tag { position: absolute; left: 0; width: 1080px; text-align: center; }
+    .st-tag span { display: inline-block; font-size: 92px; line-height: 1; padding: 14px 30px 10px; color: #1B1B2F;
+      border: 8px solid #1B1B2F; border-radius: 18px; box-shadow: 8px 8px 0 #1B1B2F; }
+    #st-hdr { position: absolute; left: 0; top: 0; width: 1080px; height: 470px; }
+    #st-hdr1 { top: 190px; } #st-hdr1 span { background: #FFFFFF; }
+    #st-hdr2 { top: 318px; } #st-hdr2 span { background: #FFD23F; }
+
+    .st-src { position: absolute; left: 90px; width: 900px; text-align: center; font-family: "Nunito", sans-serif;
+      font-weight: 800; font-size: 32px; line-height: 1.25; color: #1B1B2F; }
+    .st-stk { position: absolute; left: 0; width: 1080px; text-align: center; }
+    .st-stk span { display: inline-block; line-height: 1; border: 8px solid #1B1B2F; border-radius: 18px; box-shadow: 8px 8px 0 #1B1B2F; color: #1B1B2F; }
+
+    #st-ship { background: #4D9DE0; }
+    #st-imp { top: 250px; } #st-imp span { font-size: 96px; padding: 16px 30px 10px; background: #FFD23F; }
+
+    #st-word { background: #FFF1D0; }
+    #st-wt { top: 250px; } #st-wt span { font-size: 128px; padding: 18px 34px 12px; background: #E23E8B; color: #FFFFFF; }
+    .st-col { position: absolute; top: 600px; width: 300px; text-align: center; }
+    .st-col b { display: block; font-weight: 400; font-size: 52px; color: #1B1B2F; margin-top: 18px; }
+    .st-col i { display: block; font-style: normal; font-family: "Nunito", sans-serif; font-weight: 800; font-size: 38px; color: #6E4429; }
+    #st-c1 { left: 40px; } #st-c2 { left: 390px; } #st-c3 { left: 740px; }
+    .st-op { position: absolute; top: 640px; width: 80px; text-align: center; font-size: 96px; color: #1B1B2F; }
+    #st-op1 { left: 330px; } #st-op2 { left: 680px; }
+    #st-wsrc { top: 1060px; }
+
+    #st-lake { background: #8ED9F0; }
+    #st-ahu { top: 470px; } #st-ahu span { font-size: 100px; padding: 16px 30px 10px; background: #FFFFFF; color: #E23E8B; }
+    #st-axa { top: 1640px; }
+
+    #st-cav { background: #2BB673; }
+    #st-cv1 { top: 230px; } #st-cv1 span { font-size: 112px; padding: 16px 30px 10px; background: #FFFFFF; }
+    #st-cv2 { top: 370px; } #st-cv2 span { font-size: 96px; padding: 16px 30px 10px; background: #FFD23F; }
+    #st-price { top: 960px; } #st-price span { font-size: 92px; padding: 16px 28px 10px; background: #FFFFFF; color: #E63946; }
+    #st-csrc { top: 1124px; color: #FFFFFF; }
+
+    #st-stamp { position: absolute; left: 180px; top: 250px; width: 900px; text-align: center; }
+    #st-stamp span { display: inline-block; font-size: 82px; line-height: 1.02; padding: 18px 28px 12px; color: #E63946;
+      border: 12px solid #E63946; border-radius: 22px; background: rgba(255, 255, 255, 0.92); }
+
+    #st-end { background: #E23E8B; }
+    #st-elogo { position: absolute; left: 290px; top: 380px; width: 500px; height: 500px; }
+    #st-etitle { top: 960px; } #st-etitle span { font-size: 104px; padding: 18px 34px 12px; background: #FFD23F; }
+    #st-esub { position: absolute; left: 60px; top: 1190px; width: 960px; text-align: center; font-family: "Nunito", sans-serif;
+      font-weight: 800; font-size: 60px; line-height: 1.15; color: #FFFFFF; -webkit-text-stroke: 10px #1B1B2F; paint-order: stroke fill; }
+    #st-efollow { top: 1380px; } #st-efollow span { font-size: 64px; padding: 16px 30px 10px; background: #FFFFFF; }
+  </style>
+
+  <div id="root" data-composition-id="stage" data-width="1080" data-height="1920">
+    <svg width="0" height="0" style="position:absolute">
+      <defs>
+        <filter id="st-boil" x="-10%" y="-10%" width="120%" height="120%">
+          <feTurbulence id="st-turb" type="fractalNoise" baseFrequency="0.035" numOctaves="1" seed="1" result="n" />
+          <feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+        <symbol id="st-hen" viewBox="0 0 120 120">
+          <path d="M40 30 C38 12 52 6 56 18 C60 4 74 8 70 22 C80 14 88 26 76 32 Z" fill="#E63946" stroke="#1B1B2F" stroke-width="6" stroke-linejoin="round" />
+          <circle cx="60" cy="60" r="34" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="7" />
+          <circle cx="50" cy="54" r="6" fill="#1B1B2F" /><circle cx="72" cy="54" r="6" fill="#1B1B2F" />
+          <path d="M54 66 L68 66 L61 80 Z" fill="#FFB627" stroke="#1B1B2F" stroke-width="5" stroke-linejoin="round" />
+          <path d="M58 80 C54 92 66 94 64 82" fill="#E63946" stroke="#1B1B2F" stroke-width="4" />
+        </symbol>
+        <symbol id="st-reed" viewBox="0 0 60 600">
+          <path d="M30 600 L30 60" stroke="#1B1B2F" stroke-width="16" stroke-linecap="round" />
+          <path d="M30 600 L30 60" stroke="#4A9B3F" stroke-width="7" stroke-linecap="round" />
+          <rect x="16" y="10" width="28" height="90" rx="14" fill="#7A4E2D" stroke="#1B1B2F" stroke-width="7" />
+        </symbol>
+        <pattern id="st-roe" width="22" height="22" patternUnits="userSpaceOnUse">
+          <rect width="22" height="22" fill="#6B5A44" />
+          <circle cx="6" cy="6" r="5" fill="#B9A98C" stroke="#4A3D2C" stroke-width="1.5" />
+          <circle cx="17" cy="16" r="5" fill="#A8977A" stroke="#4A3D2C" stroke-width="1.5" />
+        </pattern>
+      </defs>
+    </svg>
+
+    <!-- ================= the market (camera moves this) ================= -->
+    <div id="st-world">
+      <svg class="st-full" viewBox="0 0 1080 1920">
+        <rect x="0" y="0" width="1080" height="1920" fill="#8ED9F0" />
+        <!-- Iztaccíhuatl (left) and Popocatépetl (right) -->
+        <path d="M-40 760 C60 640 140 600 220 640 C280 600 340 620 420 760 Z" fill="#9AA8D6" stroke="#1B1B2F" stroke-width="8" stroke-linejoin="round" />
+        <path d="M150 625 C185 605 200 610 220 640 C250 618 270 612 300 622 C260 640 230 660 210 650 C190 660 170 650 150 625 Z" fill="#FFFFFF" />
+        <path d="M620 760 L830 470 L1040 760 Z" fill="#7A8CC2" stroke="#1B1B2F" stroke-width="8" stroke-linejoin="round" />
+        <path d="M770 553 L830 470 L890 553 L860 540 L830 565 L800 540 Z" fill="#FFFFFF" />
+        <!-- lake -->
+        <rect x="-20" y="740" width="1120" height="140" fill="#2EC4B6" />
+        <path d="M-20 740 H1100" stroke="#1B1B2F" stroke-width="8" />
+        <path d="M60 790 q20 -12 40 0 M240 820 q20 -12 40 0 M800 800 q20 -12 40 0 M960 830 q20 -12 40 0" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" />
+        <!-- Templo Mayor -->
+        <g stroke="#1B1B2F" stroke-width="8" stroke-linejoin="round">
+          <rect x="300" y="790" width="480" height="90" fill="#D9C4A0" />
+          <rect x="340" y="710" width="400" height="80" fill="#E5D3B3" />
+          <rect x="380" y="640" width="320" height="70" fill="#D9C4A0" />
+          <rect x="420" y="580" width="240" height="60" fill="#E5D3B3" />
+          <path d="M500 880 L520 580 L560 580 L580 880 Z" fill="#B89B6E" />
+          <rect x="430" y="510" width="90" height="70" fill="#4D9DE0" />
+          <path d="M422 512 L475 470 L528 512 Z" fill="#2B6CB0" />
+          <rect x="560" y="510" width="90" height="70" fill="#E63946" />
+          <path d="M552 512 L605 470 L658 512 Z" fill="#A4161A" />
+        </g>
+        <g stroke="#B89B6E" stroke-width="5"><path d="M505 620 H575 M508 680 H572 M511 740 H569 M514 800 H566 M517 850 H563" /></g>
+        <!-- plaza and floor -->
+        <rect x="-20" y="880" width="1120" height="300" fill="#E9B872" />
+        <path d="M-20 880 H1100" stroke="#1B1B2F" stroke-width="8" />
+        <rect x="-20" y="1180" width="1120" height="760" fill="#D49A5A" />
+        <path d="M-20 1180 H1100" stroke="#1B1B2F" stroke-width="10" />
+        <path d="M80 1300 h120 M400 1260 h160 M760 1320 h140 M200 1480 h180 M640 1520 h160" stroke="#B87D44" stroke-width="10" stroke-linecap="round" />
+      </svg>
+      <!-- market stalls -->
+      <svg class="st-full" viewBox="0 0 1080 1920" filter="url(#st-boil)">
+        <g stroke="#1B1B2F" stroke-width="8" stroke-linejoin="round">
+          <path d="M-30 980 V880 M230 980 V880" />
+          <path d="M-40 880 L250 880 L230 820 L-20 820 Z" fill="#E23E8B" />
+          <path d="M30 820 L20 880 M90 820 L90 880 M150 820 L160 880" stroke="#FFFFFF" stroke-width="18" />
+          <path d="M-40 880 L250 880 L230 820 L-20 820 Z" fill="none" />
+          <rect x="-30" y="960" width="270" height="40" fill="#8B5A3C" />
+          <ellipse cx="40" cy="955" rx="34" ry="14" fill="#FFD23F" /><ellipse cx="110" cy="950" rx="34" ry="14" fill="#FFD23F" />
+          <path d="M160 960 q10 -30 20 0 M185 960 q10 -34 20 0" fill="#E63946" />
+          <path d="M850 980 V880 M1110 980 V880" />
+          <path d="M830 880 L1120 880 L1100 820 L850 820 Z" fill="#2BB673" />
+          <path d="M900 820 L890 880 M960 820 L960 880 M1020 820 L1030 880" stroke="#FFD23F" stroke-width="18" />
+          <path d="M830 880 L1120 880 L1100 820 L850 820 Z" fill="none" />
+          <rect x="840" y="960" width="270" height="40" fill="#8B5A3C" />
+          <path d="M870 960 C870 925 930 925 930 960 Z" fill="#C98B4F" /><path d="M950 960 C950 925 1010 925 1010 960 Z" fill="#C98B4F" />
+          <circle cx="885" cy="935" r="10" fill="#E63946" /><circle cx="905" cy="930" r="10" fill="#E63946" /><circle cx="975" cy="935" r="9" fill="#5B3A29" /><circle cx="992" cy="930" r="9" fill="#5B3A29" />
+        </g>
+      </svg>
+
+      <!-- "no chickens here" sign, frame 0 -->
+      <svg id="st-noch" class="st-full" viewBox="0 0 1080 1920">
+        <g id="st-nochG" transform="translate(790 640) scale(1)">
+          <circle r="150" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="12" />
+          <use href="#st-hen" x="-110" y="-110" width="220" height="220" />
+          <circle r="130" fill="none" stroke="#E63946" stroke-width="30" />
+          <path d="M-92 -92 L92 92" stroke="#E63946" stroke-width="30" />
+        </g>
+      </svg>
+
+      <div id="crono">
+        <svg viewBox="0 0 420 640" filter="url(#st-boil)">
+          <defs>
+            <clipPath id="c-eyeL"><ellipse cx="165" cy="228" rx="30" ry="36" /></clipPath>
+            <clipPath id="c-eyeR"><ellipse cx="255" cy="228" rx="30" ry="36" /></clipPath>
+            <clipPath id="c-mclip"><ellipse id="c-mclipE" cx="210" cy="300" rx="40" ry="8" /></clipPath>
+          </defs>
+          <g id="c-squash">
+            <g id="c-shake">
+              <path d="M182 480 L174 598 M238 480 L246 598" stroke="#1B1B2F" stroke-width="24" stroke-linecap="round" />
+              <ellipse cx="164" cy="608" rx="42" ry="20" fill="#5B3A29" stroke="#1B1B2F" stroke-width="8" />
+              <ellipse cx="256" cy="608" rx="42" ry="20" fill="#5B3A29" stroke="#1B1B2F" stroke-width="8" />
+              <g id="c-armL" transform="rotate(0 135 380)">
+                <path d="M135 380 L72 480" stroke="#1B1B2F" stroke-width="30" stroke-linecap="round" />
+                <path d="M135 380 L72 480" stroke="#FF8C42" stroke-width="14" stroke-linecap="round" />
+                <circle cx="72" cy="480" r="24" fill="#D9A066" stroke="#1B1B2F" stroke-width="8" />
+              </g>
+              <g id="c-armR" transform="rotate(0 285 380)">
+                <path d="M285 380 L348 480" stroke="#1B1B2F" stroke-width="30" stroke-linecap="round" />
+                <path d="M285 380 L348 480" stroke="#FF8C42" stroke-width="14" stroke-linecap="round" />
+                <circle cx="348" cy="480" r="24" fill="#D9A066" stroke="#1B1B2F" stroke-width="8" />
+              </g>
+              <rect x="120" y="340" width="180" height="170" rx="64" fill="#FF8C42" stroke="#1B1B2F" stroke-width="10" />
+              <rect x="122" y="440" width="176" height="22" fill="#1B1B2F" />
+              <circle cx="210" cy="451" r="28" fill="#FFD23F" stroke="#1B1B2F" stroke-width="8" />
+              <path id="c-clock" d="M210 451 V433 M210 451 L222 458" stroke="#1B1B2F" stroke-width="6" stroke-linecap="round" />
+              <g id="c-tilt">
+                <circle cx="85" cy="228" r="26" fill="#D9A066" stroke="#1B1B2F" stroke-width="9" />
+                <circle cx="335" cy="228" r="26" fill="#D9A066" stroke="#1B1B2F" stroke-width="9" />
+                <circle cx="210" cy="215" r="128" fill="#D9A066" stroke="#1B1B2F" stroke-width="12" />
+                <path d="M86 180 C86 60 334 60 334 180 C300 128 252 118 210 140 C168 116 120 128 86 180 Z" fill="#2E1E16" stroke="#1B1B2F" stroke-width="10" stroke-linejoin="round" />
+                <path d="M92 150 Q210 120 328 150" fill="none" stroke="#1B1B2F" stroke-width="16" stroke-linecap="round" />
+                <circle cx="160" cy="138" r="34" fill="#7FD3FF" stroke="#1B1B2F" stroke-width="10" />
+                <circle cx="260" cy="138" r="34" fill="#7FD3FF" stroke="#1B1B2F" stroke-width="10" />
+                <path d="M146 126 L158 118 M246 126 L258 118" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" />
+                <ellipse cx="165" cy="228" rx="30" ry="36" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="8" />
+                <ellipse cx="255" cy="228" rx="30" ry="36" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="8" />
+                <circle id="c-pupL" cx="165" cy="232" r="13" fill="#1B1B2F" />
+                <circle id="c-pupR" cx="255" cy="232" r="13" fill="#1B1B2F" />
+                <g clip-path="url(#c-eyeL)"><rect id="c-lidL" x="130" y="190" width="70" height="0" fill="#D9A066" /></g>
+                <g clip-path="url(#c-eyeR)"><rect id="c-lidR" x="220" y="190" width="70" height="0" fill="#D9A066" /></g>
+                <path id="c-browL" d="M135 182 H195" stroke="#2E1E16" stroke-width="13" stroke-linecap="round" />
+                <path id="c-browR" d="M225 182 H285" stroke="#2E1E16" stroke-width="13" stroke-linecap="round" />
+                <circle cx="128" cy="280" r="16" fill="#E8836B" opacity="0.6" /><circle cx="292" cy="280" r="16" fill="#E8836B" opacity="0.6" />
+                <g id="c-green" opacity="0"><ellipse cx="210" cy="300" rx="110" ry="50" fill="#8BC34A" opacity="0.55" /></g>
+                <ellipse id="c-mouth" cx="210" cy="300" rx="40" ry="8" fill="#5C1A2B" stroke="#1B1B2F" stroke-width="8" />
+                <g clip-path="url(#c-mclip)"><ellipse id="c-tongue" cx="210" cy="330" rx="28" ry="18" fill="#FF5D73" /></g>
+                <path id="c-blech" d="M196 304 Q210 360 224 304 Z" fill="#FF5D73" stroke="#1B1B2F" stroke-width="6" opacity="0" />
+                <path id="c-sweat" d="M338 150 Q356 182 338 196 Q320 182 338 150 Z" fill="#7FD3FF" stroke="#1B1B2F" stroke-width="6" opacity="0" />
+                <g id="c-q" opacity="0" font-family="Archivo Black" font-size="100" fill="#FFD23F" stroke="#1B1B2F" stroke-width="7" paint-order="stroke">
+                  <text x="0" y="60">?</text><text x="350" y="40">?</text>
+                </g>
+                <g id="c-bang" opacity="0" font-family="Archivo Black" font-size="120" fill="#E63946" stroke="#1B1B2F" stroke-width="7" paint-order="stroke">
+                  <text x="-10" y="70">!</text><text x="370" y="50">!</text>
+                </g>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <div id="totola">
+        <svg viewBox="0 0 460 620" filter="url(#st-boil)">
+          <g id="t-squash">
+            <g id="t-shake">
+              <!-- tail fan -->
+              <g id="t-tail" stroke="#1B1B2F" stroke-width="9">
+                <ellipse cx="350" cy="250" rx="42" ry="120" fill="#6E4429" transform="rotate(-40 350 380)" />
+                <ellipse cx="350" cy="250" rx="42" ry="120" fill="#C98B4F" transform="rotate(-18 350 380)" />
+                <ellipse cx="350" cy="250" rx="42" ry="120" fill="#6E4429" transform="rotate(4 350 380)" />
+                <ellipse cx="350" cy="250" rx="42" ry="120" fill="#C98B4F" transform="rotate(26 350 380)" />
+                <ellipse cx="350" cy="250" rx="42" ry="120" fill="#6E4429" transform="rotate(48 350 380)" />
+              </g>
+              <!-- legs -->
+              <path d="M215 470 L205 585 M295 470 L305 585" stroke="#1B1B2F" stroke-width="24" stroke-linecap="round" />
+              <path d="M215 470 L205 585 M295 470 L305 585" stroke="#E07A1F" stroke-width="10" stroke-linecap="round" />
+              <path d="M205 585 L175 600 M205 585 L205 606 M205 585 L232 600 M305 585 L278 600 M305 585 L305 606 M305 585 L334 600" stroke="#1B1B2F" stroke-width="10" stroke-linecap="round" />
+              <g id="t-body">
+                <ellipse cx="255" cy="380" rx="150" ry="125" fill="#8B5A3C" stroke="#1B1B2F" stroke-width="12" />
+                <path d="M170 360 q15 14 30 0 q15 14 30 0 q15 14 30 0 M190 420 q15 14 30 0 q15 14 30 0 q15 14 30 0" fill="none" stroke="#6E4429" stroke-width="7" stroke-linecap="round" />
+              </g>
+              <g id="t-wing" transform="rotate(0 320 330)">
+                <ellipse cx="335" cy="400" rx="68" ry="92" fill="#6E4429" stroke="#1B1B2F" stroke-width="10" />
+                <path d="M300 440 q12 24 30 22 M320 452 q14 22 30 16" fill="none" stroke="#1B1B2F" stroke-width="6" stroke-linecap="round" />
+              </g>
+              <g id="t-head">
+                <path d="M175 220 L215 320" stroke="#1B1B2F" stroke-width="74" stroke-linecap="round" />
+                <path d="M175 220 L215 320" stroke="#8FB8E8" stroke-width="52" stroke-linecap="round" />
+                <circle cx="168" cy="268" r="12" fill="#E63946" stroke="#1B1B2F" stroke-width="5" />
+                <circle cx="212" cy="272" r="10" fill="#E63946" stroke="#1B1B2F" stroke-width="5" />
+                <g fill="#2BB673" stroke="#1B1B2F" stroke-width="5">
+                  <circle cx="168" cy="318" r="12" /><circle cx="190" cy="332" r="12" /><circle cx="215" cy="338" r="12" /><circle cx="240" cy="332" r="12" />
+                </g>
+                <circle cx="170" cy="165" r="84" fill="#8FB8E8" stroke="#1B1B2F" stroke-width="12" />
+                <ellipse cx="140" cy="150" rx="25" ry="31" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="7" />
+                <ellipse cx="200" cy="150" rx="25" ry="31" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="7" />
+                <circle id="t-pupL" cx="140" cy="154" r="11" fill="#1B1B2F" />
+                <circle id="t-pupR" cx="200" cy="154" r="11" fill="#1B1B2F" />
+                <path id="t-lidL" d="M115 150 H165" stroke="#1B1B2F" stroke-width="7" stroke-linecap="round" opacity="0" />
+                <path id="t-lidR" d="M175 150 H225" stroke="#1B1B2F" stroke-width="7" stroke-linecap="round" opacity="0" />
+                <path d="M117 126 L106 116 M124 120 L118 107 M216 120 L222 107 M223 126 L234 116" stroke="#1B1B2F" stroke-width="6" stroke-linecap="round" />
+                <path id="t-browL" d="M115 106 H160" stroke="#1B1B2F" stroke-width="11" stroke-linecap="round" />
+                <path id="t-browR" d="M180 106 H225" stroke="#1B1B2F" stroke-width="11" stroke-linecap="round" />
+                <circle cx="112" cy="196" r="13" fill="#FF8FAB" opacity="0.7" /><circle cx="228" cy="196" r="13" fill="#FF8FAB" opacity="0.7" />
+                <g id="t-wattle" transform="translate(170 214) scale(1) translate(-170 -214)">
+                  <path d="M158 214 C146 262 196 266 184 214 Z" fill="#E63946" stroke="#1B1B2F" stroke-width="7" stroke-linejoin="round" />
+                </g>
+                <ellipse id="t-mouthin" cx="170" cy="200" rx="18" ry="2" fill="#5C1A2B" />
+                <path id="t-jaw" d="M152 192 L188 192 L170 216 Z" fill="#E59400" stroke="#1B1B2F" stroke-width="7" stroke-linejoin="round" />
+                <path d="M144 180 L196 180 L170 210 Z" fill="#FFB627" stroke="#1B1B2F" stroke-width="7" stroke-linejoin="round" />
+                <path id="t-snood" d="M178 118 C172 150 214 168 206 214 C202 232 188 230 190 212 C194 180 166 160 168 120 Z" fill="#E63946" stroke="#1B1B2F" stroke-width="7" stroke-linejoin="round" />
+              </g>
+              <!-- puffed feathers when furious -->
+              <g id="t-puff" opacity="0" stroke="#1B1B2F" stroke-width="8" fill="#8B5A3C">
+                <path d="M110 330 l-40 -20 l20 40 Z M120 430 l-46 6 l36 30 Z M400 330 l44 -16 l-18 42 Z" />
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <!-- the egg Totola lays -->
+      <svg id="st-eggS" class="st-full" viewBox="0 0 1080 1920" filter="url(#st-boil)">
+        <g id="st-egg" transform="translate(560 1150) scale(0)">
+          <ellipse cx="0" cy="-60" rx="52" ry="66" fill="#FFF6E0" stroke="#1B1B2F" stroke-width="10" />
+          <ellipse cx="-16" cy="-84" rx="12" ry="18" fill="#FFFFFF" />
+          <circle cx="14" cy="-40" r="7" fill="#D9B98C" /><circle cx="-10" cy="-20" r="5" fill="#D9B98C" />
+        </g>
+      </svg>
+
+      <!-- Crono's thought: an egg and a question mark -->
+      <svg id="st-think" class="st-full" viewBox="0 0 1080 1920">
+        <g id="st-thinkG" transform="translate(420 470) scale(0)">
+          <circle cx="-110" cy="150" r="16" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="7" />
+          <circle cx="-70" cy="100" r="26" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="7" />
+          <ellipse cx="60" cy="-20" rx="160" ry="110" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="9" />
+          <ellipse cx="10" cy="-20" rx="44" ry="56" fill="#FFF6E0" stroke="#1B1B2F" stroke-width="9" />
+          <text x="70" y="20" font-family="Archivo Black" font-size="120" fill="#E63946" stroke="#1B1B2F" stroke-width="7" paint-order="stroke">?</text>
+        </g>
+      </svg>
+    </div>
+
+    <!-- speed lines for the close-ups -->
+    <svg id="st-lines" class="st-full" viewBox="0 0 1080 1920" opacity="0">
+      <g stroke="#1B1B2F" stroke-width="10" stroke-linecap="round">
+        <path d="M0 300 L170 420 M0 700 L150 740 M0 1100 L160 1060 M1080 280 L900 410 M1080 690 L920 730 M1080 1120 L910 1070 M300 0 L380 160 M780 0 L700 160 M120 0 L250 210 M960 0 L830 210" />
+      </g>
+    </svg>
+
+    <!-- ================= card: chickens arrived by ship ================= -->
+    <div id="st-ship" class="st-full">
+      <svg class="st-full" viewBox="0 0 1080 1920" filter="url(#st-boil)">
+        <g stroke="#1B1B2F" stroke-width="10" stroke-linejoin="round">
+          <path d="M540 1000 V430 M330 1000 V560 M760 1000 V590" stroke-width="14" />
+          <path d="M400 460 C470 500 610 500 680 460 L690 760 C610 790 470 790 390 760 Z" fill="#FFFFFF" />
+          <path d="M440 520 L640 740 M640 520 L440 740" stroke="#E63946" stroke-width="22" stroke-linecap="round" />
+          <path d="M240 590 C290 610 370 610 420 590 L425 830 C370 845 290 845 235 830 Z" fill="#FFFFFF" />
+          <path d="M690 620 C730 635 800 635 840 620 L845 840 C800 852 730 852 690 840 Z" fill="#FFFFFF" />
+          <path d="M540 430 L600 400 L540 380 Z" fill="#FFD23F" />
+        </g>
+        <g id="st-hens">
+          <use id="st-h1" href="#st-hen" x="300" y="830" width="130" height="130" />
+          <use id="st-h2" href="#st-hen" x="475" y="820" width="130" height="130" />
+          <use id="st-h3" href="#st-hen" x="650" y="830" width="130" height="130" />
+        </g>
+        <path d="M150 920 L930 920 L860 1100 L230 1100 Z" fill="#8B5A3C" stroke="#1B1B2F" stroke-width="12" stroke-linejoin="round" />
+        <path d="M180 970 H900 M210 1040 H870" stroke="#6E4429" stroke-width="10" />
+        <circle cx="380" cy="1005" r="16" fill="#1B1B2F" /><circle cx="540" cy="1005" r="16" fill="#1B1B2F" /><circle cx="700" cy="1005" r="16" fill="#1B1B2F" />
+        <rect x="-20" y="1080" width="1120" height="900" fill="#1F6FB2" />
+        <path id="st-wave" d="M-20 1080 q60 -30 120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0" fill="none" stroke="#1B1B2F" stroke-width="10" />
+      </svg>
+      <div id="st-imp" class="st-stk"><span>IMPORTADAS</span></div>
+    </div>
+
+    <!-- ================= card: totoltetl ================= -->
+    <div id="st-word" class="st-full">
+      <div id="st-wt" class="st-stk"><span>TOTOLTETL</span></div>
+      <div id="st-c1" class="st-col">
+        <svg width="220" height="220" viewBox="0 0 220 220" filter="url(#st-boil)">
+          <circle cx="110" cy="115" r="80" fill="#8FB8E8" stroke="#1B1B2F" stroke-width="10" />
+          <circle cx="85" cy="100" r="14" fill="#1B1B2F" /><circle cx="135" cy="100" r="14" fill="#1B1B2F" />
+          <path d="M88 130 L132 130 L110 158 Z" fill="#FFB627" stroke="#1B1B2F" stroke-width="7" stroke-linejoin="round" />
+          <path d="M118 70 C112 100 150 112 144 150 C141 162 130 160 132 148 C134 120 108 104 110 72 Z" fill="#E63946" stroke="#1B1B2F" stroke-width="6" />
+        </svg>
+        <b>TŌTOLIN</b><i>guajolota</i>
+      </div>
+      <div id="st-op1" class="st-op">+</div>
+      <div id="st-c2" class="st-col">
+        <svg width="220" height="220" viewBox="0 0 220 220" filter="url(#st-boil)">
+          <path d="M40 150 C20 100 60 50 110 56 C170 50 200 110 180 160 C160 190 60 192 40 150 Z" fill="#A9A9B8" stroke="#1B1B2F" stroke-width="10" stroke-linejoin="round" />
+          <path d="M80 100 q20 -10 30 6 M130 140 q16 -6 26 6" fill="none" stroke="#7D7D90" stroke-width="7" stroke-linecap="round" />
+        </svg>
+        <b>TETL</b><i>piedra</i>
+      </div>
+      <div id="st-op2" class="st-op">=</div>
+      <div id="st-c3" class="st-col">
+        <svg width="220" height="220" viewBox="0 0 220 220" filter="url(#st-boil)">
+          <ellipse cx="110" cy="118" rx="66" ry="84" fill="#FFF6E0" stroke="#1B1B2F" stroke-width="10" />
+          <ellipse cx="88" cy="88" rx="14" ry="22" fill="#FFFFFF" />
+        </svg>
+        <b>HUEVO</b><i>totoltetl</i>
+      </div>
+      <div id="st-wsrc" class="st-src">Vocabulario de Alonso de Molina, 1571</div>
+    </div>
+
+    <!-- ================= card: the lake and the ahuautle ================= -->
+    <div id="st-lake" class="st-full">
+      <svg class="st-full" viewBox="0 0 1080 1920" filter="url(#st-boil)">
+        <rect x="-20" y="760" width="1120" height="1200" fill="#2EC4B6" />
+        <path id="st-lwave" d="M-20 760 q45 -22 90 0 t90 0 t90 0 t90 0 t90 0 t90 0 t90 0 t90 0 t90 0 t90 0 t90 0 t90 0 t90 0" fill="none" stroke="#1B1B2F" stroke-width="9" />
+        <use href="#st-reed" x="40" y="520" width="60" height="600" />
+        <use href="#st-reed" x="110" y="600" width="50" height="520" />
+        <use href="#st-reed" x="900" y="540" width="60" height="600" />
+        <use href="#st-reed" x="980" y="620" width="50" height="520" />
+        <!-- the reed with the eggs -->
+        <use href="#st-reed" x="250" y="560" width="70" height="620" />
+        <g id="st-roe" fill="#FFF6E0" stroke="#1B1B2F" stroke-width="3">
+          <circle cx="270" cy="800" r="9" /><circle cx="300" cy="812" r="9" /><circle cx="272" cy="826" r="9" /><circle cx="302" cy="840" r="9" />
+          <circle cx="270" cy="856" r="9" /><circle cx="300" cy="870" r="9" /><circle cx="272" cy="886" r="9" /><circle cx="302" cy="900" r="9" />
+          <circle cx="270" cy="916" r="9" /><circle cx="300" cy="930" r="9" /><circle cx="272" cy="946" r="9" /><circle cx="302" cy="960" r="9" />
+        </g>
+        <!-- axayácatl, the water bug -->
+        <g id="st-bug" transform="translate(680 930)">
+          <g id="st-oarL" transform="rotate(0 -60 10)"><path d="M-60 10 L-190 60" stroke="#1B1B2F" stroke-width="16" stroke-linecap="round" /><ellipse cx="-190" cy="60" rx="34" ry="12" fill="#6B8E23" stroke="#1B1B2F" stroke-width="6" transform="rotate(20 -190 60)" /></g>
+          <g id="st-oarR" transform="rotate(0 60 10)"><path d="M60 10 L190 60" stroke="#1B1B2F" stroke-width="16" stroke-linecap="round" /><ellipse cx="190" cy="60" rx="34" ry="12" fill="#6B8E23" stroke="#1B1B2F" stroke-width="6" transform="rotate(-20 190 60)" /></g>
+          <ellipse cx="0" cy="20" rx="105" ry="68" fill="#6B8E23" stroke="#1B1B2F" stroke-width="10" />
+          <path d="M-70 10 H70 M-80 40 H80" stroke="#4E6B18" stroke-width="8" stroke-linecap="round" />
+          <ellipse cx="0" cy="-45" rx="60" ry="40" fill="#8DB33A" stroke="#1B1B2F" stroke-width="10" />
+          <circle cx="-26" cy="-52" r="17" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="6" /><circle cx="26" cy="-52" r="17" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="6" />
+          <circle cx="-24" cy="-50" r="8" fill="#1B1B2F" /><circle cx="24" cy="-50" r="8" fill="#1B1B2F" />
+          <path d="M-14 -28 Q0 -18 14 -28" fill="none" stroke="#1B1B2F" stroke-width="6" stroke-linecap="round" />
+        </g>
+      </svg>
+      <div id="st-ahu" class="st-stk"><span>AHUAUTLE</span></div>
+      <div id="st-axa" class="st-src">huevos de axayácatl, una chinche de agua</div>
+    </div>
+
+    <!-- ================= card: Mexican caviar ================= -->
+    <div id="st-cav" class="st-full">
+      <div id="st-cv1" class="st-stk"><span>CAVIAR</span></div>
+      <div id="st-cv2" class="st-stk"><span>MEXICANO</span></div>
+      <svg class="st-full" viewBox="0 0 1080 1920" filter="url(#st-boil)">
+        <ellipse cx="540" cy="770" rx="250" ry="180" fill="#1B1B2F" />
+        <ellipse cx="540" cy="740" rx="250" ry="180" fill="#C9D3DD" stroke="#1B1B2F" stroke-width="12" />
+        <ellipse cx="540" cy="740" rx="205" ry="140" fill="url(#st-roe)" stroke="#1B1B2F" stroke-width="10" />
+        <g id="st-spoon" transform="rotate(0 760 600)">
+          <path d="M760 600 L900 470" stroke="#1B1B2F" stroke-width="26" stroke-linecap="round" />
+          <path d="M760 600 L900 470" stroke="#FFF6E0" stroke-width="12" stroke-linecap="round" />
+          <ellipse cx="740" cy="620" rx="46" ry="30" fill="#FFF6E0" stroke="#1B1B2F" stroke-width="9" transform="rotate(-42 740 620)" />
+          <ellipse cx="740" cy="620" rx="28" ry="16" fill="url(#st-roe)" transform="rotate(-42 740 620)" />
+        </g>
+      </svg>
+      <div id="st-price" class="st-stk"><span>≈ 50 USD / KG</span></div>
+      <div id="st-csrc" class="st-src">Precio en el lago de Texcoco · AP, 2022</div>
+    </div>
+
+    <!-- stamp: "gallina de la tierra" -->
+    <div id="st-stamp"><span>GALLINA<br>DE LA TIERRA</span></div>
+
+    <!-- header: the hook, on screen from frame 0 -->
+    <div id="st-hdr">
+      <div id="st-hdr1" class="st-tag"><span>¿LOS MEXICAS</span></div>
+      <div id="st-hdr2" class="st-tag"><span>SIN GALLINAS?</span></div>
+    </div>
+
+    <!-- ================= end card: channel brand ================= -->
+    <div id="st-end" class="st-full">
+      <svg id="st-elogo" viewBox="0 0 200 200">
+        <defs><clipPath id="st-ecirc"><circle cx="100" cy="100" r="92" /></clipPath></defs>
+        <circle cx="100" cy="100" r="92" fill="#E23E8B" />
+        <g clip-path="url(#st-ecirc)">
+          <ellipse cx="76" cy="108" rx="20" ry="25" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="6" />
+          <ellipse cx="124" cy="108" rx="20" ry="25" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="6" />
+          <circle id="st-epupL" cx="86" cy="106" r="9" fill="#1B1B2F" /><circle id="st-epupR" cx="134" cy="106" r="9" fill="#1B1B2F" />
+          <path d="M56 70 Q72 54 92 64 M108 76 L144 76" fill="none" stroke="#1B1B2F" stroke-width="7" stroke-linecap="round" />
+          <rect x="0" y="122" width="200" height="90" fill="#FFD23F" stroke="#1B1B2F" stroke-width="7" />
+          <path d="M30 150 H66 M94 150 H130 M150 150 H186 M50 176 H86 M114 176 H150" stroke="#1B1B2F" stroke-width="5" stroke-linecap="round" opacity=".35" />
+        </g>
+        <circle cx="100" cy="100" r="92" fill="none" stroke="#1B1B2F" stroke-width="8" />
+      </svg>
+      <div id="st-etitle" class="st-stk"><span>PURO CHISME</span></div>
+      <div id="st-esub">¿A poco no sabías este chisme?</div>
+      <div id="st-efollow" class="st-stk"><span>SÍGUENOS PARA MÁS</span></div>
+    </div>
+  </div>
+
+  <script>
+    const D = /*DATA-START*/{"mouth":{"fps":30,"crono":[0.0,0.0,0.0,0.0,0.32,0.615,0.675,0.589,0.454,0.511,0.826,0.987,0.726,0.241,0.212,0.57,0.626,0.598,0.713,0.564,0.278,0.314,0.385,0.192,0.196,0.568,0.836,0.655,0.273,0.239,0.569,0.875,0.885,0.683,0.491,0.281,0.081,0.004,0.0,0.18,0.609,0.869,0.766,0.619,0.603,0.681,0.739,0.692,0.658,0.69,0.724,0.715,0.552,0.258,0.132,0.387,0.691,0.72,0.697,0.768,0.84,0.802,0.653,0.409,0.312,0.585,0.7,0.476,0.346,0.324,0.221,0.082,0.012,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.149,0.547,0.899,0.86,0.719,0.86,0.803,0.397,0.134,0.04,0.0,0.0,0.0,0.0,0.036,0.175,0.363,0.452,0.482,0.552,0.536,0.384,0.392,0.682,0.905,0.812,0.721,0.797,0.66,0.466,0.599,0.63,0.497,0.685,0.807,0.526,0.314,0.357,0.426,0.466,0.645,0.763,0.482,0.305,0.628,0.884,0.869,0.812,0.707,0.559,0.381,0.291,0.383,0.445,0.338,0.321,0.424,0.482,0.64,0.876,0.834,0.478,0.159,0.027,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.014,0.092,0.343,0.677,0.779,0.641,0.418,0.169,0.123,0.354,0.546,0.514,0.404,0.385,0.392,0.362,0.371,0.408,0.396,0.245,0.09,0.215,0.593,0.869,0.753,0.505,0.599,0.885,1.0,1.0,0.879,0.754,0.749,0.616,0.395,0.191,0.092,0.358,0.725,0.658,0.479,0.574,0.558,0.47,0.549,0.474,0.2,0.054,0.059,0.14,0.295,0.431,0.463,0.388,0.252,0.11,0.021,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.449,0.653,0.654,0.553,0.373,0.194,0.066,0.032,0.281,0.74,0.864,0.553,0.254,0.124,0.05,0.21,0.541,0.552,0.291,0.088,0.01,0.0,0.031,0.161,0.462,0.721,0.714,0.744,0.881,0.773,0.476,0.259,0.375,0.781,1.0,0.876,0.548,0.246,0.234,0.447,0.578,0.532,0.367,0.152,0.025,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.182,0.47,0.836,1.0,0.789,0.471,0.574,0.863,0.753,0.377,0.309,0.526,0.564,0.522,0.51,0.44,0.433,0.469,0.54,0.656,0.531,0.234,0.1,0.052,0.14,0.516,0.845,0.725,0.33,0.085,0.018,0.0,0.0,0.0,0.0,0.0,0.0,0.019,0.057,0.099,0.35,0.758,0.825,0.604,0.364,0.117,0.112,0.395,0.63,0.643,0.614,0.667,0.691,0.642,0.571,0.525,0.373,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.187,0.352,0.434,0.467,0.499,0.52,0.529,0.538,0.556,0.566,0.484,0.271,0.069,0.049,0.26,0.558,0.58,0.319,0.195,0.436,0.826,0.959,0.775,0.617,0.745,0.796,0.551,0.301,0.119,0.215,0.611,0.81,0.629,0.401,0.363,0.361,0.365,0.414,0.312,0.103,0.006,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.039,0.329,0.779,0.766,0.314,0.217,0.61,0.93,1.0,1.0,0.851,0.452,0.101,0.0,0.222,0.663,0.82,0.699,0.608,0.51,0.446,0.479,0.561,0.735,0.879,0.703,0.489,0.67,0.887,0.722,0.401,0.302,0.41,0.513,0.537,0.514,0.587,0.763,0.802,0.665,0.577,0.651,0.779,0.815,0.666,0.358,0.098,0.007,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"totola":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.607,0.715,0.401,0.376,0.775,0.999,0.825,0.491,0.294,0.17,0.066,0.116,0.223,0.279,0.302,0.284,0.178,0.05,0.25,0.75,0.944,0.85,0.867,0.962,0.922,0.647,0.308,0.143,0.232,0.547,0.84,0.874,0.695,0.492,0.434,0.604,0.847,0.829,0.524,0.191,0.026,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.25,0.75,0.825,0.407,0.087,0.015,0.168,0.525,0.702,0.528,0.36,0.442,0.7,0.926,0.997,0.973,0.954,0.954,0.928,0.909,0.844,0.665,0.463,0.319,0.218,0.107,0.023,0.001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.21,0.671,0.96,1.0,0.974,0.817,0.507,0.221,0.176,0.471,0.773,0.652,0.286,0.154,0.415,0.744,0.779,0.603,0.449,0.442,0.582,0.679,0.549,0.287,0.102,0.043,0.259,0.671,0.819,0.571,0.333,0.498,0.644,0.419,0.154,0.148,0.453,0.67,0.543,0.438,0.428,0.295,0.236,0.463,0.615,0.397,0.125,0.077,0.364,0.729,0.676,0.411,0.324,0.367,0.451,0.554,0.603,0.568,0.515,0.505,0.504,0.434,0.295,0.145,0.062,0.035,0.011,0.0,0.167,0.506,0.638,0.584,0.624,0.664,0.693,0.839,0.937,0.869,0.794,0.765,0.714,0.643,0.557,0.373,0.129,0.228,0.634,0.81,0.846,0.944,0.98,0.91,0.774,0.645,0.47,0.271,0.19,0.222,0.295,0.345,0.335,0.28,0.184,0.093,0.061,0.047,0.023,0.005,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.299,0.775,1.0,1.0,0.919,0.73,0.525,0.304,0.115,0.082,0.227,0.405,0.496,0.583,0.64,0.55,0.375,0.281,0.278,0.238,0.148,0.069,0.109,0.289,0.432,0.486,0.455,0.339,0.274,0.327,0.386,0.379,0.374,0.345,0.227,0.094,0.019,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.044,0.305,0.725,0.938,0.951,0.977,1.0,1.0,1.0,0.947,0.679,0.275,0.113,0.302,0.58,0.586,0.295,0.061,0.061,0.207,0.307,0.218,0.061,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.178,0.585,0.885,0.979,1.0,0.982,0.879,0.566,0.365,0.637,0.823,0.584,0.289,0.175,0.333,0.555,0.471,0.369,0.591,0.751,0.603,0.347,0.182,0.173,0.34,0.56,0.575,0.34,0.088,0.0,0.144,0.49,0.659,0.427,0.113,0.208,0.612,0.734,0.539,0.294,0.091,0.007,0.227,0.643,0.756,0.578,0.322,0.085,0.007,0.037,0.066,0.048,0.013,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.028,0.285,0.694,0.893,0.901,0.684,0.4,0.428,0.646,0.757,0.548,0.307,0.382,0.393,0.198,0.298,0.709,0.814,0.475,0.155,0.087,0.205,0.383,0.472,0.487,0.482,0.415,0.253,0.073,0.013,0.087,0.173,0.146,0.053,0.007,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.066,0.381,0.78,0.737,0.338,0.269,0.611,0.667,0.303,0.157,0.475,0.76,0.653,0.493,0.447,0.296,0.139,0.243,0.367,0.205,0.073,0.337,0.725,0.694,0.359,0.256,0.558,0.888,0.868,0.517,0.143,0.122,0.363,0.422,0.264,0.123,0.045,0.007,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.334,0.684,0.928,1.0,0.977,0.9,0.836,0.828,0.867,0.87,0.685,0.382,0.147,0.053,0.054,0.197,0.506,0.692,0.75,0.836,0.809,0.691,0.524,0.359,0.321,0.322,0.303,0.287,0.251,0.189,0.116,0.054,0.019,0.004,0.0,0.0,0.003,0.006,0.004,0.0,0.0,0.004,0.021,0.184,0.567,0.745,0.437,0.093,0.111,0.464,0.773,0.637,0.442,0.581,0.573,0.276,0.083,0.2,0.584,0.841,0.763,0.565,0.385,0.27,0.222,0.242,0.321,0.366,0.321,0.205,0.083,0.016,0.0,0.048,0.262,0.581,0.76,0.834,0.941,0.905,0.649,0.431,0.471,0.705,0.843,0.773,0.558,0.255,0.056,0.069,0.14,0.106,0.027,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.059,0.368,0.78,0.873,0.688,0.501,0.492,0.621,0.707,0.746,0.664,0.401,0.234,0.434,0.803,0.976,0.98,0.825,0.536,0.348,0.204,0.054,0.059,0.309,0.588,0.625,0.491,0.303,0.137,0.047,0.008,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.061,0.265,0.599,0.894,0.937,0.838,0.681,0.442,0.509,0.796,0.685,0.366,0.421,0.631,0.506,0.191,0.056,0.141,0.414,0.778,0.974,1.0,0.788,0.401,0.389,0.675,0.724,0.482,0.35,0.507,0.654,0.721,0.747,0.694,0.569,0.349,0.124,0.091,0.206,0.231,0.186,0.136,0.059,0.009,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.201,0.267,0.365,0.6,0.851,0.978,0.796,0.341,0.046,0.022,0.279,0.742,0.856,0.65,0.575,0.683,0.887,0.967,0.791,0.566,0.51,0.54,0.554,0.641,0.816,0.944,0.948,0.81,0.481,0.134,0.252,0.75,1.0,0.94,0.731,0.428,0.181,0.054,0.01,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.171,0.592,0.921,1.0,0.904,0.706,0.596,0.637,0.722,0.678,0.48,0.448,0.677,0.685,0.356,0.269,0.566,0.783,0.759,0.517,0.261,0.421,0.718,0.638,0.33,0.185,0.303,0.505,0.632,0.564,0.38,0.321,0.42,0.432,0.231,0.122,0.305,0.421,0.222,0.047,0.187,0.537,0.779,0.758,0.551,0.329,0.266,0.29,0.279,0.195,0.068,0.004,0.0,0.0,0.0,0.0,0.0,0.0,0.019,0.199,0.543,0.789,0.778,0.542,0.266,0.086,0.011,0.0,0.002,0.108,0.324,0.433,0.414,0.402,0.48,0.641,0.67,0.416,0.11,0.0,0.08,0.411,0.748,0.684,0.394,0.156,0.076,0.34,0.787,0.982,0.877,0.645,0.475,0.523,0.696,0.717,0.464,0.2,0.226,0.521,0.837,0.98,0.981,0.723,0.249,0.008,0.239,0.729,0.966,0.906,0.669,0.327,0.155,0.083,0.202,0.622,0.913,0.821,0.47,0.254,0.458,0.752,0.807,0.678,0.579,0.652,0.694,0.51,0.289,0.196,0.17,0.135,0.115,0.119,0.095,0.077,0.068,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.237,0.723,0.987,0.88,0.555,0.258,0.265,0.524,0.768,0.807,0.715,0.699,0.758,0.789,0.629,0.322,0.376,0.788,0.974,0.793,0.469,0.393,0.562,0.468,0.178,0.126,0.422,0.814,0.907,0.846,0.889,0.838,0.655,0.586,0.602,0.438,0.206,0.257,0.505,0.503,0.244,0.053,0.116,0.481,0.791,0.665,0.372,0.289,0.346,0.416,0.483,0.495,0.437,0.39,0.448,0.551,0.539,0.399,0.215,0.086,0.045,0.028,0.008,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.097,0.316,0.487,0.665,0.897,0.931,0.753,0.528,0.275,0.118,0.304,0.701,0.908,0.862,0.703,0.655,0.787,0.723,0.389,0.321,0.547,0.597,0.601,0.728,0.621,0.255,0.03,0.069,0.308,0.618,0.789,0.776,0.632,0.423,0.286,0.27,0.282,0.274,0.183,0.051,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.011,0.271,0.739,0.929,0.686,0.25,0.014,0.0,0.0,0.25,0.75,1.0,0.918,0.661,0.328,0.096,0.133,0.495,0.817,0.649,0.358,0.51,0.706,0.608,0.604,0.815,0.786,0.395,0.088,0.009,0.101,0.451,0.78,0.768,0.498,0.16,0.013,0.209,0.56,0.607,0.34,0.129,0.032,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]}}/*DATA-END*/;
+    const DUR = 52, FPS = 30;
+    const $ = (id) => document.getElementById(id);
+    const lerp = (a, b, k) => a + (b - a) * k;
+    const smooth = (k) => k * k * (3 - 2 * k);
+    const set = (id, attr, v) => $(id).setAttribute(attr, v);
+
+    // ---- moods (keyed states the rig eases between) ----
+    const CRONO = {
+      shock:   { bl: -22, br: 22, by: -12, pup: 0.6, px: 0, py: 0, lid: 0, mw: 46, al: 130, ar: -130, tilt: 0, shake: 0.6, mo: 0.35, sweat: 1, q: 0, bang: 0, green: 0, blech: 0 },
+      listen:  { bl: 8, br: -8, by: 0, pup: 1, px: 12, py: 0, lid: 0.1, mw: 36, al: 0, ar: 10, tilt: 4, shake: 0, mo: 0, sweat: 0, q: 0, bang: 0, green: 0, blech: 0 },
+      ask:     { bl: -16, br: 12, by: -6, pup: 1, px: 10, py: -6, lid: 0, mw: 32, al: 0, ar: -100, tilt: -8, shake: 0, mo: 0, sweat: 0, q: 1, bang: 0, green: 0, blech: 0 },
+      amazed:  { bl: -26, br: 26, by: -14, pup: 1.25, px: 0, py: 0, lid: 0, mw: 50, al: 70, ar: -70, tilt: 0, shake: 0, mo: 0.45, sweat: 0, q: 0, bang: 1, green: 0, blech: 0 },
+      disgust: { bl: 20, br: -20, by: 6, pup: 0.8, px: 0, py: 4, lid: 0.45, mw: 44, al: 40, ar: -40, tilt: 6, shake: 0.25, mo: 0.2, sweat: 0, q: 0, bang: 0, green: 1, blech: 1 },
+      laugh:   { bl: -10, br: 10, by: -4, pup: 1, px: 0, py: 0, lid: 0.7, mw: 50, al: 20, ar: -150, tilt: -5, shake: 0.4, mo: 0.6, sweat: 0, q: 0, bang: 0, green: 0, blech: 0 },
+    };
+    const CKEYS = [[0, "shock"], [4.92, "listen"], [11.7, "ask"], [13.93, "listen"], [21.54, "amazed"], [23.26, "listen"], [29.65, "disgust"], [31.68, "listen"], [37.89, "ask"], [41.54, "listen"], [45.93, "laugh"]];
+    const TOTOLA = {
+      sassy:   { bl: 10, br: -10, pup: 1, px: -8, lid: 0.35, wing: -35, puff: 0, wat: 1, shake: 0, tilt: 0 },
+      proud:   { bl: -8, br: 8, pup: 1, px: 0, lid: 0.45, wing: -55, puff: 0.1, wat: 1.1, shake: 0, tilt: 6 },
+      explain: { bl: -12, br: 12, pup: 1, px: -10, lid: 0, wing: -80, puff: 0, wat: 1, shake: 0, tilt: -4 },
+      annoyed: { bl: 16, br: -16, pup: 0.9, px: -10, lid: 0.4, wing: -20, puff: 0.3, wat: 1.15, shake: 0, tilt: 3 },
+      furious: { bl: 30, br: -30, pup: 0.7, px: 0, lid: 0, wing: -95, puff: 1, wat: 1.7, shake: 1, tilt: 0 },
+    };
+    const TKEYS = [[0, "sassy"], [13.98, "proud"], [15.31, "explain"], [31.68, "proud"], [37.89, "annoyed"], [41.54, "explain"], [45.88, "furious"]];
+
+    // ---- camera: [time, scale, focus x, focus y]; re-frames on every line ----
+    const CAM = [[0, 1.2, 540, 860], [4.62, 1.05, 540, 900], [4.92, 1.1, 740, 880], [11.65, 1.0, 540, 900], [13.98, 1.22, 740, 860],
+      [21.54, 1.9, 270, 770], [23.26, 1.0, 540, 900], [29.65, 1.95, 270, 780], [31.68, 1.0, 540, 900],
+      [37.89, 1.08, 450, 900], [41.54, 1.15, 760, 880], [45.88, 1.1, 540, 860]];
+    const CLOSE = [[21.54, 23.26], [29.65, 31.68]];
+
+    function mood(keys, table, t) {
+      let i = 0;
+      while (i + 1 < keys.length && t >= keys[i + 1][0]) i++;
+      const cur = table[keys[i][1]], since = t - keys[i][0];
+      if (i === 0 || since >= 0.25) return { s: cur, since };
+      const prev = table[keys[i - 1][1]], k = smooth(since / 0.25), out = {};
+      for (const p in cur) out[p] = lerp(prev[p], cur[p], k);
+      return { s: out, since };
+    }
+    function cam(t) {
+      let i = 0;
+      while (i + 1 < CAM.length && t >= CAM[i + 1][0]) i++;
+      let [, s, fx, fy] = CAM[i];
+      const since = t - CAM[i][0];
+      if (i > 0 && since < 0.2) {  // fast re-frame, power3.out
+        const k = 1 - Math.pow(1 - since / 0.2, 3), p = CAM[i - 1];
+        s = lerp(p[1], s, k); fx = lerp(p[2], fx, k); fy = lerp(p[3], fy, k);
+      }
+      const x = Math.min(0, Math.max(1080 - 1080 * s, 540 - fx * s));
+      const y = Math.min(0, Math.max(1920 - 1920 * s, 900 - fy * s));
+      return { s, x, y };
+    }
+    const mouthAt = (who, t) => {
+      const a = D.mouth && D.mouth[who];
+      if (!a) return 0;
+      return a[Math.min(Math.max(Math.round(t * FPS), 0), a.length - 1)];
+    };
+    const blink = (t, period, offset) => ((t + offset) % period) < 0.12;
+    function squash(since, t) {
+      let sy = 1 + 0.015 * Math.sin(t * 2.4);
+      if (since < 0.1) sy *= lerp(1, 0.92, since / 0.1);
+      else if (since < 0.22) sy *= lerp(0.92, 1.05, (since - 0.1) / 0.12);
+      else if (since < 0.4) sy *= lerp(1.05, 1, (since - 0.22) / 0.18);
+      return [1 + (1 - sy) * 0.6, sy];
+    }
+
+    function render(t) {
+      set("st-turb", "seed", (Math.floor(t * 12) % 40) + 1);
+
+      const c = cam(t);
+      $("st-world").style.transform = `translate(${c.x}px, ${c.y}px) scale(${c.s})`;
+      const close = CLOSE.some(([a, b]) => t >= a && t < b);
+      set("st-lines", "opacity", close ? 1 : 0);
+      set("st-lines", "transform", `scale(${1 + 0.02 * Math.sin(t * 30)})`);
+
+      // ---- Crono ----
+      const { s: n, since } = mood(CKEYS, CRONO, t);
+      const [sx, sy] = squash(since, t);
+      set("c-squash", "transform", `translate(210 620) scale(${sx} ${sy}) translate(-210 -620)`);
+      set("c-shake", "transform", `translate(${Math.sin(t * 55) * 7 * n.shake} 0) rotate(${Math.sin(t * 41) * 2 * n.shake} 210 600)`);
+      set("c-tilt", "transform", `rotate(${n.tilt} 210 340)`);
+      set("c-armL", "transform", `rotate(${n.al + Math.sin(t * 9) * 8 * n.shake} 135 380)`);
+      set("c-armR", "transform", `rotate(${n.ar - Math.sin(t * 9 + 1) * 8 * n.shake} 285 380)`);
+      set("c-browL", "transform", `translate(0 ${n.by}) rotate(${n.bl} 165 182)`);
+      set("c-browR", "transform", `translate(0 ${n.by}) rotate(${n.br} 255 182)`);
+      for (const [id, cx] of [["c-pupL", 165], ["c-pupR", 255]]) {
+        set(id, "cx", cx + n.px); set(id, "cy", 232 + n.py); set(id, "r", 13 * n.pup);
+      }
+      const cl = blink(t, 3.1, 0.4) ? 1 : n.lid;
+      set("c-lidL", "height", 80 * cl); set("c-lidR", "height", 80 * cl);
+      // while Crono speaks, the voice alone drives the mouth; the mood's open mouth only shows in silence
+      const talking = [-0.2, -0.1, 0, 0.1, 0.2].some((d) => mouthAt("crono", t + d) > 0.05);
+      const co = talking ? mouthAt("crono", t) : n.mo;
+      const mrx = n.mw * (0.75 + 0.45 * co), mry = 6 + co * 50;
+      for (const id of ["c-mouth", "c-mclipE"]) { set(id, "rx", mrx); set(id, "ry", mry); }
+      set("c-tongue", "cy", 300 + mry * 0.75); set("c-tongue", "rx", mrx * 0.7);
+      set("c-green", "opacity", n.green); set("c-blech", "opacity", n.blech);
+      set("c-sweat", "opacity", n.sweat); set("c-sweat", "transform", `translate(0 ${n.sweat ? ((t * 60) % 40) : 0})`);
+      set("c-q", "opacity", n.q); set("c-q", "transform", `translate(0 ${Math.sin(t * 5) * 6})`);
+      set("c-bang", "opacity", n.bang); set("c-bang", "transform", `translate(0 ${Math.abs(Math.sin(t * 8)) * -10})`);
+      set("c-clock", "transform", `rotate(${t * 360} 210 451)`);
+
+      // ---- Totola ----
+      const { s: g, since: gs } = mood(TKEYS, TOTOLA, t);
+      const [gx, gy] = squash(gs, t + 1.3);
+      set("t-squash", "transform", `translate(250 600) scale(${gx} ${gy}) translate(-250 -600)`);
+      set("t-shake", "transform", `translate(${Math.sin(t * 60) * 8 * g.shake} 0)`);
+      set("t-head", "transform", `rotate(${g.tilt + Math.sin(t * 3) * 2} 200 320)`);
+      set("t-body", "transform", `translate(255 380) scale(${1 + 0.12 * g.puff}) translate(-255 -380)`);
+      set("t-wing", "transform", `rotate(${g.wing + Math.sin(t * 7) * 6 * (g.shake + 0.3)} 320 330)`);
+      set("t-tail", "transform", `rotate(${Math.sin(t * 2.2) * 3 + g.puff * 8} 350 380)`);
+      set("t-puff", "opacity", g.puff > 0.6 ? 1 : 0);
+      set("t-browL", "transform", `rotate(${g.bl} 138 106)`);
+      set("t-browR", "transform", `rotate(${g.br} 202 106)`);
+      const tb = blink(t, 2.7, 1.3);
+      for (const [id, cx] of [["t-pupL", 140], ["t-pupR", 200]]) { set(id, "cx", cx + g.px); set(id, "r", 11 * g.pup); set(id, "opacity", tb ? 0 : 1); }
+      for (const id of ["t-lidL", "t-lidR"]) set(id, "opacity", tb || g.lid > 0.3 ? 1 : 0);
+      for (const id of ["t-lidL", "t-lidR"]) set(id, "transform", `translate(0 ${tb ? 0 : -12})`);
+      const to = mouthAt("totola", t);
+      set("t-jaw", "transform", `translate(0 ${to * 26})`);
+      set("t-mouthin", "ry", 2 + to * 16); set("t-mouthin", "cy", 196 + to * 10);
+      set("t-wattle", "transform", `translate(170 214) scale(${g.wat + 0.06 * Math.sin(t * 9) * g.shake}) translate(-170 -214)`);
+      set("t-snood", "transform", `rotate(${Math.sin(t * 4) * 5} 180 120)`);
+
+      // ---- cards: little loops ----
+      [["st-h1", 830, 0], ["st-h2", 820, 1.3], ["st-h3", 830, 2.6]].forEach(([id, y, ph]) =>
+        set(id, "y", y - Math.abs(Math.sin(t * 6 + ph)) * 30));
+      set("st-wave", "transform", `translate(${-((t * 80) % 240)} 0)`);
+      set("st-lwave", "transform", `translate(${-((t * 60) % 180)} 0)`);
+      set("st-oarL", "transform", `rotate(${Math.sin(t * 10) * 18} -60 10)`);
+      set("st-oarR", "transform", `rotate(${-Math.sin(t * 10) * 18} 60 10)`);
+      set("st-bug", "transform", `translate(${680 + Math.sin(t * 1.5) * 30} ${930 + Math.sin(t * 3) * 10})`);
+      set("st-spoon", "transform", `rotate(${Math.sin(t * 2.5) * 5} 900 470)`);
+      const eg = t > 50 ? -20 : 0;  // the gossip glances back at the viewer
+      set("st-epupL", "cx", 86 + eg); set("st-epupR", "cx", 134 + eg);
+    }
+
+    const tl = gsap.timeline({ paused: true });
+    const P = { t: 0 };
+    tl.fromTo(P, { t: 0 }, { t: DUR, duration: DUR, ease: "none", onUpdate: () => render(P.t) }, 0);
+
+    // ---- hook: no-chicken sign leaves, Totola pops in ----
+    tl.fromTo("#st-nochG", { attr: { transform: "translate(790 640) scale(1)" } }, { attr: { transform: "translate(790 640) scale(0)" }, duration: 0.2, ease: "power3.in" }, 4.65);
+    tl.fromTo("#crono", { x: 200 }, { x: 0, duration: 0.3, ease: "power3.inOut" }, 4.6);
+    tl.fromTo("#totola", { x: 700, rotation: 20, transformOrigin: "50% 100%" }, { x: 0, rotation: 0, duration: 0.35, ease: "back.out(1.7)" }, 4.85);
+
+    // ---- ship card: slide in from the right, out to the left ----
+    tl.fromTo("#st-hdr", { y: 0 }, { y: -520, duration: 0.2, ease: "power3.in" }, 6.9);
+    tl.fromTo("#st-ship", { x: 1080 }, { x: 0, duration: 0.25, ease: "power3.out" }, 7.18);
+    tl.fromTo("#st-imp span", { scale: 0, rotation: -18 }, { scale: 1, rotation: -5, duration: 0.3, ease: "back.out(2)" }, 8.75);
+    tl.fromTo("#st-ship", { x: 0 }, { x: -1080, duration: 0.22, ease: "power3.in", immediateRender: false }, 11.28);
+    tl.fromTo("#st-hdr", { y: -520 }, { y: 0, duration: 0.3, ease: "back.out(1.4)", immediateRender: false }, 11.6);
+
+    // ---- egg question and the laid egg ----
+    tl.fromTo("#st-thinkG", { attr: { transform: "translate(420 470) scale(0)" } }, { attr: { transform: "translate(420 470) scale(1)" }, duration: 0.3, ease: "back.out(1.8)" }, 12.19);
+    tl.fromTo("#st-thinkG", { attr: { transform: "translate(420 470) scale(1)" } }, { attr: { transform: "translate(420 470) scale(0)" }, duration: 0.18, ease: "power3.in", immediateRender: false }, 13.58);
+    tl.fromTo("#totola", { y: 0 }, { y: -60, duration: 0.15, ease: "power2.out", immediateRender: false }, 13.73);
+    tl.fromTo("#totola", { y: -60 }, { y: 0, duration: 0.2, ease: "bounce.out", immediateRender: false }, 13.88);
+    tl.fromTo("#st-egg", { attr: { transform: "translate(600 1185) scale(0)" } }, { attr: { transform: "translate(600 1185) scale(1)" }, duration: 0.3, ease: "back.out(2.2)" }, 13.78);
+
+    // ---- word card: iris from the egg ----
+    tl.fromTo("#st-hdr", { y: 0 }, { y: -520, duration: 0.2, ease: "power3.in", immediateRender: false }, 15.14);
+    tl.fromTo("#st-word", { clipPath: "circle(0px at 560px 1100px)" }, { clipPath: "circle(2300px at 560px 1100px)", duration: 0.4, ease: "power3.inOut" }, 15.27);
+    tl.fromTo("#st-wt span", { scale: 0, rotation: 10 }, { scale: 1, rotation: -3, duration: 0.32, ease: "back.out(2)" }, 17.37);
+    tl.fromTo("#st-c2", { y: 120, opacity: 0 }, { y: 0, opacity: 1, duration: 0.25, ease: "back.out(1.8)" }, 18.48);
+    tl.fromTo("#st-op1", { scale: 0 }, { scale: 1, duration: 0.2, ease: "back.out(2)" }, 18.79);
+    tl.fromTo("#st-c1", { y: 120, opacity: 0 }, { y: 0, opacity: 1, duration: 0.25, ease: "back.out(1.8)" }, 19.01);
+    tl.fromTo("#st-op2", { scale: 0 }, { scale: 1, duration: 0.2, ease: "back.out(2)" }, 19.52);
+    tl.fromTo("#st-c3", { scale: 0, rotation: -15 }, { scale: 1, rotation: 0, duration: 0.35, ease: "back.out(2.2)" }, 19.77);
+    tl.fromTo("#st-wsrc", { opacity: 0 }, { opacity: 1, duration: 0.2, ease: "power2.out" }, 15.64);
+    tl.fromTo("#st-word", { clipPath: "circle(2300px at 560px 1100px)" }, { clipPath: "circle(0px at 270px 760px)", duration: 0.3, ease: "power3.in", immediateRender: false }, 21.13);
+
+    // ---- lake: wipe up from the bottom ----
+    tl.fromTo("#st-lake", { clipPath: "inset(100% 0% 0% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: 0.28, ease: "power3.out" }, 25.75);
+    tl.fromTo("#st-ahu span", { scale: 0, rotation: -14 }, { scale: 1, rotation: -4, duration: 0.32, ease: "back.out(2)" }, 26.99);
+    tl.fromTo("#st-axa", { opacity: 0 }, { opacity: 1, duration: 0.2, ease: "power2.out" }, 28.6);
+    tl.fromTo("#st-roe", { scale: 0, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.3, ease: "back.out(2)" }, 28.07);
+    tl.fromTo("#st-lake", { clipPath: "inset(0% 0% 0% 0%)" }, { clipPath: "inset(0% 0% 100% 0%)", duration: 0.05, ease: "none", immediateRender: false }, 29.6);
+
+    // ---- caviar card ----
+    tl.fromTo("#st-cav", { clipPath: "circle(0px at 540px 760px)" }, { clipPath: "circle(2300px at 540px 760px)", duration: 0.35, ease: "power3.inOut" }, 31.64);
+    tl.fromTo("#st-cv1 span", { scale: 0, rotation: -10 }, { scale: 1, rotation: -3, duration: 0.3, ease: "back.out(2)" }, 33.86);
+    tl.fromTo("#st-cv2 span", { scale: 0, rotation: 10 }, { scale: 1, rotation: 2, duration: 0.3, ease: "back.out(2)" }, 34.3);
+    tl.fromTo("#st-price span", { scale: 3, rotation: 25, opacity: 0 }, { scale: 1, rotation: -4, opacity: 1, duration: 0.28, ease: "power4.out" }, 36.49);
+    tl.fromTo("#st-csrc", { opacity: 0 }, { opacity: 1, duration: 0.2, ease: "power2.out" }, 35.28);
+    tl.fromTo("#st-cav", { y: 0 }, { y: -1920, duration: 0.3, ease: "power3.in", immediateRender: false }, 37.64);
+    tl.fromTo("#st-hdr", { y: -520 }, { y: 0, duration: 0.3, ease: "back.out(1.4)", immediateRender: false }, 37.81);
+
+    // ---- payoff: the stamp ----
+    tl.fromTo("#st-hdr", { y: 0 }, { y: -520, duration: 0.2, ease: "power3.in", immediateRender: false }, 42.52);
+    tl.fromTo("#st-stamp span", { scale: 3.2, rotation: 18, opacity: 0 }, { scale: 1, rotation: -9, opacity: 1, duration: 0.22, ease: "power4.in" }, 43.91);
+    tl.fromTo("#st-stamp span", { x: 0 }, { x: 10, duration: 0.05, ease: "none", yoyo: true, repeat: 3, immediateRender: false }, 44.13);
+
+    // ---- end card: brand + follow ----
+    tl.fromTo("#st-end", { y: 1920 }, { y: 0, duration: 0.32, ease: "power3.out" }, 48.55);
+    tl.fromTo("#st-elogo", { scale: 0, rotation: -20 }, { scale: 1, rotation: 0, duration: 0.4, ease: "back.out(1.8)" }, 48.8);
+    tl.fromTo("#st-etitle span", { scale: 0, rotation: 10 }, { scale: 1, rotation: -3, duration: 0.32, ease: "back.out(2)" }, 49.1);
+    tl.fromTo("#st-esub", { y: 80, opacity: 0 }, { y: 0, opacity: 1, duration: 0.3, ease: "power3.out" }, 49.4);
+    tl.fromTo("#st-efollow span", { scale: 0 }, { scale: 1, rotation: 2, duration: 0.3, ease: "back.out(2.2)" }, 49.8);
+
+    window.__timelines["stage"] = tl;
+  </script>
+</template>

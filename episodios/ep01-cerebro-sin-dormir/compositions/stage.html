@@ -1,0 +1,421 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: #FFD6E0; font-family: "Archivo Black", sans-serif; }
+    #st-world { position: absolute; inset: 0; }
+    .st-full { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+    #neuro { position: absolute; left: 0; top: 0; width: 520px; height: 600px; }
+    #glia { position: absolute; left: 0; top: 0; width: 440px; height: 520px; }
+    #neuro svg, #glia svg { width: 100%; height: 100%; overflow: visible; }
+
+    /* header */
+    #st-hdr { position: absolute; left: 0; top: 0; width: 1080px; height: 470px; }
+    .st-tag { position: absolute; left: 0; width: 1080px; text-align: center; }
+    .st-tag span { display: inline-block; font-size: 96px; line-height: 1; padding: 14px 30px 10px; color: #1B1B2F;
+      border: 8px solid #1B1B2F; border-radius: 18px; box-shadow: 8px 8px 0 #1B1B2F; }
+    #st-hdr1 { top: 190px; } #st-hdr1 span { background: #FFFFFF; }
+    #st-hdr2 { top: 322px; } #st-hdr2 span { background: #FFD23F; }
+
+    /* cutaway inside the brain */
+    #st-zoom { background: #E06C8E; }
+    #st-beta { position: absolute; left: 0; top: 1010px; width: 1080px; text-align: center; }
+    #st-beta span { display: inline-block; font-size: 84px; line-height: 1; padding: 16px 30px 12px; background: #FFFFFF; color: #9B5DE5;
+      border: 8px solid #1B1B2F; border-radius: 18px; box-shadow: 8px 8px 0 #1B1B2F; }
+
+    /* data card */
+    #st-card { background: #FFD23F; }
+    .st-ctitle { position: absolute; left: 0; width: 1080px; text-align: center; color: #1B1B2F; font-size: 100px; line-height: 1; }
+    #st-ct1 { top: 250px; } #st-ct2 { top: 362px; }
+    #st-five { position: absolute; left: 640px; top: 640px; width: 380px; text-align: center; }
+    #st-five span { display: inline-block; font-size: 150px; line-height: 1; padding: 18px 26px 10px; background: #FFFFFF; color: #9B5DE5;
+      border: 10px solid #1B1B2F; border-radius: 24px; box-shadow: 10px 10px 0 #1B1B2F; }
+    #st-src { position: absolute; left: 90px; top: 1090px; width: 900px; text-align: center; font-family: "Nunito", sans-serif;
+      font-weight: 800; font-size: 32px; line-height: 1.25; color: #1B1B2F; }
+  </style>
+
+  <div id="root" data-composition-id="stage" data-width="1080" data-height="1920">
+    <svg width="0" height="0" style="position:absolute">
+      <defs>
+        <filter id="st-boil" x="-10%" y="-10%" width="120%" height="120%">
+          <feTurbulence id="st-turb" type="fractalNoise" baseFrequency="0.035" numOctaves="1" seed="1" result="n" />
+          <feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+        <symbol id="st-bag" viewBox="-10 -10 220 220">
+          <path d="M100 30 C40 40 10 100 20 150 C30 195 170 195 180 150 C190 100 160 40 100 30 Z" fill="#4A7C59" stroke="#1B1B2F" stroke-width="10" stroke-linejoin="round" />
+          <path d="M60 120 C80 140 120 140 140 118" fill="none" stroke="#36604A" stroke-width="8" stroke-linecap="round" />
+          <path d="M100 32 L78 6 M100 32 L124 8" stroke="#1B1B2F" stroke-width="10" stroke-linecap="round" />
+          <ellipse cx="100" cy="34" rx="16" ry="10" fill="#4A7C59" stroke="#1B1B2F" stroke-width="8" />
+        </symbol>
+        <symbol id="st-goo" viewBox="-10 -10 180 140">
+          <path d="M20 110 C0 110 0 80 20 70 C20 30 60 10 85 30 C110 5 150 30 140 70 C165 80 160 112 135 112 Z" fill="#9B5DE5" stroke="#1B1B2F" stroke-width="9" stroke-linejoin="round" />
+          <circle cx="62" cy="62" r="11" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="5" /><circle cx="64" cy="64" r="5" fill="#1B1B2F" />
+          <circle cx="98" cy="58" r="11" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="5" /><circle cx="96" cy="60" r="5" fill="#1B1B2F" />
+          <path d="M68 88 Q80 80 92 88" fill="none" stroke="#1B1B2F" stroke-width="6" stroke-linecap="round" />
+        </symbol>
+        <symbol id="st-neuron" viewBox="-20 -20 340 260">
+          <path d="M150 110 L40 20 M150 110 L20 130 M150 110 L60 210 M150 110 L300 120" stroke="#1B1B2F" stroke-width="30" stroke-linecap="round" />
+          <path d="M150 110 L40 20 M150 110 L20 130 M150 110 L60 210 M150 110 L300 120" stroke="#FFE8A3" stroke-width="16" stroke-linecap="round" />
+          <circle cx="150" cy="110" r="66" fill="#FFE8A3" stroke="#1B1B2F" stroke-width="10" />
+          <circle cx="128" cy="100" r="10" fill="#1B1B2F" /><circle cx="172" cy="100" r="10" fill="#1B1B2F" />
+          <path d="M126 130 Q150 148 174 130" fill="none" stroke="#1B1B2F" stroke-width="8" stroke-linecap="round" />
+          <path d="M196 70 Q210 86 200 98" fill="#7FD3FF" stroke="#1B1B2F" stroke-width="5" />
+        </symbol>
+      </defs>
+    </svg>
+
+    <div id="st-world">
+      <!-- room: brain-fold wall and floor -->
+      <svg class="st-full" viewBox="0 0 1080 1920">
+        <g fill="none" stroke="#F9B3C6" stroke-width="18" stroke-linecap="round">
+          <path d="M-40 520 C120 440 200 600 360 520 S600 440 760 540 S1000 600 1120 500" />
+          <path d="M-40 760 C140 700 220 840 380 760 S640 680 800 780 S1020 840 1120 740" />
+          <path d="M-40 980 C120 920 240 1060 400 980 S660 900 820 1000 S1020 1060 1120 960" />
+          <path d="M-40 300 C140 240 240 360 400 290 S640 220 820 310 S1000 360 1120 280" />
+        </g>
+        <rect x="-20" y="1150" width="1120" height="800" fill="#F28CA8" />
+        <path d="M-20 1150 H1100" stroke="#1B1B2F" stroke-width="10" />
+      </svg>
+
+      <!-- trash behind the characters -->
+      <svg class="st-full" viewBox="0 0 1080 1920" filter="url(#st-boil)">
+        <use href="#st-bag" x="-30" y="960" width="230" height="230" />
+        <use href="#st-bag" x="150" y="1010" width="170" height="170" />
+        <use href="#st-bag" x="790" y="970" width="210" height="210" />
+        <use href="#st-bag" x="920" y="1020" width="190" height="190" />
+        <use href="#st-goo" x="640" y="1080" width="140" height="110" />
+      </svg>
+
+      <div id="neuro">
+        <svg viewBox="0 0 520 600" filter="url(#st-boil)">
+          <defs>
+            <clipPath id="n-eyeL"><ellipse cx="205" cy="250" rx="42" ry="48" /></clipPath>
+            <clipPath id="n-eyeR"><ellipse cx="315" cy="250" rx="42" ry="48" /></clipPath>
+            <clipPath id="n-mclip"><ellipse id="n-mclipE" cx="260" cy="340" rx="50" ry="10" /></clipPath>
+          </defs>
+          <g id="n-squash">
+            <g id="n-shake">
+              <!-- legs -->
+              <path d="M210 420 L200 560 M310 420 L320 560" stroke="#1B1B2F" stroke-width="22" stroke-linecap="round" />
+              <ellipse cx="185" cy="570" rx="48" ry="24" fill="#E63946" stroke="#1B1B2F" stroke-width="9" />
+              <ellipse cx="335" cy="570" rx="48" ry="24" fill="#E63946" stroke="#1B1B2F" stroke-width="9" />
+              <g id="n-tilt">
+                <!-- arms (behind the brain) -->
+                <g id="n-armL" transform="rotate(0 110 320)">
+                  <path d="M110 320 L40 430" stroke="#1B1B2F" stroke-width="18" stroke-linecap="round" />
+                  <circle cx="40" cy="430" r="26" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="8" />
+                </g>
+                <g id="n-armR" transform="rotate(0 410 320)">
+                  <path d="M410 320 L480 430" stroke="#1B1B2F" stroke-width="18" stroke-linecap="round" />
+                  <circle cx="480" cy="430" r="26" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="8" />
+                </g>
+                <!-- brain: ink lobes behind, pink lobes on top = one union outline -->
+                <g fill="#1B1B2F">
+                  <circle cx="140" cy="170" r="117" /><circle cx="260" cy="130" r="127" /><circle cx="380" cy="170" r="117" />
+                  <circle cx="130" cy="290" r="112" /><circle cx="390" cy="290" r="112" /><circle cx="260" cy="300" r="147" />
+                </g>
+                <g fill="#FF8FAB">
+                  <circle cx="140" cy="170" r="105" /><circle cx="260" cy="130" r="115" /><circle cx="380" cy="170" r="105" />
+                  <circle cx="130" cy="290" r="100" /><circle cx="390" cy="290" r="100" /><circle cx="260" cy="300" r="135" />
+                </g>
+                <g fill="none" stroke="#E06C8E" stroke-width="10" stroke-linecap="round">
+                  <path d="M260 30 C240 70 280 100 258 140 C240 170 262 190 260 205" />
+                  <path d="M80 140 C110 120 120 160 150 140" /><path d="M70 230 C100 210 90 260 120 250" />
+                  <path d="M370 110 C400 90 410 140 440 120" /><path d="M410 210 C440 200 440 250 460 240" />
+                  <path d="M160 70 C180 50 200 80 220 64" /><path d="M300 70 C320 50 340 80 360 66" />
+                  <path d="M90 360 C120 380 140 350 170 372" /><path d="M350 372 C380 350 400 380 430 360" />
+                </g>
+                <!-- anger vein -->
+                <g id="n-vein" transform="translate(405 85) scale(0)">
+                  <path d="M-30 -10 Q-10 -10 -10 -30 M10 -30 Q10 -10 30 -10 M30 10 Q10 10 10 30 M-10 30 Q-10 10 -30 10" fill="none" stroke="#E63946" stroke-width="10" stroke-linecap="round" />
+                </g>
+                <!-- eye bags -->
+                <g id="n-bags" opacity="0" fill="none" stroke="#B5476B" stroke-width="7" stroke-linecap="round">
+                  <path d="M168 300 Q205 318 242 300" /><path d="M278 300 Q315 318 352 300" />
+                </g>
+                <!-- eyes -->
+                <ellipse cx="205" cy="250" rx="42" ry="48" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="9" />
+                <ellipse cx="315" cy="250" rx="42" ry="48" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="9" />
+                <circle id="n-pupL" cx="205" cy="255" r="16" fill="#1B1B2F" />
+                <circle id="n-pupR" cx="315" cy="255" r="16" fill="#1B1B2F" />
+                <g clip-path="url(#n-eyeL)"><rect id="n-lidL" x="160" y="200" width="90" height="0" fill="#FF8FAB" /></g>
+                <g clip-path="url(#n-eyeR)"><rect id="n-lidR" x="270" y="200" width="90" height="0" fill="#FF8FAB" /></g>
+                <path id="n-lidLineL" d="M163 250 H247" stroke="#1B1B2F" stroke-width="8" stroke-linecap="round" opacity="0" />
+                <path id="n-lidLineR" d="M273 250 H357" stroke="#1B1B2F" stroke-width="8" stroke-linecap="round" opacity="0" />
+                <!-- brows -->
+                <path id="n-browL" d="M170 185 H240" stroke="#1B1B2F" stroke-width="16" stroke-linecap="round" />
+                <path id="n-browR" d="M280 185 H350" stroke="#1B1B2F" stroke-width="16" stroke-linecap="round" />
+                <!-- mouth -->
+                <ellipse id="n-mouth" cx="260" cy="340" rx="50" ry="10" fill="#5C1A2B" stroke="#1B1B2F" stroke-width="8" />
+                <g clip-path="url(#n-mclip)"><ellipse id="n-tongue" cx="260" cy="375" rx="34" ry="20" fill="#FF5D73" /></g>
+                <!-- sweat -->
+                <path id="n-sweat" d="M450 190 Q470 225 450 240 Q430 225 450 190 Z" fill="#7FD3FF" stroke="#1B1B2F" stroke-width="6" opacity="0" />
+                <!-- question marks -->
+                <g id="n-q" opacity="0" font-family="Archivo Black" font-size="110" fill="#FFD23F" stroke="#1B1B2F" stroke-width="7" paint-order="stroke">
+                  <text x="30" y="40">?</text><text x="420" y="20">?</text>
+                </g>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <div id="glia">
+        <svg viewBox="0 0 440 520" filter="url(#st-boil)">
+          <g id="g-body">
+            <!-- broom held by the upper-right arm -->
+            <g id="g-broom" transform="rotate(0 372 196)">
+              <path d="M372 196 L420 470" stroke="#1B1B2F" stroke-width="18" stroke-linecap="round" />
+              <path d="M372 196 L420 470" stroke="#B5835A" stroke-width="8" stroke-linecap="round" />
+              <path d="M380 450 L460 450 L490 530 L370 540 Z" fill="#E9C46A" stroke="#1B1B2F" stroke-width="8" stroke-linejoin="round" />
+              <path d="M400 470 L395 525 M425 470 L428 528 M450 470 L460 525" stroke="#C9A43E" stroke-width="5" />
+            </g>
+            <g stroke="#1B1B2F" stroke-width="86" stroke-linecap="round">
+              <path d="M220 280 L220 120 M220 280 L372 196 M220 280 L400 330 M220 280 L300 470 M220 280 L140 470 M220 280 L60 210" />
+            </g>
+            <circle cx="220" cy="280" r="118" fill="#1B1B2F" />
+            <g stroke="#3EC6C1" stroke-width="64" stroke-linecap="round">
+              <path d="M220 280 L220 120 M220 280 L372 196 M220 280 L400 330 M220 280 L300 470 M220 280 L140 470 M220 280 L60 210" />
+            </g>
+            <circle cx="220" cy="280" r="106" fill="#3EC6C1" />
+            <!-- cap -->
+            <path d="M160 120 C160 50 280 50 280 120 Z" fill="#FF8C42" stroke="#1B1B2F" stroke-width="9" stroke-linejoin="round" />
+            <path d="M150 120 H310" stroke="#1B1B2F" stroke-width="18" stroke-linecap="round" />
+            <path d="M150 120 H310" stroke="#FF8C42" stroke-width="6" stroke-linecap="round" />
+            <!-- face -->
+            <ellipse cx="185" cy="262" rx="26" ry="32" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="7" />
+            <ellipse cx="255" cy="262" rx="26" ry="32" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="7" />
+            <circle id="g-pupL" cx="185" cy="266" r="11" fill="#1B1B2F" />
+            <circle id="g-pupR" cx="255" cy="266" r="11" fill="#1B1B2F" />
+            <path id="g-lidL" d="M159 262 H211" stroke="#1B1B2F" stroke-width="7" stroke-linecap="round" opacity="0" />
+            <path id="g-lidR" d="M229 262 H281" stroke="#1B1B2F" stroke-width="7" stroke-linecap="round" opacity="0" />
+            <path d="M162 230 L154 220 M172 226 L168 214 M268 226 L272 214 M278 230 L286 220" stroke="#1B1B2F" stroke-width="6" stroke-linecap="round" />
+            <ellipse id="g-mouth" cx="220" cy="322" rx="24" ry="6" fill="#5C1A2B" stroke="#1B1B2F" stroke-width="7" />
+            <circle cx="160" cy="305" r="12" fill="#FF8FAB" opacity="0.7" /><circle cx="280" cy="305" r="12" fill="#FF8FAB" opacity="0.7" />
+            <!-- pillow held by the upper-left arm -->
+            <g id="g-pillow" transform="translate(40 210) scale(0)">
+              <rect x="-150" y="-80" width="190" height="130" rx="40" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="9" />
+              <path d="M-118 -20 Q-55 0 8 -20" fill="none" stroke="#D7DDF0" stroke-width="7" stroke-linecap="round" />
+              <circle cx="-55" cy="-35" r="7" fill="#D7DDF0" />
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <!-- trash in front (floor and below the caption band: decoration only) -->
+      <svg class="st-full" viewBox="0 0 1080 1920" filter="url(#st-boil)">
+        <use href="#st-bag" x="-40" y="1150" width="260" height="260" />
+        <use href="#st-goo" x="250" y="1330" width="180" height="140" />
+        <use href="#st-bag" x="380" y="1420" width="300" height="300" />
+        <use href="#st-bag" x="840" y="1160" width="250" height="250" />
+        <use href="#st-goo" x="700" y="1430" width="190" height="150" />
+        <use href="#st-bag" x="40" y="1560" width="330" height="330" />
+        <use href="#st-bag" x="760" y="1600" width="320" height="320" />
+        <!-- flies -->
+        <g id="st-flies" fill="#1B1B2F">
+          <g id="st-fly1"><circle r="9" /><ellipse cx="-8" cy="-10" rx="9" ry="6" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="3" /><ellipse cx="8" cy="-10" rx="9" ry="6" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="3" /></g>
+          <g id="st-fly2"><circle r="9" /><ellipse cx="-8" cy="-10" rx="9" ry="6" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="3" /><ellipse cx="8" cy="-10" rx="9" ry="6" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="3" /></g>
+          <g id="st-fly3"><circle r="9" /><ellipse cx="-8" cy="-10" rx="9" ry="6" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="3" /><ellipse cx="8" cy="-10" rx="9" ry="6" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="3" /></g>
+        </g>
+      </svg>
+
+      <!-- thought bubble: a lost key -->
+      <svg id="st-think" class="st-full" viewBox="0 0 1080 1920">
+        <g id="st-thinkG" transform="translate(560 560) scale(0)">
+          <circle cx="-170" cy="130" r="18" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="7" />
+          <circle cx="-130" cy="80" r="28" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="7" />
+          <ellipse cx="40" cy="-40" rx="170" ry="120" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="9" />
+          <g transform="translate(-20 -40) rotate(-20)">
+            <circle cx="-40" cy="0" r="38" fill="#FFD23F" stroke="#1B1B2F" stroke-width="8" /><circle cx="-40" cy="0" r="13" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="6" />
+            <path d="M-4 -10 H90 V10 H70 V30 H52 V10 H-4 Z" fill="#FFD23F" stroke="#1B1B2F" stroke-width="8" stroke-linejoin="round" />
+          </g>
+          <text x="95" y="10" font-family="Archivo Black" font-size="120" fill="#E63946" stroke="#1B1B2F" stroke-width="7" paint-order="stroke">?</text>
+        </g>
+      </svg>
+    </div>
+
+    <!-- cutaway: inside the brain -->
+    <div id="st-zoom" class="st-full">
+      <svg class="st-full" viewBox="0 0 1080 1920" filter="url(#st-boil)">
+        <g fill="none" stroke="#C9567A" stroke-width="16" stroke-linecap="round">
+          <path d="M-40 420 C160 360 260 500 460 420 S760 340 1120 440" /><path d="M-40 1220 C160 1160 260 1300 460 1220 S760 1140 1120 1240" />
+        </g>
+        <use id="st-n1" href="#st-neuron" x="40" y="430" width="380" height="290" />
+        <use id="st-n2" href="#st-neuron" x="600" y="470" width="380" height="290" />
+        <use id="st-n3" href="#st-neuron" x="330" y="700" width="380" height="290" />
+        <use id="st-g1" href="#st-goo" x="180" y="640" width="120" height="95" />
+        <use id="st-g2" href="#st-goo" x="740" y="680" width="120" height="95" />
+        <use id="st-g3" href="#st-goo" x="470" y="900" width="120" height="95" />
+        <use id="st-g4" href="#st-goo" x="300" y="640" width="100" height="80" />
+        <use id="st-g5" href="#st-goo" x="860" y="680" width="100" height="80" />
+      </svg>
+      <div id="st-beta"><span>BETA-AMILOIDE</span></div>
+    </div>
+
+    <!-- data card -->
+    <div id="st-card" class="st-full">
+      <div id="st-ct1" class="st-ctitle">1 NOCHE</div>
+      <div id="st-ct2" class="st-ctitle">SIN DORMIR</div>
+      <svg class="st-full" viewBox="0 0 1080 1920" filter="url(#st-boil)">
+        <defs><clipPath id="st-jarclip"><rect x="330" y="640" width="340" height="400" rx="40" /></clipPath></defs>
+        <rect x="320" y="560" width="360" height="70" rx="16" fill="#E63946" stroke="#1B1B2F" stroke-width="10" />
+        <g clip-path="url(#st-jarclip)">
+          <rect id="st-level" x="330" y="900" width="340" height="200" fill="#9B5DE5" />
+          <path id="st-surf" d="M330 900 Q415 880 500 900 T670 900" fill="none" stroke="#1B1B2F" stroke-width="8" />
+        </g>
+        <rect x="330" y="640" width="340" height="400" rx="40" fill="none" stroke="#1B1B2F" stroke-width="12" />
+        <path d="M370 680 V820" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round" opacity="0.8" />
+      </svg>
+      <div id="st-five"><span>+5%</span></div>
+      <div id="st-src">Estudio con 20 personas: Shokri-Kojori y col., PNAS 2018</div>
+    </div>
+
+    <!-- header: the hook, on screen from frame 0 -->
+    <div id="st-hdr">
+      <div id="st-hdr1" class="st-tag"><span>TU CEREBRO</span></div>
+      <div id="st-hdr2" class="st-tag"><span>SIN DORMIR</span></div>
+    </div>
+  </div>
+
+  <script>
+    const D = /*DATA-START*/{"mouth":{"fps":30,"neuro":[0.0,0.0,0.0,0.0,0.019,0.211,0.642,0.942,0.984,0.947,0.863,0.71,0.526,0.369,0.355,0.579,0.866,0.984,0.862,0.652,0.615,0.639,0.59,0.553,0.4,0.128,0.0,0.0,0.026,0.299,0.771,0.997,0.95,0.898,0.945,0.96,0.766,0.549,0.523,0.472,0.371,0.379,0.457,0.472,0.461,0.638,0.768,0.725,0.781,0.872,0.769,0.545,0.364,0.328,0.496,0.751,0.928,0.815,0.399,0.089,0.151,0.311,0.264,0.154,0.09,0.028,0.002,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.221,0.429,0.565,0.521,0.323,0.121,0.079,0.271,0.603,0.879,0.816,0.568,0.547,0.498,0.417,0.574,0.605,0.347,0.098,0.006,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.012,0.067,0.269,0.436,0.272,0.167,0.483,0.787,0.841,0.921,0.913,0.786,0.712,0.672,0.778,0.845,0.803,0.904,0.945,0.844,0.801,0.651,0.401,0.406,0.487,0.351,0.168,0.091,0.164,0.279,0.234,0.099,0.019,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.513,0.811,0.743,0.684,0.765,0.772,0.753,0.782,0.844,0.649,0.429,0.662,0.944,1.0,1.0,0.97,0.849,0.618,0.348,0.137,0.028,0.0,0.0,0.0,0.0,0.188,0.578,0.753,0.672,0.591,0.472,0.416,0.511,0.649,0.864,0.941,0.722,0.485,0.351,0.227,0.191,0.199,0.107,0.019,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.008,0.016,0.009,0.003,0.014,0.042,0.051,0.027,0.005,0.0,0.0,0.0,0.002,0.006,0.007,0.024,0.052,0.062,0.06,0.059,0.07,0.087,0.099,0.087,0.033,0.04,0.273,0.507,0.388,0.163,0.07,0.023,0.003,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.108,0.299,0.455,0.397,0.23,0.17,0.233,0.24,0.142,0.044,0.003,0.001,0.093,0.423,0.823,0.972,0.941,0.868,0.723,0.501,0.238,0.051,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.146,0.542,0.896,1.0,1.0,0.998,0.947,0.814,0.717,0.707,0.778,0.922,0.999,0.968,0.886,0.8,0.604,0.251,0.042,0.092,0.401,0.804,0.895,0.743,0.525,0.226,0.044,0.118,0.277,0.346,0.34,0.234,0.09,0.017,0.0,0.0,0.041,0.233,0.57,0.822,0.791,0.616,0.554,0.534,0.412,0.271,0.175,0.126,0.299,0.599,0.698,0.647,0.506,0.39,0.379,0.276,0.238,0.397,0.455,0.328,0.149,0.029,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"glia":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.523,0.832,0.847,0.666,0.423,0.203,0.055,0.003,0.0,0.0,0.0,0.002,0.02,0.047,0.293,0.764,0.917,0.593,0.189,0.025,0.089,0.206,0.183,0.057,0.001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.022,0.258,0.7,0.964,1.0,0.948,0.739,0.633,0.842,0.888,0.715,0.755,0.919,0.991,0.966,0.762,0.482,0.305,0.132,0.063,0.138,0.128,0.039,0.0,0.0,0.0,0.0,0.0,0.0,0.083,0.415,0.826,0.943,0.873,0.86,0.858,0.745,0.604,0.583,0.605,0.486,0.222,0.217,0.591,0.751,0.546,0.421,0.483,0.446,0.207,0.052,0.059,0.303,0.765,0.926,0.713,0.423,0.169,0.032,0.174,0.471,0.502,0.42,0.441,0.453,0.556,0.68,0.685,0.658,0.583,0.422,0.31,0.28,0.364,0.491,0.453,0.462,0.585,0.626,0.65,0.639,0.524,0.319,0.101,0.085,0.252,0.285,0.147,0.05,0.016,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.409,0.826,0.8,0.354,0.094,0.334,0.676,0.598,0.542,0.829,0.857,0.484,0.167,0.176,0.405,0.612,0.645,0.409,0.221,0.426,0.599,0.414,0.39,0.684,0.781,0.677,0.637,0.663,0.686,0.683,0.747,0.89,0.972,0.978,0.944,0.84,0.66,0.482,0.361,0.345,0.441,0.372,0.144,0.137,0.376,0.602,0.652,0.595,0.519,0.336,0.18,0.158,0.249,0.391,0.336,0.141,0.028,0.002,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.028,0.256,0.631,0.804,0.791,0.798,0.744,0.632,0.594,0.595,0.71,0.713,0.448,0.479,0.818,0.934,0.906,0.949,0.954,0.867,0.645,0.461,0.642,0.921,0.955,0.671,0.227,0.111,0.443,0.801,0.879,0.845,0.828,0.757,0.731,0.831,0.909,0.818,0.67,0.733,0.924,0.975,0.884,0.718,0.449,0.223,0.242,0.262,0.114,0.011,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.507,0.879,0.892,0.783,0.818,0.71,0.485,0.546,0.844,1.0,0.958,0.791,0.536,0.483,0.734,0.954,0.865,0.639,0.54,0.54,0.688,0.831,0.602,0.241,0.204,0.356,0.431,0.364,0.17,0.028,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.095,0.374,0.714,0.932,0.851,0.598,0.392,0.172,0.189,0.47,0.559,0.509,0.653,0.884,0.964,0.955,0.977,0.98,0.821,0.506,0.372,0.611,0.904,0.899,0.549,0.154,0.131,0.456,0.694,0.679,0.686,0.784,0.807,0.74,0.589,0.465,0.51,0.474,0.397,0.58,0.754,0.752,0.674,0.606,0.617,0.65,0.673,0.681,0.558,0.261,0.117,0.23,0.397,0.464,0.426,0.415,0.387,0.421,0.545,0.528,0.466,0.542,0.582,0.503,0.478,0.539,0.651,0.818,0.949,0.805,0.478,0.453,0.611,0.52,0.359,0.412,0.49,0.478,0.544,0.527,0.44,0.591,0.755,0.728,0.684,0.662,0.604,0.509,0.406,0.405,0.51,0.496,0.511,0.754,0.902,0.713,0.344,0.283,0.427,0.256,0.051,0.2,0.426,0.385,0.34,0.444,0.432,0.386,0.421,0.352,0.242,0.186,0.091,0.019,0.003,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.551,0.9,0.909,0.569,0.291,0.481,0.76,0.789,0.687,0.604,0.539,0.484,0.555,0.55,0.448,0.379,0.213,0.046,0.0,0.0,0.0,0.0,0.0,0.0,0.019,0.227,0.646,0.854,0.593,0.199,0.193,0.539,0.665,0.389,0.092,0.0,0.0,0.0,0.25,0.75,1.0,0.873,0.619,0.369,0.216,0.35,0.619,0.795,0.886,0.855,0.782,0.659,0.365,0.197,0.279,0.477,0.794,0.787,0.518,0.617,0.898,0.897,0.648,0.473,0.434,0.454,0.49,0.427,0.488,0.708,0.725,0.603,0.592,0.627,0.618,0.632,0.561,0.317,0.112,0.036,0.007,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]}}/*DATA-END*/;
+    const DUR = 31.5, FPS = D.mouth ? D.mouth.fps : 30;
+    const $ = (id) => document.getElementById(id);
+    const lerp = (a, b, k) => a + (b - a) * k;
+    const smooth = (k) => k * k * (3 - 2 * k);
+
+    // ---- moods: keyed states the rig eases between ----
+    const NEURO = {
+      angry:    { bl: 22, br: -22, by: 6, pup: 0.85, px: 0, py: 0, lid: 0, vein: 1, sweat: 0, q: 0, bags: 0, mw: 64, al: 115, ar: -115, tilt: 0, shake: 1, mo: 0.75 },
+      listen:   { bl: 10, br: -10, by: 0, pup: 1, px: 10, py: 0, lid: 0.1, vein: 0.35, sweat: 0, q: 0, bags: 0, mw: 42, al: 0, ar: -20, tilt: 3, shake: 0, mo: 0 },
+      confused: { bl: -18, br: 12, by: -6, pup: 1, px: 8, py: -6, lid: 0, vein: 0, sweat: 0, q: 1, bags: 0, mw: 34, al: 0, ar: -95, tilt: -7, shake: 0, mo: 0 },
+      scared:   { bl: -24, br: 24, by: -10, pup: 0.5, px: 0, py: 0, lid: 0, vein: 0, sweat: 1, q: 0, bags: 0, mw: 38, al: 55, ar: -55, tilt: 0, shake: 0.35, mo: 0.15 },
+      tired:    { bl: -6, br: 6, by: 6, pup: 0.95, px: 6, py: 8, lid: 0.55, vein: 0, sweat: 0, q: 0, bags: 1, mw: 34, al: 8, ar: -8, tilt: 5, shake: 0, mo: 0 },
+      camera:   { bl: -10, br: 10, by: 0, pup: 1.05, px: 0, py: 2, lid: 0.35, vein: 0, sweat: 0, q: 0, bags: 1, mw: 30, al: 8, ar: -8, tilt: 0, shake: 0, mo: 0 },
+    };
+    const NKEYS = [[0, "angry"], [2.7, "listen"], [7.45, "confused"], [10.35, "listen"], [15.1, "scared"], [23.8, "tired"], [29.5, "camera"]];
+    const GLIA = {
+      sweep: { px: -8, sw: 1, pil: 0 },
+      point: { px: -10, sw: 0, pil: 0 },
+      pillow: { px: -10, sw: 0, pil: 1 },
+    };
+    const GKEYS = [[0, "sweep"], [27.9, "pillow"]];
+
+    function mood(keys, table, t) {
+      let i = 0;
+      while (i + 1 < keys.length && t >= keys[i + 1][0]) i++;
+      const cur = table[keys[i][1]];
+      const since = t - keys[i][0];
+      if (i === 0 || since >= 0.25) return { s: cur, since };
+      const prev = table[keys[i - 1][1]], k = smooth(since / 0.25), out = {};
+      for (const p in cur) out[p] = lerp(prev[p], cur[p], k);
+      return { s: out, since };
+    }
+    const mouthAt = (who, t) => {
+      const a = D.mouth && D.mouth[who];
+      if (!a) return 0;
+      const f = Math.min(Math.max(Math.round(t * FPS), 0), a.length - 1);
+      return a[f];
+    };
+    const blink = (t, period, offset) => ((t + offset) % period) < 0.12;
+    const set = (id, attr, v) => $(id).setAttribute(attr, v);
+
+    function render(t) {
+      set("st-turb", "seed", (Math.floor(t * 12) % 40) + 1);  // line boil, 12 times a second
+
+      // ---- Neuro ----
+      const { s: n, since } = mood(NKEYS, NEURO, t);
+      // anticipation and settle on each mood change: squash 0.92 → 1.04 → 1
+      let sy = 1 + 0.015 * Math.sin(t * 2.4);
+      if (since < 0.1) sy *= lerp(1, 0.92, since / 0.1);
+      else if (since < 0.22) sy *= lerp(0.92, 1.04, (since - 0.1) / 0.12);
+      else if (since < 0.4) sy *= lerp(1.04, 1, (since - 0.22) / 0.18);
+      const sx = 1 + (1 - sy) * 0.6;
+      set("n-squash", "transform", `translate(260 590) scale(${sx} ${sy}) translate(-260 -590)`);
+      const shakeX = Math.sin(t * 55) * 7 * n.shake, shakeR = Math.sin(t * 41) * 2 * n.shake;
+      set("n-shake", "transform", `translate(${shakeX} 0) rotate(${shakeR} 260 560)`);
+      set("n-tilt", "transform", `rotate(${n.tilt} 260 420)`);
+      set("n-armL", "transform", `rotate(${n.al + Math.sin(t * 9) * 8 * n.shake} 110 320)`);
+      set("n-armR", "transform", `rotate(${n.ar - Math.sin(t * 9 + 1) * 8 * n.shake} 410 320)`);
+      set("n-browL", "transform", `translate(0 ${n.by}) rotate(${n.bl} 205 185)`);
+      set("n-browR", "transform", `translate(0 ${n.by}) rotate(${n.br} 315 185)`);
+      for (const [id, cx] of [["n-pupL", 205], ["n-pupR", 315]]) {
+        set(id, "cx", cx + n.px); set(id, "cy", 255 + n.py); set(id, "r", 16 * n.pup);
+      }
+      const nl = blink(t, 3.1, 0.4) ? 1 : n.lid;
+      set("n-lidL", "height", 100 * nl); set("n-lidR", "height", 100 * nl);
+      for (const id of ["n-lidLineL", "n-lidLineR"]) {
+        set(id, "opacity", nl > 0.05 ? 1 : 0); set(id, "transform", `translate(0 ${-50 + 100 * nl})`);
+      }
+      const no = Math.max(mouthAt("neuro", t), n.mo);
+      const mrx = n.mw * (0.75 + 0.45 * no), mry = 6 + no * 62;
+      for (const id of ["n-mouth", "n-mclipE"]) { set(id, "rx", mrx); set(id, "ry", mry); }
+      set("n-tongue", "cy", 340 + mry * 0.75); set("n-tongue", "rx", mrx * 0.7);
+      set("n-vein", "transform", `translate(405 85) scale(${n.vein * (1 + 0.12 * Math.sin(t * 14))})`);
+      set("n-sweat", "opacity", n.sweat); set("n-sweat", "transform", `translate(0 ${n.sweat ? ((t * 60) % 40) : 0})`);
+      set("n-q", "opacity", n.q); set("n-q", "transform", `translate(0 ${Math.sin(t * 5) * 6})`);
+      set("n-bags", "opacity", n.bags);
+
+      // ---- Glía ----
+      const { s: g } = mood(GKEYS, GLIA, t);
+      set("g-broom", "transform", `rotate(${Math.sin(t * 6.5) * 14 * g.sw} 372 196)`);
+      for (const [id, cx] of [["g-pupL", 185], ["g-pupR", 255]]) set(id, "cx", cx + g.px);
+      const gb = blink(t, 2.7, 1.3);
+      for (const id of ["g-lidL", "g-lidR"]) set(id, "opacity", gb ? 1 : 0);
+      for (const id of ["g-pupL", "g-pupR"]) set(id, "opacity", gb ? 0 : 1);
+      const go = mouthAt("glia", t);
+      set("g-mouth", "rx", 20 + go * 10); set("g-mouth", "ry", 5 + go * 38);
+      const pil = g.pil;
+      set("g-pillow", "transform", `translate(40 210) scale(${pil})`);
+
+      // ---- flies circling the trash ----
+      [[1, 190, 1010, 0], [2, 880, 990, 2.1], [3, 560, 1120, 4.2]].forEach(([k, cx, cy, ph]) => {
+        const x = cx + Math.cos(t * 3.1 + ph) * 70, y = cy + Math.sin(t * 4.7 + ph) * 34;
+        set(`st-fly${k}`, "transform", `translate(${x} ${y}) scale(1 ${0.8 + 0.2 * Math.abs(Math.sin(t * 40 + ph))})`);
+      });
+
+      // ---- cutaway: goo drips from the working neurons, one drop a second each ----
+      [["st-g1", 180, 640, 0], ["st-g2", 740, 680, 0.33], ["st-g3", 470, 900, 0.66], ["st-g4", 300, 640, 0.5], ["st-g5", 860, 680, 0.8]]
+        .forEach(([id, x, y, ph]) => {
+          const u = ((t - 10.4) * 0.9 + ph) % 1;
+          set(id, "y", y + (u < 0 ? 0 : u) * 160); set(id, "opacity", t < 10.4 ? 0 : 1);
+        });
+
+      // ---- data card: goo surface wobble ----
+      const lvl = $("st-level").getAttribute("y");
+      set("st-surf", "transform", `translate(0 ${lvl - 900})`);
+      set("st-surf", "d", `M330 900 Q415 ${880 + Math.sin(t * 6) * 8} 500 900 T670 900`);
+    }
+
+    const tl = gsap.timeline({ paused: true });
+    const P = { t: 0 };
+    tl.fromTo(P, { t: 0 }, { t: DUR, duration: DUR, ease: "none", onUpdate: () => render(P.t) }, 0);
+
+    // ---- shot 1 → 2: Glía pops in, Neuro slides left ----
+    tl.fromTo("#neuro", { x: 280, y: 560, scale: 1, transformOrigin: "50% 100%" }, { x: 70, scale: 0.92, duration: 0.45, ease: "power2.inOut" }, 2.6);
+    tl.fromTo("#glia", { x: 1180, y: 640, rotation: 20, transformOrigin: "50% 100%" }, { x: 610, rotation: 0, duration: 0.42, ease: "back.out(1.6)" }, 2.62);
+
+    // ---- shot 4: iris into the brain ----
+    tl.fromTo("#st-zoom", { clipPath: "circle(0px at 310px 780px)" }, { clipPath: "circle(1500px at 310px 780px)", duration: 0.45, ease: "power3.inOut" }, 10.35);
+    tl.fromTo("#st-n1", { attr: { y: 430 } }, { attr: { y: 410 }, duration: 0.3, ease: "sine.inOut", repeat: 14, yoyo: true }, 10.4);
+    tl.fromTo("#st-n2", { attr: { y: 470 } }, { attr: { y: 450 }, duration: 0.34, ease: "sine.inOut", repeat: 12, yoyo: true }, 10.5);
+    tl.fromTo("#st-n3", { attr: { y: 700 } }, { attr: { y: 680 }, duration: 0.28, ease: "sine.inOut", repeat: 15, yoyo: true }, 10.45);
+    tl.fromTo("#st-beta span", { scale: 0, rotation: -20 }, { scale: 1, rotation: -4, duration: 0.35, ease: "back.out(2)" }, 13.88);
+    tl.fromTo("#st-zoom", { clipPath: "circle(1500px at 310px 780px)" }, { clipPath: "circle(0px at 310px 780px)", duration: 0.35, ease: "power3.in", immediateRender: false }, 14.95);
+
+    // ---- shot 6: colour flood to the data card ----
+    tl.fromTo("#st-hdr", { y: 0 }, { y: -520, duration: 0.3, ease: "power3.in" }, 18.35);
+    tl.fromTo("#st-card", { clipPath: "circle(0px at 820px 900px)" }, { clipPath: "circle(2200px at 820px 900px)", duration: 0.45, ease: "power2.inOut" }, 18.4);
+    tl.fromTo("#st-ct1", { scale: 0, rotation: -8 }, { scale: 1, rotation: -3, duration: 0.35, ease: "back.out(1.8)" }, 20.85);
+    tl.fromTo("#st-ct2", { scale: 0, rotation: 8 }, { scale: 1, rotation: 2, duration: 0.35, ease: "back.out(1.8)" }, 21.05);
+    tl.fromTo("#st-level", { attr: { y: 900 } }, { attr: { y: 830 }, duration: 1.2, ease: "power2.out" }, 21.6);
+    tl.fromTo("#st-five span", { scale: 3, rotation: 30, opacity: 0 }, { scale: 1, rotation: 8, opacity: 1, duration: 0.3, ease: "power4.out" }, 22.85);
+    tl.fromTo("#st-src", { opacity: 0 }, { opacity: 1, duration: 0.25, ease: "power2.out" }, 19.0);
+    tl.fromTo("#st-card", { clipPath: "circle(2200px at 820px 900px)" }, { clipPath: "circle(0px at 820px 900px)", duration: 0.35, ease: "power3.in", immediateRender: false }, 23.55);
+    tl.fromTo("#st-hdr", { y: -520 }, { y: 0, duration: 0.4, ease: "back.out(1.4)", immediateRender: false }, 23.85);
+
+    // ---- shot 7: the lost key ----
+    tl.fromTo("#st-thinkG", { attr: { transform: "translate(560 560) scale(0)" } }, { attr: { transform: "translate(560 560) scale(1)" }, duration: 0.35, ease: "back.out(1.8)" }, 26.2);
+    tl.fromTo("#st-thinkG", { attr: { transform: "translate(560 560) scale(1)" } }, { attr: { transform: "translate(560 560) scale(0)" }, duration: 0.2, ease: "power3.in", immediateRender: false }, 27.6);
+
+    window.__timelines["stage"] = tl;
+  </script>
+</template>

@@ -1,0 +1,746 @@
+[
+ {
+  "id": "w0",
+  "text": "¿Una",
+  "start": 0.202,
+  "end": 0.5
+ },
+ {
+  "id": "w1",
+  "text": "guerra…",
+  "start": 0.583,
+  "end": 1.155
+ },
+ {
+  "id": "w2",
+  "text": "por",
+  "start": 1.245,
+  "end": 1.518
+ },
+ {
+  "id": "w3",
+  "text": "unos",
+  "start": 1.605,
+  "end": 1.955
+ },
+ {
+  "id": "w4",
+  "text": "pasteles?",
+  "start": 2.039,
+  "end": 3.082
+ },
+ {
+  "id": "w5",
+  "text": "¡Sí,",
+  "start": 3.209,
+  "end": 3.991
+ },
+ {
+  "id": "w6",
+  "text": "y",
+  "start": 4.064,
+  "end": 4.136
+ },
+ {
+  "id": "w7",
+  "text": "pasó",
+  "start": 4.264,
+  "end": 4.718
+ },
+ {
+  "id": "w8",
+  "text": "en",
+  "start": 4.791,
+  "end": 4.936
+ },
+ {
+  "id": "w9",
+  "text": "México!",
+  "start": 5.04,
+  "end": 5.809
+ },
+ {
+  "id": "w10",
+  "text": "En",
+  "start": 5.979,
+  "end": 5.998
+ },
+ {
+  "id": "w11",
+  "text": "mil",
+  "start": 6.053,
+  "end": 6.216
+ },
+ {
+  "id": "w12",
+  "text": "ochocientos",
+  "start": 6.271,
+  "end": 6.944
+ },
+ {
+  "id": "w13",
+  "text": "veintiocho,",
+  "start": 6.968,
+  "end": 7.853
+ },
+ {
+  "id": "w14",
+  "text": "unos",
+  "start": 7.918,
+  "end": 8.18
+ },
+ {
+  "id": "w15",
+  "text": "soldados",
+  "start": 8.238,
+  "end": 8.762
+ },
+ {
+  "id": "w16",
+  "text": "saquearon",
+  "start": 8.81,
+  "end": 9.344
+ },
+ {
+  "id": "w17",
+  "text": "en",
+  "start": 9.368,
+  "end": 9.416
+ },
+ {
+  "id": "w18",
+  "text": "Tacubaya",
+  "start": 9.489,
+  "end": 10.216
+ },
+ {
+  "id": "w19",
+  "text": "la",
+  "start": 10.289,
+  "end": 10.435
+ },
+ {
+  "id": "w20",
+  "text": "pastelería",
+  "start": 10.507,
+  "end": 11.235
+ },
+ {
+  "id": "w21",
+  "text": "del",
+  "start": 11.271,
+  "end": 11.38
+ },
+ {
+  "id": "w22",
+  "text": "francés",
+  "start": 11.453,
+  "end": 11.962
+ },
+ {
+  "id": "w23",
+  "text": "Remontel.",
+  "start": 12.071,
+  "end": 12.907
+ },
+ {
+  "id": "w24",
+  "text": "Su",
+  "start": 13.162,
+  "end": 13.172
+ },
+ {
+  "id": "w25",
+  "text": "local",
+  "start": 13.245,
+  "end": 13.608
+ },
+ {
+  "id": "w26",
+  "text": "valía",
+  "start": 13.681,
+  "end": 14.045
+ },
+ {
+  "id": "w27",
+  "text": "menos",
+  "start": 14.117,
+  "end": 14.481
+ },
+ {
+  "id": "w28",
+  "text": "de",
+  "start": 14.529,
+  "end": 14.626
+ },
+ {
+  "id": "w29",
+  "text": "mil",
+  "start": 14.699,
+  "end": 14.917
+ },
+ {
+  "id": "w30",
+  "text": "pesos…",
+  "start": 15.038,
+  "end": 15.935
+ },
+ {
+  "id": "w31",
+  "text": "¡y",
+  "start": 15.954,
+  "end": 16.008
+ },
+ {
+  "id": "w32",
+  "text": "pidió",
+  "start": 16.117,
+  "end": 16.517
+ },
+ {
+  "id": "w33",
+  "text": "sesenta",
+  "start": 16.608,
+  "end": 17.245
+ },
+ {
+  "id": "w34",
+  "text": "mil!",
+  "start": 17.372,
+  "end": 17.899
+ },
+ {
+  "id": "w35",
+  "text": "Diez",
+  "start": 18.261,
+  "end": 18.375
+ },
+ {
+  "id": "w36",
+  "text": "años",
+  "start": 18.462,
+  "end": 18.811
+ },
+ {
+  "id": "w37",
+  "text": "después,",
+  "start": 18.884,
+  "end": 19.611
+ },
+ {
+  "id": "w38",
+  "text": "Francia",
+  "start": 19.684,
+  "end": 20.12
+ },
+ {
+  "id": "w39",
+  "text": "le",
+  "start": 20.168,
+  "end": 20.265
+ },
+ {
+  "id": "w40",
+  "text": "cobró",
+  "start": 20.32,
+  "end": 20.629
+ },
+ {
+  "id": "w41",
+  "text": "a",
+  "start": 20.665,
+  "end": 20.702
+ },
+ {
+  "id": "w42",
+  "text": "México",
+  "start": 20.775,
+  "end": 21.211
+ },
+ {
+  "id": "w43",
+  "text": "¡seiscientos",
+  "start": 21.393,
+  "end": 22.375
+ },
+ {
+  "id": "w44",
+  "text": "mil",
+  "start": 22.465,
+  "end": 22.738
+ },
+ {
+  "id": "w45",
+  "text": "pesos!",
+  "start": 22.872,
+  "end": 23.684
+ },
+ {
+  "id": "w46",
+  "text": "Como",
+  "start": 23.925,
+  "end": 23.959
+ },
+ {
+  "id": "w47",
+  "text": "no",
+  "start": 24.032,
+  "end": 24.177
+ },
+ {
+  "id": "w48",
+  "text": "le",
+  "start": 24.225,
+  "end": 24.323
+ },
+ {
+  "id": "w49",
+  "text": "pagaron,",
+  "start": 24.377,
+  "end": 25.123
+ },
+ {
+  "id": "w50",
+  "text": "bombardeó",
+  "start": 25.195,
+  "end": 25.85
+ },
+ {
+  "id": "w51",
+  "text": "Veracruz.",
+  "start": 25.886,
+  "end": 26.577
+ },
+ {
+  "id": "w52",
+  "text": "¡La",
+  "start": 26.759,
+  "end": 27.014
+ },
+ {
+  "id": "w53",
+  "text": "Guerra",
+  "start": 27.111,
+  "end": 27.523
+ },
+ {
+  "id": "w54",
+  "text": "de",
+  "start": 27.547,
+  "end": 27.595
+ },
+ {
+  "id": "w55",
+  "text": "los",
+  "start": 27.65,
+  "end": 27.814
+ },
+ {
+  "id": "w56",
+  "text": "Pasteles!",
+  "start": 27.886,
+  "end": 28.759
+ },
+ {
+  "id": "w57",
+  "text": "Ahí,",
+  "start": 29.085,
+  "end": 29.323
+ },
+ {
+  "id": "w58",
+  "text": "un",
+  "start": 29.468,
+  "end": 29.759
+ },
+ {
+  "id": "w59",
+  "text": "cañonazo",
+  "start": 29.856,
+  "end": 30.705
+ },
+ {
+  "id": "w60",
+  "text": "le",
+  "start": 30.753,
+  "end": 30.85
+ },
+ {
+  "id": "w61",
+  "text": "voló",
+  "start": 30.905,
+  "end": 31.214
+ },
+ {
+  "id": "w62",
+  "text": "una",
+  "start": 31.286,
+  "end": 31.505
+ },
+ {
+  "id": "w63",
+  "text": "pierna",
+  "start": 31.602,
+  "end": 32.086
+ },
+ {
+  "id": "w64",
+  "text": "a",
+  "start": 32.123,
+  "end": 32.159
+ },
+ {
+  "id": "w65",
+  "text": "Santa",
+  "start": 32.244,
+  "end": 32.668
+ },
+ {
+  "id": "w66",
+  "text": "Anna.",
+  "start": 32.741,
+  "end": 33.177
+ },
+ {
+  "id": "w67",
+  "text": "Y",
+  "start": 34.105,
+  "end": 34.323
+ },
+ {
+  "id": "w68",
+  "text": "años",
+  "start": 34.41,
+  "end": 34.759
+ },
+ {
+  "id": "w69",
+  "text": "después,",
+  "start": 34.832,
+  "end": 35.414
+ },
+ {
+  "id": "w70",
+  "text": "le",
+  "start": 35.559,
+  "end": 35.85
+ },
+ {
+  "id": "w71",
+  "text": "hizo",
+  "start": 35.908,
+  "end": 36.141
+ },
+ {
+  "id": "w72",
+  "text": "a",
+  "start": 36.177,
+  "end": 36.214
+ },
+ {
+  "id": "w73",
+  "text": "su",
+  "start": 36.262,
+  "end": 36.359
+ },
+ {
+  "id": "w74",
+  "text": "pierna",
+  "start": 36.456,
+  "end": 36.941
+ },
+ {
+  "id": "w75",
+  "text": "un",
+  "start": 37.086,
+  "end": 37.377
+ },
+ {
+  "id": "w76",
+  "text": "funeral",
+  "start": 37.459,
+  "end": 38.032
+ },
+ {
+  "id": "w77",
+  "text": "con",
+  "start": 38.105,
+  "end": 38.323
+ },
+ {
+  "id": "w78",
+  "text": "honores",
+  "start": 38.395,
+  "end": 38.905
+ },
+ {
+  "id": "w79",
+  "text": "militares.",
+  "start": 38.977,
+  "end": 39.777
+ },
+ {
+  "id": "w80",
+  "text": "¡A",
+  "start": 39.886,
+  "end": 40.141
+ },
+ {
+  "id": "w81",
+  "text": "su",
+  "start": 40.214,
+  "end": 40.359
+ },
+ {
+  "id": "w82",
+  "text": "pierna!",
+  "start": 40.48,
+  "end": 41.45
+ },
+ {
+  "id": "w83",
+  "text": "En",
+  "start": 41.675,
+  "end": 41.695
+ },
+ {
+  "id": "w84",
+  "text": "mil",
+  "start": 41.749,
+  "end": 41.913
+ },
+ {
+  "id": "w85",
+  "text": "ochocientos",
+  "start": 41.967,
+  "end": 42.64
+ },
+ {
+  "id": "w86",
+  "text": "cuarenta",
+  "start": 42.688,
+  "end": 43.149
+ },
+ {
+  "id": "w87",
+  "text": "y",
+  "start": 43.185,
+  "end": 43.222
+ },
+ {
+  "id": "w88",
+  "text": "cuatro,",
+  "start": 43.264,
+  "end": 43.804
+ },
+ {
+  "id": "w89",
+  "text": "una",
+  "start": 43.876,
+  "end": 44.095
+ },
+ {
+  "id": "w90",
+  "text": "turba",
+  "start": 44.185,
+  "end": 44.531
+ },
+ {
+  "id": "w91",
+  "text": "enojada",
+  "start": 44.579,
+  "end": 45.185
+ },
+ {
+  "id": "w92",
+  "text": "la",
+  "start": 45.283,
+  "end": 45.476
+ },
+ {
+  "id": "w93",
+  "text": "desenterró.",
+  "start": 45.549,
+  "end": 46.422
+ },
+ {
+  "id": "w94",
+  "text": "¿Y",
+  "start": 46.549,
+  "end": 46.553
+ },
+ {
+  "id": "w95",
+  "text": "su",
+  "start": 46.625,
+  "end": 46.771
+ },
+ {
+  "id": "w96",
+  "text": "pierna",
+  "start": 46.844,
+  "end": 47.28
+ },
+ {
+  "id": "w97",
+  "text": "de",
+  "start": 47.305,
+  "end": 47.353
+ },
+ {
+  "id": "w98",
+  "text": "repuesto?",
+  "start": 47.444,
+  "end": 48.153
+ },
+ {
+  "id": "w99",
+  "text": "Se",
+  "start": 48.274,
+  "end": 48.516
+ },
+ {
+  "id": "w100",
+  "text": "la",
+  "start": 48.565,
+  "end": 48.662
+ },
+ {
+  "id": "w101",
+  "text": "quitaron",
+  "start": 48.71,
+  "end": 49.171
+ },
+ {
+  "id": "w102",
+  "text": "soldados",
+  "start": 49.229,
+  "end": 49.825
+ },
+ {
+  "id": "w103",
+  "text": "de",
+  "start": 49.85,
+  "end": 49.898
+ },
+ {
+  "id": "w104",
+  "text": "Illinois…",
+  "start": 49.979,
+  "end": 50.698
+ },
+ {
+  "id": "w105",
+  "text": "¡y",
+  "start": 50.88,
+  "end": 51.135
+ },
+ {
+  "id": "w106",
+  "text": "sigue",
+  "start": 51.207,
+  "end": 51.571
+ },
+ {
+  "id": "w107",
+  "text": "en",
+  "start": 51.619,
+  "end": 51.716
+ },
+ {
+  "id": "w108",
+  "text": "un",
+  "start": 51.765,
+  "end": 51.862
+ },
+ {
+  "id": "w109",
+  "text": "museo",
+  "start": 51.935,
+  "end": 52.298
+ },
+ {
+  "id": "w110",
+  "text": "de",
+  "start": 52.346,
+  "end": 52.444
+ },
+ {
+  "id": "w111",
+  "text": "Estados",
+  "start": 52.507,
+  "end": 52.953
+ },
+ {
+  "id": "w112",
+  "text": "Unidos!",
+  "start": 53.046,
+  "end": 53.753
+ },
+ {
+  "id": "w113",
+  "text": "Moraleja:",
+  "start": 54.18,
+  "end": 55.08
+ },
+ {
+  "id": "w114",
+  "text": "en",
+  "start": 55.153,
+  "end": 55.298
+ },
+ {
+  "id": "w115",
+  "text": "México,",
+  "start": 55.381,
+  "end": 56.025
+ },
+ {
+  "id": "w116",
+  "text": "hasta",
+  "start": 56.098,
+  "end": 56.462
+ },
+ {
+  "id": "w117",
+  "text": "un",
+  "start": 56.535,
+  "end": 56.68
+ },
+ {
+  "id": "w118",
+  "text": "pastel",
+  "start": 56.753,
+  "end": 57.189
+ },
+ {
+  "id": "w119",
+  "text": "te",
+  "start": 57.286,
+  "end": 57.48
+ },
+ {
+  "id": "w120",
+  "text": "puede",
+  "start": 57.541,
+  "end": 57.844
+ },
+ {
+  "id": "w121",
+  "text": "costar",
+  "start": 57.902,
+  "end": 58.28
+ },
+ {
+  "id": "w122",
+  "text": "una",
+  "start": 58.407,
+  "end": 58.789
+ },
+ {
+  "id": "w123",
+  "text": "pierna.",
+  "start": 58.862,
+  "end": 59.371
+ }
+]

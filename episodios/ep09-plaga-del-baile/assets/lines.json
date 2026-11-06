@@ -1,0 +1,65 @@
+[
+ {
+  "id": "l0",
+  "speaker": "narr",
+  "text": "¿Te imaginas ponerte a bailar… y no poder parar?",
+  "start": 0.15,
+  "end": 3.399
+ },
+ {
+  "id": "l1",
+  "speaker": "narr",
+  "text": "Estrasburgo, julio de mil quinientos dieciocho. Una mujer, Frau Troffea, sale a la calle… y se pone a bailar.",
+  "start": 3.539,
+  "end": 10.935
+ },
+ {
+  "id": "l2",
+  "speaker": "narr",
+  "text": "Sin música. Sin fiesta. ¡Y sigue así durante días!",
+  "start": 11.075,
+  "end": 15.792
+ },
+ {
+  "id": "l3",
+  "speaker": "narr",
+  "text": "Pronto ya bailaban decenas… y para agosto, según algunas crónicas, ¡hasta cuatrocientas personas!",
+  "start": 15.932,
+  "end": 22.286
+ },
+ {
+  "id": "l4",
+  "speaker": "narr",
+  "text": "¿Y los doctores? Dijeron que era sangre caliente… y que la cura era… ¡bailar más!",
+  "start": 22.426,
+  "end": 29.294
+ },
+ {
+  "id": "l5",
+  "speaker": "narr",
+  "text": "Así que las autoridades contrataron músicos… ¡y les montaron un escenario!",
+  "start": 29.434,
+  "end": 35.194
+ },
+ {
+  "id": "l6",
+  "speaker": "narr",
+  "text": "Pésima idea: los bailarines terminaban agotados y desmayados.",
+  "start": 35.334,
+  "end": 39.616
+ },
+ {
+  "id": "l7",
+  "speaker": "narr",
+  "text": "Al final, los llevaron al santuario de San Vito a rezar… y en septiembre, la plaga se apagó.",
+  "start": 39.756,
+  "end": 45.996
+ },
+ {
+  "id": "l8",
+  "speaker": "narr",
+  "text": "¿La causa? Hasta hoy… nadie sabe por qué bailaban.",
+  "start": 46.136,
+  "end": 50.334
+ }
+]

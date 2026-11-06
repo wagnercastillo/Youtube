@@ -1,0 +1,44 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; }
+    #ec { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; background: #E23E8B; }
+    #ec-logo { position: absolute; left: 290px; top: 380px; width: 500px; height: 500px; }
+    .ec-stk { position: absolute; left: 0; width: 1080px; text-align: center; }
+    .ec-stk span { display: inline-block; line-height: 1; border: 8px solid #1B1B2F; border-radius: 18px; box-shadow: 8px 8px 0 #1B1B2F;
+      color: #1B1B2F; font-family: "Archivo Black", sans-serif; }
+    #ec-title { top: 960px; } #ec-title span { font-size: 104px; padding: 18px 34px 12px; background: #FFD23F; }
+    #ec-sub { position: absolute; left: 60px; top: 1190px; width: 960px; text-align: center; font-family: "Nunito", sans-serif;
+      font-weight: 800; font-size: 60px; line-height: 1.15; color: #FFFFFF; -webkit-text-stroke: 10px #1B1B2F; paint-order: stroke fill; }
+    #ec-follow { top: 1380px; } #ec-follow span { font-size: 64px; padding: 16px 30px 10px; background: #FFFFFF; }
+  </style>
+  <div id="root" data-composition-id="endcard" data-width="1080" data-height="1920">
+    <div id="ec">
+      <svg id="ec-logo" viewBox="0 0 200 200">
+        <defs><clipPath id="ec-circ"><circle cx="100" cy="100" r="92" /></clipPath></defs>
+        <circle cx="100" cy="100" r="92" fill="#E23E8B" />
+        <g clip-path="url(#ec-circ)">
+          <ellipse cx="76" cy="108" rx="20" ry="25" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="6" />
+          <ellipse cx="124" cy="108" rx="20" ry="25" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="6" />
+          <circle id="ec-pupL" cx="86" cy="106" r="9" fill="#1B1B2F" /><circle id="ec-pupR" cx="134" cy="106" r="9" fill="#1B1B2F" />
+          <path d="M56 70 Q72 54 92 64 M108 76 L144 76" fill="none" stroke="#1B1B2F" stroke-width="7" stroke-linecap="round" />
+          <rect x="0" y="122" width="200" height="90" fill="#FFD23F" stroke="#1B1B2F" stroke-width="7" />
+          <path d="M30 150 H66 M94 150 H130 M150 150 H186 M50 176 H86 M114 176 H150" stroke="#1B1B2F" stroke-width="5" stroke-linecap="round" opacity=".35" />
+        </g>
+        <circle cx="100" cy="100" r="92" fill="none" stroke="#1B1B2F" stroke-width="8" />
+      </svg>
+      <div id="ec-title" class="ec-stk"><span>PURO CHISME</span></div>
+      <div id="ec-sub">¿A poco no sabías este chisme?</div>
+      <div id="ec-follow" class="ec-stk"><span>SÍGUENOS PARA MÁS</span></div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#ec", { y: 1920 }, { y: 0, duration: 0.32, ease: "power3.out" }, 0);
+    tl.fromTo("#ec-logo", { scale: 0, rotation: -20 }, { scale: 1, rotation: 0, duration: 0.4, ease: "back.out(1.8)" }, 0.25);
+    tl.fromTo("#ec-title span", { scale: 0, rotation: 10 }, { scale: 1, rotation: -3, duration: 0.32, ease: "back.out(2)" }, 0.55);
+    tl.fromTo("#ec-sub", { y: 80, opacity: 0 }, { y: 0, opacity: 1, duration: 0.3, ease: "power3.out" }, 0.85);
+    tl.fromTo("#ec-follow span", { scale: 0 }, { scale: 1, rotation: 2, duration: 0.3, ease: "back.out(2.2)" }, 1.2);
+    tl.to(["#ec-pupL", "#ec-pupR"], { attr: { cx: "-=20" }, duration: 0.15, ease: "power2.out" }, 2.6);
+    window.__timelines["endcard"] = tl;
+  </script>
+</template>

@@ -1,0 +1,668 @@
+[
+ {
+  "id": "w0",
+  "text": "¿Te",
+  "start": 0.15,
+  "end": 0.239
+ },
+ {
+  "id": "w1",
+  "text": "imaginas",
+  "start": 0.263,
+  "end": 0.679
+ },
+ {
+  "id": "w2",
+  "text": "ponerte",
+  "start": 0.759,
+  "end": 1.239
+ },
+ {
+  "id": "w3",
+  "text": "a",
+  "start": 1.319,
+  "end": 1.399
+ },
+ {
+  "id": "w4",
+  "text": "bailar…",
+  "start": 1.431,
+  "end": 2.199
+ },
+ {
+  "id": "w5",
+  "text": "y",
+  "start": 2.239,
+  "end": 2.279
+ },
+ {
+  "id": "w6",
+  "text": "no",
+  "start": 2.359,
+  "end": 2.519
+ },
+ {
+  "id": "w7",
+  "text": "poder",
+  "start": 2.586,
+  "end": 2.919
+ },
+ {
+  "id": "w8",
+  "text": "parar?",
+  "start": 2.979,
+  "end": 3.399
+ },
+ {
+  "id": "w9",
+  "text": "Estrasburgo,",
+  "start": 3.567,
+  "end": 4.455
+ },
+ {
+  "id": "w10",
+  "text": "julio",
+  "start": 4.515,
+  "end": 4.775
+ },
+ {
+  "id": "w11",
+  "text": "de",
+  "start": 4.802,
+  "end": 4.855
+ },
+ {
+  "id": "w12",
+  "text": "mil",
+  "start": 4.915,
+  "end": 5.095
+ },
+ {
+  "id": "w13",
+  "text": "quinientos",
+  "start": 5.148,
+  "end": 5.575
+ },
+ {
+  "id": "w14",
+  "text": "dieciocho.",
+  "start": 5.635,
+  "end": 6.455
+ },
+ {
+  "id": "w15",
+  "text": "Una",
+  "start": 6.535,
+  "end": 6.775
+ },
+ {
+  "id": "w16",
+  "text": "mujer,",
+  "start": 6.842,
+  "end": 7.335
+ },
+ {
+  "id": "w17",
+  "text": "Frau",
+  "start": 7.399,
+  "end": 7.655
+ },
+ {
+  "id": "w18",
+  "text": "Troffea,",
+  "start": 7.715,
+  "end": 8.375
+ },
+ {
+  "id": "w19",
+  "text": "sale",
+  "start": 8.423,
+  "end": 8.615
+ },
+ {
+  "id": "w20",
+  "text": "a",
+  "start": 8.635,
+  "end": 8.655
+ },
+ {
+  "id": "w21",
+  "text": "la",
+  "start": 8.668,
+  "end": 8.695
+ },
+ {
+  "id": "w22",
+  "text": "calle…",
+  "start": 8.775,
+  "end": 9.495
+ },
+ {
+  "id": "w23",
+  "text": "y",
+  "start": 9.535,
+  "end": 9.575
+ },
+ {
+  "id": "w24",
+  "text": "se",
+  "start": 9.655,
+  "end": 9.815
+ },
+ {
+  "id": "w25",
+  "text": "pone",
+  "start": 9.895,
+  "end": 10.215
+ },
+ {
+  "id": "w26",
+  "text": "a",
+  "start": 10.255,
+  "end": 10.295
+ },
+ {
+  "id": "w27",
+  "text": "bailar.",
+  "start": 10.359,
+  "end": 10.935
+ },
+ {
+  "id": "w28",
+  "text": "Sin",
+  "start": 11.22,
+  "end": 11.232
+ },
+ {
+  "id": "w29",
+  "text": "música.",
+  "start": 11.323,
+  "end": 11.952
+ },
+ {
+  "id": "w30",
+  "text": "Sin",
+  "start": 12.072,
+  "end": 12.432
+ },
+ {
+  "id": "w31",
+  "text": "fiesta.",
+  "start": 12.512,
+  "end": 13.232
+ },
+ {
+  "id": "w32",
+  "text": "¡Y",
+  "start": 13.352,
+  "end": 13.552
+ },
+ {
+  "id": "w33",
+  "text": "sigue",
+  "start": 13.619,
+  "end": 13.952
+ },
+ {
+  "id": "w34",
+  "text": "así",
+  "start": 14.052,
+  "end": 14.352
+ },
+ {
+  "id": "w35",
+  "text": "durante",
+  "start": 14.442,
+  "end": 15.072
+ },
+ {
+  "id": "w36",
+  "text": "días!",
+  "start": 15.168,
+  "end": 15.792
+ },
+ {
+  "id": "w37",
+  "text": "Pronto",
+  "start": 15.955,
+  "end": 16.206
+ },
+ {
+  "id": "w38",
+  "text": "ya",
+  "start": 16.259,
+  "end": 16.366
+ },
+ {
+  "id": "w39",
+  "text": "bailaban",
+  "start": 16.398,
+  "end": 16.846
+ },
+ {
+  "id": "w40",
+  "text": "decenas…",
+  "start": 16.886,
+  "end": 17.566
+ },
+ {
+  "id": "w41",
+  "text": "y",
+  "start": 17.606,
+  "end": 17.646
+ },
+ {
+  "id": "w42",
+  "text": "para",
+  "start": 17.694,
+  "end": 17.886
+ },
+ {
+  "id": "w43",
+  "text": "agosto,",
+  "start": 17.955,
+  "end": 18.446
+ },
+ {
+  "id": "w44",
+  "text": "según",
+  "start": 18.499,
+  "end": 18.766
+ },
+ {
+  "id": "w45",
+  "text": "algunas",
+  "start": 18.816,
+  "end": 19.166
+ },
+ {
+  "id": "w46",
+  "text": "crónicas,",
+  "start": 19.193,
+  "end": 19.966
+ },
+ {
+  "id": "w47",
+  "text": "¡hasta",
+  "start": 19.986,
+  "end": 20.286
+ },
+ {
+  "id": "w48",
+  "text": "cuatrocientas",
+  "start": 20.389,
+  "end": 21.326
+ },
+ {
+  "id": "w49",
+  "text": "personas!",
+  "start": 21.424,
+  "end": 22.286
+ },
+ {
+  "id": "w50",
+  "text": "¿Y",
+  "start": 22.658,
+  "end": 22.786
+ },
+ {
+  "id": "w51",
+  "text": "los",
+  "start": 22.816,
+  "end": 22.906
+ },
+ {
+  "id": "w52",
+  "text": "doctores?",
+  "start": 22.959,
+  "end": 24.026
+ },
+ {
+  "id": "w53",
+  "text": "Dijeron",
+  "start": 24.186,
+  "end": 24.586
+ },
+ {
+  "id": "w54",
+  "text": "que",
+  "start": 24.626,
+  "end": 24.746
+ },
+ {
+  "id": "w55",
+  "text": "era",
+  "start": 24.786,
+  "end": 24.906
+ },
+ {
+  "id": "w56",
+  "text": "sangre",
+  "start": 24.986,
+  "end": 25.626
+ },
+ {
+  "id": "w57",
+  "text": "caliente…",
+  "start": 25.662,
+  "end": 26.266
+ },
+ {
+  "id": "w58",
+  "text": "y",
+  "start": 26.306,
+  "end": 26.346
+ },
+ {
+  "id": "w59",
+  "text": "que",
+  "start": 26.386,
+  "end": 26.506
+ },
+ {
+  "id": "w60",
+  "text": "la",
+  "start": 26.533,
+  "end": 26.586
+ },
+ {
+  "id": "w61",
+  "text": "cura",
+  "start": 26.646,
+  "end": 26.906
+ },
+ {
+  "id": "w62",
+  "text": "era…",
+  "start": 27.026,
+  "end": 27.466
+ },
+ {
+  "id": "w63",
+  "text": "¡bailar",
+  "start": 27.706,
+  "end": 28.586
+ },
+ {
+  "id": "w64",
+  "text": "más!",
+  "start": 28.726,
+  "end": 29.294
+ },
+ {
+  "id": "w65",
+  "text": "Así",
+  "start": 30.261,
+  "end": 30.714
+ },
+ {
+  "id": "w66",
+  "text": "que",
+  "start": 30.734,
+  "end": 30.794
+ },
+ {
+  "id": "w67",
+  "text": "las",
+  "start": 30.834,
+  "end": 30.954
+ },
+ {
+  "id": "w68",
+  "text": "autoridades",
+  "start": 31.007,
+  "end": 31.594
+ },
+ {
+  "id": "w69",
+  "text": "contrataron",
+  "start": 31.634,
+  "end": 32.154
+ },
+ {
+  "id": "w70",
+  "text": "músicos…",
+  "start": 32.234,
+  "end": 33.114
+ },
+ {
+  "id": "w71",
+  "text": "¡y",
+  "start": 33.154,
+  "end": 33.314
+ },
+ {
+  "id": "w72",
+  "text": "les",
+  "start": 33.344,
+  "end": 33.434
+ },
+ {
+  "id": "w73",
+  "text": "montaron",
+  "start": 33.498,
+  "end": 34.074
+ },
+ {
+  "id": "w74",
+  "text": "un",
+  "start": 34.181,
+  "end": 34.394
+ },
+ {
+  "id": "w75",
+  "text": "escenario!",
+  "start": 34.454,
+  "end": 35.194
+ },
+ {
+  "id": "w76",
+  "text": "Pésima",
+  "start": 35.464,
+  "end": 35.696
+ },
+ {
+  "id": "w77",
+  "text": "idea:",
+  "start": 35.776,
+  "end": 36.176
+ },
+ {
+  "id": "w78",
+  "text": "los",
+  "start": 36.256,
+  "end": 36.496
+ },
+ {
+  "id": "w79",
+  "text": "bailarines",
+  "start": 36.528,
+  "end": 37.056
+ },
+ {
+  "id": "w80",
+  "text": "terminaban",
+  "start": 37.09,
+  "end": 37.536
+ },
+ {
+  "id": "w81",
+  "text": "agotados",
+  "start": 37.589,
+  "end": 38.176
+ },
+ {
+  "id": "w82",
+  "text": "y",
+  "start": 38.296,
+  "end": 38.416
+ },
+ {
+  "id": "w83",
+  "text": "desmayados.",
+  "start": 38.496,
+  "end": 39.616
+ },
+ {
+  "id": "w84",
+  "text": "Al",
+  "start": 39.895,
+  "end": 39.916
+ },
+ {
+  "id": "w85",
+  "text": "final,",
+  "start": 39.983,
+  "end": 40.476
+ },
+ {
+  "id": "w86",
+  "text": "los",
+  "start": 40.536,
+  "end": 40.716
+ },
+ {
+  "id": "w87",
+  "text": "llevaron",
+  "start": 40.762,
+  "end": 41.116
+ },
+ {
+  "id": "w88",
+  "text": "al",
+  "start": 41.143,
+  "end": 41.196
+ },
+ {
+  "id": "w89",
+  "text": "santuario",
+  "start": 41.26,
+  "end": 41.836
+ },
+ {
+  "id": "w90",
+  "text": "de",
+  "start": 41.916,
+  "end": 42.076
+ },
+ {
+  "id": "w91",
+  "text": "San",
+  "start": 42.136,
+  "end": 42.316
+ },
+ {
+  "id": "w92",
+  "text": "Vito",
+  "start": 42.396,
+  "end": 42.716
+ },
+ {
+  "id": "w93",
+  "text": "a",
+  "start": 42.836,
+  "end": 42.956
+ },
+ {
+  "id": "w94",
+  "text": "rezar…",
+  "start": 43.016,
+  "end": 43.676
+ },
+ {
+  "id": "w95",
+  "text": "y",
+  "start": 43.716,
+  "end": 43.756
+ },
+ {
+  "id": "w96",
+  "text": "en",
+  "start": 43.783,
+  "end": 43.836
+ },
+ {
+  "id": "w97",
+  "text": "septiembre,",
+  "start": 43.884,
+  "end": 44.716
+ },
+ {
+  "id": "w98",
+  "text": "la",
+  "start": 44.769,
+  "end": 44.876
+ },
+ {
+  "id": "w99",
+  "text": "plaga",
+  "start": 44.956,
+  "end": 45.356
+ },
+ {
+  "id": "w100",
+  "text": "se",
+  "start": 45.409,
+  "end": 45.516
+ },
+ {
+  "id": "w101",
+  "text": "apagó.",
+  "start": 45.543,
+  "end": 45.996
+ },
+ {
+  "id": "w102",
+  "text": "¿La",
+  "start": 46.279,
+  "end": 46.296
+ },
+ {
+  "id": "w103",
+  "text": "causa?",
+  "start": 46.403,
+  "end": 47.016
+ },
+ {
+  "id": "w104",
+  "text": "Hasta",
+  "start": 47.176,
+  "end": 47.576
+ },
+ {
+  "id": "w105",
+  "text": "hoy…",
+  "start": 47.656,
+  "end": 48.296
+ },
+ {
+  "id": "w106",
+  "text": "nadie",
+  "start": 48.356,
+  "end": 48.616
+ },
+ {
+  "id": "w107",
+  "text": "sabe",
+  "start": 48.696,
+  "end": 49.016
+ },
+ {
+  "id": "w108",
+  "text": "por",
+  "start": 49.096,
+  "end": 49.336
+ },
+ {
+  "id": "w109",
+  "text": "qué",
+  "start": 49.396,
+  "end": 49.576
+ },
+ {
+  "id": "w110",
+  "text": "bailaban.",
+  "start": 49.624,
+  "end": 50.334
+ }
+]

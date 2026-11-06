@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #8ED9F0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="50" data-width="1080" data-height="1920">
+      <div id="stage" data-composition-id="stage" data-composition-src="compositions/stage.html"
+        data-start="0" data-duration="50" data-track-index="1" data-track-kind="graphics"
+        data-width="1080" data-height="1920" style="z-index: 1"></div>
+      <div id="captions" data-composition-id="captions" data-composition-src="compositions/captions.html"
+        data-start="0" data-duration="50" data-track-index="2" data-track-kind="captions"
+        data-width="1080" data-height="1920" style="z-index: 2"></div>
+
+      <audio id="vo" class="clip" src="assets/voz.wav" data-start="0" data-track-index="3" data-volume="1"></audio>
+      <audio id="sfx-hook" class="clip" src="assets/sfx/impact-bass-1.mp3" data-start="0" data-duration="2.1" data-track-index="4" data-volume="0.4"></audio>
+      <audio id="sfx-totola" class="clip" src="assets/sfx/pop.mp3" data-start="4.85" data-duration="0.72" data-track-index="5" data-volume="0.55"></audio>
+      <audio id="sfx-ship-in" class="clip" src="assets/sfx/whoosh.mp3" data-start="7.08" data-duration="0.57" data-track-index="4" data-volume="0.4"></audio>
+      <audio id="sfx-imp" class="clip" src="assets/sfx/pop.mp3" data-start="8.75" data-duration="0.72" data-track-index="5" data-volume="0.5"></audio>
+      <audio id="sfx-ship-out" class="clip" src="assets/sfx/whoosh-short.mp3" data-start="11.21" data-duration="0.57" data-track-index="4" data-volume="0.35"></audio>
+      <audio id="sfx-egg" class="clip" src="assets/sfx/pop.mp3" data-start="13.78" data-duration="0.72" data-track-index="5" data-volume="0.55"></audio>
+      <audio id="sfx-word" class="clip" src="assets/sfx/whoosh.mp3" data-start="15.22" data-duration="0.57" data-track-index="4" data-volume="0.4"></audio>
+      <audio id="sfx-huevo" class="clip" src="assets/sfx/ping.mp3" data-start="19.77" data-duration="1.32" data-track-index="5" data-volume="0.45"></audio>
+      <audio id="sfx-lake" class="clip" src="assets/sfx/whoosh-short.mp3" data-start="25.7" data-duration="0.57" data-track-index="4" data-volume="0.35"></audio>
+      <audio id="sfx-ahu" class="clip" src="assets/sfx/pop.mp3" data-start="26.99" data-duration="0.72" data-track-index="5" data-volume="0.5"></audio>
+      <audio id="sfx-cav" class="clip" src="assets/sfx/whoosh.mp3" data-start="31.6" data-duration="0.57" data-track-index="4" data-volume="0.4"></audio>
+      <audio id="sfx-price" class="clip" src="assets/sfx/sparkle.mp3" data-start="36.49" data-duration="1.8" data-track-index="5" data-volume="0.45"></audio>
+      <audio id="sfx-riser" class="clip" src="assets/sfx/riser.mp3" data-start="42.53" data-duration="1.55" data-track-index="4" data-volume="0.3"></audio>
+      <audio id="sfx-stamp" class="clip" src="assets/sfx/impact-bass-1.mp3" data-start="44.09" data-duration="2.1" data-track-index="5" data-volume="0.5"></audio>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = gsap.timeline({ paused: true });
+    </script>
+  </body>
+</html>

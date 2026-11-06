@@ -1,0 +1,79 @@
+[
+ {
+  "id": "l0",
+  "speaker": "napo",
+  "text": "¡¿Otra vez me dibujaste chiquito, Gillray?!",
+  "start": 0.15,
+  "end": 2.883
+ },
+ {
+  "id": "l1",
+  "speaker": "gill",
+  "text": "Ay, Napoleón… mides cinco pies con dos pulgadas. Lo dijo tu propio médico.",
+  "start": 3.023,
+  "end": 8.303
+ },
+ {
+  "id": "l2",
+  "speaker": "napo",
+  "text": "¡Pulgadas francesas! La nuestra mide casi tres centímetros. La tuya, dos y medio.",
+  "start": 8.443,
+  "end": 13.963
+ },
+ {
+  "id": "l3",
+  "speaker": "gill",
+  "text": "Uy… ¿o sea que en realidad mides…?",
+  "start": 14.103,
+  "end": 16.944
+ },
+ {
+  "id": "l4",
+  "speaker": "napo",
+  "text": "¡Un metro sesenta y ocho! Normal para un francés de mi época.",
+  "start": 17.084,
+  "end": 20.416
+ },
+ {
+  "id": "l5",
+  "speaker": "gill",
+  "text": "Pues siempre andas con tus guardias gigantes. Junto a ellos pareces llavero.",
+  "start": 20.556,
+  "end": 24.991
+ },
+ {
+  "id": "l6",
+  "speaker": "napo",
+  "text": "¡Ellos son altos, no yo bajito! Y mis soldados me dicen el cabito de cariño.",
+  "start": 25.131,
+  "end": 29.667
+ },
+ {
+  "id": "l7",
+  "speaker": "gill",
+  "text": "Bueno, bueno… ya entendí. No eres bajito.",
+  "start": 29.807,
+  "end": 33.548
+ },
+ {
+  "id": "l8",
+  "speaker": "napo",
+  "text": "¡Por fin! ¿Y ahora qué dibujas?",
+  "start": 33.688,
+  "end": 35.589
+ },
+ {
+  "id": "l9",
+  "speaker": "gill",
+  "text": "A ti… todavía más chiquito. No eras bajito… te hicimos bajito.",
+  "start": 35.729,
+  "end": 41.118
+ },
+ {
+  "id": "l10",
+  "speaker": "napo",
+  "text": "¡GILLRAY!",
+  "start": 41.258,
+  "end": 42.083
+ }
+]

@@ -1,0 +1,812 @@
+[
+ {
+  "id": "w0",
+  "text": "¿Sabías",
+  "start": 0.198,
+  "end": 0.562
+ },
+ {
+  "id": "w1",
+  "text": "que",
+  "start": 0.598,
+  "end": 0.705
+ },
+ {
+  "id": "w2",
+  "text": "una",
+  "start": 0.759,
+  "end": 0.92
+ },
+ {
+  "id": "w3",
+  "text": "vez…",
+  "start": 1.027,
+  "end": 1.598
+ },
+ {
+  "id": "w4",
+  "text": "sentaron",
+  "start": 1.648,
+  "end": 2.134
+ },
+ {
+  "id": "w5",
+  "text": "a",
+  "start": 2.17,
+  "end": 2.205
+ },
+ {
+  "id": "w6",
+  "text": "un",
+  "start": 2.229,
+  "end": 2.277
+ },
+ {
+  "id": "w7",
+  "text": "papa",
+  "start": 2.348,
+  "end": 2.777
+ },
+ {
+  "id": "w8",
+  "text": "MUERTO",
+  "start": 2.896,
+  "end": 3.491
+ },
+ {
+  "id": "w9",
+  "text": "en",
+  "start": 3.587,
+  "end": 3.777
+ },
+ {
+  "id": "w10",
+  "text": "el",
+  "start": 3.824,
+  "end": 3.92
+ },
+ {
+  "id": "w11",
+  "text": "banquillo",
+  "start": 3.973,
+  "end": 4.42
+ },
+ {
+  "id": "w12",
+  "text": "de",
+  "start": 4.444,
+  "end": 4.491
+ },
+ {
+  "id": "w13",
+  "text": "los",
+  "start": 4.527,
+  "end": 4.634
+ },
+ {
+  "id": "w14",
+  "text": "acusados?",
+  "start": 4.705,
+  "end": 5.42
+ },
+ {
+  "id": "w15",
+  "text": "Roma,",
+  "start": 5.839,
+  "end": 6.068
+ },
+ {
+  "id": "w16",
+  "text": "año",
+  "start": 6.139,
+  "end": 6.354
+ },
+ {
+  "id": "w17",
+  "text": "ochocientos",
+  "start": 6.389,
+  "end": 6.925
+ },
+ {
+  "id": "w18",
+  "text": "noventa",
+  "start": 6.972,
+  "end": 7.282
+ },
+ {
+  "id": "w19",
+  "text": "y",
+  "start": 7.354,
+  "end": 7.425
+ },
+ {
+  "id": "w20",
+  "text": "siete.",
+  "start": 7.461,
+  "end": 8.211
+ },
+ {
+  "id": "w21",
+  "text": "El",
+  "start": 8.235,
+  "end": 8.282
+ },
+ {
+  "id": "w22",
+  "text": "papa",
+  "start": 8.354,
+  "end": 8.639
+ },
+ {
+  "id": "w23",
+  "text": "Esteban",
+  "start": 8.693,
+  "end": 9.068
+ },
+ {
+  "id": "w24",
+  "text": "Sexto",
+  "start": 9.154,
+  "end": 9.568
+ },
+ {
+  "id": "w25",
+  "text": "mandó",
+  "start": 9.639,
+  "end": 9.926
+ },
+ {
+  "id": "w26",
+  "text": "desenterrar",
+  "start": 9.979,
+  "end": 10.568
+ },
+ {
+  "id": "w27",
+  "text": "a",
+  "start": 10.604,
+  "end": 10.639
+ },
+ {
+  "id": "w28",
+  "text": "Formoso…",
+  "start": 10.696,
+  "end": 11.639
+ },
+ {
+  "id": "w29",
+  "text": "¡que",
+  "start": 11.657,
+  "end": 11.711
+ },
+ {
+  "id": "w30",
+  "text": "llevaba",
+  "start": 11.768,
+  "end": 12.211
+ },
+ {
+  "id": "w31",
+  "text": "nueve",
+  "start": 12.3,
+  "end": 12.711
+ },
+ {
+  "id": "w32",
+  "text": "meses",
+  "start": 12.794,
+  "end": 13.211
+ },
+ {
+  "id": "w33",
+  "text": "muerto!",
+  "start": 13.282,
+  "end": 13.996
+ },
+ {
+  "id": "w34",
+  "text": "Lo",
+  "start": 14.326,
+  "end": 14.336
+ },
+ {
+  "id": "w35",
+  "text": "vistió",
+  "start": 14.371,
+  "end": 14.764
+ },
+ {
+  "id": "w36",
+  "text": "de",
+  "start": 14.788,
+  "end": 14.836
+ },
+ {
+  "id": "w37",
+  "text": "papa,",
+  "start": 14.907,
+  "end": 15.621
+ },
+ {
+  "id": "w38",
+  "text": "lo",
+  "start": 15.693,
+  "end": 15.836
+ },
+ {
+  "id": "w39",
+  "text": "sentó",
+  "start": 15.893,
+  "end": 16.193
+ },
+ {
+  "id": "w40",
+  "text": "en",
+  "start": 16.217,
+  "end": 16.264
+ },
+ {
+  "id": "w41",
+  "text": "un",
+  "start": 16.312,
+  "end": 16.407
+ },
+ {
+  "id": "w42",
+  "text": "trono…",
+  "start": 16.479,
+  "end": 17.05
+ },
+ {
+  "id": "w43",
+  "text": "¡y",
+  "start": 17.229,
+  "end": 17.55
+ },
+ {
+  "id": "w44",
+  "text": "le",
+  "start": 17.621,
+  "end": 17.764
+ },
+ {
+  "id": "w45",
+  "text": "hizo",
+  "start": 17.836,
+  "end": 18.121
+ },
+ {
+  "id": "w46",
+  "text": "un",
+  "start": 18.217,
+  "end": 18.407
+ },
+ {
+  "id": "w47",
+  "text": "juicio!",
+  "start": 18.479,
+  "end": 19.05
+ },
+ {
+  "id": "w48",
+  "text": "¡Formoso!",
+  "start": 19.496,
+  "end": 20.104
+ },
+ {
+  "id": "w49",
+  "text": "¡Eras",
+  "start": 20.211,
+  "end": 20.604
+ },
+ {
+  "id": "w50",
+  "text": "obispo",
+  "start": 20.651,
+  "end": 21.032
+ },
+ {
+  "id": "w51",
+  "text": "de",
+  "start": 21.079,
+  "end": 21.175
+ },
+ {
+  "id": "w52",
+  "text": "Porto",
+  "start": 21.246,
+  "end": 21.604
+ },
+ {
+  "id": "w53",
+  "text": "y",
+  "start": 21.782,
+  "end": 21.961
+ },
+ {
+  "id": "w54",
+  "text": "te",
+  "start": 22.032,
+  "end": 22.175
+ },
+ {
+  "id": "w55",
+  "text": "hiciste",
+  "start": 22.211,
+  "end": 22.675
+ },
+ {
+  "id": "w56",
+  "text": "papa!",
+  "start": 22.746,
+  "end": 23.175
+ },
+ {
+  "id": "w57",
+  "text": "¡Eso",
+  "start": 23.246,
+  "end": 23.532
+ },
+ {
+  "id": "w58",
+  "text": "está",
+  "start": 23.575,
+  "end": 23.746
+ },
+ {
+  "id": "w59",
+  "text": "prohibido!",
+  "start": 23.787,
+  "end": 24.461
+ },
+ {
+  "id": "w60",
+  "text": "Y",
+  "start": 24.748,
+  "end": 24.777
+ },
+ {
+  "id": "w61",
+  "text": "como",
+  "start": 24.788,
+  "end": 24.834
+ },
+ {
+  "id": "w62",
+  "text": "el",
+  "start": 24.881,
+  "end": 24.977
+ },
+ {
+  "id": "w63",
+  "text": "muerto",
+  "start": 25.024,
+  "end": 25.405
+ },
+ {
+  "id": "w64",
+  "text": "no",
+  "start": 25.477,
+  "end": 25.62
+ },
+ {
+  "id": "w65",
+  "text": "hablaba…",
+  "start": 25.655,
+  "end": 26.191
+ },
+ {
+  "id": "w66",
+  "text": "un",
+  "start": 26.453,
+  "end": 26.977
+ },
+ {
+  "id": "w67",
+  "text": "diácono",
+  "start": 27.048,
+  "end": 27.548
+ },
+ {
+  "id": "w68",
+  "text": "contestaba",
+  "start": 27.62,
+  "end": 28.262
+ },
+ {
+  "id": "w69",
+  "text": "por",
+  "start": 28.334,
+  "end": 28.548
+ },
+ {
+  "id": "w70",
+  "text": "él.",
+  "start": 28.596,
+  "end": 28.762
+ },
+ {
+  "id": "w71",
+  "text": "Eh…",
+  "start": 29.135,
+  "end": 29.245
+ },
+ {
+  "id": "w72",
+  "text": "¿que…",
+  "start": 29.387,
+  "end": 29.816
+ },
+ {
+  "id": "w73",
+  "text": "soy",
+  "start": 29.887,
+  "end": 30.102
+ },
+ {
+  "id": "w74",
+  "text": "inocente?",
+  "start": 30.159,
+  "end": 31.03
+ },
+ {
+  "id": "w75",
+  "text": "¡CULPABLE!",
+  "start": 31.163,
+  "end": 32.396
+ },
+ {
+  "id": "w76",
+  "text": "Anularon",
+  "start": 32.893,
+  "end": 33.269
+ },
+ {
+  "id": "w77",
+  "text": "todo",
+  "start": 33.34,
+  "end": 33.626
+ },
+ {
+  "id": "w78",
+  "text": "lo",
+  "start": 33.673,
+  "end": 33.769
+ },
+ {
+  "id": "w79",
+  "text": "que",
+  "start": 33.804,
+  "end": 33.912
+ },
+ {
+  "id": "w80",
+  "text": "hizo,",
+  "start": 33.983,
+  "end": 34.412
+ },
+ {
+  "id": "w81",
+  "text": "le",
+  "start": 34.459,
+  "end": 34.554
+ },
+ {
+  "id": "w82",
+  "text": "cortaron",
+  "start": 34.612,
+  "end": 34.983
+ },
+ {
+  "id": "w83",
+  "text": "los",
+  "start": 35.037,
+  "end": 35.197
+ },
+ {
+  "id": "w84",
+  "text": "tres",
+  "start": 35.24,
+  "end": 35.412
+ },
+ {
+  "id": "w85",
+  "text": "dedos",
+  "start": 35.483,
+  "end": 35.84
+ },
+ {
+  "id": "w86",
+  "text": "con",
+  "start": 35.876,
+  "end": 35.983
+ },
+ {
+  "id": "w87",
+  "text": "los",
+  "start": 36.019,
+  "end": 36.126
+ },
+ {
+  "id": "w88",
+  "text": "que",
+  "start": 36.162,
+  "end": 36.269
+ },
+ {
+  "id": "w89",
+  "text": "bendecía…",
+  "start": 36.326,
+  "end": 37.197
+ },
+ {
+  "id": "w90",
+  "text": "¡y",
+  "start": 37.215,
+  "end": 37.269
+ },
+ {
+  "id": "w91",
+  "text": "lo",
+  "start": 37.316,
+  "end": 37.412
+ },
+ {
+  "id": "w92",
+  "text": "tiraron",
+  "start": 37.465,
+  "end": 37.912
+ },
+ {
+  "id": "w93",
+  "text": "al",
+  "start": 37.959,
+  "end": 38.054
+ },
+ {
+  "id": "w94",
+  "text": "río",
+  "start": 38.126,
+  "end": 38.34
+ },
+ {
+  "id": "w95",
+  "text": "Tíber!",
+  "start": 38.412,
+  "end": 38.999
+ },
+ {
+  "id": "w96",
+  "text": "Pero",
+  "start": 39.205,
+  "end": 39.229
+ },
+ {
+  "id": "w97",
+  "text": "Roma",
+  "start": 39.3,
+  "end": 39.586
+ },
+ {
+  "id": "w98",
+  "text": "se",
+  "start": 39.633,
+  "end": 39.729
+ },
+ {
+  "id": "w99",
+  "text": "indignó:",
+  "start": 39.79,
+  "end": 40.3
+ },
+ {
+  "id": "w100",
+  "text": "ese",
+  "start": 40.443,
+  "end": 40.871
+ },
+ {
+  "id": "w101",
+  "text": "mismo",
+  "start": 40.931,
+  "end": 41.229
+ },
+ {
+  "id": "w102",
+  "text": "año,",
+  "start": 41.3,
+  "end": 41.657
+ },
+ {
+  "id": "w103",
+  "text": "Esteban",
+  "start": 41.729,
+  "end": 42.157
+ },
+ {
+  "id": "w104",
+  "text": "terminó",
+  "start": 42.208,
+  "end": 42.586
+ },
+ {
+  "id": "w105",
+  "text": "en",
+  "start": 42.61,
+  "end": 42.657
+ },
+ {
+  "id": "w106",
+  "text": "la",
+  "start": 42.681,
+  "end": 42.729
+ },
+ {
+  "id": "w107",
+  "text": "cárcel…",
+  "start": 42.8,
+  "end": 43.3
+ },
+ {
+  "id": "w108",
+  "text": "y",
+  "start": 43.8,
+  "end": 44.3
+ },
+ {
+  "id": "w109",
+  "text": "ahí",
+  "start": 44.371,
+  "end": 44.586
+ },
+ {
+  "id": "w110",
+  "text": "lo",
+  "start": 44.681,
+  "end": 44.871
+ },
+ {
+  "id": "w111",
+  "text": "estrangularon.",
+  "start": 44.929,
+  "end": 45.8
+ },
+ {
+  "id": "w112",
+  "text": "¿Y",
+  "start": 45.925,
+  "end": 45.941
+ },
+ {
+  "id": "w113",
+  "text": "Formoso?",
+  "start": 46.027,
+  "end": 46.977
+ },
+ {
+  "id": "w114",
+  "text": "Lo",
+  "start": 47.084,
+  "end": 47.298
+ },
+ {
+  "id": "w115",
+  "text": "rescataron",
+  "start": 47.352,
+  "end": 47.941
+ },
+ {
+  "id": "w116",
+  "text": "del",
+  "start": 47.977,
+  "end": 48.084
+ },
+ {
+  "id": "w117",
+  "text": "río…",
+  "start": 48.155,
+  "end": 48.512
+ },
+ {
+  "id": "w118",
+  "text": "¡y",
+  "start": 48.727,
+  "end": 49.012
+ },
+ {
+  "id": "w119",
+  "text": "lo",
+  "start": 49.084,
+  "end": 49.227
+ },
+ {
+  "id": "w120",
+  "text": "volvieron",
+  "start": 49.262,
+  "end": 49.727
+ },
+ {
+  "id": "w121",
+  "text": "a",
+  "start": 49.762,
+  "end": 49.798
+ },
+ {
+  "id": "w122",
+  "text": "enterrar",
+  "start": 49.834,
+  "end": 50.37
+ },
+ {
+  "id": "w123",
+  "text": "con",
+  "start": 50.423,
+  "end": 50.584
+ },
+ {
+  "id": "w124",
+  "text": "honores",
+  "start": 50.637,
+  "end": 51.012
+ },
+ {
+  "id": "w125",
+  "text": "de",
+  "start": 51.06,
+  "end": 51.155
+ },
+ {
+  "id": "w126",
+  "text": "papa!",
+  "start": 51.227,
+  "end": 51.65
+ },
+ {
+  "id": "w127",
+  "text": "En",
+  "start": 51.949,
+  "end": 51.996
+ },
+ {
+  "id": "w128",
+  "text": "Roma,",
+  "start": 52.082,
+  "end": 52.568
+ },
+ {
+  "id": "w129",
+  "text": "ni",
+  "start": 52.663,
+  "end": 52.854
+ },
+ {
+  "id": "w130",
+  "text": "muerto",
+  "start": 52.901,
+  "end": 53.282
+ },
+ {
+  "id": "w131",
+  "text": "te",
+  "start": 53.329,
+  "end": 53.425
+ },
+ {
+  "id": "w132",
+  "text": "salvas",
+  "start": 53.461,
+  "end": 53.711
+ },
+ {
+  "id": "w133",
+  "text": "del",
+  "start": 53.746,
+  "end": 53.854
+ },
+ {
+  "id": "w134",
+  "text": "chisme.",
+  "start": 53.901,
+  "end": 54.343
+ }
+]
