@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Corre la producción nocturna todos los días a las 00:30 (hora local de la Mac).
+     Instalar: cp este archivo a ~/Library/LaunchAgents/ (setup_mac.sh lo hace, cambiando USUARIO por tu usuario)
+               launchctl load ~/Library/LaunchAgents/com.purochisme.nocturno.plist
+     Probar ya: launchctl start com.purochisme.nocturno -->
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.purochisme.nocturno</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>/Users/USUARIO/Documents/GitHub/YouTube/mac/nightly/run_nightly.sh</string>
+  </array>
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key><integer>0</integer>
+    <key>Minute</key><integer>30</integer>
+  </dict>
+  <key>StandardOutPath</key><string>/tmp/purochisme-nocturno.out</string>
+  <key>StandardErrorPath</key><string>/tmp/purochisme-nocturno.err</string>
+</dict>
+</plist>

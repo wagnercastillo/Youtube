@@ -13,3 +13,4 @@ renders/
 **/audio/tr/
 **/manim/media/
 voz_raw.wav
+mac/plugins.local.json

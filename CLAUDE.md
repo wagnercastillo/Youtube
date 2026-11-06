@@ -68,6 +68,14 @@ Fill the next free slot. Re-check Studio → Analytics → "When your viewers ar
 move the slots to the real peaks. The VPN must be off when uploading (TLS gets intercepted). Custom thumbnails need the
 channel's intermediate features; until then the owner sets `renders/miniatura.jpg` by hand.
 
+## macOS (Mac mini) and nightly automation
+
+Setup and migration: `mac/MIGRACION_MAC.md` (`mac/exportar_desde_windows.py` packs skills/memory/secrets,
+`mac/setup_mac.sh` installs everything). On macOS the venvs are `~/.chatterbox-py/bin/python` and `~/.manim-py/bin/manim`.
+Nightly production: launchd runs `mac/nightly/run_nightly.sh` at 00:30 → `claude -p "/produccion-nocturna"`
+(`.claude/skills/produccion-nocturna/SKILL.md`): 3 new episodes, uploaded private + scheduled 12/4/8 pm CDMX,
+ledger `ideas/PUBLICADOS.md`, report `reportes/AAAA-MM-DD.md`. Pause with `mac/nightly/PAUSA`.
+
 ## Channel rules (from the owner — apply to every episode)
 
 **Always the same (brand):** history/curiosities told as gossip; a big question hook on screen from frame 0; the word-highlight
