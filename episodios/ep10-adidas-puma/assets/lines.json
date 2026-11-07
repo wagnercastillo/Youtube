@@ -1,0 +1,79 @@
+[
+ {
+  "id": "l0",
+  "speaker": "narr",
+  "text": "¿Sabías que Adidas y Puma… son de dos hermanos que se odiaban?",
+  "start": 0.128,
+  "end": 4.846
+ },
+ {
+  "id": "l1",
+  "speaker": "narr",
+  "text": "Alemania, años veinte. Adi y Rudi Dassler hacen zapatos… en la lavandería de su mamá.",
+  "start": 4.966,
+  "end": 11.85
+ },
+ {
+  "id": "l2",
+  "speaker": "narr",
+  "text": "En mil novecientos treinta y seis, Jesse Owens gana cuatro oros… ¡con sus tenis!",
+  "start": 11.969,
+  "end": 18.021
+ },
+ {
+  "id": "l3",
+  "speaker": "narr",
+  "text": "Pero en la guerra, en pleno bombardeo, terminan en el mismo refugio… y Adi suelta:",
+  "start": 18.14,
+  "end": 24.817
+ },
+ {
+  "id": "l4",
+  "speaker": "adi",
+  "text": "¡Ahí vienen otra vez esos desgraciados!",
+  "start": 24.937,
+  "end": 26.878
+ },
+ {
+  "id": "l5",
+  "speaker": "rudi",
+  "text": "¿¡Desgraciados!? ¿¡Me lo dices a mí!?",
+  "start": 26.997,
+  "end": 28.873
+ },
+ {
+  "id": "l6",
+  "speaker": "narr",
+  "text": "Adi juraba que hablaba de los aviones… pero Rudi nunca le creyó.",
+  "start": 28.992,
+  "end": 33.764
+ },
+ {
+  "id": "l7",
+  "speaker": "narr",
+  "text": "En mil novecientos cuarenta y ocho se separan: Adi funda Adidas… y Rudi, Puma. Cada uno de un lado del río.",
+  "start": 33.884,
+  "end": 41.586
+ },
+ {
+  "id": "l8",
+  "speaker": "narr",
+  "text": "Y el pueblo se partió en dos: bares, panaderías, ¡hasta equipos de fútbol! Antes de hablarte, te miraban los zapatos.",
+  "start": 41.706,
+  "end": 50.391
+ },
+ {
+  "id": "l9",
+  "speaker": "narr",
+  "text": "Ni muertos se juntaron: están enterrados en extremos opuestos del cementerio.",
+  "start": 50.511,
+  "end": 55.407
+ },
+ {
+  "id": "l10",
+  "speaker": "narr",
+  "text": "¿Y las paces? Hasta dos mil nueve… ¡con un partido de fútbol!",
+  "start": 55.526,
+  "end": 60.789
+ }
+]

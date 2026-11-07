@@ -1,0 +1,866 @@
+[
+ {
+  "id": "w0",
+  "text": "¿Sabías",
+  "start": 0.19,
+  "end": 0.607
+ },
+ {
+  "id": "w1",
+  "text": "que",
+  "start": 0.658,
+  "end": 0.812
+ },
+ {
+  "id": "w2",
+  "text": "Adidas",
+  "start": 0.89,
+  "end": 1.359
+ },
+ {
+  "id": "w3",
+  "text": "y",
+  "start": 1.393,
+  "end": 1.427
+ },
+ {
+  "id": "w4",
+  "text": "Puma…",
+  "start": 1.53,
+  "end": 2.179
+ },
+ {
+  "id": "w5",
+  "text": "son",
+  "start": 2.248,
+  "end": 2.453
+ },
+ {
+  "id": "w6",
+  "text": "de",
+  "start": 2.498,
+  "end": 2.59
+ },
+ {
+  "id": "w7",
+  "text": "dos",
+  "start": 2.641,
+  "end": 2.795
+ },
+ {
+  "id": "w8",
+  "text": "hermanos",
+  "start": 2.863,
+  "end": 3.479
+ },
+ {
+  "id": "w9",
+  "text": "que",
+  "start": 3.547,
+  "end": 3.752
+ },
+ {
+  "id": "w10",
+  "text": "se",
+  "start": 3.844,
+  "end": 4.026
+ },
+ {
+  "id": "w11",
+  "text": "odiaban?",
+  "start": 4.094,
+  "end": 4.846
+ },
+ {
+  "id": "w12",
+  "text": "Alemania,",
+  "start": 5.176,
+  "end": 5.627
+ },
+ {
+  "id": "w13",
+  "text": "años",
+  "start": 5.75,
+  "end": 6.243
+ },
+ {
+  "id": "w14",
+  "text": "veinte.",
+  "start": 6.288,
+  "end": 6.721
+ },
+ {
+  "id": "w15",
+  "text": "Adi",
+  "start": 6.972,
+  "end": 7.542
+ },
+ {
+  "id": "w16",
+  "text": "y",
+  "start": 7.644,
+  "end": 7.747
+ },
+ {
+  "id": "w17",
+  "text": "Rudi",
+  "start": 7.815,
+  "end": 8.089
+ },
+ {
+  "id": "w18",
+  "text": "Dassler",
+  "start": 8.123,
+  "end": 8.568
+ },
+ {
+  "id": "w19",
+  "text": "hacen",
+  "start": 8.647,
+  "end": 9.046
+ },
+ {
+  "id": "w20",
+  "text": "zapatos…",
+  "start": 9.115,
+  "end": 9.798
+ },
+ {
+  "id": "w21",
+  "text": "en",
+  "start": 9.98,
+  "end": 10.345
+ },
+ {
+  "id": "w22",
+  "text": "la",
+  "start": 10.391,
+  "end": 10.482
+ },
+ {
+  "id": "w23",
+  "text": "lavandería",
+  "start": 10.533,
+  "end": 11.097
+ },
+ {
+  "id": "w24",
+  "text": "de",
+  "start": 11.143,
+  "end": 11.234
+ },
+ {
+  "id": "w25",
+  "text": "su",
+  "start": 11.303,
+  "end": 11.439
+ },
+ {
+  "id": "w26",
+  "text": "mamá.",
+  "start": 11.491,
+  "end": 11.85
+ },
+ {
+  "id": "w27",
+  "text": "En",
+  "start": 12.054,
+  "end": 12.072
+ },
+ {
+  "id": "w28",
+  "text": "mil",
+  "start": 12.123,
+  "end": 12.277
+ },
+ {
+  "id": "w29",
+  "text": "novecientos",
+  "start": 12.345,
+  "end": 13.029
+ },
+ {
+  "id": "w30",
+  "text": "treinta",
+  "start": 13.08,
+  "end": 13.371
+ },
+ {
+  "id": "w31",
+  "text": "y",
+  "start": 13.405,
+  "end": 13.439
+ },
+ {
+  "id": "w32",
+  "text": "seis,",
+  "start": 13.494,
+  "end": 14.089
+ },
+ {
+  "id": "w33",
+  "text": "Jesse",
+  "start": 14.151,
+  "end": 14.465
+ },
+ {
+  "id": "w34",
+  "text": "Owens",
+  "start": 14.544,
+  "end": 14.944
+ },
+ {
+  "id": "w35",
+  "text": "gana",
+  "start": 15.012,
+  "end": 15.354
+ },
+ {
+  "id": "w36",
+  "text": "cuatro",
+  "start": 15.432,
+  "end": 15.901
+ },
+ {
+  "id": "w37",
+  "text": "oros…",
+  "start": 16.038,
+  "end": 16.585
+ },
+ {
+  "id": "w38",
+  "text": "¡con",
+  "start": 16.687,
+  "end": 16.926
+ },
+ {
+  "id": "w39",
+  "text": "sus",
+  "start": 16.995,
+  "end": 17.2
+ },
+ {
+  "id": "w40",
+  "text": "tenis!",
+  "start": 17.303,
+  "end": 18.021
+ },
+ {
+  "id": "w41",
+  "text": "Pero",
+  "start": 18.226,
+  "end": 18.253
+ },
+ {
+  "id": "w42",
+  "text": "en",
+  "start": 18.298,
+  "end": 18.39
+ },
+ {
+  "id": "w43",
+  "text": "la",
+  "start": 18.435,
+  "end": 18.526
+ },
+ {
+  "id": "w44",
+  "text": "guerra,",
+  "start": 18.595,
+  "end": 19.21
+ },
+ {
+  "id": "w45",
+  "text": "en",
+  "start": 19.256,
+  "end": 19.347
+ },
+ {
+  "id": "w46",
+  "text": "pleno",
+  "start": 19.438,
+  "end": 19.826
+ },
+ {
+  "id": "w47",
+  "text": "bombardeo,",
+  "start": 19.894,
+  "end": 20.954
+ },
+ {
+  "id": "w48",
+  "text": "terminan",
+  "start": 21.008,
+  "end": 21.467
+ },
+ {
+  "id": "w49",
+  "text": "en",
+  "start": 21.49,
+  "end": 21.535
+ },
+ {
+  "id": "w50",
+  "text": "el",
+  "start": 21.603,
+  "end": 21.74
+ },
+ {
+  "id": "w51",
+  "text": "mismo",
+  "start": 21.809,
+  "end": 22.15
+ },
+ {
+  "id": "w52",
+  "text": "refugio…",
+  "start": 22.219,
+  "end": 22.834
+ },
+ {
+  "id": "w53",
+  "text": "y",
+  "start": 23.176,
+  "end": 23.518
+ },
+ {
+  "id": "w54",
+  "text": "Adi",
+  "start": 23.609,
+  "end": 23.928
+ },
+ {
+  "id": "w55",
+  "text": "suelta:",
+  "start": 24.065,
+  "end": 24.817
+ },
+ {
+  "id": "w56",
+  "text": "¡Ahí",
+  "start": 24.997,
+  "end": 25.1
+ },
+ {
+  "id": "w57",
+  "text": "vienen",
+  "start": 25.123,
+  "end": 25.305
+ },
+ {
+  "id": "w58",
+  "text": "otra",
+  "start": 25.346,
+  "end": 25.51
+ },
+ {
+  "id": "w59",
+  "text": "vez",
+  "start": 25.562,
+  "end": 25.715
+ },
+ {
+  "id": "w60",
+  "text": "esos",
+  "start": 25.77,
+  "end": 25.989
+ },
+ {
+  "id": "w61",
+  "text": "desgraciados!",
+  "start": 26.023,
+  "end": 26.878
+ },
+ {
+  "id": "w62",
+  "text": "¿¡Desgraciados!?",
+  "start": 26.997,
+  "end": 27.915
+ },
+ {
+  "id": "w63",
+  "text": "¿¡Me",
+  "start": 27.95,
+  "end": 28.121
+ },
+ {
+  "id": "w64",
+  "text": "lo",
+  "start": 28.144,
+  "end": 28.189
+ },
+ {
+  "id": "w65",
+  "text": "dices",
+  "start": 28.223,
+  "end": 28.531
+ },
+ {
+  "id": "w66",
+  "text": "a",
+  "start": 28.565,
+  "end": 28.599
+ },
+ {
+  "id": "w67",
+  "text": "mí!?",
+  "start": 28.668,
+  "end": 28.873
+ },
+ {
+  "id": "w68",
+  "text": "Adi",
+  "start": 29.099,
+  "end": 29.251
+ },
+ {
+  "id": "w69",
+  "text": "juraba",
+  "start": 29.32,
+  "end": 29.867
+ },
+ {
+  "id": "w70",
+  "text": "que",
+  "start": 29.901,
+  "end": 30.003
+ },
+ {
+  "id": "w71",
+  "text": "hablaba",
+  "start": 30.038,
+  "end": 30.414
+ },
+ {
+  "id": "w72",
+  "text": "de",
+  "start": 30.459,
+  "end": 30.55
+ },
+ {
+  "id": "w73",
+  "text": "los",
+  "start": 30.585,
+  "end": 30.687
+ },
+ {
+  "id": "w74",
+  "text": "aviones…",
+  "start": 30.756,
+  "end": 31.713
+ },
+ {
+  "id": "w75",
+  "text": "pero",
+  "start": 31.768,
+  "end": 31.986
+ },
+ {
+  "id": "w76",
+  "text": "Rudi",
+  "start": 32.055,
+  "end": 32.397
+ },
+ {
+  "id": "w77",
+  "text": "nunca",
+  "start": 32.51,
+  "end": 33.08
+ },
+ {
+  "id": "w78",
+  "text": "le",
+  "start": 33.126,
+  "end": 33.217
+ },
+ {
+  "id": "w79",
+  "text": "creyó.",
+  "start": 33.268,
+  "end": 33.764
+ },
+ {
+  "id": "w80",
+  "text": "En",
+  "start": 33.979,
+  "end": 33.997
+ },
+ {
+  "id": "w81",
+  "text": "mil",
+  "start": 34.031,
+  "end": 34.133
+ },
+ {
+  "id": "w82",
+  "text": "novecientos",
+  "start": 34.202,
+  "end": 34.817
+ },
+ {
+  "id": "w83",
+  "text": "cuarenta",
+  "start": 34.885,
+  "end": 35.296
+ },
+ {
+  "id": "w84",
+  "text": "y",
+  "start": 35.33,
+  "end": 35.364
+ },
+ {
+  "id": "w85",
+  "text": "ocho",
+  "start": 35.467,
+  "end": 35.638
+ },
+ {
+  "id": "w86",
+  "text": "se",
+  "start": 35.751,
+  "end": 35.979
+ },
+ {
+  "id": "w87",
+  "text": "separan:",
+  "start": 36.059,
+  "end": 37.005
+ },
+ {
+  "id": "w88",
+  "text": "Adi",
+  "start": 37.074,
+  "end": 37.279
+ },
+ {
+  "id": "w89",
+  "text": "funda",
+  "start": 37.347,
+  "end": 37.689
+ },
+ {
+  "id": "w90",
+  "text": "Adidas…",
+  "start": 37.767,
+  "end": 38.373
+ },
+ {
+  "id": "w91",
+  "text": "y",
+  "start": 38.441,
+  "end": 38.509
+ },
+ {
+  "id": "w92",
+  "text": "Rudi,",
+  "start": 38.578,
+  "end": 38.92
+ },
+ {
+  "id": "w93",
+  "text": "Puma.",
+  "start": 39.056,
+  "end": 39.535
+ },
+ {
+  "id": "w94",
+  "text": "Cada",
+  "start": 39.672,
+  "end": 40.014
+ },
+ {
+  "id": "w95",
+  "text": "uno",
+  "start": 40.099,
+  "end": 40.356
+ },
+ {
+  "id": "w96",
+  "text": "de",
+  "start": 40.424,
+  "end": 40.561
+ },
+ {
+  "id": "w97",
+  "text": "un",
+  "start": 40.606,
+  "end": 40.697
+ },
+ {
+  "id": "w98",
+  "text": "lado",
+  "start": 40.766,
+  "end": 41.039
+ },
+ {
+  "id": "w99",
+  "text": "del",
+  "start": 41.074,
+  "end": 41.176
+ },
+ {
+  "id": "w100",
+  "text": "río.",
+  "start": 41.244,
+  "end": 41.586
+ },
+ {
+  "id": "w101",
+  "text": "Y",
+  "start": 41.706,
+  "end": 41.708
+ },
+ {
+  "id": "w102",
+  "text": "el",
+  "start": 41.776,
+  "end": 41.913
+ },
+ {
+  "id": "w103",
+  "text": "pueblo",
+  "start": 41.972,
+  "end": 42.323
+ },
+ {
+  "id": "w104",
+  "text": "se",
+  "start": 42.368,
+  "end": 42.46
+ },
+ {
+  "id": "w105",
+  "text": "partió",
+  "start": 42.515,
+  "end": 42.87
+ },
+ {
+  "id": "w106",
+  "text": "en",
+  "start": 42.915,
+  "end": 43.007
+ },
+ {
+  "id": "w107",
+  "text": "dos:",
+  "start": 43.092,
+  "end": 43.691
+ },
+ {
+  "id": "w108",
+  "text": "bares,",
+  "start": 43.759,
+  "end": 44.306
+ },
+ {
+  "id": "w109",
+  "text": "panaderías,",
+  "start": 44.357,
+  "end": 45.263
+ },
+ {
+  "id": "w110",
+  "text": "¡hasta",
+  "start": 45.297,
+  "end": 45.605
+ },
+ {
+  "id": "w111",
+  "text": "equipos",
+  "start": 45.682,
+  "end": 46.221
+ },
+ {
+  "id": "w112",
+  "text": "de",
+  "start": 46.266,
+  "end": 46.357
+ },
+ {
+  "id": "w113",
+  "text": "fútbol!",
+  "start": 46.46,
+  "end": 47.109
+ },
+ {
+  "id": "w114",
+  "text": "Antes",
+  "start": 47.349,
+  "end": 48.135
+ },
+ {
+  "id": "w115",
+  "text": "de",
+  "start": 48.18,
+  "end": 48.272
+ },
+ {
+  "id": "w116",
+  "text": "hablarte,",
+  "start": 48.306,
+  "end": 48.956
+ },
+ {
+  "id": "w117",
+  "text": "te",
+  "start": 48.979,
+  "end": 49.024
+ },
+ {
+  "id": "w118",
+  "text": "miraban",
+  "start": 49.075,
+  "end": 49.434
+ },
+ {
+  "id": "w119",
+  "text": "los",
+  "start": 49.468,
+  "end": 49.571
+ },
+ {
+  "id": "w120",
+  "text": "zapatos.",
+  "start": 49.639,
+  "end": 50.391
+ },
+ {
+  "id": "w121",
+  "text": "Ni",
+  "start": 50.646,
+  "end": 50.669
+ },
+ {
+  "id": "w122",
+  "text": "muertos",
+  "start": 50.738,
+  "end": 51.216
+ },
+ {
+  "id": "w123",
+  "text": "se",
+  "start": 51.239,
+  "end": 51.285
+ },
+ {
+  "id": "w124",
+  "text": "juntaron:",
+  "start": 51.353,
+  "end": 52.174
+ },
+ {
+  "id": "w125",
+  "text": "están",
+  "start": 52.231,
+  "end": 52.515
+ },
+ {
+  "id": "w126",
+  "text": "enterrados",
+  "start": 52.567,
+  "end": 53.131
+ },
+ {
+  "id": "w127",
+  "text": "en",
+  "start": 53.199,
+  "end": 53.336
+ },
+ {
+  "id": "w128",
+  "text": "extremos",
+  "start": 53.404,
+  "end": 53.883
+ },
+ {
+  "id": "w129",
+  "text": "opuestos",
+  "start": 53.974,
+  "end": 54.43
+ },
+ {
+  "id": "w130",
+  "text": "del",
+  "start": 54.464,
+  "end": 54.567
+ },
+ {
+  "id": "w131",
+  "text": "cementerio.",
+  "start": 54.626,
+  "end": 55.407
+ },
+ {
+  "id": "w132",
+  "text": "¿Y",
+  "start": 56.037,
+  "end": 56.276
+ },
+ {
+  "id": "w133",
+  "text": "las",
+  "start": 56.344,
+  "end": 56.55
+ },
+ {
+  "id": "w134",
+  "text": "paces?",
+  "start": 56.618,
+  "end": 57.165
+ },
+ {
+  "id": "w135",
+  "text": "Hasta",
+  "start": 57.336,
+  "end": 57.78
+ },
+ {
+  "id": "w136",
+  "text": "dos",
+  "start": 57.849,
+  "end": 58.054
+ },
+ {
+  "id": "w137",
+  "text": "mil",
+  "start": 58.105,
+  "end": 58.259
+ },
+ {
+  "id": "w138",
+  "text": "nueve…",
+  "start": 58.327,
+  "end": 59.079
+ },
+ {
+  "id": "w139",
+  "text": "¡con",
+  "start": 59.131,
+  "end": 59.285
+ },
+ {
+  "id": "w140",
+  "text": "un",
+  "start": 59.353,
+  "end": 59.49
+ },
+ {
+  "id": "w141",
+  "text": "partido",
+  "start": 59.541,
+  "end": 59.9
+ },
+ {
+  "id": "w142",
+  "text": "de",
+  "start": 59.945,
+  "end": 60.037
+ },
+ {
+  "id": "w143",
+  "text": "fútbol!",
+  "start": 60.105,
+  "end": 60.789
+ }
+]
