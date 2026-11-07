@@ -1,0 +1,770 @@
+[
+ {
+  "id": "w0",
+  "text": "Nadie",
+  "start": 0.346,
+  "end": 0.533
+ },
+ {
+  "id": "w1",
+  "text": "le",
+  "start": 0.557,
+  "end": 0.605
+ },
+ {
+  "id": "w2",
+  "text": "decía",
+  "start": 0.678,
+  "end": 1.042
+ },
+ {
+  "id": "w3",
+  "text": "que",
+  "start": 1.096,
+  "end": 1.26
+ },
+ {
+  "id": "w4",
+  "text": "no",
+  "start": 1.333,
+  "end": 1.478
+ },
+ {
+  "id": "w5",
+  "text": "a",
+  "start": 1.587,
+  "end": 1.696
+ },
+ {
+  "id": "w6",
+  "text": "Alejandro",
+  "start": 1.755,
+  "end": 2.278
+ },
+ {
+  "id": "w7",
+  "text": "Magno…",
+  "start": 2.351,
+  "end": 3.224
+ },
+ {
+  "id": "w8",
+  "text": "hasta",
+  "start": 3.285,
+  "end": 3.587
+ },
+ {
+  "id": "w9",
+  "text": "que",
+  "start": 3.624,
+  "end": 3.733
+ },
+ {
+  "id": "w10",
+  "text": "conoció",
+  "start": 3.787,
+  "end": 4.315
+ },
+ {
+  "id": "w11",
+  "text": "a",
+  "start": 4.46,
+  "end": 4.605
+ },
+ {
+  "id": "w12",
+  "text": "este",
+  "start": 4.678,
+  "end": 4.969
+ },
+ {
+  "id": "w13",
+  "text": "tipo.",
+  "start": 5.056,
+  "end": 5.478
+ },
+ {
+  "id": "w14",
+  "text": "Mi",
+  "start": 5.715,
+  "end": 5.726
+ },
+ {
+  "id": "w15",
+  "text": "ídolo:",
+  "start": 5.872,
+  "end": 6.672
+ },
+ {
+  "id": "w16",
+  "text": "Diógenes.",
+  "start": 6.769,
+  "end": 7.545
+ },
+ {
+  "id": "w17",
+  "text": "Filósofo",
+  "start": 7.69,
+  "end": 8.49
+ },
+ {
+  "id": "w18",
+  "text": "griego,",
+  "start": 8.545,
+  "end": 9.29
+ },
+ {
+  "id": "w19",
+  "text": "vivía",
+  "start": 9.345,
+  "end": 9.726
+ },
+ {
+  "id": "w20",
+  "text": "en",
+  "start": 9.775,
+  "end": 9.872
+ },
+ {
+  "id": "w21",
+  "text": "una",
+  "start": 9.926,
+  "end": 10.09
+ },
+ {
+  "id": "w22",
+  "text": "tinaja…",
+  "start": 10.163,
+  "end": 10.817
+ },
+ {
+  "id": "w23",
+  "text": "y",
+  "start": 10.999,
+  "end": 11.181
+ },
+ {
+  "id": "w24",
+  "text": "le",
+  "start": 11.229,
+  "end": 11.326
+ },
+ {
+  "id": "w25",
+  "text": "decían",
+  "start": 11.399,
+  "end": 11.908
+ },
+ {
+  "id": "w26",
+  "text": "el",
+  "start": 12.272,
+  "end": 12.417
+ },
+ {
+  "id": "w27",
+  "text": "Perro.",
+  "start": 12.508,
+  "end": 12.999
+ },
+ {
+  "id": "w28",
+  "text": "¡Como",
+  "start": 13.181,
+  "end": 13.581
+ },
+ {
+  "id": "w29",
+  "text": "yo!",
+  "start": 13.702,
+  "end": 14.09
+ },
+ {
+  "id": "w30",
+  "text": "Platón",
+  "start": 15.255,
+  "end": 15.546
+ },
+ {
+  "id": "w31",
+  "text": "dijo",
+  "start": 15.619,
+  "end": 15.91
+ },
+ {
+  "id": "w32",
+  "text": "que",
+  "start": 15.983,
+  "end": 16.201
+ },
+ {
+  "id": "w33",
+  "text": "el",
+  "start": 16.249,
+  "end": 16.346
+ },
+ {
+  "id": "w34",
+  "text": "hombre",
+  "start": 16.398,
+  "end": 16.71
+ },
+ {
+  "id": "w35",
+  "text": "era",
+  "start": 16.765,
+  "end": 16.928
+ },
+ {
+  "id": "w36",
+  "text": "un",
+  "start": 16.976,
+  "end": 17.074
+ },
+ {
+  "id": "w37",
+  "text": "bípedo",
+  "start": 17.146,
+  "end": 17.51
+ },
+ {
+  "id": "w38",
+  "text": "sin",
+  "start": 17.565,
+  "end": 17.728
+ },
+ {
+  "id": "w39",
+  "text": "plumas…",
+  "start": 17.786,
+  "end": 18.746
+ },
+ {
+  "id": "w40",
+  "text": "y",
+  "start": 18.783,
+  "end": 18.819
+ },
+ {
+  "id": "w41",
+  "text": "Diógenes",
+  "start": 18.892,
+  "end": 19.619
+ },
+ {
+  "id": "w42",
+  "text": "le",
+  "start": 19.692,
+  "end": 19.837
+ },
+ {
+  "id": "w43",
+  "text": "llevó",
+  "start": 19.881,
+  "end": 20.128
+ },
+ {
+  "id": "w44",
+  "text": "un",
+  "start": 20.176,
+  "end": 20.274
+ },
+ {
+  "id": "w45",
+  "text": "pollo",
+  "start": 20.346,
+  "end": 20.637
+ },
+ {
+  "id": "w46",
+  "text": "desplumado:",
+  "start": 20.71,
+  "end": 21.437
+ },
+ {
+  "id": "w47",
+  "text": "¡aquí",
+  "start": 21.728,
+  "end": 22.455
+ },
+ {
+  "id": "w48",
+  "text": "está",
+  "start": 22.485,
+  "end": 22.601
+ },
+ {
+  "id": "w49",
+  "text": "tu",
+  "start": 22.674,
+  "end": 22.819
+ },
+ {
+  "id": "w50",
+  "text": "hombre!",
+  "start": 22.882,
+  "end": 23.401
+ },
+ {
+  "id": "w51",
+  "text": "Y",
+  "start": 23.58,
+  "end": 23.589
+ },
+ {
+  "id": "w52",
+  "text": "un",
+  "start": 23.662,
+  "end": 23.807
+ },
+ {
+  "id": "w53",
+  "text": "día,",
+  "start": 23.898,
+  "end": 24.389
+ },
+ {
+  "id": "w54",
+  "text": "en",
+  "start": 24.462,
+  "end": 24.607
+ },
+ {
+  "id": "w55",
+  "text": "Corinto,",
+  "start": 24.68,
+  "end": 25.48
+ },
+ {
+  "id": "w56",
+  "text": "mientras",
+  "start": 25.545,
+  "end": 26.062
+ },
+ {
+  "id": "w57",
+  "text": "tomaba",
+  "start": 26.116,
+  "end": 26.425
+ },
+ {
+  "id": "w58",
+  "text": "el",
+  "start": 26.474,
+  "end": 26.571
+ },
+ {
+  "id": "w59",
+  "text": "sol…",
+  "start": 26.662,
+  "end": 27.007
+ },
+ {
+  "id": "w60",
+  "text": "llegó",
+  "start": 27.182,
+  "end": 27.953
+ },
+ {
+  "id": "w61",
+  "text": "el",
+  "start": 27.977,
+  "end": 28.025
+ },
+ {
+  "id": "w62",
+  "text": "rey",
+  "start": 28.123,
+  "end": 28.462
+ },
+ {
+  "id": "w63",
+  "text": "que",
+  "start": 28.498,
+  "end": 28.607
+ },
+ {
+  "id": "w64",
+  "text": "iba",
+  "start": 28.68,
+  "end": 28.862
+ },
+ {
+  "id": "w65",
+  "text": "a",
+  "start": 28.88,
+  "end": 28.898
+ },
+ {
+  "id": "w66",
+  "text": "conquistar",
+  "start": 28.959,
+  "end": 29.625
+ },
+ {
+  "id": "w67",
+  "text": "medio",
+  "start": 29.723,
+  "end": 30.207
+ },
+ {
+  "id": "w68",
+  "text": "mundo.",
+  "start": 30.28,
+  "end": 30.789
+ },
+ {
+  "id": "w69",
+  "text": "Soy",
+  "start": 31.102,
+  "end": 31.135
+ },
+ {
+  "id": "w70",
+  "text": "Alejandro.",
+  "start": 31.185,
+  "end": 31.789
+ },
+ {
+  "id": "w71",
+  "text": "Pídeme",
+  "start": 31.825,
+  "end": 32.08
+ },
+ {
+  "id": "w72",
+  "text": "lo",
+  "start": 32.128,
+  "end": 32.225
+ },
+ {
+  "id": "w73",
+  "text": "que",
+  "start": 32.262,
+  "end": 32.371
+ },
+ {
+  "id": "w74",
+  "text": "quieras.",
+  "start": 32.395,
+  "end": 32.807
+ },
+ {
+  "id": "w75",
+  "text": "Quítate.",
+  "start": 33.0,
+  "end": 33.598
+ },
+ {
+  "id": "w76",
+  "text": "Me",
+  "start": 33.695,
+  "end": 33.889
+ },
+ {
+  "id": "w77",
+  "text": "tapas",
+  "start": 33.944,
+  "end": 34.253
+ },
+ {
+  "id": "w78",
+  "text": "el",
+  "start": 34.301,
+  "end": 34.398
+ },
+ {
+  "id": "w79",
+  "text": "sol.",
+  "start": 34.489,
+  "end": 34.98
+ },
+ {
+  "id": "w80",
+  "text": "¡Los",
+  "start": 35.344,
+  "end": 35.398
+ },
+ {
+  "id": "w81",
+  "text": "soldados",
+  "start": 35.471,
+  "end": 36.053
+ },
+ {
+  "id": "w82",
+  "text": "se",
+  "start": 36.101,
+  "end": 36.198
+ },
+ {
+  "id": "w83",
+  "text": "morían",
+  "start": 36.253,
+  "end": 36.707
+ },
+ {
+  "id": "w84",
+  "text": "de",
+  "start": 36.755,
+  "end": 36.853
+ },
+ {
+  "id": "w85",
+  "text": "risa!",
+  "start": 36.98,
+  "end": 37.653
+ },
+ {
+  "id": "w86",
+  "text": "Pero",
+  "start": 37.755,
+  "end": 38.162
+ },
+ {
+  "id": "w87",
+  "text": "Alejandro",
+  "start": 38.235,
+  "end": 38.889
+ },
+ {
+  "id": "w88",
+  "text": "les",
+  "start": 38.998,
+  "end": 39.325
+ },
+ {
+  "id": "w89",
+  "text": "dijo:",
+  "start": 39.413,
+  "end": 39.835
+ },
+ {
+  "id": "w90",
+  "text": "Si",
+  "start": 40.0,
+  "end": 40.019
+ },
+ {
+  "id": "w91",
+  "text": "no",
+  "start": 40.067,
+  "end": 40.165
+ },
+ {
+  "id": "w92",
+  "text": "fuera",
+  "start": 40.213,
+  "end": 40.455
+ },
+ {
+  "id": "w93",
+  "text": "Alejandro…",
+  "start": 40.514,
+  "end": 41.401
+ },
+ {
+  "id": "w94",
+  "text": "quisiera",
+  "start": 41.43,
+  "end": 41.765
+ },
+ {
+  "id": "w95",
+  "text": "ser",
+  "start": 41.819,
+  "end": 41.983
+ },
+ {
+  "id": "w96",
+  "text": "Diógenes.",
+  "start": 42.055,
+  "end": 42.783
+ },
+ {
+  "id": "w97",
+  "text": "Y",
+  "start": 42.946,
+  "end": 42.955
+ },
+ {
+  "id": "w98",
+  "text": "el",
+  "start": 43.028,
+  "end": 43.174
+ },
+ {
+  "id": "w99",
+  "text": "chisme",
+  "start": 43.246,
+  "end": 43.683
+ },
+ {
+  "id": "w100",
+  "text": "final:",
+  "start": 43.767,
+  "end": 44.701
+ },
+ {
+  "id": "w101",
+  "text": "dicen",
+  "start": 44.828,
+  "end": 45.355
+ },
+ {
+  "id": "w102",
+  "text": "que",
+  "start": 45.41,
+  "end": 45.574
+ },
+ {
+  "id": "w103",
+  "text": "murieron",
+  "start": 45.646,
+  "end": 46.228
+ },
+ {
+  "id": "w104",
+  "text": "el",
+  "start": 46.349,
+  "end": 46.592
+ },
+ {
+  "id": "w105",
+  "text": "mismo",
+  "start": 46.689,
+  "end": 47.174
+ },
+ {
+  "id": "w106",
+  "text": "día.",
+  "start": 47.265,
+  "end": 47.61
+ },
+ {
+  "id": "w107",
+  "text": "Uno",
+  "start": 47.846,
+  "end": 48.555
+ },
+ {
+  "id": "w108",
+  "text": "en",
+  "start": 48.676,
+  "end": 48.919
+ },
+ {
+  "id": "w109",
+  "text": "un",
+  "start": 48.967,
+  "end": 49.065
+ },
+ {
+  "id": "w110",
+  "text": "palacio",
+  "start": 49.137,
+  "end": 49.646
+ },
+ {
+  "id": "w111",
+  "text": "en",
+  "start": 49.695,
+  "end": 49.792
+ },
+ {
+  "id": "w112",
+  "text": "Babilonia…",
+  "start": 49.828,
+  "end": 50.592
+ },
+ {
+  "id": "w113",
+  "text": "el",
+  "start": 50.835,
+  "end": 51.319
+ },
+ {
+  "id": "w114",
+  "text": "otro",
+  "start": 51.406,
+  "end": 51.755
+ },
+ {
+  "id": "w115",
+  "text": "en",
+  "start": 51.876,
+  "end": 52.119
+ },
+ {
+  "id": "w116",
+  "text": "Corinto,",
+  "start": 52.192,
+  "end": 52.846
+ },
+ {
+  "id": "w117",
+  "text": "sin",
+  "start": 52.992,
+  "end": 53.428
+ },
+ {
+  "id": "w118",
+  "text": "nada.",
+  "start": 53.53,
+  "end": 54.083
+ },
+ {
+  "id": "w119",
+  "text": "Porque",
+  "start": 54.474,
+  "end": 54.574
+ },
+ {
+  "id": "w120",
+  "text": "a",
+  "start": 54.719,
+  "end": 54.865
+ },
+ {
+  "id": "w121",
+  "text": "Alejandro",
+  "start": 54.894,
+  "end": 55.155
+ },
+ {
+  "id": "w122",
+  "text": "Magno…",
+  "start": 55.246,
+  "end": 56.101
+ },
+ {
+  "id": "w123",
+  "text": "nadie",
+  "start": 56.228,
+  "end": 56.683
+ },
+ {
+  "id": "w124",
+  "text": "le",
+  "start": 56.731,
+  "end": 56.828
+ },
+ {
+  "id": "w125",
+  "text": "decía",
+  "start": 56.901,
+  "end": 57.337
+ },
+ {
+  "id": "w126",
+  "text": "que",
+  "start": 57.392,
+  "end": 57.555
+ },
+ {
+  "id": "w127",
+  "text": "no.",
+  "start": 57.676,
+  "end": 57.846
+ }
+]

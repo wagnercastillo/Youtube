@@ -1,0 +1,72 @@
+[
+ {
+  "id": "l0",
+  "speaker": "narr",
+  "text": "Nadie le decía que no a Alejandro Magno… hasta que conoció a este tipo.",
+  "start": 0.136,
+  "end": 5.478
+ },
+ {
+  "id": "l1",
+  "speaker": "narr",
+  "text": "Mi ídolo: Diógenes. Filósofo griego, vivía en una tinaja… y le decían el Perro. ¡Como yo!",
+  "start": 5.605,
+  "end": 14.09
+ },
+ {
+  "id": "l2",
+  "speaker": "narr",
+  "text": "Platón dijo que el hombre era un bípedo sin plumas… y Diógenes le llevó un pollo desplumado: ¡aquí está tu hombre!",
+  "start": 14.217,
+  "end": 23.401
+ },
+ {
+  "id": "l3",
+  "speaker": "narr",
+  "text": "Y un día, en Corinto, mientras tomaba el sol… llegó el rey que iba a conquistar medio mundo.",
+  "start": 23.528,
+  "end": 30.789
+ },
+ {
+  "id": "l4",
+  "speaker": "alejandro",
+  "text": "Soy Alejandro. Pídeme lo que quieras.",
+  "start": 30.916,
+  "end": 32.807
+ },
+ {
+  "id": "l5",
+  "speaker": "diogenes",
+  "text": "Quítate. Me tapas el sol.",
+  "start": 32.935,
+  "end": 34.98
+ },
+ {
+  "id": "l6",
+  "speaker": "narr",
+  "text": "¡Los soldados se morían de risa! Pero Alejandro les dijo:",
+  "start": 35.107,
+  "end": 39.835
+ },
+ {
+  "id": "l7",
+  "speaker": "alejandro",
+  "text": "Si no fuera Alejandro… quisiera ser Diógenes.",
+  "start": 39.962,
+  "end": 42.783
+ },
+ {
+  "id": "l8",
+  "speaker": "narr",
+  "text": "Y el chisme final: dicen que murieron el mismo día. Uno en un palacio en Babilonia… el otro en Corinto, sin nada.",
+  "start": 42.91,
+  "end": 54.083
+ },
+ {
+  "id": "l9",
+  "speaker": "narr",
+  "text": "Porque a Alejandro Magno… nadie le decía que no.",
+  "start": 54.21,
+  "end": 57.846
+ }
+]
