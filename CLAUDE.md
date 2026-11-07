@@ -20,10 +20,18 @@ channel `@PuroChismeAnimado`. Each episode is a 45–65 s vertical video (1080×
 - `ideas/IDEAS.md` — topic bank and the reel formula (hook ≤1.5 s, payoff, loop ending). Every fact must be verified before scripting.
 - `.env` (root) holds `ELEVENLABS_API_KEY`; the episode scripts search parent folders for it.
 
-## Episode pipeline (EP04 is the most complete reference)
+## Episode pipeline (latest episode is the reference; EP04 for Manim)
 
-Python environments: `~/.chatterbox-py/Scripts/python.exe` (numpy, soundfile, librosa) for voice and casting scripts;
-`~/.manim-py/Scripts/manim.exe` for Manim; system `python -I` for the stdlib-only scripts.
+Python environments: `~/.chatterbox-py/bin/python` (numpy, soundfile, librosa) for voice and casting scripts;
+`~/.manim-py/bin/manim` for Manim; system `python -I` for the stdlib-only scripts. (On the old Windows box: `Scripts/python.exe`,
+`Scripts/manim.exe`.)
+
+Each episode folder also has a HyperFrames-generated `CLAUDE.md`/`AGENTS.md` (boilerplate): load the `/hyperframes` skill before
+touching compositions. Formats used so far (ESTADO.md line 1): EP02/03 SVG cartoon rigs, EP04 Manim, EP05 real paintings in a
+museum, EP06 Three.js 3D map, EP07 3D+2D hybrid, EP08 phone chat, EP09 pixel-art videogame (canvas drawn per frame on hf-seek).
+
+ElevenLabs voice slots are full (10/10): reuse an existing voice id from an earlier `audio/voices.json` (EP09 reused EP06's) or
+free a slot before designing new voices.
 
 1. Voices — `audio/design_voices.py` designs ElevenLabs voices by description (ids saved in `audio/voices.json`);
    `audio/audition.py` (EP04) designs ~9 candidates and ranks them by pitch variance, dynamics, speed and brightness.
@@ -37,6 +45,8 @@ Python environments: `~/.chatterbox-py/Scripts/python.exe` (numpy, soundfile, li
    (`manim/script.py`, EP04: `cd manim && ~/.manim-py/Scripts/manim.exe script.py EP04`, copy
    `media/videos/script/1920p30/EP04.mp4` to `assets/manim.mp4`, which `index.html` plays muted).
    EP04 binds every cue to a word with `W(line, word)` / `L(line)` read from `transcript.json`, so a new voice re-syncs by itself.
+   EP05+ generate the visuals from code instead: `python -I audio/build_video.py` (run after `gen_audio_el.py` and `build.py`)
+   writes `compositions/stage.html` and `index.html`, every cue anchored with `W()`/`L()`. Edit `build_video.py`, not its output.
 5. Captions/assembly — `python -I audio/build.py` writes `compositions/captions.html` (word-highlight captions at y≈1530)
    and injects mouth data; EP04 also has `audio/build_index.py`, which writes `index.html` with word-anchored SFX and music.
 6. Check and render — `npx hyperframes check`, `npx hyperframes snapshot --at 1,5,9` (look at the frames),

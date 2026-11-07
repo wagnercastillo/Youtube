@@ -1,0 +1,86 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; pointer-events: none; font-family: "Archivo Black", sans-serif; }
+    .ban { position: absolute; left: 0; top: 300px; width: 1080px; text-align: center; clip-path: inset(-30px 1200px -30px -30px); }
+    .ban span { display: inline-block; max-width: 980px; font-size: 52px; line-height: 1.1; padding: 16px 30px 10px; background: #FFFFFF;
+      color: #1B1B2F; border: 8px solid #1B1B2F; border-radius: 26px; box-shadow: 0 10px 0 #1B1B2F; letter-spacing: 1px; }
+    .gold span { background: #FFD23F; } .blue span { background: #2F6FD6; color: #FFFFFF; } .red span { background: #D6402F; color: #FFFFFF; }
+    .dark span { background: #1B1B2F; color: #FFD23F; border-color: #FFD23F; box-shadow: 0 10px 0 #000000; }
+    #hook { position: absolute; left: 0; top: 150px; width: 1080px; }
+    .tags { width: 1080px; text-align: center; margin-bottom: 24px; clip-path: inset(-30px 1200px -30px -30px); }
+    .tags span { display: inline-block; white-space: nowrap; font-size: 56px; line-height: 1; padding: 16px 28px 10px; color: #1B1B2F;
+      border: 9px solid #1B1B2F; border-radius: 30px; box-shadow: 0 12px 0 #1B1B2F; }
+    #h1 span { background: #FFFFFF; } #h2 span { background: #FFD23F; }
+    #h1 .a { color: #2F6FD6; } #h1 .p { color: #D6402F; }
+  </style>
+  <div id="root" data-composition-id="overlay" data-width="1080" data-height="1920">
+    <div id="b1" class="ban "><span>ALEMANIA · AÑOS 20</span></div>
+    <div id="b2" class="ban "><span>TALLER: LA LAVANDERÍA DE MAMÁ</span></div>
+    <div id="b3" class="ban "><span>BERLÍN 1936 · JESSE OWENS</span></div>
+    <div id="b4" class="ban gold"><span>4 MEDALLAS DE ORO 🥇</span></div>
+    <div id="b5" class="ban dark"><span>SEGUNDA GUERRA MUNDIAL</span></div>
+    <div id="b6" class="ban dark"><span>MISMO REFUGIO… 😬</span></div>
+    <div id="b7" class="ban "><span>¿LOS AVIONES… O ÉL? 🤔</span></div>
+    <div id="b8" class="ban "><span>1948: SE SEPARAN 💔</span></div>
+    <div id="b9" class="ban blue"><span>ADI → ADIDAS</span></div>
+    <div id="b10" class="ban red"><span>RUDI → PUMA</span></div>
+    <div id="b11" class="ban "><span>UN PUEBLO, DOS BANDOS</span></div>
+    <div id="b12" class="ban "><span>«EL PUEBLO DE LOS CUELLOS DOBLADOS»</span></div>
+    <div id="b13" class="ban dark"><span>RUDI † 1974 · ADI † 1978</span></div>
+    <div id="b14" class="ban gold"><span>2009: EL PARTIDO DE LA PAZ ⚽</span></div>
+    <div id="hook">
+      <div id="h1" class="tags"><span>¿<b class="a">ADIDAS</b> Y <b class="p">PUMA</b>…</span></div>
+      <div id="h2" class="tags"><span>HERMANOS QUE SE ODIABAN?</span></div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#h1", { clipPath: "inset(-30px 1200px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px -30px)", duration: 0.28, ease: "power3.out" }, 0);
+    tl.fromTo("#h2", { clipPath: "inset(-30px 1200px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px -30px)", duration: 0.3, ease: "power3.out" }, 2.148);
+    tl.fromTo("#h2 span", { rotation: 0 }, { rotation: -3, duration: 0.25, ease: "back.out(3)" }, 4.094);
+    tl.fromTo("#hook", { clipPath: "inset(-30px -30px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px 1200px)", duration: 0.3, ease: "power3.in", immediateRender: false }, 4.766);
+    tl.fromTo("#b1", { clipPath: "inset(-30px 1200px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px -30px)", duration: 0.32, ease: "power3.out" }, 5.176);
+    tl.fromTo("#b1 span", { y: 18 }, { y: 0, duration: 0.36, ease: "back.out(2.4)" }, 5.296);
+    tl.fromTo("#b1", { clipPath: "inset(-30px -30px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px 1200px)", duration: 0.22, ease: "power3.in", immediateRender: false }, 10.383);
+    tl.fromTo("#b2", { clipPath: "inset(-30px 1200px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px -30px)", duration: 0.32, ease: "power3.out" }, 10.533);
+    tl.fromTo("#b2 span", { y: 18 }, { y: 0, duration: 0.36, ease: "back.out(2.4)" }, 10.653);
+    tl.fromTo("#b2", { clipPath: "inset(-30px -30px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px 1200px)", duration: 0.22, ease: "power3.in", immediateRender: false }, 11.919);
+    tl.fromTo("#b3", { clipPath: "inset(-30px 1200px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px -30px)", duration: 0.32, ease: "power3.out" }, 14.151);
+    tl.fromTo("#b3 span", { y: 18 }, { y: 0, duration: 0.36, ease: "back.out(2.4)" }, 14.271);
+    tl.fromTo("#b3", { clipPath: "inset(-30px -30px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px 1200px)", duration: 0.22, ease: "power3.in", immediateRender: false }, 15.312);
+    tl.fromTo("#b4", { clipPath: "inset(-30px 1200px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px -30px)", duration: 0.32, ease: "power3.out" }, 15.432);
+    tl.fromTo("#b4 span", { y: 18 }, { y: 0, duration: 0.36, ease: "back.out(2.4)" }, 15.552);
+    tl.fromTo("#b4", { clipPath: "inset(-30px -30px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px 1200px)", duration: 0.22, ease: "power3.in", immediateRender: false }, 18.09);
+    tl.fromTo("#b5", { clipPath: "inset(-30px 1200px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px -30px)", duration: 0.32, ease: "power3.out" }, 18.595);
+    tl.fromTo("#b5 span", { y: 18 }, { y: 0, duration: 0.36, ease: "back.out(2.4)" }, 18.715);
+    tl.fromTo("#b5", { clipPath: "inset(-30px -30px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px 1200px)", duration: 0.22, ease: "power3.in", immediateRender: false }, 22.069);
+    tl.fromTo("#b6", { clipPath: "inset(-30px 1200px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px -30px)", duration: 0.32, ease: "power3.out" }, 22.219);
+    tl.fromTo("#b6 span", { y: 18 }, { y: 0, duration: 0.36, ease: "back.out(2.4)" }, 22.339);
+    tl.fromTo("#b6", { clipPath: "inset(-30px -30px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px 1200px)", duration: 0.22, ease: "power3.in", immediateRender: false }, 24.887);
+    tl.fromTo("#b7", { clipPath: "inset(-30px 1200px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px -30px)", duration: 0.32, ease: "power3.out" }, 30.756);
+    tl.fromTo("#b7 span", { y: 18 }, { y: 0, duration: 0.36, ease: "back.out(2.4)" }, 30.876);
+    tl.fromTo("#b7", { clipPath: "inset(-30px -30px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px 1200px)", duration: 0.22, ease: "power3.in", immediateRender: false }, 33.834);
+    tl.fromTo("#b8", { clipPath: "inset(-30px 1200px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px -30px)", duration: 0.32, ease: "power3.out" }, 36.059);
+    tl.fromTo("#b8 span", { y: 18 }, { y: 0, duration: 0.36, ease: "back.out(2.4)" }, 36.179);
+    tl.fromTo("#b8", { clipPath: "inset(-30px -30px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px 1200px)", duration: 0.22, ease: "power3.in", immediateRender: false }, 37.367);
+    tl.fromTo("#b9", { clipPath: "inset(-30px 1200px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px -30px)", duration: 0.32, ease: "power3.out" }, 37.467);
+    tl.fromTo("#b9 span", { y: 18 }, { y: 0, duration: 0.36, ease: "back.out(2.4)" }, 37.587);
+    tl.fromTo("#b9", { clipPath: "inset(-30px -30px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px 1200px)", duration: 0.22, ease: "power3.in", immediateRender: false }, 38.756);
+    tl.fromTo("#b10", { clipPath: "inset(-30px 1200px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px -30px)", duration: 0.32, ease: "power3.out" }, 38.806);
+    tl.fromTo("#b10 span", { y: 18 }, { y: 0, duration: 0.36, ease: "back.out(2.4)" }, 38.926);
+    tl.fromTo("#b10", { clipPath: "inset(-30px -30px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px 1200px)", duration: 0.22, ease: "power3.in", immediateRender: false }, 41.656);
+    tl.fromTo("#b11", { clipPath: "inset(-30px 1200px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px -30px)", duration: 0.32, ease: "power3.out" }, 43.092);
+    tl.fromTo("#b11 span", { y: 18 }, { y: 0, duration: 0.36, ease: "back.out(2.4)" }, 43.212);
+    tl.fromTo("#b11", { clipPath: "inset(-30px -30px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px 1200px)", duration: 0.22, ease: "power3.in", immediateRender: false }, 47.199);
+    tl.fromTo("#b12", { clipPath: "inset(-30px 1200px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px -30px)", duration: 0.32, ease: "power3.out" }, 49.075);
+    tl.fromTo("#b12 span", { y: 18 }, { y: 0, duration: 0.36, ease: "back.out(2.4)" }, 49.195);
+    tl.fromTo("#b12", { clipPath: "inset(-30px -30px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px 1200px)", duration: 0.22, ease: "power3.in", immediateRender: false }, 50.461);
+    tl.fromTo("#b13", { clipPath: "inset(-30px 1200px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px -30px)", duration: 0.32, ease: "power3.out" }, 52.567);
+    tl.fromTo("#b13 span", { y: 18 }, { y: 0, duration: 0.36, ease: "back.out(2.4)" }, 52.687);
+    tl.fromTo("#b13", { clipPath: "inset(-30px -30px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px 1200px)", duration: 0.22, ease: "power3.in", immediateRender: false }, 55.476);
+    tl.fromTo("#b14", { clipPath: "inset(-30px 1200px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px -30px)", duration: 0.32, ease: "power3.out" }, 59.441);
+    tl.fromTo("#b14 span", { y: 18 }, { y: 0, duration: 0.36, ease: "back.out(2.4)" }, 59.561);
+    tl.fromTo("#b14", { clipPath: "inset(-30px -30px -30px -30px)" }, { clipPath: "inset(-30px -30px -30px 1200px)", duration: 0.22, ease: "power3.in", immediateRender: false }, 61.09);
+    window.__timelines["overlay"] = tl;
+  </script>
+</template>

@@ -14,3 +14,7 @@ renders/
 **/manim/media/
 voz_raw.wav
 mac/plugins.local.json
+**/blender/frames/
+**/blender/stills/
+**/blender/render.log
+.DS_Store
