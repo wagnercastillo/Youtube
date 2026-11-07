@@ -1,0 +1,65 @@
+[
+ {
+  "id": "l0",
+  "speaker": "narr",
+  "text": "El filósofo más famoso del mundo… ¡y su esposa le echó una cubeta de agua!",
+  "start": 0.136,
+  "end": 4.465
+ },
+ {
+  "id": "l1",
+  "speaker": "narr",
+  "text": "Atenas. Sócrates se pasaba el día en la plaza haciendo preguntas… y sin cobrar ni un centavo.",
+  "start": 4.592,
+  "end": 10.283
+ },
+ {
+  "id": "l2",
+  "speaker": "xantipa",
+  "text": "¡Sócrates! ¡Tienes hijos que mantener y tú filosofando en la calle!",
+  "start": 10.41,
+  "end": 13.994
+ },
+ {
+  "id": "l3",
+  "speaker": "narr",
+  "text": "Un día lo regañó tanto… que le echó agua encima. Y él, tranquilito:",
+  "start": 14.121,
+  "end": 18.277
+ },
+ {
+  "id": "l4",
+  "speaker": "socrates",
+  "text": "¿No les dije que después de los truenos de Xantipa… venía la lluvia?",
+  "start": 18.405,
+  "end": 22.335
+ },
+ {
+  "id": "l5",
+  "speaker": "narr",
+  "text": "Otro día ella le arrancó el manto en plena plaza. Y cuando le preguntaron por qué se casó con ella:",
+  "start": 22.463,
+  "end": 28.645
+ },
+ {
+  "id": "l6",
+  "speaker": "socrates",
+  "text": "Como el jinete que escoge al caballo más bravo: si la aguanto a ella, aguanto a cualquiera.",
+  "start": 28.772,
+  "end": 34.226
+ },
+ {
+  "id": "l7",
+  "speaker": "narr",
+  "text": "Pero ojo: este chisme lo contaron sus amigos. Platón, en cambio, la pinta a su lado la noche antes de que lo ejecutaran.",
+  "start": 34.354,
+  "end": 41.232
+ },
+ {
+  "id": "l8",
+  "speaker": "narr",
+  "text": "Entonces… ¿la villana de la telenovela era ella? ¿O el marido que no cobraba?",
+  "start": 41.359,
+  "end": 46.264
+ }
+]

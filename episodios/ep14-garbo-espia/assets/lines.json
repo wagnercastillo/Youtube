@@ -1,0 +1,65 @@
+[
+ {
+  "id": "l0",
+  "speaker": "narr",
+  "text": "Este espía engañó a Hitler… ¡y Hitler le dio una medalla!",
+  "start": 0.136,
+  "end": 3.892
+ },
+ {
+  "id": "l1",
+  "speaker": "narr",
+  "text": "Juan Pujol, español. Quería espiar para los ingleses… y lo rechazaron.",
+  "start": 4.019,
+  "end": 8.045
+ },
+ {
+  "id": "l2",
+  "speaker": "narr",
+  "text": "Así que se ofreció a los nazis, se fue a Lisboa… y les mandaba informes de Londres sacados de una guía turística, revistas y noticieros del cine.",
+  "start": 8.172,
+  "end": 15.245
+ },
+ {
+  "id": "l3",
+  "speaker": "narr",
+  "text": "Hasta que los ingleses dijeron: ¡a este lo queremos! Y le pusieron Garbo.",
+  "start": 15.373,
+  "end": 19.612
+ },
+ {
+  "id": "l4",
+  "speaker": "narr",
+  "text": "Con su jefe británico inventó una red de veintisiete espías… ¡todos falsos! Y los alemanes les pagaban a todos.",
+  "start": 19.739,
+  "end": 27.145
+ },
+ {
+  "id": "l5",
+  "speaker": "narr",
+  "text": "En mil novecientos cuarenta y cuatro, su gran jugada: convenció a los alemanes de que el desembarco en Normandía era solo una distracción.",
+  "start": 27.272,
+  "end": 34.021
+ },
+ {
+  "id": "l6",
+  "speaker": "aleman",
+  "text": "Con gran felicidad le informo: el Führer le concede la Cruz de Hierro.",
+  "start": 34.148,
+  "end": 37.995
+ },
+ {
+  "id": "l7",
+  "speaker": "narr",
+  "text": "¡Y meses después, el rey de Inglaterra también lo condecoró!",
+  "start": 38.122,
+  "end": 41.068
+ },
+ {
+  "id": "l8",
+  "speaker": "narr",
+  "text": "Medalla de los dos bandos… y uno de ellos nunca supo que lo estaban engañando.",
+  "start": 41.195,
+  "end": 45.497
+ }
+]

@@ -1,0 +1,824 @@
+[
+ {
+  "id": "w0",
+  "text": "Este",
+  "start": 0.279,
+  "end": 0.314
+ },
+ {
+  "id": "w1",
+  "text": "hombre",
+  "start": 0.355,
+  "end": 0.605
+ },
+ {
+  "id": "w2",
+  "text": "vendió",
+  "start": 0.634,
+  "end": 0.823
+ },
+ {
+  "id": "w3",
+  "text": "la",
+  "start": 0.871,
+  "end": 0.968
+ },
+ {
+  "id": "w4",
+  "text": "Torre",
+  "start": 1.005,
+  "end": 1.186
+ },
+ {
+  "id": "w5",
+  "text": "Eiffel…",
+  "start": 1.223,
+  "end": 2.132
+ },
+ {
+  "id": "w6",
+  "text": "¡y",
+  "start": 2.15,
+  "end": 2.205
+ },
+ {
+  "id": "w7",
+  "text": "luego",
+  "start": 2.241,
+  "end": 2.423
+ },
+ {
+  "id": "w8",
+  "text": "intentó",
+  "start": 2.465,
+  "end": 2.75
+ },
+ {
+  "id": "w9",
+  "text": "venderla",
+  "start": 2.768,
+  "end": 3.186
+ },
+ {
+  "id": "w10",
+  "text": "otra",
+  "start": 3.208,
+  "end": 3.295
+ },
+ {
+  "id": "w11",
+  "text": "vez!",
+  "start": 3.386,
+  "end": 3.732
+ },
+ {
+  "id": "w12",
+  "text": "París,",
+  "start": 3.915,
+  "end": 4.227
+ },
+ {
+  "id": "w13",
+  "text": "mil",
+  "start": 4.264,
+  "end": 4.373
+ },
+ {
+  "id": "w14",
+  "text": "novecientos",
+  "start": 4.421,
+  "end": 4.954
+ },
+ {
+  "id": "w15",
+  "text": "veinticinco.",
+  "start": 4.955,
+  "end": 5.828
+ },
+ {
+  "id": "w16",
+  "text": "Victor",
+  "start": 5.859,
+  "end": 6.046
+ },
+ {
+  "id": "w17",
+  "text": "Lustig",
+  "start": 6.105,
+  "end": 6.483
+ },
+ {
+  "id": "w18",
+  "text": "lee",
+  "start": 6.537,
+  "end": 6.701
+ },
+ {
+  "id": "w19",
+  "text": "en",
+  "start": 6.725,
+  "end": 6.774
+ },
+ {
+  "id": "w20",
+  "text": "el",
+  "start": 6.798,
+  "end": 6.846
+ },
+ {
+  "id": "w21",
+  "text": "periódico",
+  "start": 6.89,
+  "end": 7.283
+ },
+ {
+  "id": "w22",
+  "text": "que",
+  "start": 7.319,
+  "end": 7.428
+ },
+ {
+  "id": "w23",
+  "text": "mantener",
+  "start": 7.468,
+  "end": 7.792
+ },
+ {
+  "id": "w24",
+  "text": "la",
+  "start": 7.816,
+  "end": 7.865
+ },
+ {
+  "id": "w25",
+  "text": "torre",
+  "start": 7.919,
+  "end": 8.155
+ },
+ {
+  "id": "w26",
+  "text": "sale",
+  "start": 8.199,
+  "end": 8.374
+ },
+ {
+  "id": "w27",
+  "text": "carísimo.",
+  "start": 8.446,
+  "end": 9.245
+ },
+ {
+  "id": "w28",
+  "text": "Así",
+  "start": 9.417,
+  "end": 9.506
+ },
+ {
+  "id": "w29",
+  "text": "que",
+  "start": 9.525,
+  "end": 9.579
+ },
+ {
+  "id": "w30",
+  "text": "se",
+  "start": 9.627,
+  "end": 9.725
+ },
+ {
+  "id": "w31",
+  "text": "hace",
+  "start": 9.754,
+  "end": 9.87
+ },
+ {
+  "id": "w32",
+  "text": "pasar",
+  "start": 9.931,
+  "end": 10.234
+ },
+ {
+  "id": "w33",
+  "text": "por",
+  "start": 10.252,
+  "end": 10.306
+ },
+ {
+  "id": "w34",
+  "text": "funcionario",
+  "start": 10.352,
+  "end": 10.815
+ },
+ {
+  "id": "w35",
+  "text": "del",
+  "start": 10.852,
+  "end": 10.961
+ },
+ {
+  "id": "w36",
+  "text": "gobierno…",
+  "start": 11.009,
+  "end": 11.615
+ },
+ {
+  "id": "w37",
+  "text": "y",
+  "start": 11.652,
+  "end": 11.688
+ },
+ {
+  "id": "w38",
+  "text": "cita",
+  "start": 11.746,
+  "end": 11.979
+ },
+ {
+  "id": "w39",
+  "text": "a",
+  "start": 12.015,
+  "end": 12.052
+ },
+ {
+  "id": "w40",
+  "text": "varios",
+  "start": 12.094,
+  "end": 12.343
+ },
+ {
+  "id": "w41",
+  "text": "chatarreros",
+  "start": 12.386,
+  "end": 12.997
+ },
+ {
+  "id": "w42",
+  "text": "en",
+  "start": 13.022,
+  "end": 13.07
+ },
+ {
+  "id": "w43",
+  "text": "un",
+  "start": 13.095,
+  "end": 13.143
+ },
+ {
+  "id": "w44",
+  "text": "hotel",
+  "start": 13.191,
+  "end": 13.434
+ },
+ {
+  "id": "w45",
+  "text": "de",
+  "start": 13.458,
+  "end": 13.506
+ },
+ {
+  "id": "w46",
+  "text": "lujo.",
+  "start": 13.555,
+  "end": 14.015
+ },
+ {
+  "id": "w47",
+  "text": "Les",
+  "start": 14.251,
+  "end": 14.278
+ },
+ {
+  "id": "w48",
+  "text": "dice:",
+  "start": 14.322,
+  "end": 14.569
+ },
+ {
+  "id": "w49",
+  "text": "es",
+  "start": 14.666,
+  "end": 14.86
+ },
+ {
+  "id": "w50",
+  "text": "secreto,",
+  "start": 14.908,
+  "end": 15.515
+ },
+ {
+  "id": "w51",
+  "text": "el",
+  "start": 15.539,
+  "end": 15.587
+ },
+ {
+  "id": "w52",
+  "text": "gobierno",
+  "start": 15.635,
+  "end": 16.024
+ },
+ {
+  "id": "w53",
+  "text": "va",
+  "start": 16.048,
+  "end": 16.096
+ },
+ {
+  "id": "w54",
+  "text": "a",
+  "start": 16.133,
+  "end": 16.169
+ },
+ {
+  "id": "w55",
+  "text": "vender",
+  "start": 16.205,
+  "end": 16.46
+ },
+ {
+  "id": "w56",
+  "text": "la",
+  "start": 16.485,
+  "end": 16.533
+ },
+ {
+  "id": "w57",
+  "text": "torre…",
+  "start": 16.587,
+  "end": 17.115
+ },
+ {
+  "id": "w58",
+  "text": "como",
+  "start": 17.144,
+  "end": 17.26
+ },
+ {
+  "id": "w59",
+  "text": "chatarra.",
+  "start": 17.304,
+  "end": 17.842
+ },
+ {
+  "id": "w60",
+  "text": "Uno",
+  "start": 18.035,
+  "end": 18.056
+ },
+ {
+  "id": "w61",
+  "text": "de",
+  "start": 18.105,
+  "end": 18.202
+ },
+ {
+  "id": "w62",
+  "text": "ellos,",
+  "start": 18.25,
+  "end": 18.565
+ },
+ {
+  "id": "w63",
+  "text": "André",
+  "start": 18.614,
+  "end": 18.856
+ },
+ {
+  "id": "w64",
+  "text": "Poisson,",
+  "start": 18.905,
+  "end": 19.365
+ },
+ {
+  "id": "w65",
+  "text": "cae",
+  "start": 19.414,
+  "end": 19.584
+ },
+ {
+  "id": "w66",
+  "text": "redondito:",
+  "start": 19.62,
+  "end": 20.165
+ },
+ {
+  "id": "w67",
+  "text": "le",
+  "start": 20.286,
+  "end": 20.529
+ },
+ {
+  "id": "w68",
+  "text": "paga",
+  "start": 20.565,
+  "end": 20.747
+ },
+ {
+  "id": "w69",
+  "text": "una",
+  "start": 20.784,
+  "end": 20.893
+ },
+ {
+  "id": "w70",
+  "text": "fortuna…",
+  "start": 20.951,
+  "end": 21.693
+ },
+ {
+  "id": "w71",
+  "text": "¡con",
+  "start": 21.729,
+  "end": 21.838
+ },
+ {
+  "id": "w72",
+  "text": "todo",
+  "start": 21.896,
+  "end": 22.129
+ },
+ {
+  "id": "w73",
+  "text": "y",
+  "start": 22.165,
+  "end": 22.202
+ },
+ {
+  "id": "w74",
+  "text": "soborno!",
+  "start": 22.256,
+  "end": 23.075
+ },
+ {
+  "id": "w75",
+  "text": "Lustig",
+  "start": 23.772,
+  "end": 24.135
+ },
+ {
+  "id": "w76",
+  "text": "huye",
+  "start": 24.172,
+  "end": 24.354
+ },
+ {
+  "id": "w77",
+  "text": "con",
+  "start": 24.39,
+  "end": 24.499
+ },
+ {
+  "id": "w78",
+  "text": "el",
+  "start": 24.524,
+  "end": 24.572
+ },
+ {
+  "id": "w79",
+  "text": "dinero…",
+  "start": 24.624,
+  "end": 25.226
+ },
+ {
+  "id": "w80",
+  "text": "y",
+  "start": 25.263,
+  "end": 25.299
+ },
+ {
+  "id": "w81",
+  "text": "Poisson,",
+  "start": 25.347,
+  "end": 25.808
+ },
+ {
+  "id": "w82",
+  "text": "de",
+  "start": 25.833,
+  "end": 25.881
+ },
+ {
+  "id": "w83",
+  "text": "pura",
+  "start": 25.954,
+  "end": 26.281
+ },
+ {
+  "id": "w84",
+  "text": "vergüenza,",
+  "start": 26.303,
+  "end": 26.826
+ },
+ {
+  "id": "w85",
+  "text": "ni",
+  "start": 26.851,
+  "end": 26.899
+ },
+ {
+  "id": "w86",
+  "text": "lo",
+  "start": 26.947,
+  "end": 27.045
+ },
+ {
+  "id": "w87",
+  "text": "denuncia.",
+  "start": 27.081,
+  "end": 27.585
+ },
+ {
+  "id": "w88",
+  "text": "¿Y",
+  "start": 27.712,
+  "end": 27.714
+ },
+ {
+  "id": "w89",
+  "text": "qué",
+  "start": 27.75,
+  "end": 27.859
+ },
+ {
+  "id": "w90",
+  "text": "hace",
+  "start": 27.888,
+  "end": 28.005
+ },
+ {
+  "id": "w91",
+  "text": "Lustig?",
+  "start": 28.063,
+  "end": 28.805
+ },
+ {
+  "id": "w92",
+  "text": "¡Regresa",
+  "start": 28.841,
+  "end": 29.241
+ },
+ {
+  "id": "w93",
+  "text": "a",
+  "start": 29.277,
+  "end": 29.314
+ },
+ {
+  "id": "w94",
+  "text": "París",
+  "start": 29.35,
+  "end": 29.605
+ },
+ {
+  "id": "w95",
+  "text": "a",
+  "start": 29.641,
+  "end": 29.677
+ },
+ {
+  "id": "w96",
+  "text": "venderla",
+  "start": 29.714,
+  "end": 30.041
+ },
+ {
+  "id": "w97",
+  "text": "otra",
+  "start": 30.085,
+  "end": 30.259
+ },
+ {
+  "id": "w98",
+  "text": "vez!",
+  "start": 30.332,
+  "end": 30.841
+ },
+ {
+  "id": "w99",
+  "text": "Pero",
+  "start": 30.899,
+  "end": 31.132
+ },
+ {
+  "id": "w100",
+  "text": "esta",
+  "start": 31.175,
+  "end": 31.35
+ },
+ {
+  "id": "w101",
+  "text": "vez",
+  "start": 31.405,
+  "end": 31.568
+ },
+ {
+  "id": "w102",
+  "text": "sí",
+  "start": 31.665,
+  "end": 31.859
+ },
+ {
+  "id": "w103",
+  "text": "lo",
+  "start": 31.907,
+  "end": 32.005
+ },
+ {
+  "id": "w104",
+  "text": "denuncian…",
+  "start": 32.041,
+  "end": 32.732
+ },
+ {
+  "id": "w105",
+  "text": "y",
+  "start": 32.768,
+  "end": 32.805
+ },
+ {
+  "id": "w106",
+  "text": "escapa",
+  "start": 32.859,
+  "end": 33.168
+ },
+ {
+  "id": "w107",
+  "text": "a",
+  "start": 33.205,
+  "end": 33.241
+ },
+ {
+  "id": "w108",
+  "text": "Estados",
+  "start": 33.277,
+  "end": 33.532
+ },
+ {
+  "id": "w109",
+  "text": "Unidos.",
+  "start": 33.595,
+  "end": 34.055
+ },
+ {
+  "id": "w110",
+  "text": "Años",
+  "start": 34.215,
+  "end": 34.375
+ },
+ {
+  "id": "w111",
+  "text": "después",
+  "start": 34.421,
+  "end": 34.739
+ },
+ {
+  "id": "w112",
+  "text": "lo",
+  "start": 34.764,
+  "end": 34.812
+ },
+ {
+  "id": "w113",
+  "text": "atrapan",
+  "start": 34.848,
+  "end": 35.103
+ },
+ {
+  "id": "w114",
+  "text": "por",
+  "start": 35.139,
+  "end": 35.248
+ },
+ {
+  "id": "w115",
+  "text": "hacer",
+  "start": 35.285,
+  "end": 35.466
+ },
+ {
+  "id": "w116",
+  "text": "billetes",
+  "start": 35.503,
+  "end": 35.83
+ },
+ {
+  "id": "w117",
+  "text": "falsos…",
+  "start": 35.888,
+  "end": 36.485
+ },
+ {
+  "id": "w118",
+  "text": "y",
+  "start": 36.521,
+  "end": 36.557
+ },
+ {
+  "id": "w119",
+  "text": "termina",
+  "start": 36.599,
+  "end": 36.921
+ },
+ {
+  "id": "w120",
+  "text": "en",
+  "start": 36.945,
+  "end": 36.994
+ },
+ {
+  "id": "w121",
+  "text": "Alcatraz.",
+  "start": 37.018,
+  "end": 37.721
+ },
+ {
+  "id": "w122",
+  "text": "Así",
+  "start": 37.953,
+  "end": 38.042
+ },
+ {
+  "id": "w123",
+  "text": "que",
+  "start": 38.06,
+  "end": 38.115
+ },
+ {
+  "id": "w124",
+  "text": "ya",
+  "start": 38.163,
+  "end": 38.26
+ },
+ {
+  "id": "w125",
+  "text": "sabes:",
+  "start": 38.315,
+  "end": 38.915
+ },
+ {
+  "id": "w126",
+  "text": "si",
+  "start": 38.963,
+  "end": 39.06
+ },
+ {
+  "id": "w127",
+  "text": "alguien",
+  "start": 39.096,
+  "end": 39.351
+ },
+ {
+  "id": "w128",
+  "text": "te",
+  "start": 39.375,
+  "end": 39.424
+ },
+ {
+  "id": "w129",
+  "text": "vende",
+  "start": 39.46,
+  "end": 39.642
+ },
+ {
+  "id": "w130",
+  "text": "la",
+  "start": 39.69,
+  "end": 39.787
+ },
+ {
+  "id": "w131",
+  "text": "Torre",
+  "start": 39.842,
+  "end": 40.042
+ },
+ {
+  "id": "w132",
+  "text": "Eiffel…",
+  "start": 40.06,
+  "end": 40.878
+ },
+ {
+  "id": "w133",
+  "text": "pregúntale",
+  "start": 40.907,
+  "end": 41.315
+ },
+ {
+  "id": "w134",
+  "text": "si",
+  "start": 41.339,
+  "end": 41.387
+ },
+ {
+  "id": "w135",
+  "text": "es",
+  "start": 41.412,
+  "end": 41.46
+ },
+ {
+  "id": "w136",
+  "text": "suya.",
+  "start": 41.533,
+  "end": 41.885
+ }
+]

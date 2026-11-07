@@ -1,0 +1,171 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: #8A6440; font-family: "Archivo Black", sans-serif; }
+    #board { position: absolute; left: 0; top: 0; width: 2400px; height: 5600px; transform-origin: 0 0;
+      background-color: #C49A6C; background-image: radial-gradient(#B08558 2px, transparent 2.5px), radial-gradient(#D4AC80 1.5px, transparent 2px);
+      background-size: 26px 26px, 34px 34px; background-position: 0 0, 13px 17px; box-shadow: inset 0 0 0 40px #6B4423; }
+    .it { position: absolute; z-index: 1; box-shadow: 10px 14px 0 rgba(40,25,10,0.35); }
+    .pola { background: #FFFFFF; padding: 22px 22px 0; } .pola .ph { width: 100%; height: 420px; } .cap { font-size: 46px; color: #1B1B2F; text-align: center; padding-top: 22px; }
+    .face { width: 100%; height: 100%; display: block; }
+    .doc { background: #F3EAD3; padding: 30px 36px; font-family: "Courier New", monospace; color: #2B2B2B; }
+    .doc h3 { font-family: "Courier New", monospace; font-weight: 900; font-size: 40px; margin-bottom: 18px; border-bottom: 4px solid #2B2B2B; padding-bottom: 8px; }
+    .doc p { font-size: 38px; line-height: 1.25; font-weight: 700; }
+    .file { background: #E8C98A; } .file .ph { width: 160px; height: 160px; float: right; margin-left: 20px; border: 6px solid #FFFFFF; }
+    .tel { background: #FFF6C8; }
+    .prop { background: transparent; box-shadow: none; }
+    .book { width: 100%; height: 100%; background: #2B4C9B; color: #FFFFFF; font-size: 44px; line-height: 1.1; display: flex; align-items: center; justify-content: center;
+      text-align: center; border: 8px solid #1B1B2F; border-radius: 10px; box-shadow: 10px 14px 0 rgba(40,25,10,0.35); }
+    .mag { background: #E63946; } .reel { background: #1B1B2F; }
+    .medw { background: transparent; box-shadow: none; } .medal { width: 100%; height: 100%; filter: drop-shadow(8px 10px 0 rgba(40,25,10,0.35)); }
+    .net { background: #F3EAD3; padding: 30px; display: grid; grid-template-columns: repeat(9, 1fr); gap: 14px; }
+    .ag { background: #FFFFFF; padding: 6px; height: 240px; } .ag .face { height: 100%; }
+    .mapw { background: #FFFFFF; padding: 16px; } .map { width: 100%; height: 100%; display: block; }
+    .stamp { position: absolute; z-index: 5; font-size: 88px; border: 12px solid; border-radius: 18px; padding: 10px 28px 0; background: rgba(243,234,211,0.55); white-space: nowrap; }
+    #yarn { position: absolute; z-index: 6; left: 0; top: 0; width: 2400px; height: 5000px; overflow: visible; pointer-events: none; }
+    .yarn { fill: none; stroke: #D7263D; stroke-width: 9; stroke-linecap: butt; stroke-dasharray: 1; stroke-dashoffset: 1; }
+    #hook, #o1 { position: absolute; left: 0; top: 1080px; width: 1080px; }
+    .tags { width: 1080px; text-align: center; margin-bottom: 22px; clip-path: inset(-30px 100% -30px -30px); }
+    .tags span { display: inline-block; white-space: nowrap; font-size: 74px; line-height: 1; padding: 16px 30px 10px; color: #1B1B2F; border: 8px solid #1B1B2F; box-shadow: 10px 10px 0 #1B1B2F; }
+    #h1 span { background: #FFFFFF; } #h2 span { background: #E63946; color: #FFFFFF; }
+    #o1 { top: 260px; clip-path: inset(-30px 100% -30px -30px); text-align: center; } #o1 span { background: #FFD23F; }
+    #src { position: absolute; left: 0; top: 1455px; width: 1080px; text-align: center; opacity: 0; }
+    #src span { display: inline-block; font-family: "Nunito", sans-serif; font-weight: 800; font-size: 30px; padding: 6px 16px; background: rgba(27,27,47,0.85); color: #FFFFFF; border-radius: 10px; }
+  </style>
+  <div id="root" data-composition-id="stage" data-width="1080" data-height="1920" data-layout-allow-overflow data-layout-allow-overlap>
+    <div id="board">
+      <div id="pGarbo" class="it pola" style="left:960px;top:300px;width:480px;height:560px;rotate:-3deg"><div class="ph"><svg viewBox="0 0 200 200" class="face"><rect width="200" height="200" fill="#D8E4EC"/>
+<path d="M30 200 Q30 140 100 132 Q170 140 170 200 Z" fill="#3A4A5E"/><path d="M86 136 L100 170 L114 136 Z" fill="#FFFFFF"/><path d="M96 140 L100 166 L104 140 Z" fill="#B3262E"/>
+<circle cx="100" cy="88" r="46" fill="#F2C9A0"/><path d="M54 80 Q58 34 100 36 Q146 36 148 78 Q132 56 100 58 Q72 58 54 80 Z" fill="#2B1D16"/>
+<circle cx="82" cy="88" r="5" fill="#1B1B2F"/><path d="M110 88 Q118 82 126 88" stroke="#1B1B2F" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M80 110 Q100 104 120 110" stroke="#2B1D16" stroke-width="7" fill="none" stroke-linecap="round"/>
+<path d="M84 120 Q100 130 116 120" stroke="#7A1F2B" stroke-width="5" fill="none" stroke-linecap="round"/></svg></div><div class="cap">JUAN PUJOL</div></div>
+      <div id="mIron0" class="it medw" style="left:1450px;top:380px;width:260px;height:340px;rotate:6deg"><svg viewBox="0 0 200 260" class="medal"><path d="M70 0 H130 L120 60 H80 Z" fill="#1B1B2F"/><path d="M80 0 H90 L86 60 H82 Z M110 0 H120 L118 60 H114 Z" fill="#FFFFFF"/><path d="M92 0 H108 L106 60 H94 Z" fill="#C8102E"/>
+<path d="M100 70 L118 120 L170 106 L134 150 L170 194 L118 180 L100 230 L82 180 L30 194 L66 150 L30 106 L82 120 Z" fill="#1B1B2F" stroke="#E8E8E8" stroke-width="8" stroke-linejoin="round"/><text x="100" y="164" font-size="30" text-anchor="middle" fill="#E8E8E8" font-family="Archivo Black">1939</text></svg></div>
+      <div id="dRej" class="it doc" style="left:380px;top:1080px;width:640px;height:380px;rotate:4deg"><h3>EMBAJADA BRITÁNICA</h3><p>Solicitud de: J. Pujol<br>Quiere ser espía.</p></div>
+      <div id="dLis" class="it doc" style="left:1150px;top:1650px;width:520px;height:300px;rotate:-4deg"><h3>LISBOA, 1941</h3><p>Agente alemán «ALARIC»<br>(Pujol)</p></div>
+      <div id="iGuia" class="it prop" style="left:200px;top:1980px;width:420px;height:300px;rotate:-6deg"><div class="book">GUÍA TURÍSTICA<br>DE GRAN BRETAÑA</div></div>
+      <div id="iRev" class="it prop" style="left:680px;top:2120px;width:360px;height:280px;rotate:5deg"><div class="book mag">REVISTAS</div></div>
+      <div id="iCine" class="it prop" style="left:1110px;top:2080px;width:400px;height:300px;rotate:-3deg"><div class="book reel">NOTICIERO<br>DEL CINE 🎞</div></div>
+      <div id="dRep" class="it doc" style="left:1650px;top:1980px;width:560px;height:420px;rotate:3deg"><h3>«INFORME DESDE LONDRES»</h3><p>Barcos… tropas…<br>(lo copió de una guía)</p></div>
+      <div id="dMi5" class="it doc file" style="left:1500px;top:2560px;width:640px;height:360px;rotate:-3deg"><div class="ph sm"><svg viewBox="0 0 200 200" class="face"><rect width="200" height="200" fill="#D8E4EC"/>
+<path d="M30 200 Q30 140 100 132 Q170 140 170 200 Z" fill="#3A4A5E"/><path d="M86 136 L100 170 L114 136 Z" fill="#FFFFFF"/><path d="M96 140 L100 166 L104 140 Z" fill="#B3262E"/>
+<circle cx="100" cy="88" r="46" fill="#F2C9A0"/><path d="M54 80 Q58 34 100 36 Q146 36 148 78 Q132 56 100 58 Q72 58 54 80 Z" fill="#2B1D16"/>
+<circle cx="82" cy="88" r="5" fill="#1B1B2F"/><path d="M110 88 Q118 82 126 88" stroke="#1B1B2F" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M80 110 Q100 104 120 110" stroke="#2B1D16" stroke-width="7" fill="none" stroke-linecap="round"/>
+<path d="M84 120 Q100 130 116 120" stroke="#7A1F2B" stroke-width="5" fill="none" stroke-linecap="round"/></svg></div><h3>MI5 · AGENTE «GARBO»</h3></div>
+      <div id="dNet" class="it net" style="left:260px;top:2620px;width:1100px;height:860px;rotate:0deg"><div class="ag"><svg viewBox="0 0 100 120" class="face"><rect width="100" height="120" fill="#E9E1D0"/><path d="M14 120 Q14 82 50 76 Q86 82 86 120 Z" fill="#5E574C"/><circle cx="50" cy="48" r="24" fill="#5E574C"/><text x="50" y="58" font-size="30" text-anchor="middle" fill="#FFFFFF" font-family="Archivo Black">?</text></svg></div><div class="ag"><svg viewBox="0 0 100 120" class="face"><rect width="100" height="120" fill="#E9E1D0"/><path d="M14 120 Q14 82 50 76 Q86 82 86 120 Z" fill="#5E574C"/><circle cx="50" cy="48" r="24" fill="#5E574C"/><text x="50" y="58" font-size="30" text-anchor="middle" fill="#FFFFFF" font-family="Archivo Black">?</text></svg></div><div class="ag"><svg viewBox="0 0 100 120" class="face"><rect width="100" height="120" fill="#E9E1D0"/><path d="M14 120 Q14 82 50 76 Q86 82 86 120 Z" fill="#5E574C"/><circle cx="50" cy="48" r="24" fill="#5E574C"/><text x="50" y="58" font-size="30" text-anchor="middle" fill="#FFFFFF" font-family="Archivo Black">?</text></svg></div><div class="ag"><svg viewBox="0 0 100 120" class="face"><rect width="100" height="120" fill="#E9E1D0"/><path d="M14 120 Q14 82 50 76 Q86 82 86 120 Z" fill="#5E574C"/><circle cx="50" cy="48" r="24" fill="#5E574C"/><text x="50" y="58" font-size="30" text-anchor="middle" fill="#FFFFFF" font-family="Archivo Black">?</text></svg></div><div class="ag"><svg viewBox="0 0 100 120" class="face"><rect width="100" height="120" fill="#E9E1D0"/><path d="M14 120 Q14 82 50 76 Q86 82 86 120 Z" fill="#5E574C"/><circle cx="50" cy="48" r="24" fill="#5E574C"/><text x="50" y="58" font-size="30" text-anchor="middle" fill="#FFFFFF" font-family="Archivo Black">?</text></svg></div><div class="ag"><svg viewBox="0 0 100 120" class="face"><rect width="100" height="120" fill="#E9E1D0"/><path d="M14 120 Q14 82 50 76 Q86 82 86 120 Z" fill="#5E574C"/><circle cx="50" cy="48" r="24" fill="#5E574C"/><text x="50" y="58" font-size="30" text-anchor="middle" fill="#FFFFFF" font-family="Archivo Black">?</text></svg></div><div class="ag"><svg viewBox="0 0 100 120" class="face"><rect width="100" height="120" fill="#E9E1D0"/><path d="M14 120 Q14 82 50 76 Q86 82 86 120 Z" fill="#5E574C"/><circle cx="50" cy="48" r="24" fill="#5E574C"/><text x="50" y="58" font-size="30" text-anchor="middle" fill="#FFFFFF" font-family="Archivo Black">?</text></svg></div><div class="ag"><svg viewBox="0 0 100 120" class="face"><rect width="100" height="120" fill="#E9E1D0"/><path d="M14 120 Q14 82 50 76 Q86 82 86 120 Z" fill="#5E574C"/><circle cx="50" cy="48" r="24" fill="#5E574C"/><text x="50" y="58" font-size="30" text-anchor="middle" fill="#FFFFFF" font-family="Archivo Black">?</text></svg></div><div class="ag"><svg viewBox="0 0 100 120" class="face"><rect width="100" height="120" fill="#E9E1D0"/><path d="M14 120 Q14 82 50 76 Q86 82 86 120 Z" fill="#5E574C"/><circle cx="50" cy="48" r="24" fill="#5E574C"/><text x="50" y="58" font-size="30" text-anchor="middle" fill="#FFFFFF" font-family="Archivo Black">?</text></svg></div><div class="ag"><svg viewBox="0 0 100 120" class="face"><rect width="100" height="120" fill="#E9E1D0"/><path d="M14 120 Q14 82 50 76 Q86 82 86 120 Z" fill="#5E574C"/><circle cx="50" cy="48" r="24" fill="#5E574C"/><text x="50" y="58" font-size="30" text-anchor="middle" fill="#FFFFFF" font-family="Archivo Black">?</text></svg></div><div class="ag"><svg viewBox="0 0 100 120" class="face"><rect width="100" height="120" fill="#E9E1D0"/><path d="M14 120 Q14 82 50 76 Q86 82 86 120 Z" fill="#5E574C"/><circle cx="50" cy="48" r="24" fill="#5E574C"/><text x="50" y="58" font-size="30" text-anchor="middle" fill="#FFFFFF" font-family="Archivo Black">?</text></svg></div><div class="ag"><svg viewBox="0 0 100 120" class="face"><rect width="100" height="120" fill="#E9E1D0"/><path d="M14 120 Q14 82 50 76 Q86 82 86 120 Z" fill="#5E574C"/><circle cx="50" cy="48" r="24" fill="#5E574C"/><text x="50" y="58" font-size="30" text-anchor="middle" fill="#FFFFFF" font-family="Archivo Black">?</text></svg></div><div class="ag"><svg viewBox="0 0 100 120" class="face"><rect width="100" height="120" fill="#E9E1D0"/><path d="M14 120 Q14 82 50 76 Q86 82 86 120 Z" fill="#5E574C"/><circle cx="50" cy="48" r="24" fill="#5E574C"/><text x="50" y="58" font-size="30" text-anchor="middle" fill="#FFFFFF" font-family="Archivo Black">?</text></svg></div><div class="ag"><svg viewBox="0 0 100 120" class="face"><rect width="100" height="120" fill="#E9E1D0"/><path d="M14 120 Q14 82 50 76 Q86 82 86 120 Z" fill="#5E574C"/><circle cx="50" cy="48" r="24" fill="#5E574C"/><text x="50" y="58" font-size="30" text-anchor="middle" fill="#FFFFFF" font-family="Archivo Black">?</text></svg></div><div class="ag"><svg viewBox="0 0 100 120" class="face"><rect width="100" height="120" fill="#E9E1D0"/><path d="M14 120 Q14 82 50 76 Q86 82 86 120 Z" fill="#5E574C"/><circle cx="50" cy="48" r="24" fill="#5E574C"/><text x="50" y="58" font-size="30" text-anchor="middle" fill="#FFFFFF" font-family="Archivo Black">?</text></svg></div><div class="ag"><svg viewBox="0 0 100 120" class="face"><rect width="100" height="120" fill="#E9E1D0"/><path d="M14 120 Q14 82 50 76 Q86 82 86 120 Z" fill="#5E574C"/><circle cx="50" cy="48" r="24" fill="#5E574C"/><text x="50" y="58" font-size="30" text-anchor="middle" fill="#FFFFFF" font-family="Archivo Black">?</text></svg></div><div class="ag"><svg viewBox="0 0 100 120" class="face"><rect width="100" height="120" fill="#E9E1D0"/><path d="M14 120 Q14 82 50 76 Q86 82 86 120 Z" fill="#5E574C"/><circle cx="50" cy="48" r="24" fill="#5E574C"/><text x="50" y="58" font-size="30" text-anchor="middle" fill="#FFFFFF" font-family="Archivo Black">?</text></svg></div><div class="ag"><svg viewBox="0 0 100 120" class="face"><rect width="100" height="120" fill="#E9E1D0"/><path d="M14 120 Q14 82 50 76 Q86 82 86 120 Z" fill="#5E574C"/><circle cx="50" cy="48" r="24" fill="#5E574C"/><text x="50" y="58" font-size="30" text-anchor="middle" fill="#FFFFFF" font-family="Archivo Black">?</text></svg></div><div class="ag"><svg viewBox="0 0 100 120" class="face"><rect width="100" height="120" fill="#E9E1D0"/><path d="M14 120 Q14 82 50 76 Q86 82 86 120 Z" fill="#5E574C"/><circle cx="50" cy="48" r="24" fill="#5E574C"/><text x="50" y="58" font-size="30" text-anchor="middle" fill="#FFFFFF" font-family="Archivo Black">?</text></svg></div><div class="ag"><svg viewBox="0 0 100 120" class="face"><rect width="100" height="120" fill="#E9E1D0"/><path d="M14 120 Q14 82 50 76 Q86 82 86 120 Z" fill="#5E574C"/><circle cx="50" cy="48" r="24" fill="#5E574C"/><text x="50" y="58" font-size="30" text-anchor="middle" fill="#FFFFFF" font-family="Archivo Black">?</text></svg></div><div class="ag"><svg viewBox="0 0 100 120" class="face"><rect width="100" height="120" fill="#E9E1D0"/><path d="M14 120 Q14 82 50 76 Q86 82 86 120 Z" fill="#5E574C"/><circle cx="50" cy="48" r="24" fill="#5E574C"/><text x="50" y="58" font-size="30" text-anchor="middle" fill="#FFFFFF" font-family="Archivo Black">?</text></svg></div><div class="ag"><svg viewBox="0 0 100 120" class="face"><rect width="100" height="120" fill="#E9E1D0"/><path d="M14 120 Q14 82 50 76 Q86 82 86 120 Z" fill="#5E574C"/><circle cx="50" cy="48" r="24" fill="#5E574C"/><text x="50" y="58" font-size="30" text-anchor="middle" fill="#FFFFFF" font-family="Archivo Black">?</text></svg></div><div class="ag"><svg viewBox="0 0 100 120" class="face"><rect width="100" height="120" fill="#E9E1D0"/><path d="M14 120 Q14 82 50 76 Q86 82 86 120 Z" fill="#5E574C"/><circle cx="50" cy="48" r="24" fill="#5E574C"/><text x="50" y="58" font-size="30" text-anchor="middle" fill="#FFFFFF" font-family="Archivo Black">?</text></svg></div><div class="ag"><svg viewBox="0 0 100 120" class="face"><rect width="100" height="120" fill="#E9E1D0"/><path d="M14 120 Q14 82 50 76 Q86 82 86 120 Z" fill="#5E574C"/><circle cx="50" cy="48" r="24" fill="#5E574C"/><text x="50" y="58" font-size="30" text-anchor="middle" fill="#FFFFFF" font-family="Archivo Black">?</text></svg></div><div class="ag"><svg viewBox="0 0 100 120" class="face"><rect width="100" height="120" fill="#E9E1D0"/><path d="M14 120 Q14 82 50 76 Q86 82 86 120 Z" fill="#5E574C"/><circle cx="50" cy="48" r="24" fill="#5E574C"/><text x="50" y="58" font-size="30" text-anchor="middle" fill="#FFFFFF" font-family="Archivo Black">?</text></svg></div><div class="ag"><svg viewBox="0 0 100 120" class="face"><rect width="100" height="120" fill="#E9E1D0"/><path d="M14 120 Q14 82 50 76 Q86 82 86 120 Z" fill="#5E574C"/><circle cx="50" cy="48" r="24" fill="#5E574C"/><text x="50" y="58" font-size="30" text-anchor="middle" fill="#FFFFFF" font-family="Archivo Black">?</text></svg></div><div class="ag"><svg viewBox="0 0 100 120" class="face"><rect width="100" height="120" fill="#E9E1D0"/><path d="M14 120 Q14 82 50 76 Q86 82 86 120 Z" fill="#5E574C"/><circle cx="50" cy="48" r="24" fill="#5E574C"/><text x="50" y="58" font-size="30" text-anchor="middle" fill="#FFFFFF" font-family="Archivo Black">?</text></svg></div></div>
+      <div id="dPay" class="it doc" style="left:1500px;top:3020px;width:560px;height:260px;rotate:4deg"><h3>NÓMINA ALEMANA</h3><p>27 agentes · pagados ✔</p></div>
+      <div id="dMap" class="it mapw" style="left:760px;top:3560px;width:900px;height:700px;rotate:-2deg"><svg viewBox="0 0 900 700" class="map"><rect width="900" height="700" fill="#BFD9E6"/>
+<path d="M120 0 L520 0 L560 120 L470 200 L520 290 L380 330 L300 300 L160 320 L200 220 L120 160 Z" fill="#EAD9B0" stroke="#5A4A2A" stroke-width="5"/>
+<path d="M0 520 L260 470 L330 500 L420 460 L560 470 L640 400 L700 380 L900 330 L900 700 L0 700 Z" fill="#EAD9B0" stroke="#5A4A2A" stroke-width="5"/>
+<text x="330" y="170" font-size="40" text-anchor="middle" fill="#5A4A2A" font-family="Archivo Black">INGLATERRA</text><text x="560" y="620" font-size="40" text-anchor="middle" fill="#5A4A2A" font-family="Archivo Black">FRANCIA</text>
+<circle cx="360" cy="492" r="14" fill="#2B8A3E"/><text x="300" y="540" font-size="30" fill="#2B8A3E" font-family="Archivo Black">NORMANDÍA</text>
+<circle cx="690" cy="392" r="14" fill="#C8102E"/><text x="640" y="450" font-size="30" fill="#C8102E" font-family="Archivo Black">CALAIS</text>
+<path id="arReal" pathLength="1" d="M300 300 Q320 400 352 470" stroke="#2B8A3E" stroke-width="16" fill="none" stroke-linecap="butt" stroke-dasharray="1" stroke-dashoffset="1"/>
+<path id="arFake" pathLength="1" d="M470 220 Q620 280 680 372" stroke="#C8102E" stroke-width="30" fill="none" stroke-linecap="butt" stroke-dasharray="1" stroke-dashoffset="1"/></svg></div>
+      <div id="dTel" class="it doc tel" style="left:260px;top:4280px;width:640px;height:420px;rotate:-4deg"><h3>TELEGRAMA · 29-VII-1944</h3><p>«El Führer le concede<br>la Cruz de Hierro»</p></div>
+      <div id="mIron" class="it medw" style="left:960px;top:4300px;width:260px;height:340px;rotate:-5deg"><svg viewBox="0 0 200 260" class="medal"><path d="M70 0 H130 L120 60 H80 Z" fill="#1B1B2F"/><path d="M80 0 H90 L86 60 H82 Z M110 0 H120 L118 60 H114 Z" fill="#FFFFFF"/><path d="M92 0 H108 L106 60 H94 Z" fill="#C8102E"/>
+<path d="M100 70 L118 120 L170 106 L134 150 L170 194 L118 180 L100 230 L82 180 L30 194 L66 150 L30 106 L82 120 Z" fill="#1B1B2F" stroke="#E8E8E8" stroke-width="8" stroke-linejoin="round"/><text x="100" y="164" font-size="30" text-anchor="middle" fill="#E8E8E8" font-family="Archivo Black">1939</text></svg></div>
+      <div id="mMbe" class="it medw" style="left:1560px;top:4300px;width:260px;height:340px;rotate:5deg"><svg viewBox="0 0 200 260" class="medal"><path d="M70 0 H130 L120 60 H80 Z" fill="#E6A2B4"/><path d="M80 0 H86 L84 60 H82 Z M114 0 H120 L118 60 H116 Z" fill="#9A9AA6"/>
+<path d="M100 74 C116 74 120 100 112 116 C130 108 156 112 156 130 C156 148 130 152 112 144 C120 160 116 186 100 186 C84 186 80 160 88 144 C70 152 44 148 44 130 C44 112 70 108 88 116 C80 100 84 74 100 74 Z" fill="#D9D9E0" stroke="#7A7A88" stroke-width="5"/>
+<circle cx="100" cy="130" r="22" fill="#C8102E" stroke="#FFD23F" stroke-width="5"/><path d="M86 66 L92 50 L100 60 L108 50 L114 66 Z" fill="#FFD23F" stroke="#7A5A10" stroke-width="3"/></svg></div>
+      <div id="dMbe" class="it doc" style="left:1340px;top:4680px;width:720px;height:220px;rotate:3deg"><h3>REY JORGE VI · 25-XI-1944</h3><p>Miembro de la Orden del Imperio Británico</p></div>
+      <div id="sRej" class="stamp" data-layout-allow-overlap style="left:470px;top:1300px;color:#C8102E;border-color:#C8102E;rotate:-12deg">RECHAZADO</div>
+      <div id="sFake" class="stamp" data-layout-allow-overlap style="left:1700px;top:2300px;color:#C8102E;border-color:#C8102E;rotate:-14deg">FALSO</div>
+      <div id="sHire" class="stamp" data-layout-allow-overlap style="left:1560px;top:2820px;color:#2B8A3E;border-color:#2B8A3E;rotate:8deg">CONTRATADO</div>
+      <div id="sAll" class="stamp" data-layout-allow-overlap style="left:420px;top:3200px;color:#C8102E;border-color:#C8102E;rotate:-8deg">¡TODOS FALSOS!</div>
+      <div id="sDis" class="stamp" data-layout-allow-overlap style="left:900px;top:4090px;color:#C8102E;border-color:#C8102E;rotate:-6deg">«SOLO UNA DISTRACCIÓN»</div>
+      <svg id="yarn" viewBox="0 0 2400 5000"><path id="st0" pathLength="1" d="M1200 330 Q1390.0 425.0 1580 400" class="yarn"/><path id="st1" pathLength="1" d="M1200 330 Q950.0 775.0 700 1100" class="yarn"/><path id="st2" pathLength="1" d="M700 1100 Q1055.0 1445.0 1410 1670" class="yarn"/><path id="st3" pathLength="1" d="M410 2000 Q1170.0 2060.0 1930 2000" class="yarn"/><path id="st4" pathLength="1" d="M860 2140 Q1395.0 2130.0 1930 2000" class="yarn"/><path id="st5" pathLength="1" d="M1310 2100 Q1620.0 2110.0 1930 2000" class="yarn"/><path id="st6" pathLength="1" d="M1930 2000 Q1875.0 2350.0 1820 2580" class="yarn"/><path id="st7" pathLength="1" d="M1820 2580 Q1800.0 2870.0 1780 3040" class="yarn"/><path id="st8" pathLength="1" d="M1780 3040 Q1495.0 3370.0 1210 3580" class="yarn"/><path id="st9" pathLength="1" d="M1210 3580 Q895.0 4000.0 580 4300" class="yarn"/><path id="st10" pathLength="1" d="M580 4300 Q835.0 4370.0 1090 4320" class="yarn"/><path id="st11" pathLength="1" d="M1210 3580 Q1450.0 4010.0 1690 4320" class="yarn"/><path id="st12" pathLength="1" d="M1200 330 Q1445.0 2385.0 1690 4320" class="yarn"/><circle cx="1200" cy="330" r="16" fill="#C8102E" stroke="#6E0A12" stroke-width="5"/><circle cx="1580" cy="400" r="16" fill="#C8102E" stroke="#6E0A12" stroke-width="5"/><circle cx="700" cy="1100" r="16" fill="#C8102E" stroke="#6E0A12" stroke-width="5"/><circle cx="1410" cy="1670" r="16" fill="#C8102E" stroke="#6E0A12" stroke-width="5"/><circle cx="410" cy="2000" r="16" fill="#C8102E" stroke="#6E0A12" stroke-width="5"/><circle cx="860" cy="2140" r="16" fill="#C8102E" stroke="#6E0A12" stroke-width="5"/><circle cx="1310" cy="2100" r="16" fill="#C8102E" stroke="#6E0A12" stroke-width="5"/><circle cx="1930" cy="2000" r="16" fill="#C8102E" stroke="#6E0A12" stroke-width="5"/><circle cx="1820" cy="2580" r="16" fill="#C8102E" stroke="#6E0A12" stroke-width="5"/><circle cx="1780" cy="3040" r="16" fill="#C8102E" stroke="#6E0A12" stroke-width="5"/><circle cx="1210" cy="3580" r="16" fill="#C8102E" stroke="#6E0A12" stroke-width="5"/><circle cx="580" cy="4300" r="16" fill="#C8102E" stroke="#6E0A12" stroke-width="5"/><circle cx="1090" cy="4320" r="16" fill="#C8102E" stroke="#6E0A12" stroke-width="5"/><circle cx="1690" cy="4320" r="16" fill="#C8102E" stroke="#6E0A12" stroke-width="5"/></svg>
+    </div>
+    <div id="hook">
+      <div id="h1" class="tags"><span>ENGAÑÓ A HITLER…</span></div>
+      <div id="h2" class="tags"><span>¡Y HITLER LO PREMIÓ!</span></div>
+    </div>
+    <div id="o1" class="tags"><span>CONDECORADO POR LOS DOS BANDOS</span></div>
+    <div id="src"><span>Fuente: Wikipedia «Juan Pujol García» · MI5</span></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.set("#board", { x: -660.0, y: 0.0, scale: 1.0 }, 0);
+    tl.to("#board", { x: -220.0, y: -360.0, scale: 1.0, duration: 0.7, ease: "power3.inOut" }, 3.869);
+    tl.to("#board", { x: -647.5, y: -829.0, scale: 0.95, duration: 0.7, ease: "power3.inOut" }, 8.022);
+    tl.to("#board", { x: -131.0, y: -310.0, scale: 0.55, duration: 0.7, ease: "power3.inOut" }, 12.477);
+    tl.to("#board", { x: -1079.2, y: -1584.0, scale: 0.92, duration: 0.7, ease: "power3.inOut" }, 15.223);
+    tl.to("#board", { x: -92.5, y: -783.0, scale: 0.55, duration: 0.7, ease: "power3.inOut" }, 19.589);
+    tl.to("#board", { x: -609.5, y: -2805.0, scale: 0.95, duration: 0.7, ease: "power3.inOut" }, 27.122);
+    tl.to("#board", { x: -709.5, y: -3195.0, scale: 1.05, duration: 0.7, ease: "power3.inOut" }, 31.941);
+    tl.to("#board", { x: -198.0, y: -2765.4, scale: 0.82, duration: 0.7, ease: "power3.inOut" }, 33.998);
+    tl.to("#board", { x: -1027.5, y: -3489.0, scale: 0.95, duration: 0.7, ease: "power3.inOut" }, 37.972);
+    tl.to("#board", { x: 180.0, y: 120.0, scale: 0.3, duration: 0.9, ease: "power3.inOut" }, 41.045);
+    tl.to("#board", { x: -660.0, y: 0.0, scale: 1.0, duration: 0.7, ease: "power3.inOut" }, 43.594);
+    tl.fromTo("#pGarbo", { scale: 1.35, opacity: 0, y: -40 }, { scale: 1, opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 0.05);
+    tl.fromTo("#mIron0", { scale: 1.35, opacity: 0, y: -40 }, { scale: 1, opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 2.728);
+    tl.fromTo("#dRej", { scale: 1.35, opacity: 0, y: -40 }, { scale: 1, opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 4.161);
+    tl.fromTo("#dLis", { scale: 1.35, opacity: 0, y: -40 }, { scale: 1, opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 9.9);
+    tl.fromTo("#iGuia", { scale: 1.35, opacity: 0, y: -40 }, { scale: 1, opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 12.627);
+    tl.fromTo("#iRev", { scale: 1.35, opacity: 0, y: -40 }, { scale: 1, opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 13.709);
+    tl.fromTo("#iCine", { scale: 1.35, opacity: 0, y: -40 }, { scale: 1, opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 14.282);
+    tl.fromTo("#dRep", { scale: 1.35, opacity: 0, y: -40 }, { scale: 1, opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 12.627);
+    tl.fromTo("#dMi5", { scale: 1.35, opacity: 0, y: -40 }, { scale: 1, opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 17.474);
+    tl.fromTo("#dNet", { scale: 1.35, opacity: 0, y: -40 }, { scale: 1, opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 19.739);
+    tl.fromTo("#dPay", { scale: 1.35, opacity: 0, y: -40 }, { scale: 1, opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 26.108);
+    tl.fromTo("#dMap", { scale: 1.35, opacity: 0, y: -40 }, { scale: 1, opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 27.356);
+    tl.fromTo("#dTel", { scale: 1.35, opacity: 0, y: -40 }, { scale: 1, opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 34.148);
+    tl.fromTo("#mIron", { scale: 1.35, opacity: 0, y: -40 }, { scale: 1, opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 37.059);
+    tl.fromTo("#mMbe", { scale: 1.35, opacity: 0, y: -40 }, { scale: 1, opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 39.298);
+    tl.fromTo("#dMbe", { scale: 1.35, opacity: 0, y: -40 }, { scale: 1, opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 40.541);
+    tl.fromTo("#dNet .ag:nth-child(1)", { scale: 0 }, { scale: 1, duration: 0.18, ease: "back.out(2)" }, 21.933);
+    tl.fromTo("#dNet .ag:nth-child(2)", { scale: 0 }, { scale: 1, duration: 0.18, ease: "back.out(2)" }, 21.978);
+    tl.fromTo("#dNet .ag:nth-child(3)", { scale: 0 }, { scale: 1, duration: 0.18, ease: "back.out(2)" }, 22.023);
+    tl.fromTo("#dNet .ag:nth-child(4)", { scale: 0 }, { scale: 1, duration: 0.18, ease: "back.out(2)" }, 22.068);
+    tl.fromTo("#dNet .ag:nth-child(5)", { scale: 0 }, { scale: 1, duration: 0.18, ease: "back.out(2)" }, 22.113);
+    tl.fromTo("#dNet .ag:nth-child(6)", { scale: 0 }, { scale: 1, duration: 0.18, ease: "back.out(2)" }, 22.158);
+    tl.fromTo("#dNet .ag:nth-child(7)", { scale: 0 }, { scale: 1, duration: 0.18, ease: "back.out(2)" }, 22.203);
+    tl.fromTo("#dNet .ag:nth-child(8)", { scale: 0 }, { scale: 1, duration: 0.18, ease: "back.out(2)" }, 22.248);
+    tl.fromTo("#dNet .ag:nth-child(9)", { scale: 0 }, { scale: 1, duration: 0.18, ease: "back.out(2)" }, 22.293);
+    tl.fromTo("#dNet .ag:nth-child(10)", { scale: 0 }, { scale: 1, duration: 0.18, ease: "back.out(2)" }, 22.338);
+    tl.fromTo("#dNet .ag:nth-child(11)", { scale: 0 }, { scale: 1, duration: 0.18, ease: "back.out(2)" }, 22.383);
+    tl.fromTo("#dNet .ag:nth-child(12)", { scale: 0 }, { scale: 1, duration: 0.18, ease: "back.out(2)" }, 22.428);
+    tl.fromTo("#dNet .ag:nth-child(13)", { scale: 0 }, { scale: 1, duration: 0.18, ease: "back.out(2)" }, 22.473);
+    tl.fromTo("#dNet .ag:nth-child(14)", { scale: 0 }, { scale: 1, duration: 0.18, ease: "back.out(2)" }, 22.518);
+    tl.fromTo("#dNet .ag:nth-child(15)", { scale: 0 }, { scale: 1, duration: 0.18, ease: "back.out(2)" }, 22.563);
+    tl.fromTo("#dNet .ag:nth-child(16)", { scale: 0 }, { scale: 1, duration: 0.18, ease: "back.out(2)" }, 22.608);
+    tl.fromTo("#dNet .ag:nth-child(17)", { scale: 0 }, { scale: 1, duration: 0.18, ease: "back.out(2)" }, 22.653);
+    tl.fromTo("#dNet .ag:nth-child(18)", { scale: 0 }, { scale: 1, duration: 0.18, ease: "back.out(2)" }, 22.698);
+    tl.fromTo("#dNet .ag:nth-child(19)", { scale: 0 }, { scale: 1, duration: 0.18, ease: "back.out(2)" }, 22.743);
+    tl.fromTo("#dNet .ag:nth-child(20)", { scale: 0 }, { scale: 1, duration: 0.18, ease: "back.out(2)" }, 22.788);
+    tl.fromTo("#dNet .ag:nth-child(21)", { scale: 0 }, { scale: 1, duration: 0.18, ease: "back.out(2)" }, 22.833);
+    tl.fromTo("#dNet .ag:nth-child(22)", { scale: 0 }, { scale: 1, duration: 0.18, ease: "back.out(2)" }, 22.878);
+    tl.fromTo("#dNet .ag:nth-child(23)", { scale: 0 }, { scale: 1, duration: 0.18, ease: "back.out(2)" }, 22.923);
+    tl.fromTo("#dNet .ag:nth-child(24)", { scale: 0 }, { scale: 1, duration: 0.18, ease: "back.out(2)" }, 22.968);
+    tl.fromTo("#dNet .ag:nth-child(25)", { scale: 0 }, { scale: 1, duration: 0.18, ease: "back.out(2)" }, 23.013);
+    tl.fromTo("#dNet .ag:nth-child(26)", { scale: 0 }, { scale: 1, duration: 0.18, ease: "back.out(2)" }, 23.058);
+    tl.fromTo("#dNet .ag:nth-child(27)", { scale: 0 }, { scale: 1, duration: 0.18, ease: "back.out(2)" }, 23.103);
+    tl.fromTo("#sRej", { scale: 2.6, opacity: 0 }, { scale: 1, opacity: 0.92, duration: 0.18, ease: "power4.in" }, 7.365);
+    tl.fromTo("#sFake", { scale: 2.6, opacity: 0 }, { scale: 1, opacity: 0.92, duration: 0.18, ease: "power4.in" }, 12.627);
+    tl.fromTo("#sHire", { scale: 2.6, opacity: 0 }, { scale: 1, opacity: 0.92, duration: 0.18, ease: "power4.in" }, 17.474);
+    tl.fromTo("#sAll", { scale: 2.6, opacity: 0 }, { scale: 1, opacity: 0.92, duration: 0.18, ease: "power4.in" }, 24.003);
+    tl.fromTo("#sDis", { scale: 2.6, opacity: 0 }, { scale: 1, opacity: 0.92, duration: 0.18, ease: "power4.in" }, 33.332);
+    tl.fromTo("#st0", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.5, ease: "power2.out" }, 2.878);
+    tl.fromTo("#st1", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.5, ease: "power2.out" }, 6.704);
+    tl.fromTo("#st2", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.5, ease: "power2.out" }, 9.195);
+    tl.fromTo("#st3", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.5, ease: "power2.out" }, 12.777);
+    tl.fromTo("#st4", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.5, ease: "power2.out" }, 13.859);
+    tl.fromTo("#st5", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.5, ease: "power2.out" }, 14.432);
+    tl.fromTo("#st6", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.5, ease: "power2.out" }, 17.624);
+    tl.fromTo("#st7", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.5, ease: "power2.out" }, 26.258);
+    tl.fromTo("#st8", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.5, ease: "power2.out" }, 27.506);
+    tl.fromTo("#st9", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.5, ease: "power2.out" }, 37.209);
+    tl.fromTo("#st10", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.5, ease: "power2.out" }, 37.209);
+    tl.fromTo("#st11", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.5, ease: "power2.out" }, 39.448);
+    tl.fromTo("#st12", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.5, ease: "power2.out" }, 42.305);
+    tl.fromTo("#arReal", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.6, ease: "power2.out" }, 32.091);
+    tl.fromTo("#arFake", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.6, ease: "power2.out" }, 32.932);
+    tl.fromTo("#h1", { clipPath: "inset(-30px 100% -30px -30px)" }, { clipPath: "inset(-30px -30px -30px -30px)", duration: 0.32, ease: "power3.out" }, 0.03);
+    tl.fromTo("#h2", { clipPath: "inset(-30px 100% -30px -30px)" }, { clipPath: "inset(-30px -30px -30px -30px)", duration: 0.32, ease: "power3.out" }, 0.2);
+    tl.to("#hook", { clipPath: "inset(-30px -30px -30px 1200px)", duration: 0.3, ease: "power3.in" }, 3.919);
+    tl.fromTo("#o1", { clipPath: "inset(-30px 100% -30px -30px)" }, { clipPath: "inset(-30px -30px -30px -30px)", duration: 0.32, ease: "power3.out" }, 42.155);
+    tl.to("#o1", { clipPath: "inset(-30px -30px -30px 1200px)", duration: 0.25, ease: "power3.in" }, 43.644);
+    tl.fromTo("#src", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 27.272);
+    tl.to("#src", { opacity: 0, duration: 0.3 }, 41.195);
+    window.__timelines["stage"] = tl;
+  </script>
+</template>

@@ -1,0 +1,65 @@
+[
+ {
+  "id": "l0",
+  "speaker": "anchor",
+  "text": "¡Última hora! Encuentran a un hombre congelado en los Alpes… ¡y llevaba ahí más de cinco mil años!",
+  "start": 0.136,
+  "end": 5.664
+ },
+ {
+  "id": "l1",
+  "speaker": "anchor",
+  "text": "Nos enlazamos con nuestra reportera en vivo. ¿Qué pasó?",
+  "start": 5.791,
+  "end": 8.805
+ },
+ {
+  "id": "l2",
+  "speaker": "reporter",
+  "text": "Diecinueve de septiembre de mil novecientos noventa y uno. Dos turistas alemanes ven un cuerpo saliendo del hielo, en la frontera entre Austria e Italia.",
+  "start": 8.933,
+  "end": 16.894
+ },
+ {
+  "id": "l3",
+  "speaker": "reporter",
+  "text": "Al principio todos pensaron que era un alpinista que había muerto hace poco… ¡y hasta lo sacaron con un taladro!",
+  "start": 17.021,
+  "end": 22.627
+ },
+ {
+  "id": "l4",
+  "speaker": "anchor",
+  "text": "¿Y no era reciente?",
+  "start": 22.755,
+  "end": 24.245
+ },
+ {
+  "id": "l5",
+  "speaker": "reporter",
+  "text": "¡Para nada! Vivió hace más de cinco mil años. Lo bautizaron Ötzi.",
+  "start": 24.372,
+  "end": 28.554
+ },
+ {
+  "id": "l6",
+  "speaker": "anchor",
+  "text": "Pero el chisme no termina ahí…",
+  "start": 28.681,
+  "end": 30.499
+ },
+ {
+  "id": "l7",
+  "speaker": "reporter",
+  "text": "En dos mil uno, unos rayos X encontraron una punta de flecha en su hombro izquierdo. ¡A Ötzi lo asesinaron!",
+  "start": 30.626,
+  "end": 36.754
+ },
+ {
+  "id": "l8",
+  "speaker": "anchor",
+  "text": "Su última comida: carne de cabra montés. ¿Y quién lo mató? Cinco mil años después… nadie lo sabe. Seguiremos informando.",
+  "start": 36.881,
+  "end": 45.524
+ }
+]

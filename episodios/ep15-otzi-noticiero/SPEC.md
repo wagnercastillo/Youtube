@@ -1,0 +1,2 @@
+# EP15-OTZI-NOTICIERO
+Formato NUEVO: NOTICIERO DE TV (canvas + gráficos HTML): estudio con conductor, enlace en pantalla dividida, reportera en vivo en la nieve, rótulos inferiores, «EN VIVO», cintillo, escáner de rayos X estilo CSI que revela la flecha, tablero «¿QUIÉN LO MATÓ?». Estructura NUEVA: diálogo conductor/reportera. Voces nuevas «noticias» (conductor) y «corresponsal» (reportera). Región: Austria/Italia.

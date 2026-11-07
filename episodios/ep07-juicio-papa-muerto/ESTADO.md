@@ -18,3 +18,6 @@ ElevenLabs: límite de 10 voces propias; el dueño borró 2 voces rechazadas par
 ## Para subir (youtube_description.txt, youtube_tags.txt)
 Título: Desenterraron a un papa… ¡para JUZGARLO! 💀⚖️
 Subido MANUALMENTE por el dueño 2026-11-06. Copia por API https://youtu.be/OjQLXpbl30Q desprogramada y privada (duplicado; el dueño decide si la borra).
+
+SUBIDO 2026-11-07 (cola): https://youtu.be/LpFhBIDnlKs · publishAt 2026-11-08T18:00:00Z · update ok
+Re-subido 2026-11-07 (el dueño borró el anterior): https://youtu.be/LpFhBIDnlKs · publishAt 2026-11-08T18:00:00Z (dom 12 pm CDMX) · 13 etiquetas.

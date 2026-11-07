@@ -1,0 +1,65 @@
+[
+ {
+  "id": "l0",
+  "speaker": "narr",
+  "text": "Este hombre vendió la Torre Eiffel… ¡y luego intentó venderla otra vez!",
+  "start": 0.136,
+  "end": 3.732
+ },
+ {
+  "id": "l1",
+  "speaker": "narr",
+  "text": "París, mil novecientos veinticinco. Victor Lustig lee en el periódico que mantener la torre sale carísimo.",
+  "start": 3.859,
+  "end": 9.245
+ },
+ {
+  "id": "l2",
+  "speaker": "narr",
+  "text": "Así que se hace pasar por funcionario del gobierno… y cita a varios chatarreros en un hotel de lujo.",
+  "start": 9.373,
+  "end": 14.015
+ },
+ {
+  "id": "l3",
+  "speaker": "narr",
+  "text": "Les dice: es secreto, el gobierno va a vender la torre… como chatarra.",
+  "start": 14.143,
+  "end": 17.842
+ },
+ {
+  "id": "l4",
+  "speaker": "narr",
+  "text": "Uno de ellos, André Poisson, cae redondito: le paga una fortuna… ¡con todo y soborno!",
+  "start": 17.969,
+  "end": 23.075
+ },
+ {
+  "id": "l5",
+  "speaker": "narr",
+  "text": "Lustig huye con el dinero… y Poisson, de pura vergüenza, ni lo denuncia.",
+  "start": 23.202,
+  "end": 27.585
+ },
+ {
+  "id": "l6",
+  "speaker": "narr",
+  "text": "¿Y qué hace Lustig? ¡Regresa a París a venderla otra vez! Pero esta vez sí lo denuncian… y escapa a Estados Unidos.",
+  "start": 27.712,
+  "end": 34.055
+ },
+ {
+  "id": "l7",
+  "speaker": "narr",
+  "text": "Años después lo atrapan por hacer billetes falsos… y termina en Alcatraz.",
+  "start": 34.183,
+  "end": 37.721
+ },
+ {
+  "id": "l8",
+  "speaker": "narr",
+  "text": "Así que ya sabes: si alguien te vende la Torre Eiffel… pregúntale si es suya.",
+  "start": 37.848,
+  "end": 41.885
+ }
+]

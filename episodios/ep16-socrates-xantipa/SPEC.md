@@ -1,0 +1,2 @@
+# EP16-SOCRATES-XANTIPA
+Formato NUEVO: TELENOVELA EN PAPEL RECORTADO (canvas): figuras de cartulina con borde blanco y sombra, bordes dentados fijos (no tiemblan), títeres articulados, zooms de golpe de telenovela, título «LA ESPOSA DEL FILÓSOFO / ¡XANTIPA!», tormenta y cubeta, manto arrancado, el caballo bravo que se transforma en Xantipa, la noche antes de la ejecución y el cierre «¿VILLANA… O VÍCTIMA?». Voces nuevas: narrador «galán», Xantipa «villana», Sócrates «sabio». Región: Grecia.

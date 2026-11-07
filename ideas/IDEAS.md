@@ -169,3 +169,10 @@ Cada animal se presenta a sí mismo como en una entrevista de trabajo o un reali
 - [ ] Definir el estilo visual (flat / cartoon con contorno / papel recortado).
 - [ ] Diseñar los personajes del elenco del nicho 1.
 - [ ] Escuchar las muestras de voz y confirmar la voz de cada personaje.
+
+---
+
+## Ideas validadas con outliers (2026-11-07, `research/INFORME_20261107.md`)
+1. Garbo, el espía condecorado por los dos bandos · 2. "La Cosa", el regalo que espió 7 años · 3. Ötzi, asesinato de 5,300 años ·
+4. Polonia desapareció 123 años · 5. Alaska vendida por 7.2 M · 6. Sócrates y Xantipa · 7. El cañón de París · 8. La Armada "Invencible" ·
+9. Baarle, casas en dos países · 10. El "caviar" mexica (ahuautle).

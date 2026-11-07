@@ -1,0 +1,2 @@
+# EP14-GARBO-ESPIA
+Formato NUEVO: TABLERO DE DETECTIVE (corcho 2400×5600 en HTML/SVG; la cámara viaja con GSAP anclada a palabras). Polaroids con caricaturas SVG, documentos a máquina, hilo rojo que se tiende entre chinchetas, sellos (RECHAZADO, FALSO, CONTRATADO, ¡TODOS FALSOS!), red de 27 espías falsos, mapa del Canal (Normandía real vs Calais falso), telegrama y las dos medallas. Narrador: voz nueva «intriga» (EP14 narr). Oficial alemán: voz nueva «coronel». Región: España/Reino Unido/Alemania.

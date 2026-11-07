@@ -20,3 +20,6 @@ si ya pasó, el siguiente libre):
   cd ~/.claude/skills/youtube-uploader/scripts
   npx ts-node youtube-upload.ts --video <ep>/renders/ep10-diogenes-alejandro.mp4 --description-file <ep>/youtube_description.txt --category 27 --privacy private --title "Le dijo QUÍTATE a Alejandro Magno 😳☀️"
   npx ts-node update-video.ts <id> <ep>/youtube_description.txt 27 <ISO> <ep>/youtube_tags.txt
+
+SUBIDO 2026-11-07 (cola): https://youtu.be/Vbu5ML0NVdM · publishAt 2026-11-07T18:00:00Z · update ERROR
+Reintento del update 14:10Z: OK, programado 2026-11-07T18:00:00Z (12 pm CDMX) con etiquetas.
