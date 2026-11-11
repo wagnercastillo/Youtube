@@ -1,0 +1,1018 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anfitriones Puro Chisme</title>
+<style>
+  :root { --ink:#1B1B2F; --pink:#E23E8B; --yellow:#FFD23F; --paper:#FFF8EC; --muted:#5b5b70; --green:#2E9E5B; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink); font-family: "Segoe UI", system-ui, sans-serif; line-height:1.55; }
+  header { background:var(--pink); color:#fff; padding:2.2rem 1rem 2rem; border-bottom:6px solid var(--ink); }
+  .wrap { width:min(1180px, 100% - 2rem); margin:0 auto; }
+  h1 { margin:0; font-family:"Arial Black", Impact, sans-serif; font-size:clamp(2rem, 6vw, 3.4rem); letter-spacing:-.02em; }
+  header p { margin:.6rem 0 0; max-width:760px; font-size:1.08rem; }
+  .how { background:#fff; border:4px solid var(--ink); border-radius:18px; padding:1rem 1.2rem; margin:1.6rem 0; box-shadow:6px 6px 0 var(--ink); }
+  .how p { margin:.3rem 0; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(340px, 1fr)); gap:1.6rem; margin:1.6rem 0 3rem; }
+  .card { background:#fff; border:4px solid var(--ink); border-radius:22px; overflow:hidden; box-shadow:7px 7px 0 var(--ink); display:flex; flex-direction:column; min-width:0; }
+  .art { background:var(--yellow); border-bottom:4px solid var(--ink); display:grid; place-items:center; padding:.6rem; }
+  .art svg { width:100%; max-width:300px; height:auto; }
+  .body { padding:1rem 1.2rem 1.3rem; display:flex; flex-direction:column; gap:.55rem; }
+  .tag { display:inline-block; font-size:.75rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:#fff; background:var(--ink); padding:.2rem .55rem; border-radius:999px; }
+  .tag.rec { background:var(--green); }
+  h2 { margin:.2rem 0 0; font-family:"Arial Black", Impact, sans-serif; font-size:1.55rem; }
+  .who { margin:0; color:var(--muted); }
+  dl { margin:0; display:grid; grid-template-columns:auto 1fr; gap:.25rem .7rem; font-size:.93rem; }
+  dt { font-weight:800; }
+  dd { margin:0; }
+  .quote { background:#FFF2C7; border-left:5px solid var(--pink); padding:.5rem .7rem; border-radius:8px; font-style:italic; }
+  .voices { display:flex; flex-direction:column; gap:.45rem; margin-top:.3rem; }
+  .voice { display:grid; grid-template-columns:7.2rem 1fr; align-items:center; gap:.5rem; font-size:.85rem; }
+  .voice b { font-family:Consolas, monospace; }
+  .voice.best b::after { content:" ★"; color:var(--green); }
+  audio { width:100%; height:34px; }
+  .pc { display:grid; grid-template-columns:1fr 1fr; gap:.6rem; font-size:.88rem; }
+  .pc div { background:#f6f6f9; border-radius:10px; padding:.5rem .6rem; }
+  .pc strong { display:block; }
+  footer { border-top:4px solid var(--ink); padding:1.5rem 0 3rem; }
+  @media (max-width:420px){ .grid{ grid-template-columns:1fr; } .pc{ grid-template-columns:1fr; } .voice{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>¿Quién cuenta el chisme?</h1>
+    <p>Cinco opciones de anfitrión fijo para Puro Chisme. Aparece en todos los videos, aunque cambie el estilo de animación, para que el canal se reconozca al instante, como hacen los canales en inglés que más crecen.</p>
+  </div>
+</header>
+<main class="wrap">
+  <div class="how">
+    <p><strong>Cómo escoger:</strong> escucha las 3 voces de cada personaje. La ★ es la que mejor puntuó en energía (variación de tono, dinámica, brillo y velocidad), pero tu oído manda.</p>
+    <p>Dime el nombre del archivo (por ejemplo <b>miron_1</b>) y guardo esa voz. Las demás no ocupan espacio en ElevenLabs.</p>
+    <p><strong>Cómo saldría en los videos:</strong> abre con su frase de entrada en el segundo 0 (junto a la pregunta gancho), aparece en una esquina con reacciones durante el chisme y cierra en la tarjeta final con su frase de salida.</p>
+  </div>
+
+  <div class="grid">
+
+    <!-- 1. EL MIRÓN -->
+    <article class="card">
+      <div class="art">
+        <svg viewBox="0 0 300 300" role="img" aria-label="El Mirón asomándose sobre una barda amarilla">
+          <circle cx="150" cy="150" r="138" fill="#E23E8B" stroke="#1B1B2F" stroke-width="7"/>
+          <clipPath id="c1"><circle cx="150" cy="150" r="134"/></clipPath>
+          <g clip-path="url(#c1)">
+            <path d="M88 120 Q90 60 150 56 Q212 60 214 122 L214 200 L88 200 Z" fill="#F2C29B" stroke="#1B1B2F" stroke-width="7"/>
+            <path d="M84 104 Q96 46 156 48 Q214 52 220 100 Q200 82 176 86 Q150 70 120 88 Q98 84 84 104 Z" fill="#3A2416" stroke="#1B1B2F" stroke-width="6"/>
+            <ellipse cx="124" cy="140" rx="22" ry="27" fill="#fff" stroke="#1B1B2F" stroke-width="6"/>
+            <ellipse cx="178" cy="140" rx="22" ry="27" fill="#fff" stroke="#1B1B2F" stroke-width="6"/>
+            <circle cx="134" cy="140" r="10" fill="#1B1B2F"/><circle cx="188" cy="140" r="10" fill="#1B1B2F"/>
+            <path d="M100 108 Q118 96 140 106" fill="none" stroke="#1B1B2F" stroke-width="7" stroke-linecap="round"/>
+            <path d="M160 112 L200 112" fill="none" stroke="#1B1B2F" stroke-width="7" stroke-linecap="round"/>
+            <rect x="0" y="182" width="300" height="130" fill="#FFD23F" stroke="#1B1B2F" stroke-width="7"/>
+            <path d="M30 216 H80 M120 216 H170 M210 216 H262 M60 250 H110 M150 250 H200" stroke="#1B1B2F" stroke-width="5" stroke-linecap="round" opacity=".35"/>
+            <g transform="translate(206 150) rotate(-14)">
+              <path d="M0 40 Q-6 10 10 0 L34 0 Q46 6 42 40 Z" fill="#F2C29B" stroke="#1B1B2F" stroke-width="6"/>
+              <path d="M12 0 V-10 M22 0 V-12 M32 0 V-9" stroke="#1B1B2F" stroke-width="6" stroke-linecap="round"/>
+            </g>
+            <text x="176" y="64" font-family="Arial Black" font-size="22" fill="#fff" stroke="#1B1B2F" stroke-width="2">psst!</text>
+          </g>
+        </svg>
+      </div>
+      <div class="body">
+        <span class="tag rec">Mi recomendación</span>
+        <h2>El Mirón</h2>
+        <p class="who">El chismoso que se asoma por la barda. Es literalmente <strong>los ojos del logo</strong> convertidos en personaje.</p>
+        <dl>
+          <dt>Personalidad</dt><dd>Cómplice, travieso, de tu edad. Te cuenta el chisme como a su mejor amigo.</dd>
+          <dt>Voz</dt><dd>30 años, rasposa, empieza en susurro y explota de emoción.</dd>
+          <dt>Entrada</dt><dd>"¡Psst! ¡Oye, tú!…"</dd>
+          <dt>Salida</dt><dd>"¿A poco no sabías este chisme?" (ya es la frase de la tarjeta final)</dd>
+        </dl>
+        <p class="quote">"¡Psst! ¡Oye, tú! Sí, tú… acércate tantito, que lo que vi detrás de esta barda no lo vas a creer. ¿Listo para el chisme?"</p>
+        <div class="voices">
+          <div class="voice best"><b>miron_1</b><audio controls preload="none" src="voces/miron_1.mp3"></audio></div>
+          <div class="voice"><b>miron_0</b><audio controls preload="none" src="voces/miron_0.mp3"></audio></div>
+          <div class="voice"><b>miron_2</b><audio controls preload="none" src="voces/miron_2.mp3"></audio></div>
+        </div>
+        <div class="pc">
+          <div><strong>A favor</strong>Une personaje y logo: la marca entera es un solo chismoso. Se puede dibujar en cualquier estilo (2D, 3D, pixel, Blender).</div>
+          <div><strong>En contra</strong>Al ser joven y "normal", depende de que la voz tenga mucho carácter.</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 2. EL LOCUTOR -->
+    <article class="card">
+      <div class="art">
+        <svg viewBox="0 0 300 300" role="img" aria-label="Locutor de radio con audífonos y micrófono antiguo">
+          <circle cx="150" cy="150" r="138" fill="#E23E8B" stroke="#1B1B2F" stroke-width="7"/>
+          <clipPath id="c2"><circle cx="150" cy="150" r="134"/></clipPath>
+          <g clip-path="url(#c2)">
+            <path d="M70 300 Q80 220 150 214 Q220 220 230 300 Z" fill="#2F6FD6" stroke="#1B1B2F" stroke-width="7"/>
+            <path d="M136 216 L150 236 L164 216" fill="#fff" stroke="#1B1B2F" stroke-width="5"/>
+            <path d="M132 232 L150 242 L132 252 Z M168 232 L150 242 L168 252 Z" fill="#E23E8B" stroke="#1B1B2F" stroke-width="4"/>
+            <ellipse cx="150" cy="140" rx="62" ry="72" fill="#E8B48A" stroke="#1B1B2F" stroke-width="7"/>
+            <path d="M88 118 Q92 62 150 60 Q210 62 212 118 Q196 92 150 96 Q110 92 88 118 Z" fill="#1B1B2F"/>
+            <path d="M80 130 Q80 60 150 56 Q220 60 220 130" fill="none" stroke="#1B1B2F" stroke-width="9"/>
+            <rect x="66" y="118" width="26" height="44" rx="10" fill="#E23E8B" stroke="#1B1B2F" stroke-width="6"/>
+            <rect x="208" y="118" width="26" height="44" rx="10" fill="#E23E8B" stroke="#1B1B2F" stroke-width="6"/>
+            <ellipse cx="128" cy="134" rx="13" ry="15" fill="#fff" stroke="#1B1B2F" stroke-width="5"/>
+            <ellipse cx="172" cy="134" rx="13" ry="15" fill="#fff" stroke="#1B1B2F" stroke-width="5"/>
+            <circle cx="131" cy="136" r="6" fill="#1B1B2F"/><circle cx="175" cy="136" r="6" fill="#1B1B2F"/>
+            <path d="M112 112 Q128 104 142 112 M158 112 Q172 104 188 112" fill="none" stroke="#1B1B2F" stroke-width="6" stroke-linecap="round"/>
+            <path d="M118 172 Q134 160 150 170 Q166 160 182 172 Q166 178 150 174 Q134 178 118 172 Z" fill="#1B1B2F"/>
+            <path d="M128 186 Q150 204 172 186" fill="#7A2230" stroke="#1B1B2F" stroke-width="5"/>
+            <rect x="200" y="176" width="44" height="64" rx="20" fill="#C9CED6" stroke="#1B1B2F" stroke-width="6"/>
+            <path d="M206 192 H238 M206 206 H238 M206 220 H238" stroke="#1B1B2F" stroke-width="4"/>
+            <rect x="216" y="240" width="12" height="40" fill="#1B1B2F"/>
+            <rect x="113" y="20" width="74" height="30" rx="8" fill="#FF3347" stroke="#1B1B2F" stroke-width="5"/>
+            <text x="150" y="42" text-anchor="middle" font-family="Arial Black" font-size="17" fill="#fff">AL AIRE</text>
+          </g>
+        </svg>
+      </div>
+      <div class="body">
+        <span class="tag">Opción 2</span>
+        <h2>El Locutor de Radio Chisme</h2>
+        <p class="who">Locutor de radio AM de los de antes. Cada video es "una transmisión" de Radio Chisme.</p>
+        <dl>
+          <dt>Personalidad</dt><dd>Seguro, teatral, exagera cada noticia como si fuera la del siglo.</dd>
+          <dt>Voz</dt><dd>50 años, grave, resonante, de anuncio clásico.</dd>
+          <dt>Entrada</dt><dd>"¡Buenas, buenas, mi gente!…"</dd>
+          <dt>Salida</dt><dd>"Y hasta aquí la transmisión… ¿a poco no sabías este chisme?"</dd>
+        </dl>
+        <p class="quote">"¡Buenas, buenas, mi gente! Están sintonizando Radio Chisme, la única estación donde la historia viene con todo y escándalo. ¡Agárrense!"</p>
+        <div class="voices">
+          <div class="voice best"><b>locutor_0</b><audio controls preload="none" src="voces/locutor_0.mp3"></audio></div>
+          <div class="voice"><b>locutor_1</b><audio controls preload="none" src="voces/locutor_1.mp3"></audio></div>
+          <div class="voice"><b>locutor_2</b><audio controls preload="none" src="voces/locutor_2.mp3"></audio></div>
+        </div>
+        <div class="pc">
+          <div><strong>A favor</strong>La voz grave llama la atención y da autoridad. Permite segmentos fijos ("noticia de último minuto").</div>
+          <div><strong>En contra</strong>Se parece al formato noticiero que ya usamos en EP15 (Ötzi).</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 3. EL MEROLICO -->
+    <article class="card">
+      <div class="art">
+        <svg viewBox="0 0 300 300" role="img" aria-label="Merolico con gorra y megáfono de cono">
+          <circle cx="150" cy="150" r="138" fill="#E23E8B" stroke="#1B1B2F" stroke-width="7"/>
+          <clipPath id="c3"><circle cx="150" cy="150" r="134"/></clipPath>
+          <g clip-path="url(#c3)">
+            <path d="M66 300 Q76 222 146 216 Q214 222 226 300 Z" fill="#F2B33D" stroke="#1B1B2F" stroke-width="7"/>
+            <path d="M110 230 L110 300 M182 230 L182 300" stroke="#fff" stroke-width="10"/>
+            <ellipse cx="146" cy="146" rx="60" ry="66" fill="#C98F62" stroke="#1B1B2F" stroke-width="7"/>
+            <path d="M84 116 Q86 62 146 58 Q206 62 208 116 Z" fill="#D6402F" stroke="#1B1B2F" stroke-width="7"/>
+            <path d="M80 116 L232 110 Q236 126 220 128 L84 128 Z" fill="#D6402F" stroke="#1B1B2F" stroke-width="6"/>
+            <ellipse cx="124" cy="146" rx="12" ry="14" fill="#fff" stroke="#1B1B2F" stroke-width="5"/>
+            <ellipse cx="166" cy="146" rx="12" ry="14" fill="#fff" stroke="#1B1B2F" stroke-width="5"/>
+            <circle cx="128" cy="146" r="6" fill="#1B1B2F"/><circle cx="170" cy="146" r="6" fill="#1B1B2F"/>
+            <path d="M106 174 Q126 162 146 172 Q166 162 186 174" fill="none" stroke="#1B1B2F" stroke-width="9" stroke-linecap="round"/>
+            <path d="M118 184 Q146 214 176 184 Z" fill="#7A2230" stroke="#1B1B2F" stroke-width="5"/>
+            <path d="M126 186 H168" stroke="#fff" stroke-width="5"/>
+            <g transform="translate(186 170) rotate(-18)">
+              <path d="M0 0 L70 -30 L70 34 Z" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="6" stroke-linejoin="round"/>
+              <rect x="-14" y="-8" width="16" height="16" fill="#2F6FD6" stroke="#1B1B2F" stroke-width="5"/>
+            </g>
+            <path d="M262 120 l14 -8 M266 150 h16 M262 180 l14 8" stroke="#1B1B2F" stroke-width="6" stroke-linecap="round"/>
+          </g>
+        </svg>
+      </div>
+      <div class="body">
+        <span class="tag">Opción 3</span>
+        <h2>El Merolico</h2>
+        <p class="who">El pregonero del mercado que vende chismes "fresquecitos" con su cono-megáfono.</p>
+        <dl>
+          <dt>Personalidad</dt><dd>Vendedor rápido, gracioso, todo lo ofrece como oferta del día.</dd>
+          <dt>Voz</dt><dd>40 años, potente, un poco nasal, rápida y cantadita.</dd>
+          <dt>Entrada</dt><dd>"¡Pásele, pásele, marchanta!…"</dd>
+          <dt>Salida</dt><dd>"¡Lleve su chisme, lleve su chisme!"</dd>
+        </dl>
+        <p class="quote">"¡Pásele, pásele, marchanta! Hoy traigo chisme fresquecito de hace quinientos años, ¡calientito y bien verificado! ¡Ándele, que se acaba!"</p>
+        <div class="voices">
+          <div class="voice best"><b>merolico_1</b><audio controls preload="none" src="voces/merolico_1.mp3"></audio></div>
+          <div class="voice"><b>merolico_0</b><audio controls preload="none" src="voces/merolico_0.mp3"></audio></div>
+          <div class="voice"><b>merolico_2</b><audio controls preload="none" src="voces/merolico_2.mp3"></audio></div>
+        </div>
+        <div class="pc">
+          <div><strong>A favor</strong>Muy mexicano y muy identificable. La energía del pregón engancha en el primer segundo.</div>
+          <div><strong>En contra</strong>Muy local: como el canal cuenta historias de todo el mundo, puede sentirse menos universal para Latinoamérica.</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 4. EL TECOLOTE -->
+    <article class="card">
+      <div class="art">
+        <svg viewBox="0 0 300 300" role="img" aria-label="Tecolote con lentes y moño sobre una rama de noche">
+          <circle cx="150" cy="150" r="138" fill="#27305C" stroke="#1B1B2F" stroke-width="7"/>
+          <clipPath id="c4"><circle cx="150" cy="150" r="134"/></clipPath>
+          <g clip-path="url(#c4)">
+            <circle cx="232" cy="74" r="24" fill="#FFF6D8"/>
+            <circle cx="70" cy="60" r="3" fill="#fff"/><circle cx="96" cy="92" r="2.5" fill="#fff"/><circle cx="200" cy="40" r="2.5" fill="#fff"/>
+            <rect x="0" y="246" width="300" height="20" rx="10" fill="#7A4E2D" stroke="#1B1B2F" stroke-width="6"/>
+            <path d="M92 250 Q80 160 112 112 L102 74 L134 98 Q150 92 166 98 L198 74 L188 112 Q220 160 208 250 Z" fill="#9C6B3E" stroke="#1B1B2F" stroke-width="7"/>
+            <path d="M118 250 Q112 190 150 176 Q188 190 182 250 Z" fill="#E8D2A6" stroke="#1B1B2F" stroke-width="5"/>
+            <path d="M130 204 l8 6 l8 -6 M154 204 l8 6 l8 -6 M140 226 l8 6 l8 -6" fill="none" stroke="#9C6B3E" stroke-width="4"/>
+            <circle cx="126" cy="132" r="28" fill="#FFD23F" stroke="#1B1B2F" stroke-width="6"/>
+            <circle cx="174" cy="132" r="28" fill="#FFD23F" stroke="#1B1B2F" stroke-width="6"/>
+            <circle cx="126" cy="132" r="13" fill="#1B1B2F"/><circle cx="174" cy="132" r="13" fill="#1B1B2F"/>
+            <circle cx="131" cy="127" r="4" fill="#fff"/><circle cx="179" cy="127" r="4" fill="#fff"/>
+            <path d="M154 132 h-8" stroke="#1B1B2F" stroke-width="6"/>
+            <path d="M104 110 Q126 100 146 112" fill="none" stroke="#1B1B2F" stroke-width="7" stroke-linecap="round"/>
+            <path d="M144 152 L150 166 L156 152 Z" fill="#F2B33D" stroke="#1B1B2F" stroke-width="4" stroke-linejoin="round"/>
+            <path d="M132 172 L150 180 L132 188 Z M168 172 L150 180 L168 188 Z" fill="#E23E8B" stroke="#1B1B2F" stroke-width="4"/>
+          </g>
+        </svg>
+      </div>
+      <div class="body">
+        <span class="tag">Opción 4</span>
+        <h2>El Tecolote</h2>
+        <p class="who">El búho que no duerme: de noche vigila la historia y se entera de todo.</p>
+        <dl>
+          <dt>Personalidad</dt><dd>Misterioso y pícaro, sabe más de lo que dice, cuenta con suspenso.</dd>
+          <dt>Voz</dt><dd>60 años, grave, aterciopelada, pausada, con pausas de suspenso.</dd>
+          <dt>Entrada</dt><dd>"Uuuh… yo de noche no duermo…"</dd>
+          <dt>Salida</dt><dd>"Y eso… nadie te lo había contado. Uuuh."</dd>
+        </dl>
+        <p class="quote">"Uuuh… yo de noche no duermo, ¿eh? Yo observo. Y esta noche vi algo que los libros de historia no te quieren contar. ¿Te lo cuento?"</p>
+        <div class="voices">
+          <div class="voice best"><b>tecolote_1</b><audio controls preload="none" src="voces/tecolote_1.mp3"></audio></div>
+          <div class="voice"><b>tecolote_0</b><audio controls preload="none" src="voces/tecolote_0.mp3"></audio></div>
+          <div class="voice"><b>tecolote_2</b><audio controls preload="none" src="voces/tecolote_2.mp3"></audio></div>
+        </div>
+        <div class="pc">
+          <div><strong>A favor</strong>Una mascota animal es fácil de convertir en peluche o sticker. Es el modelo de Hoodie Guy (animales que "hablan").</div>
+          <div><strong>En contra</strong>Su ritmo pausado puede perder gente en los primeros 2 segundos; necesita una frase de entrada corta.</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 5. DON CALACAS -->
+    <article class="card">
+      <div class="art">
+        <svg viewBox="0 0 300 300" role="img" aria-label="Calavera sonriente con sombrero y flor de cempasúchil">
+          <circle cx="150" cy="150" r="138" fill="#E23E8B" stroke="#1B1B2F" stroke-width="7"/>
+          <clipPath id="c5"><circle cx="150" cy="150" r="134"/></clipPath>
+          <g clip-path="url(#c5)">
+            <path d="M80 300 Q86 232 150 226 Q214 232 220 300 Z" fill="#1B1B2F"/>
+            <path d="M150 232 V300 M126 244 Q150 252 174 244 M128 262 Q150 270 172 262 M130 280 Q150 288 170 280" stroke="#fff" stroke-width="5" fill="none"/>
+            <path d="M92 150 Q90 86 150 82 Q210 86 208 150 Q208 182 188 196 L188 214 L112 214 L112 196 Q92 182 92 150 Z" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="7"/>
+            <ellipse cx="126" cy="146" rx="20" ry="22" fill="#1B1B2F"/><ellipse cx="174" cy="146" rx="20" ry="22" fill="#1B1B2F"/>
+            <circle cx="130" cy="142" r="6" fill="#FFD23F"/><circle cx="178" cy="142" r="6" fill="#FFD23F"/>
+            <path d="M143 176 L150 164 L157 176 Z" fill="#1B1B2F"/>
+            <path d="M112 192 Q150 222 188 192" fill="#7A2230" stroke="#1B1B2F" stroke-width="6"/>
+            <path d="M124 194 V206 M137 198 V212 M150 199 V214 M163 198 V212 M176 194 V206" stroke="#fff" stroke-width="4"/>
+            <path d="M110 120 Q118 110 128 120 M172 120 Q182 110 190 120" stroke="#E23E8B" stroke-width="5" fill="none"/>
+            <ellipse cx="150" cy="86" rx="118" ry="18" fill="#F2B33D" stroke="#1B1B2F" stroke-width="7"/>
+            <path d="M104 84 Q108 34 150 32 Q192 34 196 84 Z" fill="#F2B33D" stroke="#1B1B2F" stroke-width="7"/>
+            <path d="M106 70 H194" stroke="#D6402F" stroke-width="9"/>
+            <g transform="translate(214 62)">
+              <circle r="16" fill="#FF8A2E" stroke="#1B1B2F" stroke-width="5"/>
+              <circle r="7" fill="#FFD23F" stroke="#1B1B2F" stroke-width="3"/>
+            </g>
+            <text x="34" y="214" font-family="Arial Black" font-size="24" fill="#FFD23F" stroke="#1B1B2F" stroke-width="2">¡ja ja!</text>
+          </g>
+        </svg>
+      </div>
+      <div class="body">
+        <span class="tag">Opción 5</span>
+        <h2>Don Calacas</h2>
+        <p class="who">Calavera que "estuvo ahí": testigo de todos los chismes de la historia porque ya vivió (y murió) muchas veces.</p>
+        <dl>
+          <dt>Personalidad</dt><dd>Abuelo carcajeante y exagerado, se burla hasta de su propia muerte.</dd>
+          <dt>Voz</dt><dd>75 años, aguda, chillona, se ríe a carcajadas.</dd>
+          <dt>Entrada</dt><dd>"¡Ay, no, no, no! Yo estuve ahí…"</dd>
+          <dt>Salida</dt><dd>"¡Ni muerto me lo pierdo! ¿A poco no sabías este chisme?"</dd>
+        </dl>
+        <p class="quote">"¡Ay, no, no, no! Yo estuve ahí, ¿eh? Hace como trescientos años, pero me acuerdo clarito. Y lo que pasó ese día… ¡fue un escándalo!"</p>
+        <div class="voices">
+          <div class="voice best"><b>calacas_1</b><audio controls preload="none" src="voces/calacas_1.mp3"></audio></div>
+          <div class="voice"><b>calacas_0</b><audio controls preload="none" src="voces/calacas_0.mp3"></audio></div>
+          <div class="voice"><b>calacas_2</b><audio controls preload="none" src="voces/calacas_2.mp3"></audio></div>
+        </div>
+        <div class="pc">
+          <div><strong>A favor</strong>Su excusa ("yo estuve ahí") encaja con cualquier época y país. Muy visual y muy mexicano, con atractivo en toda Latinoamérica.</div>
+          <div><strong>En contra</strong>Los temas de muerte pueden sentirse oscuros; hay que mantenerlo cómico (estilo Día de Muertos, nunca macabro).</div>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="how" id="mas">
+    <p><strong>Más personajes (todavía sin voz).</strong> Ocho ideas más para comparar con las cinco de arriba. Si alguno te gusta, le genero sus 3 voces igual que a los demás.</p>
+  </div>
+
+  <div class="grid">
+
+    <!-- 6. DON TIJERAS -->
+    <article class="card">
+      <div class="art">
+        <svg viewBox="0 0 300 300" role="img" aria-label="Peluquero con bigote, peine en el pelo y tijeras">
+          <circle cx="150" cy="150" r="138" fill="#E23E8B" stroke="#1B1B2F" stroke-width="7"/>
+          <clipPath id="c6"><circle cx="150" cy="150" r="134"/></clipPath>
+          <g clip-path="url(#c6)">
+            <g><rect x="22" y="60" width="26" height="150" rx="13" fill="#fff" stroke="#1B1B2F" stroke-width="6"/>
+              <path d="M24 80 L46 100 M24 110 L46 130 M24 140 L46 160 M24 170 L46 190" stroke="#D6402F" stroke-width="8"/></g>
+            <path d="M70 300 Q80 222 150 216 Q220 222 230 300 Z" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="7"/>
+            <path d="M150 220 V300" stroke="#1B1B2F" stroke-width="4" stroke-dasharray="2 14" stroke-linecap="round"/>
+            <ellipse cx="150" cy="144" rx="60" ry="70" fill="#E8B48A" stroke="#1B1B2F" stroke-width="7"/>
+            <path d="M90 120 Q92 66 150 64 Q206 64 212 118 Q196 86 156 92 Q118 84 90 120 Z" fill="#1B1B2F"/>
+            <path d="M160 70 L196 58" stroke="#1B1B2F" stroke-width="3"/>
+            <rect x="152" y="46" width="44" height="12" rx="3" fill="#2F6FD6" stroke="#1B1B2F" stroke-width="4" transform="rotate(-14 174 52)"/>
+            <ellipse cx="128" cy="140" rx="12" ry="14" fill="#fff" stroke="#1B1B2F" stroke-width="5"/>
+            <ellipse cx="172" cy="140" rx="12" ry="14" fill="#fff" stroke="#1B1B2F" stroke-width="5"/>
+            <circle cx="134" cy="142" r="6" fill="#1B1B2F"/><circle cx="178" cy="142" r="6" fill="#1B1B2F"/>
+            <path d="M112 118 Q128 112 142 120 M158 120 Q172 112 188 118" fill="none" stroke="#1B1B2F" stroke-width="6" stroke-linecap="round"/>
+            <path d="M104 178 Q126 160 150 172 Q174 160 196 178 Q186 168 196 160 M104 178 Q114 168 104 160" fill="#1B1B2F" stroke="#1B1B2F" stroke-width="6" stroke-linejoin="round"/>
+            <path d="M132 192 Q150 204 168 192" fill="none" stroke="#1B1B2F" stroke-width="5" stroke-linecap="round"/>
+            <g transform="translate(232 196) rotate(30)">
+              <circle cx="-10" cy="22" r="10" fill="none" stroke="#1B1B2F" stroke-width="6"/>
+              <circle cx="10" cy="22" r="10" fill="none" stroke="#1B1B2F" stroke-width="6"/>
+              <path d="M-6 14 L8 -34 M6 14 L-8 -34" stroke="#C9CED6" stroke-width="7" stroke-linecap="round"/>
+              <path d="M-6 14 L8 -34 M6 14 L-8 -34" stroke="#1B1B2F" stroke-width="2"/>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div class="body">
+        <span class="tag">Opción 6 · sin voz</span>
+        <h2>Don Tijeras</h2>
+        <p class="who">El peluquero del barrio: en la barbería se sabe todo. Lleva siglos cortando el pelo a reyes y generales.</p>
+        <dl>
+          <dt>Personalidad</dt><dd>Platicador, confianzudo, cuenta el chisme mientras "te corta el pelo".</dd>
+          <dt>Voz sugerida</dt><dd>45 años, cálida y rápida, de compadre, risa corta.</dd>
+          <dt>Entrada</dt><dd>"Siéntate, siéntate… ¿Corte de siempre? Oye, ¿supiste lo de…?"</dd>
+          <dt>Salida</dt><dd>"Quedaste guapo… y bien informado."</dd>
+        </dl>
+        <div class="pc">
+          <div><strong>A favor</strong>La barbería es el lugar clásico del chisme; da un escenario fijo y fácil.</div>
+          <div><strong>En contra</strong>Necesita un "cliente" en cada video para que no se sienta raro.</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 7. PEPE EL PERICO -->
+    <article class="card">
+      <div class="art">
+        <svg viewBox="0 0 300 300" role="img" aria-label="Perico verde con corona chueca">
+          <circle cx="150" cy="150" r="138" fill="#E23E8B" stroke="#1B1B2F" stroke-width="7"/>
+          <clipPath id="c7"><circle cx="150" cy="150" r="134"/></clipPath>
+          <g clip-path="url(#c7)">
+            <rect x="0" y="250" width="300" height="18" rx="9" fill="#7A4E2D" stroke="#1B1B2F" stroke-width="6"/>
+            <path d="M104 252 Q86 170 120 120 Q150 84 186 108 Q214 140 200 200 Q190 240 170 252 Z" fill="#2E9E5B" stroke="#1B1B2F" stroke-width="7"/>
+            <path d="M120 250 Q112 200 140 184 Q170 200 168 250 Z" fill="#7FD18B" stroke="#1B1B2F" stroke-width="5"/>
+            <path d="M186 150 Q234 170 216 240 Q196 210 180 196 Z" fill="#2F6FD6" stroke="#1B1B2F" stroke-width="6"/>
+            <path d="M130 108 Q150 92 172 104 Q170 130 150 134 Q130 130 130 108 Z" fill="#FFD23F" stroke="#1B1B2F" stroke-width="5"/>
+            <circle cx="160" cy="118" r="16" fill="#fff" stroke="#1B1B2F" stroke-width="5"/>
+            <circle cx="164" cy="118" r="7" fill="#1B1B2F"/>
+            <path d="M120 140 Q100 150 106 172 Q118 166 128 154 Z" fill="#F2B33D" stroke="#1B1B2F" stroke-width="5" stroke-linejoin="round"/>
+            <path d="M112 150 Q104 148 104 160" fill="none" stroke="#1B1B2F" stroke-width="4"/>
+            <path d="M136 92 L140 62 L154 80 L166 58 L174 82 L188 66 L184 98 Z" fill="#F2B33D" stroke="#1B1B2F" stroke-width="5" stroke-linejoin="round" transform="rotate(14 160 80)"/>
+            <path transform="translate(-26 8)" d="M216 70 Q244 60 256 76 Q244 96 220 90 L210 100 Z" fill="#fff" stroke="#1B1B2F" stroke-width="5"/>
+            <text x="210" y="92" text-anchor="middle" font-family="Arial Black" font-size="12" fill="#1B1B2F">¡cuac!</text>
+          </g>
+        </svg>
+      </div>
+      <div class="body">
+        <span class="tag">Opción 7 · sin voz</span>
+        <h2>Pepe el Perico</h2>
+        <p class="who">El perico de palacio: vivió en las jaulas de reyes, papas y presidentes, y repite todo lo que oyó.</p>
+        <dl>
+          <dt>Personalidad</dt><dd>Indiscreto sin querer: "yo nomás repito lo que oí".</dd>
+          <dt>Voz sugerida</dt><dd>35 años, aguda y rasposa, repite palabras clave dos veces, con muletillas de ave.</dd>
+          <dt>Entrada</dt><dd>"¡Cuac! Yo nomás repito lo que oí, ¿eh? ¡Lo que oí!"</dd>
+          <dt>Salida</dt><dd>"¡Chisme, chisme! ¿A poco no sabías?"</dd>
+        </dl>
+        <div class="pc">
+          <div><strong>A favor</strong>Su excusa es perfecta para el chisme y la repetición vuelve pegajosas las frases clave. Es una mascota animal (modelo Hoodie Guy).</div>
+          <div><strong>En contra</strong>Si se abusa de la repetición, cansa; hay que dosificarla.</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 8. EL DETECTIVE -->
+    <article class="card">
+      <div class="art">
+        <svg viewBox="0 0 300 300" role="img" aria-label="Detective con sombrero y lupa gigante">
+          <circle cx="150" cy="150" r="138" fill="#E23E8B" stroke="#1B1B2F" stroke-width="7"/>
+          <clipPath id="c8"><circle cx="150" cy="150" r="134"/></clipPath>
+          <g clip-path="url(#c8)">
+            <path d="M66 300 Q76 220 146 214 Q216 220 228 300 Z" fill="#B5895A" stroke="#1B1B2F" stroke-width="7"/>
+            <path d="M118 218 L146 260 L174 218" fill="none" stroke="#1B1B2F" stroke-width="6"/>
+            <ellipse cx="146" cy="150" rx="56" ry="64" fill="#F2C29B" stroke="#1B1B2F" stroke-width="7"/>
+            <ellipse cx="146" cy="96" rx="96" ry="16" fill="#6B4A2E" stroke="#1B1B2F" stroke-width="7"/>
+            <path d="M94 94 Q96 40 146 38 Q196 40 198 94 Z" fill="#6B4A2E" stroke="#1B1B2F" stroke-width="7"/>
+            <path d="M96 84 H196" stroke="#1B1B2F" stroke-width="10"/>
+            <ellipse cx="124" cy="146" rx="11" ry="13" fill="#fff" stroke="#1B1B2F" stroke-width="5"/>
+            <circle cx="126" cy="148" r="5" fill="#1B1B2F"/>
+            <path d="M110 126 Q124 118 138 128" fill="none" stroke="#1B1B2F" stroke-width="6" stroke-linecap="round"/>
+            <path d="M126 186 Q146 196 166 184" fill="none" stroke="#1B1B2F" stroke-width="5" stroke-linecap="round"/>
+            <g transform="translate(184 150)">
+              <path d="M30 34 L62 78" stroke="#6B4A2E" stroke-width="16" stroke-linecap="round"/>
+              <path d="M30 34 L62 78" stroke="#1B1B2F" stroke-width="4" stroke-linecap="round" opacity=".5"/>
+              <circle r="40" fill="#CFEAF7" fill-opacity=".85" stroke="#1B1B2F" stroke-width="8"/>
+              <ellipse cx="-4" cy="2" rx="18" ry="22" fill="#fff" stroke="#1B1B2F" stroke-width="5"/>
+              <circle cx="2" cy="4" r="10" fill="#1B1B2F"/>
+              <path d="M-22 -24 Q-12 -32 0 -30" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div class="body">
+        <span class="tag">Opción 8 · sin voz</span>
+        <h2>El Detective Chismoso</h2>
+        <p class="who">Investigador privado que no cuenta chismes: los "investiga" con lupa y presenta las pruebas.</p>
+        <dl>
+          <dt>Personalidad</dt><dd>Serio por fuera, morboso por dentro. "Caso cerrado" al final.</dd>
+          <dt>Voz sugerida</dt><dd>45 años, grave y cortada, de narrador de cine negro, con pausas para el suspenso.</dd>
+          <dt>Entrada</dt><dd>"Caso número… este. La víctima: la verdad."</dd>
+          <dt>Salida</dt><dd>"Caso cerrado. ¿A poco no sabías este chisme?"</dd>
+        </dl>
+        <div class="pc">
+          <div><strong>A favor</strong>Encaja con la regla de verificar datos y mostrar fuentes: las "pruebas" son las fuentes.</div>
+          <div><strong>En contra</strong>Ya usamos el expediente de detective en EP14 (Garbo); puede sentirse repetido.</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 9. EL CRONISTA (viajero del tiempo) -->
+    <article class="card">
+      <div class="art">
+        <svg viewBox="0 0 300 300" role="img" aria-label="Viajero del tiempo con goggles y reloj de bolsillo">
+          <circle cx="150" cy="150" r="138" fill="#E23E8B" stroke="#1B1B2F" stroke-width="7"/>
+          <clipPath id="c9"><circle cx="150" cy="150" r="134"/></clipPath>
+          <g clip-path="url(#c9)">
+            <path d="M40 50 A110 110 0 0 1 260 50" fill="none" stroke="#FFD23F" stroke-width="5" stroke-dasharray="10 12"/>
+            <path d="M66 300 Q78 220 150 214 Q222 220 234 300 Z" fill="#7A4E8A" stroke="#1B1B2F" stroke-width="7"/>
+            <path d="M150 218 V300" stroke="#F2B33D" stroke-width="5" stroke-dasharray="3 12" stroke-linecap="round"/>
+            <ellipse cx="150" cy="148" rx="58" ry="66" fill="#E8B48A" stroke="#1B1B2F" stroke-width="7"/>
+            <path d="M88 132 Q78 80 120 70 Q150 50 182 70 Q224 80 212 132 Q206 104 180 100 Q150 112 120 100 Q94 104 88 132 Z" fill="#F4F1EA" stroke="#1B1B2F" stroke-width="6"/>
+            <path d="M86 110 H214" stroke="#6B4A2E" stroke-width="10"/>
+            <circle cx="124" cy="110" r="18" fill="#CFEAF7" stroke="#1B1B2F" stroke-width="6"/>
+            <circle cx="176" cy="110" r="18" fill="#CFEAF7" stroke="#1B1B2F" stroke-width="6"/>
+            <ellipse cx="128" cy="150" rx="11" ry="13" fill="#fff" stroke="#1B1B2F" stroke-width="5"/>
+            <ellipse cx="172" cy="150" rx="11" ry="13" fill="#fff" stroke="#1B1B2F" stroke-width="5"/>
+            <circle cx="131" cy="152" r="5" fill="#1B1B2F"/><circle cx="175" cy="152" r="5" fill="#1B1B2F"/>
+            <path d="M126 188 Q150 206 174 188" fill="#7A2230" stroke="#1B1B2F" stroke-width="5"/>
+            <g transform="translate(232 214)">
+              <path d="M0 -42 V-30" stroke="#1B1B2F" stroke-width="6"/>
+              <circle r="30" fill="#F2B33D" stroke="#1B1B2F" stroke-width="6"/>
+              <circle r="22" fill="#FFF8EC" stroke="#1B1B2F" stroke-width="3"/>
+              <path d="M0 0 V-15 M0 0 L11 6" stroke="#1B1B2F" stroke-width="4" stroke-linecap="round"/>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div class="body">
+        <span class="tag">Opción 9 · sin voz</span>
+        <h2>El Cronista del Tiempo</h2>
+        <p class="who">Reportero con reloj de bolsillo que viaja en el tiempo para ver el chisme en vivo y regresa a contarlo.</p>
+        <dl>
+          <dt>Personalidad</dt><dd>Acelerado, despeinado, siempre "acaba de llegar" de otra época.</dd>
+          <dt>Voz sugerida</dt><dd>35 años, rápida, sin aliento, entusiasta, como reportero que corre.</dd>
+          <dt>Entrada</dt><dd>"¡Uf! Acabo de regresar de 1859 y no me vas a creer…"</dd>
+          <dt>Salida</dt><dd>"Me voy, que se me hace tarde… ¡para el siglo XV!"</dd>
+        </dl>
+        <div class="pc">
+          <div><strong>A favor</strong>Justifica cualquier época y país; el "salto en el tiempo" es una transición visual lista para usar.</div>
+          <div><strong>En contra</strong>Personaje de viajero del tiempo muy común; necesita un look propio.</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 10. EL CHISMOSO ENMASCARADO -->
+    <article class="card">
+      <div class="art">
+        <svg viewBox="0 0 300 300" role="img" aria-label="Luchador con máscara rosa y amarilla">
+          <circle cx="150" cy="150" r="138" fill="#FFD23F" stroke="#1B1B2F" stroke-width="7"/>
+          <clipPath id="c10"><circle cx="150" cy="150" r="134"/></clipPath>
+          <g clip-path="url(#c10)">
+            <path d="M0 220 H300 M0 246 H300 M0 272 H300" stroke="#D6402F" stroke-width="7"/>
+            <path d="M56 300 Q66 210 150 204 Q234 210 244 300 Z" fill="#E8B48A" stroke="#1B1B2F" stroke-width="7"/>
+            <path d="M118 236 Q130 248 150 246 Q170 248 182 236" fill="none" stroke="#1B1B2F" stroke-width="5"/>
+            <path d="M88 150 Q86 70 150 66 Q214 70 212 150 Q212 196 190 212 L110 212 Q88 196 88 150 Z" fill="#E23E8B" stroke="#1B1B2F" stroke-width="7"/>
+            <path d="M150 66 Q138 110 150 150 Q162 110 150 66 Z" fill="#FFD23F" stroke="#1B1B2F" stroke-width="4"/>
+            <path d="M100 128 Q122 106 146 130 Q124 160 100 128 Z M154 130 Q178 106 200 128 Q176 160 154 130 Z" fill="#FFD23F" stroke="#1B1B2F" stroke-width="5"/>
+            <ellipse cx="124" cy="132" rx="11" ry="12" fill="#fff" stroke="#1B1B2F" stroke-width="4"/>
+            <ellipse cx="176" cy="132" rx="11" ry="12" fill="#fff" stroke="#1B1B2F" stroke-width="4"/>
+            <circle cx="128" cy="134" r="5" fill="#1B1B2F"/><circle cx="180" cy="134" r="5" fill="#1B1B2F"/>
+            <ellipse cx="150" cy="182" rx="24" ry="18" fill="#FFD23F" stroke="#1B1B2F" stroke-width="5"/>
+            <path d="M134 182 Q150 198 166 182 Z" fill="#7A2230" stroke="#1B1B2F" stroke-width="4"/>
+            <path d="M200 96 L232 70 M212 110 L250 98" stroke="#1B1B2F" stroke-width="6" stroke-linecap="round"/>
+          </g>
+        </svg>
+      </div>
+      <div class="body">
+        <span class="tag">Opción 10 · sin voz</span>
+        <h2>El Chismoso Enmascarado</h2>
+        <p class="who">Luchador con máscara rosa y amarilla (colores de la marca) que anuncia cada chisme como una pelea estelar.</p>
+        <dl>
+          <dt>Personalidad</dt><dd>Gritón, teatral, convierte cada historia en "a dos de tres caídas".</dd>
+          <dt>Voz sugerida</dt><dd>40 años, potente, ronca, de presentador de arena, alarga las vocales.</dd>
+          <dt>Entrada</dt><dd>"¡En esta esquinaaa… el chisme más pesado de la historiaaa!"</dd>
+          <dt>Salida</dt><dd>"¡Y gana por nocaut… el chisme!"</dd>
+        </dl>
+        <div class="pc">
+          <div><strong>A favor</strong>Muy mexicano, muy visual y muy enérgico. La máscara con los colores de la marca la vuelve propia.</div>
+          <div><strong>En contra</strong>La energía de pelea no le queda a historias tristes o delicadas.</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 11. EL BUSTO DEL MUSEO -->
+    <article class="card">
+      <div class="art">
+        <svg viewBox="0 0 300 300" role="img" aria-label="Busto de mármol de un romano con un ojo guiñando">
+          <circle cx="150" cy="150" r="138" fill="#E23E8B" stroke="#1B1B2F" stroke-width="7"/>
+          <clipPath id="c11"><circle cx="150" cy="150" r="134"/></clipPath>
+          <g clip-path="url(#c11)">
+            <rect x="96" y="250" width="108" height="60" fill="#C9A27A" stroke="#1B1B2F" stroke-width="7"/>
+            <path d="M80 254 Q86 206 150 200 Q214 206 220 254 Z" fill="#E9E6E0" stroke="#1B1B2F" stroke-width="7"/>
+            <path d="M110 222 Q150 240 190 222" fill="none" stroke="#B9B4AA" stroke-width="5"/>
+            <ellipse cx="150" cy="138" rx="56" ry="66" fill="#F4F1EA" stroke="#1B1B2F" stroke-width="7"/>
+            <path d="M94 116 Q92 70 150 66 Q208 70 206 116" fill="none" stroke="#1B1B2F" stroke-width="6"/>
+            <g fill="#E9E6E0" stroke="#1B1B2F" stroke-width="4">
+              <circle cx="104" cy="96" r="12"/><circle cx="122" cy="80" r="12"/><circle cx="142" cy="72" r="12"/><circle cx="162" cy="72" r="12"/><circle cx="182" cy="80" r="12"/><circle cx="198" cy="96" r="12"/>
+            </g>
+            <path d="M96 92 Q150 54 204 92" fill="none" stroke="#2E9E5B" stroke-width="8"/>
+            <ellipse cx="126" cy="136" rx="12" ry="13" fill="#fff" stroke="#1B1B2F" stroke-width="5"/>
+            <circle cx="130" cy="138" r="5" fill="#1B1B2F"/>
+            <path d="M162 138 Q174 130 186 138" fill="none" stroke="#1B1B2F" stroke-width="6" stroke-linecap="round"/>
+            <path d="M144 150 Q138 166 150 168" fill="none" stroke="#B9B4AA" stroke-width="5"/>
+            <path d="M128 184 Q152 198 174 180" fill="none" stroke="#1B1B2F" stroke-width="5" stroke-linecap="round"/>
+            <path d="M190 172 L204 178 M196 160 L212 160" stroke="#B9B4AA" stroke-width="4" stroke-linecap="round"/>
+          </g>
+        </svg>
+      </div>
+      <div class="body">
+        <span class="tag">Opción 11 · sin voz</span>
+        <h2>El Busto</h2>
+        <p class="who">Estatua romana de mármol que lleva 2,000 años en museos escuchando a guías y visitantes, y por fin habla.</p>
+        <dl>
+          <dt>Personalidad</dt><dd>Elegante y dramático, pero no aguanta el chisme. Guiña el ojo.</dd>
+          <dt>Voz sugerida</dt><dd>55 años, grave, teatral, de actor de teatro clásico que se vuelve chismoso.</dd>
+          <dt>Entrada</dt><dd>"Dos mil años callado… y hoy no me aguanto."</dd>
+          <dt>Salida</dt><dd>"Y yo… yo no dije nada. Soy de piedra."</dd>
+        </dl>
+        <div class="pc">
+          <div><strong>A favor</strong>Conecta con el formato de pinturas o museo (EP05) y con Roma, que rinde mucho en inglés.</div>
+          <div><strong>En contra</strong>Una estatua se mueve poco; hay que animarle bien la cara.</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 12. EL CANTINERO -->
+    <article class="card">
+      <div class="art">
+        <svg viewBox="0 0 300 300" role="img" aria-label="Cantinero con trapo al hombro limpiando un tarro">
+          <circle cx="150" cy="150" r="138" fill="#E23E8B" stroke="#1B1B2F" stroke-width="7"/>
+          <clipPath id="c12"><circle cx="150" cy="150" r="134"/></clipPath>
+          <g clip-path="url(#c12)">
+            <path d="M70 300 Q80 222 150 216 Q220 222 230 300 Z" fill="#FFFFFF" stroke="#1B1B2F" stroke-width="7"/>
+            <path d="M112 226 L112 300 M188 226 L188 300" stroke="#1B1B2F" stroke-width="8"/>
+            <path d="M190 226 Q210 236 214 270 L196 270 Q194 244 182 232 Z" fill="#D6402F" stroke="#1B1B2F" stroke-width="5"/>
+            <ellipse cx="150" cy="146" rx="58" ry="66" fill="#C98F62" stroke="#1B1B2F" stroke-width="7"/>
+            <path d="M92 118 Q96 72 150 70 Q204 72 208 118 Q194 96 150 100 Q106 96 92 118 Z" fill="#8A8A8A" stroke="#1B1B2F" stroke-width="5"/>
+            <path d="M118 96 Q150 84 182 96" fill="none" stroke="#1B1B2F" stroke-width="3"/>
+            <ellipse cx="126" cy="142" rx="11" ry="10" fill="#fff" stroke="#1B1B2F" stroke-width="5"/>
+            <ellipse cx="174" cy="142" rx="11" ry="10" fill="#fff" stroke="#1B1B2F" stroke-width="5"/>
+            <circle cx="122" cy="143" r="5" fill="#1B1B2F"/><circle cx="170" cy="143" r="5" fill="#1B1B2F"/>
+            <path d="M110 124 L140 130 M160 130 L190 124" stroke="#1B1B2F" stroke-width="6" stroke-linecap="round"/>
+            <path d="M110 172 Q150 160 190 172 Q190 194 150 198 Q110 194 110 172 Z" fill="#8A8A8A" stroke="#1B1B2F" stroke-width="5"/>
+            <path d="M136 182 Q150 190 164 182" fill="none" stroke="#1B1B2F" stroke-width="4" stroke-linecap="round"/>
+            <g transform="translate(58 214)">
+              <rect x="-20" y="-34" width="40" height="56" rx="6" fill="#F2B33D" fill-opacity=".9" stroke="#1B1B2F" stroke-width="6"/>
+              <path d="M20 -20 Q38 -16 36 0 Q34 12 20 10" fill="none" stroke="#1B1B2F" stroke-width="6"/>
+              <ellipse cx="0" cy="-36" rx="22" ry="8" fill="#fff" stroke="#1B1B2F" stroke-width="4"/>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div class="body">
+        <span class="tag">Opción 12 · sin voz</span>
+        <h2>Don Chema, el Cantinero</h2>
+        <p class="who">Cantinero de "La Historia", la cantina donde todos los personajes famosos han ido a desahogarse.</p>
+        <dl>
+          <dt>Personalidad</dt><dd>Señor de pocas palabras que de repente suelta la bomba. Limpia el tarro mientras cuenta.</dd>
+          <dt>Voz sugerida</dt><dd>60 años, grave y ronca, calmada, con remates secos y graciosos.</dd>
+          <dt>Entrada</dt><dd>"Aquí en mi barra se sentó Napoleón… y me contó cada cosa."</dd>
+          <dt>Salida</dt><dd>"Pero yo no te dije nada, ¿eh?"</dd>
+        </dl>
+        <div class="pc">
+          <div><strong>A favor</strong>Contraste gracioso entre su calma y lo escandaloso del chisme; escenario fijo y acogedor.</div>
+          <div><strong>En contra</strong>Cantina y alcohol pueden limitar el público menor de edad; mejor que sea una fonda o cafetería.</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 13. EL CARTERO -->
+    <article class="card">
+      <div class="art">
+        <svg viewBox="0 0 300 300" role="img" aria-label="Cartero con gorra y una carta abierta">
+          <circle cx="150" cy="150" r="138" fill="#E23E8B" stroke="#1B1B2F" stroke-width="7"/>
+          <clipPath id="c13"><circle cx="150" cy="150" r="134"/></clipPath>
+          <g clip-path="url(#c13)">
+            <path d="M66 300 Q76 222 150 216 Q224 222 234 300 Z" fill="#2F6FD6" stroke="#1B1B2F" stroke-width="7"/>
+            <path d="M92 230 L210 300" stroke="#7A4E2D" stroke-width="12"/>
+            <ellipse cx="150" cy="148" rx="56" ry="64" fill="#F2C29B" stroke="#1B1B2F" stroke-width="7"/>
+            <path d="M92 108 Q92 66 150 64 Q208 66 208 108 Z" fill="#2F6FD6" stroke="#1B1B2F" stroke-width="7"/>
+            <path d="M88 108 L216 108 Q218 120 204 122 L96 122 Z" fill="#1B1B2F"/>
+            <rect x="138" y="76" width="24" height="18" rx="3" fill="#FFD23F" stroke="#1B1B2F" stroke-width="4"/>
+            <ellipse cx="128" cy="148" rx="12" ry="14" fill="#fff" stroke="#1B1B2F" stroke-width="5"/>
+            <ellipse cx="172" cy="148" rx="12" ry="14" fill="#fff" stroke="#1B1B2F" stroke-width="5"/>
+            <circle cx="122" cy="154" r="6" fill="#1B1B2F"/><circle cx="166" cy="154" r="6" fill="#1B1B2F"/>
+            <path d="M112 132 Q128 124 142 132 M158 132 Q172 124 188 132" fill="none" stroke="#1B1B2F" stroke-width="5" stroke-linecap="round"/>
+            <ellipse cx="150" cy="190" rx="10" ry="12" fill="#7A2230" stroke="#1B1B2F" stroke-width="5"/>
+            <g transform="translate(96 232) rotate(-12)">
+              <rect x="-46" y="-30" width="92" height="60" fill="#FFF8EC" stroke="#1B1B2F" stroke-width="6"/>
+              <path d="M-46 -30 L0 6 L46 -30" fill="none" stroke="#1B1B2F" stroke-width="5"/>
+              <circle cx="0" cy="12" r="10" fill="#D6402F" stroke="#1B1B2F" stroke-width="4"/>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div class="body">
+        <span class="tag">Opción 13 · sin voz</span>
+        <h2>El Cartero</h2>
+        <p class="who">Cartero de la historia que "sin querer" lee las cartas que entrega: cartas de amor, de traición y de guerra.</p>
+        <dl>
+          <dt>Personalidad</dt><dd>Nervioso y culpable, pero no puede evitar abrir el sobre.</dd>
+          <dt>Voz sugerida</dt><dd>35 años, voz media, nerviosa y emocionada, susurra "¡no le digas a nadie!".</dd>
+          <dt>Entrada</dt><dd>"Yo no debería leer esto… pero mira lo que le escribió."</dd>
+          <dt>Salida</dt><dd>"Ya, ya, la cierro… ¡qué chisme!"</dd>
+        </dl>
+        <div class="pc">
+          <div><strong>A favor</strong>Muchas historias reales están en cartas (Napoleón y Josefina, por ejemplo); la carta puede mostrar la fuente.</div>
+          <div><strong>En contra</strong>Menos llamativo visualmente que una calavera o un luchador.</div>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="how" id="mas2">
+    <p><strong>Tercera tanda (sin voz).</strong> Ocho personajes más, todos hombres, con ideas distintas a las anteriores.</p>
+  </div>
+
+  <div class="grid">
+
+    <!-- 14. EL GATO FISGÓN -->
+    <article class="card">
+      <div class="art">
+        <svg viewBox="0 0 300 300" role="img" aria-label="Gato callejero naranja asomado en un tejado de noche">
+          <circle cx="150" cy="150" r="138" fill="#27305C" stroke="#1B1B2F" stroke-width="7"/>
+          <clipPath id="c14"><circle cx="150" cy="150" r="134"/></clipPath>
+          <g clip-path="url(#c14)">
+            <circle cx="70" cy="70" r="20" fill="#FFF6D8"/>
+            <path d="M0 230 L80 200 L160 230 L240 200 L300 222 V300 H0 Z" fill="#D6402F" stroke="#1B1B2F" stroke-width="7" stroke-linejoin="round"/>
+            <path d="M20 250 L60 236 M120 248 L160 236 M200 236 L240 222" stroke="#1B1B2F" stroke-width="5" opacity=".4"/>
+            <path d="M226 210 Q262 180 250 130" fill="none" stroke="#F2913D" stroke-width="16" stroke-linecap="round"/>
+            <path d="M226 210 Q262 180 250 130" fill="none" stroke="#1B1B2F" stroke-width="4" stroke-dasharray="3 14" stroke-linecap="round"/>
+            <path d="M96 222 Q86 150 108 120 L100 74 L136 102 Q150 98 166 102 L202 74 L194 120 Q216 150 206 222 Z" fill="#F2913D" stroke="#1B1B2F" stroke-width="7" stroke-linejoin="round"/>
+            <path d="M110 86 L130 106 M190 86 L172 106" stroke="#FFC9D9" stroke-width="7"/>
+            <path d="M118 140 Q130 128 142 140 M160 140 Q172 128 184 140" fill="none" stroke="#1B1B2F" stroke-width="4"/>
+            <ellipse cx="130" cy="150" rx="13" ry="15" fill="#B6F25E" stroke="#1B1B2F" stroke-width="5"/>
+            <ellipse cx="172" cy="150" rx="13" ry="15" fill="#B6F25E" stroke="#1B1B2F" stroke-width="5"/>
+            <ellipse cx="132" cy="150" rx="3" ry="11" fill="#1B1B2F"/><ellipse cx="174" cy="150" rx="3" ry="11" fill="#1B1B2F"/>
+            <path d="M144 172 L151 180 L158 172 Z" fill="#E23E8B" stroke="#1B1B2F" stroke-width="3"/>
+            <path d="M151 180 Q142 192 134 186 M151 180 Q160 192 168 186" fill="none" stroke="#1B1B2F" stroke-width="4" stroke-linecap="round"/>
+            <path d="M118 176 L84 168 M118 184 L84 188 M184 176 L218 168 M184 184 L218 188" stroke="#1B1B2F" stroke-width="3"/>
+            <path d="M104 116 L110 100 M190 116 L196 100" stroke="#1B1B2F" stroke-width="4"/>
+          </g>
+        </svg>
+      </div>
+      <div class="body">
+        <span class="tag">Opción 14 · sin voz</span>
+        <h2>El Gato Fisgón</h2>
+        <p class="who">Gato callejero de los tejados que se asoma por las ventanas de los palacios. Tiene siete vidas, así que lleva siglos viendo de todo.</p>
+        <dl>
+          <dt>Personalidad</dt><dd>Presumido, indiferente… hasta que suelta el chisme. Se lame la pata antes de contarlo.</dd>
+          <dt>Voz sugerida</dt><dd>40 años, suave, arrastrada y sarcástica, de galán de barrio.</dd>
+          <dt>Entrada</dt><dd>"Miau… digo, ¿qué tal? En mi tercera vida vi esto…"</dd>
+          <dt>Salida</dt><dd>"La curiosidad no mató al gato… lo hizo chismoso."</dd>
+        </dl>
+        <div class="pc">
+          <div><strong>A favor</strong>Lo de las "siete vidas" justifica cualquier época, y los gatos funcionan muy bien en redes.</div>
+          <div><strong>En contra</strong>Gato animado es un personaje muy común; necesita un rasgo propio (cicatriz, collar con medalla).</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 15. EL BUFÓN -->
+    <article class="card">
+      <div class="art">
+        <svg viewBox="0 0 300 300" role="img" aria-label="Bufón de corte con gorro de cascabeles rosa y amarillo">
+          <circle cx="150" cy="150" r="138" fill="#E23E8B" stroke="#1B1B2F" stroke-width="7"/>
+          <clipPath id="c15"><circle cx="150" cy="150" r="134"/></clipPath>
+          <g clip-path="url(#c15)">
+            <path d="M66 300 Q78 222 150 216 Q222 222 234 300 Z" fill="#FFD23F" stroke="#1B1B2F" stroke-width="7"/>
+            <path d="M150 216 V300" stroke="#1B1B2F" stroke-width="6"/>
+            <path d="M150 216 V300 L234 300 Q222 222 150 216 Z" fill="#2F6FD6" stroke="#1B1B2F" stroke-width="7"/>
+            <path d="M96 222 L114 240 L132 222 L150 240 L168 222 L186 240 L204 222" fill="#fff" stroke="#1B1B2F" stroke-width="5" stroke-linejoin="round"/>
+            <ellipse cx="150" cy="152" rx="54" ry="62" fill="#F2C29B" stroke="#1B1B2F" stroke-width="7"/>
+            <path d="M96 128 Q70 70 40 92 Q52 112 60 100 M96 128 Q118 40 150 42 Q182 40 204 128 M204 128 Q230 70 260 92 Q248 112 240 100" fill="none" stroke="#1B1B2F" stroke-width="7"/>
+            <path d="M96 130 Q66 66 40 92 Q74 86 96 130 Z" fill="#E23E8B" stroke="#1B1B2F" stroke-width="6"/>
+            <path d="M96 130 Q116 44 150 42 Q184 44 204 130 Q150 106 96 130 Z" fill="#FFD23F" stroke="#1B1B2F" stroke-width="6"/>
+            <path d="M204 130 Q234 66 260 92 Q226 86 204 130 Z" fill="#2F6FD6" stroke="#1B1B2F" stroke-width="6"/>
+            <circle cx="40" cy="92" r="10" fill="#F2B33D" stroke="#1B1B2F" stroke-width="4"/>
+            <circle cx="150" cy="40" r="10" fill="#F2B33D" stroke="#1B1B2F" stroke-width="4"/>
+            <circle cx="260" cy="92" r="10" fill="#F2B33D" stroke="#1B1B2F" stroke-width="4"/>
+            <ellipse cx="128" cy="150" rx="11" ry="13" fill="#fff" stroke="#1B1B2F" stroke-width="5"/>
+            <ellipse cx="172" cy="150" rx="11" ry="13" fill="#fff" stroke="#1B1B2F" stroke-width="5"/>
+            <circle cx="131" cy="150" r="5" fill="#1B1B2F"/><circle cx="175" cy="150" r="5" fill="#1B1B2F"/>
+            <path d="M116 132 Q128 122 140 132 M160 132 Q172 122 184 132" fill="none" stroke="#1B1B2F" stroke-width="5" stroke-linecap="round"/>
+            <circle cx="114" cy="176" r="8" fill="#F08A7A"/><circle cx="186" cy="176" r="8" fill="#F08A7A"/>
+            <path d="M120 182 Q150 214 180 182 Z" fill="#7A2230" stroke="#1B1B2F" stroke-width="5"/>
+          </g>
+        </svg>
+      </div>
+      <div class="body">
+        <span class="tag">Opción 15 · sin voz</span>
+        <h2>El Bufón</h2>
+        <p class="who">Bufón de la corte: el único que podía burlarse del rey en su cara. Trabajó en todas las cortes de la historia.</p>
+        <dl>
+          <dt>Personalidad</dt><dd>Burlón, rápido, hace chistes de los poderosos. Suenan sus cascabeles cuando llega la parte buena.</dd>
+          <dt>Voz sugerida</dt><dd>35 años, aguda y juguetona, cambia de tono imitando a los personajes.</dd>
+          <dt>Entrada</dt><dd>"¡Majestad! Ay, perdón, eras tú… Siéntate, que hoy se burlan del rey."</dd>
+          <dt>Salida</dt><dd>"¡Y el rey ni se enteró! ¿A poco no sabías este chisme?"</dd>
+        </dl>
+        <div class="pc">
+          <div><strong>A favor</strong>Perfecto para chismes de reyes y cortes, que rinden mucho; puede imitar voces de otros personajes.</div>
+          <div><strong>En contra</strong>Para la gente joven, un bufón medieval puede verse anticuado.</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 16. EL CORRIDISTA -->
+    <article class="card">
+      <div class="art">
+        <svg viewBox="0 0 300 300" role="img" aria-label="Cantante de corridos con sombrero de charro y guitarra">
+          <circle cx="150" cy="150" r="138" fill="#E23E8B" stroke="#1B1B2F" stroke-width="7"/>
+          <clipPath id="c16"><circle cx="150" cy="150" r="134"/></clipPath>
+          <g clip-path="url(#c16)">
+            <path d="M66 300 Q78 224 150 218 Q222 224 234 300 Z" fill="#1B1B2F"/>
+            <path d="M116 226 Q150 246 184 226" fill="none" stroke="#F2B33D" stroke-width="6"/>
+            <path d="M130 226 L150 250 L170 226" fill="#D6402F" stroke="#1B1B2F" stroke-width="4"/>
+            <ellipse cx="150" cy="156" rx="52" ry="60" fill="#C98F62" stroke="#1B1B2F" stroke-width="7"/>
+            <ellipse cx="150" cy="104" rx="128" ry="22" fill="#1B1B2F" stroke="#1B1B2F" stroke-width="5"/>
+            <path d="M24 104 Q150 140 276 104" fill="none" stroke="#F2B33D" stroke-width="5"/>
+            <path d="M104 102 Q106 46 150 44 Q194 46 196 102 Z" fill="#1B1B2F"/>
+            <path d="M108 86 Q150 96 192 86" fill="none" stroke="#F2B33D" stroke-width="6"/>
+            <ellipse cx="130" cy="152" rx="10" ry="12" fill="#fff" stroke="#1B1B2F" stroke-width="5"/>
+            <ellipse cx="170" cy="152" rx="10" ry="12" fill="#fff" stroke="#1B1B2F" stroke-width="5"/>
+            <circle cx="132" cy="154" r="5" fill="#1B1B2F"/><circle cx="172" cy="154" r="5" fill="#1B1B2F"/>
+            <path d="M112 182 Q130 170 150 180 Q170 170 188 182 Q170 176 150 186 Q130 176 112 182 Z" fill="#1B1B2F"/>
+            <ellipse cx="150" cy="198" rx="14" ry="10" fill="#7A2230" stroke="#1B1B2F" stroke-width="4"/>
+            <g transform="translate(220 230) rotate(-35)">
+              <rect x="-6" y="-96" width="12" height="80" fill="#7A4E2D" stroke="#1B1B2F" stroke-width="4"/>
+              <path d="M-26 -10 Q-34 -26 -18 -30 Q0 -34 18 -30 Q34 -26 26 -10 Q40 8 26 30 Q0 44 -26 30 Q-40 8 -26 -10 Z" fill="#E8A55A" stroke="#1B1B2F" stroke-width="6"/>
+              <circle cy="4" r="9" fill="#1B1B2F"/>
+            </g>
+            <path d="M40 150 l6 -18 l6 18 M44 132 v-16 l10 -4" fill="none" stroke="#FFD23F" stroke-width="5" stroke-linecap="round"/>
+          </g>
+        </svg>
+      </div>
+      <div class="body">
+        <span class="tag">Opción 16 · sin voz</span>
+        <h2>El Corridista</h2>
+        <p class="who">Cantante de corridos con guitarra y sombrero de charro. En México, los corridos eran el "noticiero" que llevaba los chismes de pueblo en pueblo.</p>
+        <dl>
+          <dt>Personalidad</dt><dd>Dramático y orgulloso; empieza cada chisme como un corrido y luego lo cuenta hablado.</dd>
+          <dt>Voz sugerida</dt><dd>40 años, grave y sonora, con entonación de cantante de ranchera.</dd>
+          <dt>Entrada</dt><dd>"Voy a contarles, señores, lo que pasó en…" (con un rasgueo de guitarra)</dd>
+          <dt>Salida</dt><dd>"Ya con esta me despido… ¿a poco no sabías este chisme?"</dd>
+        </dl>
+        <div class="pc">
+          <div><strong>A favor</strong>Tiene una base cultural real (los corridos sí llevaban noticias), su entrada y salida son fórmulas conocidas, y la guitarra es un sello sonoro.</div>
+          <div><strong>En contra</strong>Hay que evitar que se asocie con narcocorridos: mantener el estilo clásico, de la Revolución.</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 17. CHISMATRÓN 3000 -->
+    <article class="card">
+      <div class="art">
+        <svg viewBox="0 0 300 300" role="img" aria-label="Robot retro con antena y cinta grabadora en el pecho">
+          <circle cx="150" cy="150" r="138" fill="#E23E8B" stroke="#1B1B2F" stroke-width="7"/>
+          <clipPath id="c17"><circle cx="150" cy="150" r="134"/></clipPath>
+          <g clip-path="url(#c17)">
+            <rect x="80" y="210" width="140" height="110" rx="16" fill="#C9CED6" stroke="#1B1B2F" stroke-width="7"/>
+            <rect x="104" y="226" width="92" height="44" rx="8" fill="#1B1B2F"/>
+            <circle cx="128" cy="248" r="14" fill="#F4F1EA" stroke="#FFD23F" stroke-width="4"/>
+            <circle cx="172" cy="248" r="14" fill="#F4F1EA" stroke="#FFD23F" stroke-width="4"/>
+            <path d="M128 248 h0.1 M172 248 h0.1" stroke="#1B1B2F" stroke-width="8" stroke-linecap="round"/>
+            <rect x="140" y="196" width="20" height="18" fill="#8C9096" stroke="#1B1B2F" stroke-width="5"/>
+            <rect x="88" y="84" width="124" height="114" rx="20" fill="#C9CED6" stroke="#1B1B2F" stroke-width="7"/>
+            <path d="M150 84 V54" stroke="#1B1B2F" stroke-width="6"/>
+            <circle cx="150" cy="48" r="10" fill="#FF3347" stroke="#1B1B2F" stroke-width="5"/>
+            <rect x="76" y="122" width="14" height="36" rx="5" fill="#2F6FD6" stroke="#1B1B2F" stroke-width="5"/>
+            <rect x="210" y="122" width="14" height="36" rx="5" fill="#2F6FD6" stroke="#1B1B2F" stroke-width="5"/>
+            <rect x="104" y="108" width="92" height="44" rx="10" fill="#1B1B2F"/>
+            <circle cx="128" cy="130" r="13" fill="#B6F25E"/><circle cx="172" cy="130" r="13" fill="#B6F25E"/>
+            <circle cx="132" cy="128" r="5" fill="#1B1B2F"/><circle cx="176" cy="128" r="5" fill="#1B1B2F"/>
+            <rect x="114" y="164" width="72" height="20" rx="6" fill="#1B1B2F"/>
+            <path d="M118 174 h8 l4 -6 l6 12 l6 -12 l6 12 l6 -12 l6 12 l6 -6 h10" fill="none" stroke="#B6F25E" stroke-width="3" stroke-linejoin="round"/>
+          </g>
+        </svg>
+      </div>
+      <div class="body">
+        <span class="tag">Opción 17 · sin voz</span>
+        <h2>Chismatrón 3000</h2>
+        <p class="who">Robot archivista del futuro que grabó toda la historia en su cinta y ahora "reproduce los archivos clasificados".</p>
+        <dl>
+          <dt>Personalidad</dt><dd>Formal y robótico, pero se emociona y "se descompone" cuando el chisme está bueno.</dd>
+          <dt>Voz sugerida</dt><dd>35 años, clara y rítmica, que alterna una voz formal de máquina con gritos humanos de emoción.</dd>
+          <dt>Entrada</dt><dd>"Reproduciendo archivo clasificado… ¡ay, este está buenísimo!"</dd>
+          <dt>Salida</dt><dd>"Archivo guardado en la memoria: ¿a poco no sabías este chisme?"</dd>
+        </dl>
+        <div class="pc">
+          <div><strong>A favor</strong>Contraste gracioso entre lo serio y lo chismoso; la cinta "rebobinando" es una transición natural entre escenas.</div>
+          <div><strong>En contra</strong>Una voz robótica es justo lo que rechazaste antes: debe sonar 100 % humana, solo actuando de robot.</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 18. EL CAPITÁN RUMOR -->
+    <article class="card">
+      <div class="art">
+        <svg viewBox="0 0 300 300" role="img" aria-label="Capitán pirata con parche y sombrero tricornio">
+          <circle cx="150" cy="150" r="138" fill="#E23E8B" stroke="#1B1B2F" stroke-width="7"/>
+          <clipPath id="c18"><circle cx="150" cy="150" r="134"/></clipPath>
+          <g clip-path="url(#c18)">
+            <path d="M0 250 Q40 236 80 250 T160 250 T240 250 T320 250 V300 H0 Z" fill="#3FA7D6" stroke="#1B1B2F" stroke-width="6"/>
+            <path d="M70 300 Q80 224 150 218 Q220 224 230 300 Z" fill="#D6402F" stroke="#1B1B2F" stroke-width="7"/>
+            <path d="M110 226 L150 262 L190 226" fill="#fff" stroke="#1B1B2F" stroke-width="5"/>
+            <ellipse cx="150" cy="152" rx="56" ry="62" fill="#E8B48A" stroke="#1B1B2F" stroke-width="7"/>
+            <path d="M64 110 Q150 50 236 110 Q200 92 150 96 Q100 92 64 110 Z" fill="#1B1B2F" stroke="#1B1B2F" stroke-width="6" stroke-linejoin="round"/>
+            <path d="M100 96 Q150 30 200 96 Z" fill="#1B1B2F"/>
+            <path d="M82 104 Q150 70 218 104" fill="none" stroke="#F2B33D" stroke-width="5"/>
+            <g transform="translate(150 70)"><circle r="10" fill="#fff" stroke="#1B1B2F" stroke-width="3"/><path d="M-12 12 L12 -2 M12 12 L-12 -2" stroke="#fff" stroke-width="4"/></g>
+            <path d="M98 128 L204 150" stroke="#1B1B2F" stroke-width="4"/>
+            <ellipse cx="172" cy="148" rx="16" ry="14" fill="#1B1B2F"/>
+            <ellipse cx="128" cy="148" rx="11" ry="13" fill="#fff" stroke="#1B1B2F" stroke-width="5"/>
+            <circle cx="131" cy="150" r="5" fill="#1B1B2F"/>
+            <path d="M114 130 Q128 122 142 132" fill="none" stroke="#1B1B2F" stroke-width="5" stroke-linecap="round"/>
+            <path d="M108 186 Q150 232 192 186 Q170 196 150 192 Q130 196 108 186 Z" fill="#6B4A2E" stroke="#1B1B2F" stroke-width="5"/>
+            <path d="M134 188 Q150 200 166 188" fill="#7A2230" stroke="#1B1B2F" stroke-width="4"/>
+            <circle cx="96" cy="162" r="7" fill="none" stroke="#F2B33D" stroke-width="4"/>
+          </g>
+        </svg>
+      </div>
+      <div class="body">
+        <span class="tag">Opción 18 · sin voz</span>
+        <h2>El Capitán Rumor</h2>
+        <p class="who">Capitán pirata que atracó en todos los puertos del mundo. Su tesoro no es oro: son secretos.</p>
+        <dl>
+          <dt>Personalidad</dt><dd>Aventurero y exagerado, presume que "lo escuchó en una taberna de Sevilla".</dd>
+          <dt>Voz sugerida</dt><dd>50 años, ronca y potente, con risa de pirata y mucha actitud.</dd>
+          <dt>Entrada</dt><dd>"¡Arr! En el puerto de… me contaron un secreto que vale más que el oro."</dd>
+          <dt>Salida</dt><dd>"¡Ese chisme ya es tuyo, marinero!"</dd>
+        </dl>
+        <div class="pc">
+          <div><strong>A favor</strong>Justifica chismes de todo el mundo (cada puerto, un país); muy aventurero y llamativo.</div>
+          <div><strong>En contra</strong>El estereotipo pirata ("¡arr!") puede cansar; usarlo poco.</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 19. EL FARAÓN DESPIERTO -->
+    <article class="card">
+      <div class="art">
+        <svg viewBox="0 0 300 300" role="img" aria-label="Momia faraón con tocado azul y dorado y vendas">
+          <circle cx="150" cy="150" r="138" fill="#E23E8B" stroke="#1B1B2F" stroke-width="7"/>
+          <clipPath id="c19"><circle cx="150" cy="150" r="134"/></clipPath>
+          <g clip-path="url(#c19)">
+            <path d="M70 300 Q80 222 150 216 Q220 222 230 300 Z" fill="#F4F1EA" stroke="#1B1B2F" stroke-width="7"/>
+            <path d="M84 250 L216 236 M78 276 L222 262" stroke="#C9B79C" stroke-width="6"/>
+            <path d="M84 216 L84 108 Q90 60 150 56 Q210 60 216 108 L216 216 L186 216 L186 120 L114 120 L114 216 Z" fill="#2F6FD6" stroke="#1B1B2F" stroke-width="7"/>
+            <path d="M84 132 H114 M84 156 H114 M84 180 H114 M186 132 H216 M186 156 H216 M186 180 H216" stroke="#F2B33D" stroke-width="10"/>
+            <rect x="110" y="96" width="80" height="120" rx="30" fill="#F4F1EA" stroke="#1B1B2F" stroke-width="7"/>
+            <path d="M110 124 L190 116 M112 196 L188 188" stroke="#C9B79C" stroke-width="6"/>
+            <path d="M110 82 Q150 70 190 82 L184 100 L116 100 Z" fill="#F2B33D" stroke="#1B1B2F" stroke-width="6"/>
+            <path d="M150 76 Q144 62 150 52 Q160 60 154 76" fill="#F2B33D" stroke="#1B1B2F" stroke-width="4"/>
+            <ellipse cx="132" cy="146" rx="11" ry="12" fill="#fff" stroke="#1B1B2F" stroke-width="5"/>
+            <circle cx="135" cy="148" r="5" fill="#1B1B2F"/>
+            <ellipse cx="170" cy="146" rx="12" ry="14" fill="#fff" stroke="#1B1B2F" stroke-width="5"/>
+            <circle cx="173" cy="146" r="6" fill="#1B1B2F"/>
+            <path d="M128 172 Q150 186 172 170" fill="none" stroke="#1B1B2F" stroke-width="5" stroke-linecap="round"/>
+            <path d="M146 216 V244 Q150 252 154 244 V216" fill="#2F6FD6" stroke="#1B1B2F" stroke-width="4"/>
+            <path d="M236 70 l4 -10 l4 10 M240 60 v-4" stroke="#FFD23F" stroke-width="4" stroke-linecap="round"/>
+            <text x="250" y="130" font-family="Arial Black" font-size="22" fill="#FFD23F" stroke="#1B1B2F" stroke-width="1.5">Z?</text>
+          </g>
+        </svg>
+      </div>
+      <div class="body">
+        <span class="tag">Opción 19 · sin voz</span>
+        <h2>El Faraón Despierto</h2>
+        <p class="who">Faraón que acaba de despertar de su momia después de 3,000 años y se pone al corriente de todos los chismes que se perdió.</p>
+        <dl>
+          <dt>Personalidad</dt><dd>Majestuoso y escandalizado: "¡¿Cómo que pasó ESO mientras yo dormía?!"</dd>
+          <dt>Voz sugerida</dt><dd>55 años, grave y solemne, que se quiebra cuando se escandaliza.</dd>
+          <dt>Entrada</dt><dd>"Tres mil años dormido… ¿y me vengo a enterar de esto?"</dd>
+          <dt>Salida</dt><dd>"Ya me puedo volver a dormir… ¡con este chisme!"</dd>
+        </dl>
+        <div class="pc">
+          <div><strong>A favor</strong>Invierte el formato: él no cuenta el chisme, se lo cuentan y reacciona, igual que el espectador. Egipto rinde muy bien.</div>
+          <div><strong>En contra</strong>Necesita a alguien que le cuente (un narrador o un segundo personaje).</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 20. EL TAXISTA -->
+    <article class="card">
+      <div class="art">
+        <svg viewBox="0 0 300 300" role="img" aria-label="Taxista con lentes de sol, gorra y volante">
+          <circle cx="150" cy="150" r="138" fill="#E23E8B" stroke="#1B1B2F" stroke-width="7"/>
+          <clipPath id="c20"><circle cx="150" cy="150" r="134"/></clipPath>
+          <g clip-path="url(#c20)">
+            <rect x="0" y="40" width="300" height="34" fill="#FFD23F" stroke="#1B1B2F" stroke-width="6"/>
+            <path d="M20 57 h20 M60 57 h20 M100 57 h20 M180 57 h20 M220 57 h20 M260 57 h20" stroke="#1B1B2F" stroke-width="10"/>
+            <path d="M70 300 Q80 222 150 216 Q220 222 230 300 Z" fill="#F4F1EA" stroke="#1B1B2F" stroke-width="7"/>
+            <path d="M120 222 L150 252 L180 222" fill="#2E9E5B" stroke="#1B1B2F" stroke-width="5"/>
+            <ellipse cx="150" cy="150" rx="58" ry="64" fill="#C98F62" stroke="#1B1B2F" stroke-width="7"/>
+            <path d="M90 124 Q92 82 150 80 Q208 82 210 124 Z" fill="#2E9E5B" stroke="#1B1B2F" stroke-width="7"/>
+            <path d="M88 124 L196 124 Q232 126 236 140 L196 138 L92 138 Z" fill="#2E9E5B" stroke="#1B1B2F" stroke-width="6"/>
+            <rect x="104" y="140" width="40" height="26" rx="10" fill="#1B1B2F"/>
+            <rect x="156" y="140" width="40" height="26" rx="10" fill="#1B1B2F"/>
+            <path d="M144 150 h12" stroke="#1B1B2F" stroke-width="6"/>
+            <path d="M112 146 l10 -2" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+            <path d="M114 186 Q150 214 186 186" fill="none" stroke="#1B1B2F" stroke-width="6" stroke-linecap="round"/>
+            <path d="M178 182 l12 -4" stroke="#1B1B2F" stroke-width="5" stroke-linecap="round"/>
+            <circle cx="150" cy="300" r="74" fill="none" stroke="#1B1B2F" stroke-width="14"/>
+            <circle cx="150" cy="300" r="74" fill="none" stroke="#5A5F6B" stroke-width="8"/>
+          </g>
+        </svg>
+      </div>
+      <div class="body">
+        <span class="tag">Opción 20 · sin voz</span>
+        <h2>El Ruletero</h2>
+        <p class="who">Taxista de toda la vida que ha llevado en su taxi a medio mundo y escucha todo por el retrovisor.</p>
+        <dl>
+          <dt>Personalidad</dt><dd>Platicador, opinador, "yo de esto sé, joven". Mira por el retrovisor mientras cuenta.</dd>
+          <dt>Voz sugerida</dt><dd>50 años, rasposa y cotidiana, muy de barrio, con mucha confianza.</dd>
+          <dt>Entrada</dt><dd>"Súbase, joven… ¿a dónde lo llevo? ¿Al año 1500? Ahí le va el chisme."</dd>
+          <dt>Salida</dt><dd>"Llegamos. Ahí le encargo… ¿a poco no sabía este chisme?"</dd>
+        </dl>
+        <div class="pc">
+          <div><strong>A favor</strong>Es el arquetipo del chismoso latinoamericano por excelencia; el "viaje en taxi" a otra época funciona como transición.</div>
+          <div><strong>En contra</strong>Muy urbano y moderno: hay que sostener la broma de que maneja por la historia.</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 21. EL RATÓN DE PALACIO -->
+    <article class="card">
+      <div class="art">
+        <svg viewBox="0 0 300 300" role="img" aria-label="Ratón gris asomándose por un agujero en la pared de un palacio">
+          <circle cx="150" cy="150" r="138" fill="#F2E3C6" stroke="#1B1B2F" stroke-width="7"/>
+          <clipPath id="c21"><circle cx="150" cy="150" r="134"/></clipPath>
+          <g clip-path="url(#c21)">
+            <path d="M0 0 H300 V300 H0 Z" fill="#E8D2A6"/>
+            <path d="M0 40 H300 M0 110 H300 M60 0 V40 M180 0 V40 M120 40 V110 M240 40 V110" stroke="#C9A27A" stroke-width="5"/>
+            <path d="M50 300 V200 Q150 100 250 200 V300 Z" fill="#1B1B2F"/>
+            <circle cx="104" cy="160" r="34" fill="#A9B4BE" stroke="#1B1B2F" stroke-width="7"/>
+            <circle cx="196" cy="160" r="34" fill="#A9B4BE" stroke="#1B1B2F" stroke-width="7"/>
+            <circle cx="104" cy="160" r="18" fill="#F7B6C8"/><circle cx="196" cy="160" r="18" fill="#F7B6C8"/>
+            <path d="M96 300 Q90 210 150 190 Q210 210 204 300 Z" fill="#A9B4BE" stroke="#1B1B2F" stroke-width="7"/>
+            <ellipse cx="132" cy="226" rx="12" ry="14" fill="#fff" stroke="#1B1B2F" stroke-width="5"/>
+            <ellipse cx="168" cy="226" rx="12" ry="14" fill="#fff" stroke="#1B1B2F" stroke-width="5"/>
+            <circle cx="136" cy="226" r="6" fill="#1B1B2F"/><circle cx="172" cy="226" r="6" fill="#1B1B2F"/>
+            <circle cx="150" cy="252" r="9" fill="#E23E8B" stroke="#1B1B2F" stroke-width="4"/>
+            <path d="M140 254 L100 246 M140 258 L102 266 M160 254 L200 246 M160 258 L198 266" stroke="#1B1B2F" stroke-width="3"/>
+            <path d="M144 270 Q150 278 156 270" fill="none" stroke="#1B1B2F" stroke-width="4"/>
+            <rect x="140" y="272" width="8" height="10" fill="#fff" stroke="#1B1B2F" stroke-width="2"/><rect x="152" y="272" width="8" height="10" fill="#fff" stroke="#1B1B2F" stroke-width="2"/>
+            <g transform="translate(232 76)"><path d="M-22 10 L22 10 L16 -14 L6 0 L0 -18 L-6 0 L-16 -14 Z" fill="#F2B33D" stroke="#1B1B2F" stroke-width="4" stroke-linejoin="round"/></g>
+          </g>
+        </svg>
+      </div>
+      <div class="body">
+        <span class="tag">Opción 21 · sin voz</span>
+        <h2>Ratón de Palacio</h2>
+        <p class="who">Ratoncito que vive en las paredes de los palacios y escucha todos los secretos de reyes y reinas desde su agujero.</p>
+        <dl>
+          <dt>Personalidad</dt><dd>Chiquito, nervioso y emocionado; habla rapidísimo porque siempre tiene miedo de que lo cachen.</dd>
+          <dt>Voz sugerida</dt><dd>30 años, aguda pero masculina, muy rápida, susurros que se vuelven gritos.</dd>
+          <dt>Entrada</dt><dd>"¡Shhh! Desde aquí se oye todo… y hoy el rey dijo algo…"</dd>
+          <dt>Salida</dt><dd>"¡Ay, viene el gato! ¿A poco no sabías este chisme?"</dd>
+        </dl>
+        <div class="pc">
+          <div><strong>A favor</strong>Tierno y simpático (atrae a todas las edades); asomarse por el agujero se parece a la mirada del logo.</div>
+          <div><strong>En contra</strong>Se parece en el concepto a El Mirón y a Pepe el Perico (testigo escondido).</div>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <p><strong>Por qué recomiendo a El Mirón:</strong> el canal ya tiene un personaje sin nombre, los ojos que se asoman por la barda del logo. Darles voz y cuerpo hace que el logo, la tarjeta final y el anfitrión sean la misma cara, y cualquier estilo de animación lo puede dibujar. Si buscas la voz que más "grite" en el primer segundo, Don Calacas y El Merolico son las más enérgicas.</p>
+    <p>Voces generadas con ElevenLabs Voice Design (eleven_ttv_v3), español mexicano nativo, 3 previews por personaje. Script: <code>marca/anfitriones/audition.py</code>.</p>
+  </div>
+</footer>
+</body>
+</html>

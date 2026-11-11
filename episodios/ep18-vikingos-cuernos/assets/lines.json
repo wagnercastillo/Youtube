@@ -1,0 +1,65 @@
+[
+ {
+  "id": "l0",
+  "speaker": "narr",
+  "text": "¿Los vikingos usaban cascos con cuernos? ¡Mentira! Y el que se los puso… ni siquiera era vikingo.",
+  "start": 0.12,
+  "end": 5.176
+ },
+ {
+  "id": "l1",
+  "speaker": "bjorn",
+  "text": "¡Dibújamelos, compadre! Bien grandotes, para que me tengan miedo.",
+  "start": 5.288,
+  "end": 8.347
+ },
+ {
+  "id": "l2",
+  "speaker": "narr",
+  "text": "Ahorita te los borro. En mil novecientos cuarenta y tres, en Noruega, desenterraron el único casco vikingo casi completo que existe. ¿Y cuántos cuernos tenía? Cero.",
+  "start": 8.459,
+  "end": 17.146
+ },
+ {
+  "id": "l3",
+  "speaker": "bjorn",
+  "text": "¿Cero? ¿Y entonces cómo asusto a la gente?",
+  "start": 17.258,
+  "end": 19.635
+ },
+ {
+  "id": "l4",
+  "speaker": "narr",
+  "text": "Con el hacha, Björn. Además, los historiadores dicen que en plena batalla unos cuernos serían puro estorbo.",
+  "start": 19.747,
+  "end": 24.466
+ },
+ {
+  "id": "l5",
+  "speaker": "narr",
+  "text": "Ojo: sí hay cascos con cuernos en Dinamarca… pero son de la Edad de Bronce. Mil setecientos años antes de los vikingos. Y eran para ceremonias, no para pelear.",
+  "start": 24.578,
+  "end": 32.818
+ },
+ {
+  "id": "l6",
+  "speaker": "narr",
+  "text": "¿Entonces quién los hizo famosos? Un diseñador de vestuario. Alemania, mil ochocientos setenta y seis: se estrena la ópera de Wagner, y Carl Emil Doepler les pone cuernos a sus guerreros.",
+  "start": 32.93,
+  "end": 43.802
+ },
+ {
+  "id": "l7",
+  "speaker": "doepler",
+  "text": "¡Se veían divinos en el escenario! ¿Qué querían, que salieran con gorrito?",
+  "start": 43.914,
+  "end": 47.429
+ },
+ {
+  "id": "l8",
+  "speaker": "narr",
+  "text": "Y desde entonces, caricaturas, películas y disfraces… todos con cuernos. ¿Y tú? ¿También los dibujabas así?",
+  "start": 47.541,
+  "end": 53.665
+ }
+]

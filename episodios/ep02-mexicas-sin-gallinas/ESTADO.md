@@ -22,3 +22,4 @@ Pendiente: música.
 (cámara 1.1 en 45.88 s) y tarjeta final "PURO CHISME" 48.55–52 s. Duración 52 s.
 OJO: remap.py parte de audio/bak/*.html.txt (versión anterior) y BORRA estos cambios. Respaldo previo en
 audio/bak/stage_pre_endcard.html.txt; si se regenera la voz, actualizar los bak con stage.html actual antes de remap.
+Miniatura v2 (2026-11-11, episodios/miniaturas.py) SUBIDA por API con set-thumbnail.ts.

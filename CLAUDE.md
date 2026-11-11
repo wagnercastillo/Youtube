@@ -75,8 +75,9 @@ gets its own evaluation window:
 - 4:00 pm CDMX = 22:00Z (5:00 pm Ecuador): after school/work
 - 8:00 pm CDMX = 02:00Z next day (9:00 pm Ecuador): evening peak — put the strongest video of the day here
 Fill the next free slot. Re-check Studio → Analytics → "When your viewers are on YouTube" once the channel has data and
-move the slots to the real peaks. The VPN must be off when uploading (TLS gets intercepted). Custom thumbnails need the
-channel's intermediate features; until then the owner sets `renders/miniatura.jpg` by hand.
+move the slots to the real peaks. The VPN must be off when uploading (TLS gets intercepted). Thumbnails: `python -I episodios/miniaturas.py <ep>`
+builds `renders/miniatura.jpg` from a frame + big hook text (add the episode to `EPISODIOS` first), then
+`npx ts-node set-thumbnail.ts <videoId> <jpg>` (works since 2026-11-11).
 
 ## macOS (Mac mini) and nightly automation
 

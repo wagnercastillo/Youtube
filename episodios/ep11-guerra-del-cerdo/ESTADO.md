@@ -15,3 +15,4 @@ Título: ¡Casi una GUERRA por un CERDO! 🐷💥 (1859)
 PENDIENTE de subir (límite diario de subidas del canal; ver EP10).
 
 SUBIDO 2026-11-07 (cola): https://youtu.be/CVLi2mJlFSg · publishAt 2026-11-08T03:00:00Z · update ok
+Miniatura v2 (2026-11-11, episodios/miniaturas.py) SUBIDA por API con set-thumbnail.ts (reintento tras cuota diaria).

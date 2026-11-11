@@ -1,0 +1,10 @@
+# EP18-VIKINGOS-CUERNOS — "¿Los vikingos usaban cascos con CUERNOS? ¡Mentira! ⚔️" (2026-11-11)
+Formato NUEVO: CUADERNO DIBUJADO A MANO (skill hand-drawn-canvas-animation, Canvas 2D, 24 fps). Mito a lápiz / evidencia a tinta; la mano del dibujante (lápiz, goma, plumón) dibuja, tacha y BORRA los cuernos. Cambio de material por época: cuaderno → lámina riso 2 tintas (Veksø, Edad de Bronce) → cartel serigrafiado (Bayreuth 1876) → cuaderno; los cuernos cruzan cada cambio. Estructura: el dibujo discute con su dibujante. Voces nuevas: narr "caricaturista_2" DxOLfAaVHab4mkI9bGX0, bjorn "grandote_1" NSFntsD61O1v6ooHJKS6, doepler "vestuarista_2" 1azBIMobgdCEqbnJmXkY (se borraron EP15 anchor, EP16 xantipa y socrates para liberar slots).
+Pipeline: audio/audition.py → audio/gen_audio_el.py (TEMPO 1.25) → audio/gen_music_sfx.py → audio/build.py → audio/build_video.py (escribe film/cues.js + index.html)
+  → cd film && CHROME="/c/Program Files/Google/Chrome/Application/chrome.exe" node render.mjs vikingos.html --out ../renders/film → cp renders/film/vikingos.mp4 assets/dibujo.mp4
+  → npm run check → npm run render → renders/ep18-vikingos-cuernos.mp4. El film se edita en film/vikingos.html (cues generados, no editar cues.js).
+Render: renders/ep18-vikingos-cuernos.mp4 (59.07 s, 1080×1920 30 fps, mean −17.0 dB, max −1.1 dB; decodifica sin errores). Miniatura: renders/miniatura.jpg ("NUNCA LOS USARON").
+Voz verificada con hyperframes transcribe (Parakeet): coincide con el guion palabra por palabra (escribe "Cart Emile Doppler", "asustó").
+Datos (SPEC.md → FUENTES): Gjermundbu 1943 siglo X; Veksø ~900 a. C. (hallados 1942); Doepler, vestuario del primer Anillo en Bayreuth 1876; era vikinga desde 793. Escritos de memoria (sin búsqueda web en la sesión): confirmar con las fuentes antes de publicar.
+SUBIDO 2026-11-11: https://youtu.be/mAwq4C4qjTg · publishAt 2026-11-12T02:30:00Z (8:30 pm CDMX mié 11) · tags + miniatura ok
+Limitaciones conocidas: la mano en modo "pluma" usa el dibujo del lápiz; las migas no forman el logo al final (corte directo a la tarjeta); el crédito "CARL EMIL DOEPLER" queda pegado al borde del cartel.

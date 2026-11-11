@@ -8,3 +8,4 @@ Datos verificados: Ötzi: hallado el 19-IX-1991 por los turistas alemanes Helmut
 Título: ¡ÚLTIMA HORA! Hallan un ASESINATO de hace 5,000 años 🧊🏹
 
 SUBIDO 2026-11-07 (cola): https://youtu.be/XCPbJgqM-Rc · publishAt 2026-11-09T18:00:00Z · update ok
+Miniatura v2 (2026-11-11, episodios/miniaturas.py) SUBIDA por API con set-thumbnail.ts (reintento tras cuota diaria).

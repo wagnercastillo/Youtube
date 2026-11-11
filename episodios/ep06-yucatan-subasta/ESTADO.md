@@ -17,3 +17,4 @@ Pipeline: audition.py → gen_audio_el.py → gen_music_sfx.py → build_geo.py 
 Título: Yucatán se ofreció a otros países… y NADIE lo quiso 🗺️🔨
 
 Subido 2026-11-06 y PROGRAMADO: https://youtu.be/-0FNeL8xsq8 · se publica 2026-11-07T01:00:00Z (hoy 7:00 pm CDMX / 8:00 pm Ecuador).
+Miniatura v2 (2026-11-11, episodios/miniaturas.py) SUBIDA por API con set-thumbnail.ts.

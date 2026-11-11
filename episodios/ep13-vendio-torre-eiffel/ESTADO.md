@@ -11,3 +11,4 @@ segunda fue un intento.
 Título: Vendió la TORRE EIFFEL… ¡y quiso venderla OTRA VEZ! 🗼💸 — PENDIENTE (límite diario de subidas).
 
 SUBIDO 2026-11-07 (cola): https://youtu.be/mHEE-qgFfuI · publishAt 2026-11-07T20:00:00Z · update ok
+Miniatura v2 (2026-11-11, episodios/miniaturas.py) SUBIDA por API con set-thumbnail.ts (reintento tras cuota diaria).

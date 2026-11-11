@@ -29,3 +29,4 @@ Fuentes:
 #historia #napoleon #datoscuriosos #chisme #purochisme #historiauniversal
 Etiquetas: napoleón, napoleon bonaparte, historia, francia, mitos de la historia, datos curiosos, chisme histórico, historia animada
 Lista: Chismes de la historia · No es para niños · Contenido alterado: No (animación)
+Miniatura v2 (2026-11-11, episodios/miniaturas.py) SUBIDA por API con set-thumbnail.ts.

@@ -35,3 +35,4 @@ Título: Dos hermanos se odiaron tanto… que crearon Adidas y Puma 👟💔
 Render: renders/ep10-adidas-puma.mp4 (v2, 65.4 s, mean −14.8 dB, max −1.1 dB). Pendiente: subir privado y programar (falta token OAuth en este Mac).
 
 SUBIDO 2026-11-07 (cola): https://youtu.be/pDipjdlz8tI · publishAt 2026-11-10T18:00:00Z · update ok
+Miniatura v2 (2026-11-11, episodios/miniaturas.py) SUBIDA por API con set-thumbnail.ts.

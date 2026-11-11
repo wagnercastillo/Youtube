@@ -11,3 +11,4 @@ Título: ¡Estoy CHUECA desde antes de que me terminaran! 🇮🇹😳 — PENDI
 
 SUBIDO 2026-11-07 (cola): https://youtu.be/svm_fQwD5jk · publishAt 2026-11-07T22:00:00Z · update ok
 Reprogramado 2026-11-07: publishAt 2026-11-08T22:00:00Z (dom 4 pm CDMX) para no cargar el sábado.
+Miniatura v2 (2026-11-11, episodios/miniaturas.py) SUBIDA por API con set-thumbnail.ts (reintento tras cuota diaria).

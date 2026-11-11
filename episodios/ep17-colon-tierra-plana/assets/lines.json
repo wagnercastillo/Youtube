@@ -1,0 +1,79 @@
+[
+ {
+  "id": "l0",
+  "speaker": "narr",
+  "text": "¿Colón descubrió que la Tierra era redonda? ¡Mentira! Y sus cuentas estaban tan mal que casi se muere.",
+  "start": 0.12,
+  "end": 7.032
+ },
+ {
+  "id": "l1",
+  "speaker": "narr",
+  "text": "Mil setecientos años antes, el griego Eratóstenes ya la había medido con un palo y una sombra. ¡Y le atinó!",
+  "start": 7.144,
+  "end": 13.8
+ },
+ {
+  "id": "l2",
+  "speaker": "narr",
+  "text": "En la Edad Media, los reyes posaban con el mundo en la mano. Redondo.",
+  "start": 13.912,
+  "end": 17.804
+ },
+ {
+  "id": "l3",
+  "speaker": "colon",
+  "text": "¡Yo nunca dije que fuera plana! Dije que era CHIQUITA, y que Japón quedaba aquí nomás.",
+  "start": 17.916,
+  "end": 22.934
+ },
+ {
+  "id": "l4",
+  "speaker": "narr",
+  "text": "Su error: la creyó una cuarta parte más chica. Puso Japón a cuatro mil quinientos kilómetros… ¡y está a casi veinte mil!",
+  "start": 23.046,
+  "end": 31.073
+ },
+ {
+  "id": "l5",
+  "speaker": "narr",
+  "text": "En Salamanca le dijeron que no por eso: se iba a morir de hambre a medio camino.",
+  "start": 31.185,
+  "end": 36.662
+ },
+ {
+  "id": "l6",
+  "speaker": "colon",
+  "text": "¡Y no me morí! Llegué a… bueno, a un lugar.",
+  "start": 36.774,
+  "end": 40.178
+ },
+ {
+  "id": "l7",
+  "speaker": "narr",
+  "text": "Porque América estaba estorbando en medio. Y murió jurando que era Asia.",
+  "start": 40.29,
+  "end": 45.302
+ },
+ {
+  "id": "l8",
+  "speaker": "narr",
+  "text": "¿Y lo de la Tierra plana? Lo inventó un escritor gringo, Washington Irving, en mil ochocientos veintiocho.",
+  "start": 45.414,
+  "end": 51.686
+ },
+ {
+  "id": "l9",
+  "speaker": "irving",
+  "text": "Era una NOVELA, querida. ¿Qué tiene de malo un poquito de drama?",
+  "start": 51.798,
+  "end": 55.102
+ },
+ {
+  "id": "l10",
+  "speaker": "narr",
+  "text": "Nada… solo que lo siguen enseñando en la escuela. ¿Tú también te lo creíste?",
+  "start": 55.214,
+  "end": 59.538
+ }
+]

@@ -8,3 +8,4 @@ Datos verificados: Juan Pujol García: rechazado por los británicos en Madrid; 
 Título: Engañó a HITLER… ¡y Hitler le dio una MEDALLA! 🕵️🎖️
 
 SUBIDO 2026-11-07 (cola): https://youtu.be/YHejqjAuR8A · publishAt 2026-11-10T02:00:00Z · update ok
+Miniatura v2 (2026-11-11, episodios/miniaturas.py) SUBIDA por API con set-thumbnail.ts (reintento tras cuota diaria).

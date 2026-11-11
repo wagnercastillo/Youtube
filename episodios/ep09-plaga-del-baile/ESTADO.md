@@ -16,3 +16,4 @@ septiembre; causa desconocida (histeria colectiva es la teoría principal). Muer
 ## Para subir (youtube_description.txt, youtube_tags.txt)
 Título: Bailaron SEMANAS y no podían parar… (1518) 💃🕹️
 Subido 2026-11-06 y PROGRAMADO: https://youtu.be/56edefRgceM · se publica 2026-11-09T01:00:00Z (dom 8 nov 7:00 pm CDMX / 8:00 pm Ecuador). Miniatura pendiente (a mano: el canal aún no tiene permiso de miniaturas por API).
+Miniatura v2 (2026-11-11, episodios/miniaturas.py) SUBIDA por API con set-thumbnail.ts.

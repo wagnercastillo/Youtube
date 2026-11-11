@@ -1,0 +1,551 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>EP18 · vikingos sin cuernos (cuaderno)</title>
+<style>body{margin:0;background:#242321;display:grid;place-items:center;min-height:100vh}canvas{max-width:100vw;max-height:100vh;object-fit:contain}</style>
+<canvas id="c"></canvas>
+<script src="core.js"></script>
+<script src="studio.js"></script>
+<script src="cels.js"></script>
+<script src="materials.js"></script>
+<script src="cues.js"></script>
+<script>
+'use strict';
+/* BRIEF (skill hand-drawn-canvas-animation; SPEC.md tiene el brief completo)
+   Mito a LÁPIZ (se borra), evidencia a TINTA. Björn = cels enteros (poses autoradas, boca y parpadeo de reemplazo),
+   expuestos en twos; berrinche en ones. La mano del dibujante (lápiz / goma / plumón) se mueve en ones y su punta
+   coincide con el trazo que revela. Lámina riso (Edad de Bronce) y cartel serigrafiado (1876) son páginas del mismo
+   cuaderno; los CUERNOS cruzan cada cambio de material. Todo anclado a window.CUES (palabras de transcript.json).
+   Sin boil: cada dibujo se compila una vez y se cachea; un dibujo sostenido conserva sus trazos. */
+const C = window.CUES, M = window.MOUTH, SPK = window.SPK;
+const PAPER = '#F2EADB', GRAPH = '#4B4B52', INK = '#1B1A20', RED = '#D7263D', GOLD = '#E3A72F', BLUE = '#2A5DB0';
+const POSTER = '#EFE4C8', PRED = '#B5212F';
+const HAND = '"Segoe Print", "Ink Free", "Comic Sans MS", cursive';
+const SERIF = 'Georgia, "Times New Roman", serif';
+const PR = [[0, .12], [.15, .85], [.5, 1], [.85, .7], [1, .1]];
+const lerp2 = (a, b, u) => [lerp(a[0], b[0], u), lerp(a[1], b[1], u)];
+const span = (t, a, b) => clamp((t - a) / (b - a), 0, 1);
+
+// ---------- cel helpers ----------
+function celB() { const strokes = []; const add = (id, points, width = 1.8, opacity = 1, extra = {}) => strokes.push({ id, points, width: width * 1.6, opacity, pressure: PR, ...extra }); return { strokes, add }; }
+const mir = pts => pts.map(([x, y]) => [-x, y]);
+const ell = (cx, cy, rx, ry, n = 18) => Array.from({ length: n }, (_, i) => { const a = i / n * TAU; return [cx + rx * Math.cos(a), cy + ry * Math.sin(a)]; });
+const off = (pts, dx, dy) => pts.map(([x, y]) => [x + dx, y + dy]);
+const _cels = new Map();
+function cel(key, build) { if (!_cels.has(key)) _cels.set(key, compileCel(build(), { id: key })); return _cels.get(key); }
+function drawCelP(c, cl, prog, o = {}) {   // draw-on in authored stroke order (the hand's tip follows the same order)
+  if (prog >= 1) return drawCel(c, cl, o); if (prog <= 0) return;
+  let budget = cl.strokes.reduce((a, s) => a + s.samples.length, 0) * prog; const part = { strokes: [] };
+  for (const s of cl.strokes) { if (budget < 2) break; const n = Math.min(s.samples.length, Math.floor(budget)); part.strokes.push({ ...s, samples: s.samples.slice(0, n) }); budget -= s.samples.length; }
+  drawCel(c, part, o);
+}
+const _spr = new Map();
+function sprite(key, box, scale, paint) {   // a finished drawing rendered once at output scale
+  const k = key + '@' + S;
+  if (!_spr.has(k)) { const [x0, y0, x1, y1] = box, cv = document.createElement('canvas'); cv.width = Math.ceil((x1 - x0) * scale * S); cv.height = Math.ceil((y1 - y0) * scale * S);
+    const g = cv.getContext('2d'); g.scale(scale * S, scale * S); g.translate(-x0, -y0); paint(g); _spr.set(k, { cv, x0, y0, scale }); }
+  return _spr.get(k);
+}
+function blitSprite(c, sp, x, y, extraScale = 1) { c.drawImage(sp.cv, x + sp.x0 * sp.scale * extraScale, y + sp.y0 * sp.scale * extraScale, sp.cv.width / S * extraScale, sp.cv.height / S * extraScale); }
+
+// ---------- Björn (local units: feet at y=0, ~330 tall) ----------
+const BX = 540, BY = 1380, SC = 2.0;
+const toW = ([x, y], bx = BX, by = BY, sc = SC) => [bx + x * sc, by + y * sc];
+const ARMS = {
+  akimbo: { o: [[-84, -182], [-128, -150], [-110, -100]], i: [[-80, -160], [-106, -140], [-97, -106]], f: [-101, -97], r: 15 },
+  point: { o: [[84, -182], [120, -215], [132, -262]], i: [[82, -162], [106, -200], [116, -255]], f: [125, -272], r: 14, finger: [[127, -284], [124, -312]] },
+  up: { o: [[-84, -182], [-125, -215], [-130, -268]], i: [[-80, -162], [-108, -205], [-112, -262]], f: [-121, -280], r: 16 },
+  down: { o: [[-84, -182], [-135, -160], [-150, -120]], i: [[-80, -162], [-118, -150], [-132, -118]], f: [-142, -108], r: 16 },
+  shrug: { o: [[-84, -182], [-130, -176], [-150, -204]], i: [[-80, -162], [-122, -160], [-140, -196]], f: [-150, -212], r: 13, palm: true },
+  hold: { o: [[84, -182], [128, -160], [140, -128]], i: [[80, -162], [112, -150], [122, -125]], f: [134, -118], r: 15 },
+  limp: { o: [[-86, -182], [-108, -140], [-112, -90]], i: [[-80, -160], [-94, -130], [-96, -92]], f: [-105, -80], r: 13 },
+};
+const armR = a => ({ ...a, o: mir(a.o), i: mir(a.i), f: [-a.f[0], a.f[1]], finger: a.finger && mir(a.finger) });
+const BROWS = { proud: [[-28, -256], [-17, -261], [-6, -258]], angry: [[-29, -261], [-17, -255], [-5, -249]], sad: [[-29, -250], [-17, -256], [-6, -260]] };
+const POSES = {
+  stand: { L: 'akimbo', R: 'akimbo', brow: ['proud', 'proud'] },
+  point: { L: 'akimbo', R: 'point*', brow: ['proud', 'proud'] },
+  confused: { L: 'shrug', R: 'shrug', brow: ['angry', 'sad'] },
+  tantrumA: { L: 'up', R: 'up', brow: ['angry', 'angry'], legUp: -1, dy: -10 },
+  tantrumB: { L: 'down', R: 'down', brow: ['angry', 'angry'], legUp: 1, dy: 0 },
+  axe: { L: 'akimbo', R: 'hold*', brow: ['proud', 'proud'] },
+  sad: { L: 'limp', R: 'limp', brow: ['sad', 'sad'] },
+};
+function armOf(name, side) { const star = name.endsWith('*'), a = ARMS[name.replace('*', '')]; if (side === 'L') return star ? armR(a) : a; return star ? a : armR(a); }
+function bjornCel(pose, mouth, blink) {
+  const P = POSES[pose], { strokes, add } = celB();
+  // legs and boots first, the tunic overlaps them
+  for (const side of [-1, 1]) {
+    const up = P.legUp === side ? -26 : 0, sx = P.legUp === side ? 10 * side : 0;
+    add('leg/o' + side, [[62 * side, -27], [64 * side + sx, -8 + up]], 2, .9); add('leg/i' + side, [[26 * side, -24], [26 * side + sx, -8 + up]], 1.7, .85);
+    add('boot' + side, off([[72, -10], [24, -12], [18, -4], [22, 2], [80, 2], [84, -4]].map(([x, y]) => [x * side, y]), sx, up), 2.2, .95, { close: true, corner: 1 });
+  }
+  add('body', [[-55, -200], [-84, -176], [-99, -132], [-104, -86], [-93, -47], [-60, -27], [0, -22], [60, -27], [93, -47], [104, -86], [99, -132], [84, -176], [55, -200]], 2.2, .95);
+  add('belt/a', [[-101, -68], [-50, -62], [0, -60], [50, -62], [101, -68]], 1.6, .85); add('belt/b', [[-98, -52], [-50, -47], [0, -45], [50, -47], [98, -52]], 1.5, .8);
+  add('buckle', [[-13, -66], [13, -66], [13, -42], [-13, -42]], 1.5, .9, { close: true, corner: 1 });
+  for (let i = 0; i < 7; i++) add('fur/' + i, [[-70 + i * 23, -196 + Math.abs(i - 3) * 3], [-62 + i * 23, -186 + Math.abs(i - 3) * 3], [-56 + i * 23, -196 + Math.abs(i - 3) * 3]], 1.1, .6);
+  for (const side of ['L', 'R']) {
+    const a = armOf(P[side], side);
+    add('arm/o' + side, a.o, 2, .95); add('arm/i' + side, a.i, 1.6, .85);
+    add('fist' + side, ell(a.f[0], a.f[1], a.r, a.r * .9, 14), 1.9, .95, { close: true });
+    if (a.finger) add('finger' + side, a.finger, 2.4, .95);
+    if (a.palm) add('palm' + side, [[a.f[0] - 10, a.f[1] - 6], [a.f[0], a.f[1] - 16], [a.f[0] + 10, a.f[1] - 8]], 1.4, .8);
+  }
+  // face below the helmet brim (y > -262)
+  add('face/l', [[-44, -262], [-48, -240], [-44, -222]], 1.7, .9); add('face/r', mir([[-44, -262], [-48, -240], [-44, -222]]), 1.7, .9);
+  add('ear/l', [[-48, -248], [-57, -244], [-56, -231], [-47, -229]], 1.5, .85); add('ear/r', mir([[-48, -248], [-57, -244], [-56, -231], [-47, -229]]), 1.5, .85);
+  const [bl, br] = P.brow; add('brow/l', BROWS[bl], 2.4, .95); add('brow/r', mir(BROWS[br]), 2.4, .95);
+  if (blink) { add('lid/l', [[-24, -243], [-17, -240], [-10, -243]], 2, 1); add('lid/r', [[10, -243], [17, -240], [24, -243]], 2, 1); }
+  else for (const x of [-17, 17]) { add('eye' + x, ell(x, -244, 4.5, 5.5, 10), 2.4, 1, { close: true }); add('pupil' + x, ell(x + 1, -244, 1.6, 1.8, 8), 2.6, 1, { close: true }); }
+  add('nose', [[-5, -247], [-13, -230], [-9, -219], [0, -216], [9, -219], [13, -230], [5, -247]], 1.9, .95);
+  add('beard', [[-46, -226], [-53, -196], [-47, -160], [-29, -132], [0, -118], [29, -132], [47, -160], [53, -196], [46, -226]], 2.1, .95);
+  for (let i = 0; i < 9; i++) { const x = -36 + i * 9, y = -175 + Math.abs(i - 4) * 5; add('beard/t' + i, [[x - 2, y - 14], [x + 1, y], [x - 1, y + 12]], .9, .45); }
+  for (const s of [-1, 1]) { add('braid' + s, [[14 * s, -126], [16 * s, -102], [12 * s, -80]], 1.7, .9); for (let k = 0; k < 3; k++) add('braid' + s + '/' + k, [[(9 + k) * s, -116 + k * 11], [(15 + k * .6) * s, -110 + k * 11], [(20) * s, -116 + k * 11]], 1, .7); add('bead' + s, ell(12 * s, -76, 5, 4, 8), 1.4, .9, { close: true }); }
+  add('mous', [[-40, -213], [-24, -206], [-9, -210], [0, -207], [9, -210], [24, -206], [40, -213]], 2.2, .95);
+  add('mous/l', [[-40, -213], [-46, -199]], 1.8, .9); add('mous/r', [[40, -213], [46, -199]], 1.8, .9);
+  if (mouth === 0) add('mouth', [[-12, -195], [0, -192], [12, -195]], 1.9, .95);
+  else if (mouth === 1) add('mouth', ell(0, -193, 11, 6, 12), 1.9, .95, { close: true });
+  else { add('mouth', ell(0, -189, 14, 12, 14), 2, .95, { close: true }); add('tongue', [[-8, -182], [0, -186], [8, -182]], 1.2, .7); }
+  return { strokes };
+}
+const bodyPath = (() => { const p = new Path2D(); const pts = [[-55, -200], [-84, -176], [-99, -132], [-104, -86], [-93, -47], [-60, -27], [0, -22], [60, -27], [93, -47], [104, -86], [99, -132], [84, -176], [55, -200]]; pts.forEach((q, i) => i ? p.lineTo(...q) : p.moveTo(...q)); p.closePath(); return p; })();
+const beardPath = curvePath([[-46, -226], [-53, -196], [-47, -160], [-29, -132], [0, -118], [29, -132], [47, -160], [53, -196], [46, -226], [0, -212]], true);
+function bjornSprite(pose, mouth, blink) {
+  return sprite(`bjorn/${pose}/${mouth}/${blink}`, [-175, -350, 175, 12], SC, g => {
+    wash(g, bodyPath, '#7E9CB8', { al: .32, off: 3, seed: 4 });
+    graphite(g, bodyPath, [-110, -205, 220, 190], { seed: 7, color: GRAPH, tone: (x, y) => clamp((x + 20) / 120, 0, .8) * .9, direction: () => 1.05, softness: .3 });
+    wash(g, beardPath, '#D98E4A', { al: .42, off: 3, seed: 6 });
+    for (const side of ['L', 'R']) { const a = armOf(POSES[pose][side], side); const sl = curvePath([...a.o, ...a.i.slice().reverse()], true, .9); gouache(g, sl, PAPER); wash(g, sl, '#7E9CB8', { al: .38, off: 2, seed: 9 }); const fp = new Path2D(); fp.ellipse(a.f[0], a.f[1], a.r, a.r * .9, 0, 0, TAU); gouache(g, fp, '#F3D2B5'); }
+    drawCel(g, cel(`bjorn/${pose}/${mouth}/${blink}`, () => bjornCel(pose, mouth, blink)), { material: 'pencil', color: GRAPH });
+  });
+}
+// helmets
+const DOME = [[-55, -262], [-53, -292], [-37, -318], [0, -329], [37, -318], [53, -292], [55, -262]];
+function helmCel(kind) {
+  const { strokes, add } = celB();
+  if (kind === 'hat') {
+    add('hat', [[-56, -260], [-57, -292], [-40, -323], [0, -335], [40, -323], [57, -292], [56, -260]], 2.1, .95);
+    add('band/a', [[-59, -258], [0, -255], [59, -258]], 1.8, .9); add('band/b', [[-58, -278], [0, -275], [58, -278]], 1.6, .85);
+    for (let i = 0; i < 12; i++) add('rib/' + i, [[-52 + i * 9.5, -276], [-52 + i * 9.5, -259]], 1, .55);
+    for (let i = 0; i < 5; i++) add('knit/' + i, [[-40 + i * 20, -300], [-34 + i * 20, -292], [-28 + i * 20, -300]], .9, .45);
+    add('pom', ell(0, -347, 16, 14, 14), 1.8, .9, { close: true });
+    for (let i = 0; i < 6; i++) add('pom/' + i, [[-9 + i * 3.5, -356], [-6 + i * 3.5, -347], [-9 + i * 3.5, -338]], .8, .5);
+    return { strokes };
+  }
+  add('dome', DOME, kind === 'ink' ? 2.6 : 2.2, .95);
+  add('brim/a', [[-58, -262], [0, -259], [58, -262]], 2, .95); add('brim/b', [[-57, -275], [0, -272], [57, -275]], 1.7, .9);
+  if (kind === 'pencil') { for (let i = 0; i < 5; i++) add('rivet/' + i, ell(-40 + i * 20, -268, 2, 2, 6), 1.2, .8, { close: true }); return { strokes }; }
+  // Gjermundbu: crest ridge, cross bands, spectacle guard around the eyes
+  add('crest', [[0, -329], [0, -262]], 2.2, .95); add('band/l', [[-37, -318], [-30, -290], [-27, -262]], 1.6, .9); add('band/r', [[37, -318], [30, -290], [27, -262]], 1.6, .9);
+  add('ring/l', ell(-17, -247, 15, 11, 16), 2.4, .95, { close: true }); add('ring/r', ell(17, -247, 15, 11, 16), 2.4, .95, { close: true });
+  add('bridge', [[-3, -252], [0, -254], [3, -252]], 2.2, .95);
+  for (let i = 0; i < 6; i++) add('rivet/' + i, ell(-45 + i * 18, -268, 2.2, 2.2, 6), 1.4, .9, { close: true });
+  return { strokes };
+}
+const domePath = curvePath([...DOME, [0, -262]], true);
+function helmSprite(kind) {
+  return sprite('helm/' + kind, [-80, -380, 80, -220], SC, g => {
+    if (kind === 'hat') wash(g, curvePath([[-56, -260], [-57, -292], [-40, -323], [0, -335], [40, -323], [57, -292], [56, -260]], true), '#3F9C8F', { al: .45, off: 3, seed: 3 });
+    else { gouache(g, domePath, PAPER); if (kind === 'ink') formHatch(g, domePath, [-60, -335, 120, 80], { seed: 3, color: INK, spacing: 6, length: 14, width: .9, opacity: .55, tone: (x, y) => clamp((x + 5) / 55, 0, 1) * .8, direction: () => 1.2 });
+      else graphite(g, domePath, [-60, -335, 120, 80], { seed: 5, color: GRAPH, tone: (x) => clamp((x + 10) / 60, 0, .7), direction: () => 1.1, softness: .3 }); }
+    drawCel(g, cel('helm/' + kind, () => helmCel(kind)), { material: kind === 'ink' ? 'ink' : 'pencil', color: kind === 'ink' ? INK : GRAPH });
+  });
+}
+// horns (pencil = myth). k scales a horn about its base on the helmet.
+const HORN_O = [[-52, -292], [-86, -300], [-112, -322], [-126, -356], [-122, -392]], HORN_I = [[-122, -392], [-108, -362], [-92, -332], [-70, -312], [-52, -276]], HBASE = [-52, -284];
+const hornPts = (k, side) => [...HORN_O, ...HORN_I].map(([x, y]) => [side * (HBASE[0] + (x - HBASE[0]) * k), HBASE[1] + (y - HBASE[1]) * k]);
+function hornCel(k, side) {
+  const { strokes, add } = celB(); const p = hornPts(k, side);
+  add('horn', p, 2.2, .95, { close: true, corner: .5 });
+  for (let i = 1; i <= 3; i++) { const a = p[i], b = p[p.length - 1 - i]; add('ring/' + i, [a, lerp2(a, b, .5).map((v, j) => v + (j ? 3 : 0)), b], 1.1, .6); }
+  return { strokes };
+}
+function drawHorns(c, k, side, o = {}) {   // o.prog for draw-on
+  const kk = Math.round(k * 20) / 20, cl = cel(`horn/${kk}/${side}`, () => hornCel(kk, side));
+  c.save(); const p = new Path2D(); hornPts(kk, side).forEach((q, i) => i ? p.lineTo(...q) : p.moveTo(...q)); p.closePath();
+  if ((o.prog ?? 1) >= 1) { gouache(c, p, PAPER); graphite(c, p, [-200, -480, 400, 230], { seed: 11 + side, color: GRAPH, tone: () => .35, direction: () => .7 * side, softness: .25 }); }
+  drawCelP(c, cl, o.prog ?? 1, { material: 'pencil', color: GRAPH }); c.restore();
+}
+const hornOutlineW = (k, side, bx = BX, by = BY, sc = SC) => hornPts(k, side).map(p => toW(p, bx, by, sc));
+const bboxOf = pts => { const xs = pts.map(p => p[0]), ys = pts.map(p => p[1]); return [Math.min(...xs), Math.min(...ys), Math.max(...xs), Math.max(...ys)]; };
+
+// ---------- Doepler (ink, local feet at 0, ~440 tall with hat) ----------
+const DX = 800, DY = 1380, DSC = 1.9;
+const DARMS = {
+  hover: { o: [[-52, -282], [-70, -320], [-80, -350]], i: [[-40, -262], [-62, -310], [-72, -348]], f: [-80, -360] },
+  place: { o: [[-52, -282], [-95, -298], [-128, -300]], i: [[-40, -262], [-90, -282], [-124, -290]], f: [-134, -302] },
+  chest: { o: [[-52, -282], [-60, -240], [-22, -236]], i: [[-40, -262], [-46, -249], [-22, -248]], f: [-12, -241] },
+  scis: { o: [[52, -282], [66, -220], [70, -170]], i: [[42, -262], [54, -215], [58, -170]], f: [66, -160] },
+  fan: { o: [[52, -282], [80, -300], [92, -340]], i: [[42, -262], [70, -290], [80, -336]], f: [90, -350] },
+};
+function doeplerCel(L, R, mouth, legs, fanA) {
+  const { strokes, add } = celB();
+  const lg = legs === 0 ? [0, 0] : legs === 1 ? [-14, 12] : [12, -14];
+  for (const s of [-1, 1]) { const d = s < 0 ? lg[0] : lg[1];
+    add('leg/o' + s, [[28 * s, -150], [30 * s + d, -8]], 1.8, .95); add('leg/i' + s, [[8 * s, -150], [10 * s + d, -8]], 1.6, .9);
+    add('shoe' + s, [[44 * s + d, -8], [6 * s + d, -10], [0 * s + d, -2], [46 * s + d, 2]], 2, .95, { close: true, corner: 1 }); }
+  add('coat/l', [[-40, -292], [-58, -270], [-62, -200], [-58, -130], [-68, -78]], 2.3, .95); add('coat/r', mir([[-40, -292], [-58, -270], [-62, -200], [-58, -130], [-68, -78]]), 2.3, .95);
+  add('coat/hem', [[-68, -78], [-36, -110], [-12, -150], [12, -150], [36, -110], [68, -78]], 1.8, .9);
+  add('lapel/l', [[-10, -290], [-22, -240], [-12, -150]], 1.6, .9); add('lapel/r', mir([[-10, -290], [-22, -240], [-12, -150]]), 1.6, .9);
+  for (let i = 0; i < 3; i++) add('btn/' + i, ell(0, -250 + i * 28, 3, 3, 6), 1.5, .95, { close: true });
+  add('bow/l', [[0, -292], [-16, -300], [-16, -284]], 1.8, .95, { close: true, corner: .6 }); add('bow/r', [[0, -292], [16, -300], [16, -284]], 1.8, .95, { close: true, corner: .6 });
+  add('head', [[-30, -354], [-31, -330], [-25, -312], [-12, -299], [0, -296], [12, -299], [25, -312], [31, -330], [30, -354]], 2.1, .95);
+  add('brim', ell(0, -358, 50, 7, 18), 2, .95, { close: true }); add('crown', [[-31, -362], [-34, -444], [34, -444], [31, -362]], 2.2, .95, { corner: 1 });
+  add('hatband', [[-32, -378], [0, -376], [32, -378]], 2.6, .95);
+  add('eye', ell(-11, -337, 2.6, 3, 8), 2.4, 1, { close: true }); add('mono', ell(12, -337, 10, 10, 14), 1.7, .95, { close: true }); add('eye/m', ell(12, -337, 2.6, 3, 8), 2.4, 1, { close: true });
+  add('chain', [[21, -332], [32, -300], [28, -276]], .9, .7);
+  add('brows', [[-19, -350], [-11, -355], [-4, -351]], 2, .95); add('brows/m', [[4, -352], [12, -357], [21, -352]], 2, .95);
+  add('nose', [[0, -344], [-5, -326], [2, -322]], 1.7, .9);
+  add('stache', [[-31, -334], [-27, -326], [-17, -318], [-6, -322], [0, -320], [6, -322], [17, -318], [27, -326], [31, -334]], 2.4, .95);
+  if (mouth === 0) add('mouth', [[-6, -311], [0, -310], [6, -311]], 1.8, .95); else add('mouth', ell(0, -309, mouth === 1 ? 5 : 7, mouth === 1 ? 4 : 7, 10), 1.8, .95, { close: true });
+  for (const [side, a] of [['L', DARMS[L]], ['R', DARMS[R]]]) { add('arm/o' + side, a.o, 2, .95); add('arm/i' + side, a.i, 1.6, .9); add('glove' + side, ell(a.f[0], a.f[1], 11, 10, 12), 1.8, .95, { close: true }); }
+  if (R === 'scis') { const [x, y] = DARMS.scis.f; add('sc/a', [[x - 2, y + 8], [x - 10, y + 52]], 2, .95); add('sc/b', [[x + 4, y + 8], [x + 12, y + 50]], 2, .95); add('sc/ring', ell(x + 10, y - 2, 6, 5, 8), 1.6, .9, { close: true }); }
+  if (R === 'fan') { const [x, y] = DARMS.fan.f, a = fanA ? 0 : .35; const q = [[-6, -8], [44, -30], [54, 10], [6, 24]].map(([u, v]) => [x + u * Math.cos(a) - v * Math.sin(a), y + u * Math.sin(a) + v * Math.cos(a)]); add('sheet', q, 1.6, .9, { close: true, corner: 1 }); add('sheet/l', [lerp2(q[0], q[1], .3), lerp2(q[3], q[2], .3)], .9, .6); }
+  return { strokes };
+}
+const coatPath = curvePath([[-40, -292], [-58, -270], [-62, -200], [-58, -130], [-68, -78], [-36, -110], [-12, -150], [12, -150], [36, -110], [68, -78], [58, -130], [62, -200], [58, -270], [40, -292]], true, .5);
+function doeplerSprite(L, R, mouth, legs, fanA) {
+  const key = `doe/${L}/${R}/${mouth}/${legs}/${fanA}`;
+  return sprite(key, [-170, -455, 170, 12], DSC, g => {
+    wash(g, coatPath, '#55607A', { al: .5, off: 3, seed: 8 });
+    formHatch(g, coatPath, [-70, -295, 140, 220], { seed: 9, color: INK, spacing: 7, length: 16, width: .9, opacity: .5, tone: (x) => clamp((x + 10) / 70, 0, 1) * .85, direction: () => 1.25 });
+    gouache(g, rectPath(-32, -444, 64, 82), '#2a2a33', .92);
+    drawCel(g, cel(key, () => doeplerCel(L, R, mouth, legs, fanA)), { material: 'ink', color: INK });
+  });
+}
+
+// ---------- the artist's hand (ink + a little colour) ----------
+const HAND_A = -0.82;   // tool axis rotation (tip at origin, tool runs up-right)
+function handCel(tool) {
+  const { strokes, add } = celB();
+  if (tool === 'pencil') { add('t/a', [[0, 0], [42, -11], [430, -11]], 1.8); add('t/b', [[0, 0], [42, 11], [430, 11]], 1.8); add('t/c', [[42, -11], [36, 0], [42, 11]], 1.1, .7); add('t/m', [[60, 0], [430, 0]], .8, .4); add('t/fer', [[430, -12], [462, -12], [462, 12], [430, 12]], 1.6, .9, { close: true, corner: 1 }); add('t/er', [[462, -11], [492, -10], [492, 10], [462, 11]], 1.6, .9, { close: true, corner: 1 }); }
+  if (tool === 'marker') { add('t/a', [[0, 0], [30, -9], [36, -17], [420, -17]], 1.8); add('t/b', [[0, 0], [30, 9], [36, 17], [420, 17]], 1.8); add('t/cap', [[300, -19], [420, -19], [420, 19], [300, 19]], 1.7, .95, { close: true, corner: 1 }); }
+  if (tool === 'eraser') { add('t/blk', [[-62, -36], [70, -36], [70, 36], [-62, 36]], 2, .95, { close: true, corner: 1 }); add('t/sl', [[10, -36], [10, 36]], 1.2, .6); add('t/stick', [[70, -10], [300, -10]], 1.6); add('t/stick2', [[70, 10], [300, 10]], 1.6); }
+  const g0 = tool === 'eraser' ? 110 : 150;
+  add('palm', [[g0, -14], [g0 + 22, -62], [g0 + 72, -84], [g0 + 128, -74], [g0 + 156, -32], [g0 + 156, 22], [g0 + 124, 50], [g0 + 60, 44]], 2.3, .95);
+  add('thumb', [[g0 + 6, -16], [g0 + 34, -34], [g0 + 66, -28], [g0 + 82, -14]], 2, .95);
+  add('index', [[g0 - 2, 14], [g0 + 26, 28], [g0 + 66, 32], [g0 + 104, 38]], 2, .95);
+  add('k1', [[g0 + 80, -70], [g0 + 90, -60]], 1.2, .7); add('k2', [[g0 + 108, -66], [g0 + 116, -54]], 1.2, .7);
+  add('cuff', [[g0 + 150, -52], [g0 + 146, 44]], 2.2, .95); add('slv/a', [[g0 + 150, -52], [g0 + 700, -170]], 2.2, .95); add('slv/b', [[g0 + 146, 44], [g0 + 700, -40]], 2.2, .95);
+  for (let i = 0; i < 6; i++) add('slv/h' + i, [[g0 + 200 + i * 60, -50 - i * 9], [g0 + 230 + i * 60, -22 - i * 9]], .9, .45);
+  return { strokes };
+}
+function handSprite(tool) {
+  return sprite('hand/' + tool, [-90, -200, 900, 120], 1, g => {
+    const g0 = tool === 'eraser' ? 110 : 150;
+    gouache(g, curvePath([[g0 + 150, -52], [g0 + 700, -170], [g0 + 700, -40], [g0 + 146, 44]], true, 1), '#9DB4C7');
+    if (tool === 'pencil') { gouache(g, polyPath([[42, -11], [430, -11], [430, 11], [42, 11]]), '#E9C46A'); gouache(g, polyPath([[0, 0], [42, -11], [42, 11]]), '#E8D3B0'); gouache(g, polyPath([[0, 0], [12, -3], [12, 3]]), '#333'); gouache(g, polyPath([[462, -11], [492, -10], [492, 10], [462, 11]]), '#E89A9A'); }
+    if (tool === 'marker') { gouache(g, polyPath([[36, -17], [420, -17], [420, 17], [36, 17]]), '#3a3a40'); gouache(g, polyPath([[300, -19], [420, -19], [420, 19], [300, 19]]), RED); gouache(g, polyPath([[0, 0], [30, -9], [30, 9]]), RED); }
+    if (tool === 'eraser') { gouache(g, rectPath(-62, -36, 132, 72), '#EFA3A6'); gouache(g, rectPath(70, -10, 230, 20), '#C9A36B'); }
+    gouache(g, curvePath([[g0, -14], [g0 + 22, -62], [g0 + 72, -84], [g0 + 128, -74], [g0 + 156, -32], [g0 + 156, 22], [g0 + 124, 50], [g0 + 60, 44], [g0 - 2, 14]], true), '#F3D2B5');
+    drawCel(g, cel('hand/' + tool, () => handCel(tool)), { material: 'ink', color: INK });
+  });
+}
+function drawHand(c, st) { if (!st) return; const sp = handSprite(st.tool); c.save(); c.translate(st.p[0], st.p[1]); c.rotate(HAND_A); c.drawImage(sp.cv, sp.x0, sp.y0, sp.cv.width / S, sp.cv.height / S); c.restore(); }
+
+// ---------- texts ----------
+const _m = document.createElement('canvas').getContext('2d');
+const textW = (txt, font) => { _m.font = font; return _m.measureText(txt).width; };
+function label(c, txt, x, y, o = {}) {
+  const { size = 40, color = INK, font = HAND, weight = '700', rot = 0, prog = 1, align = 'center', vert = false } = o; if (prog <= 0) return;
+  c.save(); c.translate(x, y); c.rotate(rot); const f = `${weight} ${size}px ${font}`; c.font = f; c.textAlign = align; c.textBaseline = 'middle';
+  const w = c.measureText(txt).width, x0 = align === 'center' ? -w / 2 : align === 'left' ? 0 : -w;
+  c.beginPath(); if (vert) c.rect(x0 - 30, -size, w + 60, size * 2.2 * prog); else c.rect(x0 - 30, -size * 1.2, (w + 60) * prog, size * 2.4); c.clip();
+  c.fillStyle = color; c.fillText(txt, 0, 0); c.restore();
+}
+function marks(c, pts, p, w = 9, color = RED, seed = 3) { brush(c, pts, { w, color, p, seed, amp: .8 }); }
+
+// ---------- layout + tasks of the hand ----------
+const OFF = [1320, 1720];
+const K0 = 1.0, K1 = 1.6;
+const hornB = (k, side) => bboxOf(hornOutlineW(k, side));
+const xStroke = (bb, a) => a ? [[bb[0] - 10, bb[1] - 10], [bb[2] + 10, bb[3] + 10]] : [[bb[2] + 10, bb[1] - 10], [bb[0] - 10, bb[3] + 10]];
+const HL = hornB(K0, -1), HRb = hornB(K0, 1);
+const MENT = { txt: '¡MENTIRA!', x: 540, y: 560, size: 118 }; MENT.w = textW(MENT.txt, `700 ${MENT.size}px ${HAND}`);
+const pathAt = (pts, u) => { const P = motionPath(pts, { smooth: false }); return P.at(clamp(u, 0, 1)).p; };
+const zig = (bb, n) => { const pts = []; for (let i = 0; i <= n; i++) { const v = i / n; pts.push(i % 2 ? [bb[2] - 5, lerp(bb[1], bb[3], v)] : [bb[0] + 5, lerp(bb[1], bb[3], v)]); } return pts; };
+const HAT = [[830, 690], [832, 600], [904, 598], [906, 690], [800, 694], [940, 690]].map(([x, y]) => [x, y]);   // the top-hat doodle (seeds Doepler)
+const NOR = [[214, 520], [176, 492], [150, 446], [156, 404], [178, 368], [196, 330], [226, 290], [252, 252], [282, 222], [312, 196], [346, 178], [380, 172]];
+const PANEL = [620, 180, 1010, 520];
+const PANEL_PTS = [[PANEL[0], PANEL[1]], [PANEL[2], PANEL[1]], [PANEL[2], PANEL[3]], [PANEL[0], PANEL[3]], [PANEL[0], PANEL[1] + 4]];
+const AXE = [[BX + 134 * SC, BY - 90 * SC], [BX + 134 * SC, BY - 330 * SC]];
+const MINI = [[60, 230, 330, 470], [405, 230, 675, 470], [750, 230, 1020, 470]];
+const helmTrace = DOME.map(p => toW(p));
+const TASKS = [
+  { id: 'xL1', tool: 'marker', t0: C.mentira, t1: C.mentira + .2, tip: u => lerp2(...xStroke(HL, 1), u) },
+  { id: 'xL2', tool: 'marker', t0: C.mentira + .24, t1: C.mentira + .42, tip: u => lerp2(...xStroke(HL, 0), u) },
+  { id: 'xR1', tool: 'marker', t0: C.mentira + .5, t1: C.mentira + .68, tip: u => lerp2(...xStroke(HRb, 1), u) },
+  { id: 'xR2', tool: 'marker', t0: C.mentira + .72, t1: C.mentira + .9, tip: u => lerp2(...xStroke(HRb, 0), u) },
+  { id: 'ment', tool: 'marker', t0: C.mentira + .98, t1: C.mentira + 1.55, tip: u => [MENT.x - MENT.w / 2 + MENT.w * u, MENT.y + 40 + 14 * Math.sin(u * 30)] },
+  { id: 'hat', tool: 'pencil', t0: C.vikingo - .25, t1: C.vikingo + .45, tip: u => pathAt(HAT, u) },
+  { id: 'horns', tool: 'pencil', t0: C.grandotes - .1, t1: C.grandotes + .7, tip: u => u < .5 ? pathAt(hornOutlineW(K1, -1), u * 2) : pathAt(hornOutlineW(K1, 1), u * 2 - 1) },
+  { id: 'threat', tool: 'eraser', t0: C.borro, t1: C.borro + .55, tip: u => [HL[0] - 70 + 18 * Math.sin(u * 14), HL[1] + 40] },
+  { id: 'map', tool: 'pen', t0: C.noruega - .1, t1: C.noruega + .8, tip: u => pathAt(NOR, u) },
+  { id: 'helm', tool: 'pen', t0: C.unico, t1: C.unico + 1.0, tip: u => pathAt(helmTrace, u) },
+  { id: 'erase', tool: 'eraser', t0: C.cuantos, t1: C.cero + .35, tip: u => u < .5 ? pathAt(zig(hornB(K1, -1), 7), u * 2) : pathAt(zig(hornB(K1, 1), 7), u * 2 - 1) },
+  { id: 'axe', tool: 'pen', t0: C.hacha + .05, t1: C.hacha + .6, tip: u => u < .6 ? lerp2(AXE[0], AXE[1], u / .6) : [AXE[1][0] + 60 * Math.sin((u - .6) / .4 * Math.PI), AXE[1][1] + 70 * (u - .6) / .4] },
+  { id: 'panel', tool: 'pencil', t0: C.batalla - .25, t1: C.batalla + .25, tip: u => pathAt(PANEL_PTS, u) },
+  { id: 'estorbo', tool: 'marker', t0: C.estorbo - .05, t1: C.estorbo + .45, tip: u => [700 + 260 * u, 590 + 10 * Math.sin(u * 25)] },
+  ...MINI.map((b, i) => ({ id: 'mx' + i, tool: 'marker', t0: [C.caricaturas, C.peliculas, C.disfraces][i] + .28, t1: [C.caricaturas, C.peliculas, C.disfraces][i] + .5, tip: u => lerp2([b[0] + 20, b[1] + 20], [b[2] - 20, b[3] - 20], u) })),
+  { id: 'horns2', tool: 'pencil', t0: C.dibujabas, t1: C.dibujabas + .55, tip: u => u < .5 ? pathAt(hornOutlineW(K0, -1), u * 2) : pathAt(hornOutlineW(K0, 1), u * 2 - 1) },
+  { id: 'erase2', tool: 'eraser', t0: C.l8e + .25, t1: C.l8e + .85, tip: u => u < .5 ? pathAt(zig(hornB(K0, -1), 5), u * 2) : pathAt(zig(hornB(K0, 1), 5), u * 2 - 1) },
+];
+const T = Object.fromEntries(TASKS.map(a => [a.id, a]));
+const prog = (id, t) => span(t, T[id].t0, T[id].t1);
+// 'pen' (ink) uses the pencil drawing of the hand with a dark nib: same grip, different mark
+function handState(t) {
+  for (const a of TASKS) if (t >= a.t0 && t <= a.t1) return { tool: a.tool === 'pen' ? 'pencil' : a.tool, p: a.tip(span(t, a.t0, a.t1)) };
+  let prev = null, next = null; for (const a of TASKS) { if (a.t1 < t) prev = a; else if (a.t0 > t) { next = a; break; } }
+  const tl = a => a.tool === 'pen' ? 'pencil' : a.tool;
+  if (prev && next && tl(prev) === tl(next) && next.t0 - prev.t1 < .9) return { tool: tl(next), p: lerp2(prev.tip(1), next.tip(0), easeIO(span(t, prev.t1, next.t0))) };
+  if (prev && t - prev.t1 < .3) return { tool: tl(prev), p: lerp2(prev.tip(1), OFF, easeIn(span(t, prev.t1, prev.t1 + .3))) };
+  if (next && next.t0 - t < .3) return { tool: tl(next), p: lerp2(OFF, next.tip(0), easeOut(span(t, next.t0 - .3, next.t0))) };
+  return null;
+}
+
+// ---------- eraser marks + crumbs (deterministic from the task path) ----------
+const _hornLayer = layer();
+function eraseStamps(g, id, t) {
+  const a = T[id], n = 70; g.save(); g.globalCompositeOperation = 'destination-out';
+  for (let s = 0; s <= n; s++) { const ts = lerp(a.t0, a.t1, s / n); if (ts > t) break; const [x, y] = a.tip(s / n);
+    g.save(); g.translate(x, y); g.rotate(HAND_A); g.globalAlpha = .42; g.fillStyle = '#000'; g.beginPath(); g.roundRect(-64, -38, 134, 76, 8); g.fill(); g.restore(); }
+  g.restore();
+}
+function crumbs(c, id, t, floor = 1392) {
+  const a = T[id]; if (t < a.t0) return; c.save(); c.fillStyle = '#8f8a86';
+  for (let s = 0; s < 46; s++) { const u = (s + .5) / 46, ts = lerp(a.t0, a.t1, u); if (ts > t) break; const [x0, y0] = a.tip(u), r = 2 + hash(s, 41) * 3.5;
+    let vx = (hash(s, 42) - .5) * 120, vy = -40 - hash(s, 43) * 90, dt = t - ts, g = 1500, x, y;
+    const tHit = (-vy + Math.sqrt(vy * vy + 2 * g * Math.max(0, floor - y0))) / g;
+    if (dt < tHit) { x = x0 + vx * dt; y = y0 + vy * dt + .5 * g * dt * dt; }
+    else { const v2 = -(vy + g * tHit) * .32, d2 = dt - tHit, t2 = -2 * v2 / g; x = x0 + vx * (tHit + Math.min(d2, t2) * .5); y = d2 < t2 ? floor + v2 * d2 + .5 * g * d2 * d2 : floor; }
+    c.beginPath(); c.ellipse(x, y, r * 1.6, r, hash(s, 44) * 3, 0, TAU); c.fill(); }
+  c.restore();
+}
+
+// ---------- camera ----------
+function camFor(t) {
+  const shots = { bjorn: [540, 1010, 1.12], doepler: [690, 1000, 1.1], narr: [540, 960, 1.0] };
+  let cur = shots.narr, from = shots.narr, t0 = -9;
+  for (const id of Object.keys(SPK).sort((a, b) => SPK[a][1] - SPK[b][1])) { const [spk, s] = SPK[id]; if (t >= s - .15) { from = cur; cur = shots[spk] || shots.narr; t0 = s - .15; } }
+  const u = easeInOutSine(span(t, t0, t0 + .5)); let [x, y, z] = [lerp(from[0], cur[0], u), lerp(from[1], cur[1], u), lerp(from[2], cur[2], u)];
+  const k = span(t, C.l3, C.l3 + .4); if (k > 0 && k < 1) { x += 16 * Math.sin(t * 60) * (1 - k); y += 9 * Math.cos(t * 47) * (1 - k); }   // one ≤0.4 s burst on the mood change
+  return [x, y, z];
+}
+
+// ---------- notebook page ----------
+function notebookPaper(c) {
+  paper(c, PAPER, null, 87); c.save(); c.strokeStyle = 'rgba(70,60,50,.10)'; c.lineWidth = 1; for (let y = 120; y < H; y += 64) { c.beginPath(); c.moveTo(0, y); c.lineTo(W, y); c.stroke(); } c.restore();
+}
+function spiral(c) { c.save(); for (let x = 50; x < W; x += 62) { c.fillStyle = '#d9cfbd'; c.beginPath(); c.ellipse(x, 52, 11, 11, 0, 0, TAU); c.fill(); c.strokeStyle = '#6d6a70'; c.lineWidth = 4; c.beginPath(); c.ellipse(x + 2, 34, 9, 26, .2, Math.PI * .1, Math.PI * 1.25); c.stroke(); } c.restore(); }
+function bjornAt(c, t, o = {}) {
+  const tw = twos(t), f = Math.floor(tw * 30);
+  let pose = o.pose, mouth = 0;
+  const mv = (M.bjorn || [])[f] || 0; mouth = mv < .15 ? 0 : mv < .5 ? 1 : 2;
+  const blink = (Math.floor(t * 24) % 86) < 3 ? 1 : 0;
+  const P = POSES[pose]; const dy = (P.dy || 0) * SC;
+  blitSprite(c, bjornSprite(pose, mouth, blink), BX, BY + dy);
+  return dy;
+}
+function notebook1(c, t) {
+  notebookPaper(c); const [cx, cy, z] = camFor(t); cam(c, cx, cy, z);
+  // pose by beat (twos for acting, ones in the tantrum)
+  let pose = 'stand';
+  if (t >= C.l1 - .1 && t < C.l2) pose = 'point';
+  if (t >= C.cero + .2 && t < C.l3 + .15) pose = 'confused';
+  if (t >= C.l3 + .15 && t < C.l3e) pose = Math.floor((t - C.l3) * 24 / 3) % 2 ? 'tantrumB' : 'tantrumA';
+  if (t >= C.l3e && t < C.hacha + .6) pose = 'confused';
+  if (t >= C.hacha + .6) pose = 'axe';
+  const dy = bjornAt(c, t, { pose });
+  // helmet: pencil until the pen inks Gjermundbu over it
+  const hp = prog('helm', t);
+  if (hp < 1) blitSprite(c, helmSprite('pencil'), BX, BY + dy);
+  if (hp > 0) { if (hp >= 1) blitSprite(c, helmSprite('ink'), BX, BY + dy); else { c.save(); c.translate(BX, BY + dy); c.scale(SC, SC); gouache(c, domePath, PAPER); drawCelP(c, cel('helm/ink', () => helmCel('ink')), hp, { material: 'ink', color: INK }); c.restore(); } }
+  // horns on their own layer so the eraser can take them off
+  const g = _hornLayer.getContext('2d'); resetT(g); g.clearRect(0, 0, W, H); g.save(); viewT(g); cam(g, cx, cy, z); g.translate(BX, BY + dy); g.scale(SC, SC);
+  const hp2 = prog('horns', t);
+  if (t < T.erase.t1 + .1) {
+    if (hp2 <= 0) { drawHorns(g, K0, -1); drawHorns(g, K0, 1); }
+    else { const step = u => [1, 1.2, 1.4, 1.6][Math.min(3, Math.floor(clamp(u, 0, .999) * 4))]; drawHorns(g, hp2 < .5 ? step(hp2 * 2) : K1, -1); drawHorns(g, hp2 < .5 ? K0 : step(hp2 * 2 - 1), 1); }
+  }
+  g.restore(); resetT(g); if (t >= T.erase.t0) { cam(g, cx, cy, z); eraseStamps(g, 'erase', t); }
+  c.save(); resetT(c); c.drawImage(_hornLayer, 0, 0, W, H); c.restore(); cam(c, cx, cy, z);
+  if (t >= T.erase.t0) crumbs(c, 'erase', t);
+  // the axe, inked by the pen on "hacha"
+  const ap = prog('axe', t);
+  if (ap > 0 && t >= C.hacha) { const [a, b] = AXE; brush(c, [a, b], { w: 9, color: INK, p: clamp(ap / .6, 0, 1), seed: 21, amp: .6 });
+    if (ap > .6) { const blade = [[b[0], b[1] + 10], [b[0] + 70, b[1] - 30], [b[0] + 92, b[1] + 40], [b[0] + 70, b[1] + 100], [b[0], b[1] + 66]]; const pb = new Path2D(); blade.forEach((q, i) => i ? pb.lineTo(...q) : pb.moveTo(...q)); pb.closePath();
+      if (ap >= 1) { gouache(c, pb, '#c9ccd2'); formHatch(c, pb, [b[0], b[1] - 40, 100, 150], { seed: 5, color: INK, spacing: 6, length: 12, opacity: .5, tone: () => .55, direction: () => .4 }); }
+      brush(c, blade, { w: 5, color: INK, p: clamp((ap - .6) / .4, 0, 1), seed: 22, amp: .5, close: true }); } }
+  resetT(c); cam(c, cx, cy, z);
+  // --- hook block (frame 0) and the red correction, wiped away on l1
+  const wipe = span(t, C.l1 - .05, C.l1 + .3);
+  if (wipe < 1) { c.save(); c.beginPath(); c.rect(W * wipe, 0, W, H); c.clip();
+    label(c, '¿LOS VIKINGOS USABAN', 540, 196, { size: 74 }); label(c, 'CASCOS CON CUERNOS?', 540, 300, { size: 80 });
+    brush(c, [[548, 352], [700, 348], [930, 352]], { w: 6, color: RED, p: 1, seed: 2, amp: .5 });
+    for (const id of ['xL1', 'xL2', 'xR1', 'xR2']) { const a = T[id]; marks(c, [a.tip(0), a.tip(1)], prog(id, t), 11); }
+    label(c, MENT.txt, MENT.x, MENT.y, { size: MENT.size, color: RED, rot: -.06, prog: prog('ment', t) });
+    c.restore(); }
+  // top-hat doodle + question mark (who put the horns on?)
+  const hatP = prog('hat', t);
+  if (hatP > 0 && t < C.l2 + .3) { const k = 1 - span(t, C.l2, C.l2 + .3); c.save(); c.beginPath(); c.rect(0, 0, W, H * k + 1); c.clip(); brush(c, HAT, { w: 4, color: GRAPH, p: hatP, seed: 31, amp: 1 }); if (hatP >= 1) label(c, '?', 960, 600, { size: 90, color: GRAPH }); c.restore(); }
+  // map of Norway, 1943
+  const mp = prog('map', t);
+  if (mp > 0 && t < C.l4) { const out = span(t, C.l4 - .3, C.l4); c.save(); c.beginPath(); c.rect(0, 0, W * (1 - out), H); c.clip();
+    brush(c, NOR, { w: 4, color: INK, p: mp, seed: 41, amp: .8 }); brush(c, [[214, 520], [262, 470], [300, 400], [330, 320], [372, 250], [380, 172]], { w: 2, color: INK, p: mp, seed: 42, amp: .6, al: .5 });
+    label(c, 'NORUEGA', 270, 560, { size: 34, prog: span(t, T.map.t1 - .2, T.map.t1 + .2) });
+    if (mp >= 1) { c.fillStyle = RED; c.beginPath(); c.arc(188, 420, 11, 0, TAU); c.fill(); label(c, '1943', 120, 380, { size: 46, color: RED, prog: span(t, T.map.t1, T.map.t1 + .25) }); }
+    c.restore(); }
+  if (hp > .9 && t < C.l3 + .2) label(c, 'casco de Gjermundbu · siglo X', 540, 1430, { size: 34, prog: span(t, T.helm.t1 - .1, T.helm.t1 + .3) });
+  if (t >= C.cero && t < C.l4) label(c, '0', 900, 640, { size: 170, color: RED, prog: span(t, C.cero, C.cero + .2), vert: true });
+  // battle vignette: a hand grabs the horn
+  const pp = prog('panel', t);
+  if (pp > 0 && t < C.l5) { brush(c, PANEL_PTS, { w: 3, color: GRAPH, p: pp, seed: 51, amp: 1 });
+    if (pp >= 1) { const ph = Math.min(2, Math.floor(span(t, T.panel.t1, T.panel.t1 + 1.2) * 3)); const tilt = [0, .08, .55][ph], cx2 = 815, cy2 = 470;
+      c.save(); c.beginPath(); c.rect(PANEL[0] + 3, PANEL[1] + 3, PANEL[2] - PANEL[0] - 6, PANEL[3] - PANEL[1] - 6); c.clip();
+      c.translate(cx2, cy2); c.rotate(-tilt); c.translate(-cx2, -cy2);
+      blitSprite(c, bjornSprite('confused', ph === 2 ? 2 : 0, 0), cx2, cy2 + 190, .42); blitSprite(c, helmSprite('ink'), cx2, cy2 + 190, .42);
+      c.save(); c.translate(cx2, cy2 + 190); c.scale(SC * .42, SC * .42); drawHorns(c, K1, 1); c.restore(); c.restore();
+      const tipR = toW(hornPts(K1, 1)[4], cx2, cy2 + 190, SC * .42), hx = [1080, tipR[0] + 30, tipR[0] + 60][ph], hy = [tipR[1], tipR[1], tipR[1] + 40][ph];
+      c.save(); c.beginPath(); c.rect(PANEL[0] + 3, PANEL[1] + 3, PANEL[2] - PANEL[0] - 6, PANEL[3] - PANEL[1] - 6); c.clip();
+      brush(c, [[hx, hy], [hx + 40, hy - 18], [hx + 160, hy - 40]], { w: 5, color: GRAPH, p: 1, seed: 52 }); brush(c, ell(hx + 8, hy - 4, 22, 17, 12), { w: 3, color: GRAPH, p: 1, seed: 53, close: true }); c.restore(); } }
+  if (t >= C.estorbo - .05 && t < C.l5) label(c, '¡ESTORBO!', 830, 590, { size: 64, color: RED, rot: -.05, prog: prog('estorbo', t) });
+  if (t >= C.historiadores && t < C.l5) label(c, '(según los historiadores)', 815, 650, { size: 26, color: GRAPH, prog: span(t, C.historiadores, C.historiadores + .4) });
+  resetT(c); spiral(c); viewT(c); cam(c, cx, cy, z);
+  drawHand(c, handState(t));
+}
+// ---------- riso plate: Bronze Age ----------
+function hornPair(cx, cy, s) {
+  const L = [[-38, 14], [-44, -16], [-86, -44], [-124, -94], [-138, -152], [-120, -198], [-98, -206], [-104, -180], [-104, -140], [-88, -100], [-60, -70], [-26, -20], [-22, 14]];
+  const mk = sgn => curvePath(L.map(([x, y]) => [cx + sgn * x * s, cy + y * s]), true, .6); return [mk(1), mk(-1)];
+}
+const VX = 540, VY = 900, VS = 1.5;
+const plateGold = plate(), plateBlue = plate();
+function plateScene(c, t, o = {}) {
+  paper(c, '#EFE7D6', null, 33);
+  const gl = plateGold.getContext('2d'), bl = plateBlue.getContext('2d');
+  for (const g of [gl, bl]) { resetT(g); g.globalCompositeOperation = 'source-over'; g.fillStyle = '#fff'; g.fillRect(0, 0, W, H); }
+  const pg = span(t, C.cascos5, C.cascos5 + .4), pb = span(t, C.cascos5 + .5, C.cascos5 + .9);
+  const dome = new Path2D(); dome.ellipse(VX, VY, 112 * VS, 100 * VS, 0, Math.PI, TAU); dome.closePath();
+  const band = rectPath(VX - 122 * VS, VY - 6, 244 * VS, 34 * VS);
+  const horns = o.detached ? [] : hornPair(VX, VY - 60 * VS, 1.05 * VS);
+  gl.save(); gl.beginPath(); gl.rect(0, 0, W, VY - 520 + 700 * pg); gl.clip();
+  gl.fillStyle = '#666'; gl.fill(dome); gl.fillStyle = '#444'; gl.fill(band); for (const h of horns) { gl.fillStyle = '#555'; gl.fill(h); }
+  gl.fillStyle = '#999'; for (let i = 0; i < 9; i++) { gl.beginPath(); gl.arc(VX + (-96 + i * 24) * VS, VY + 17 * VS, 6, 0, TAU); gl.fill(); }
+  gl.restore();
+  bl.save(); bl.beginPath(); bl.rect(0, 0, W, VY - 520 + 700 * pb); bl.clip(); bl.strokeStyle = '#000'; bl.lineWidth = 7; bl.stroke(dome); bl.stroke(band); for (const h of horns) bl.stroke(h);
+  bl.fillStyle = '#000'; for (const x of [-30, 30]) { bl.beginPath(); bl.arc(VX + x * VS, VY - 46 * VS, 13 * VS, 0, TAU); bl.fill(); } bl.beginPath(); bl.moveTo(VX, VY - 40 * VS); bl.lineTo(VX - 14 * VS, VY - 2); bl.lineTo(VX + 14 * VS, VY - 2); bl.closePath(); bl.fill();
+  bl.restore();
+  // timeline (Bronze Age → Vikings)
+  const tl = span(t, C.mil5, C.antes + .3);
+  if (tl > 0) { bl.save(); bl.strokeStyle = '#000'; bl.lineWidth = 8; bl.beginPath(); bl.moveTo(130, 1250); bl.lineTo(130 + 820 * tl, 1250); bl.stroke(); bl.fillStyle = '#000'; bl.beginPath(); bl.arc(130, 1250, 16, 0, TAU); bl.fill(); if (tl >= 1) { bl.beginPath(); bl.moveTo(975, 1250); bl.lineTo(940, 1228); bl.lineTo(940, 1272); bl.closePath(); bl.fill(); } bl.restore(); }
+  printPlate(c, plateGold, { ink: GOLD, cell: 7, angle: .26, jitter: .15, seed: 3, maxCov: .85, offset: [0, 0], mottling: .15 });
+  printPlate(c, plateBlue, { ink: BLUE, cell: 4, angle: .78, jitter: .05, seed: 4, maxCov: .95, offset: [3, -2], gain: 1.4 });
+  // printed lettering (blue)
+  label(c, 'LÁMINA II · EDAD DE BRONCE', 540, 230, { size: 46, color: BLUE, font: SERIF, prog: span(t, C.l5, C.l5 + .4) });
+  label(c, 'Cascos de Veksø · Dinamarca', 540, 1030, { size: 44, color: BLUE, font: SERIF, prog: span(t, C.dinamarca + .5, C.dinamarca + .9) });
+  label(c, '~900 a. C. · Museo Nacional de Dinamarca', 540, 1088, { size: 30, color: BLUE, font: SERIF, weight: '400', prog: span(t, C.bronce, C.bronce + .4) });
+  label(c, '~900 a. C.', 150, 1310, { size: 34, color: BLUE, font: SERIF, prog: span(t, C.mil5, C.mil5 + .3) });
+  label(c, '793 d. C. VIKINGOS', 940, 1310, { size: 34, color: BLUE, font: SERIF, align: 'right', prog: span(t, C.antes, C.antes + .3) });
+  label(c, '← 1,700 AÑOS →', 545, 1200, { size: 44, color: GOLD, font: SERIF, prog: span(t, C.antes - .2, C.antes + .3) });
+  if (t >= C.ceremonias) { const k = span(t, C.ceremonias, C.ceremonias + .12); c.save(); c.translate(800, 560); c.rotate(-.18); c.scale(1.4 - .4 * k, 1.4 - .4 * k); c.globalAlpha = Math.min(1, k * 3);
+    c.strokeStyle = GOLD; c.lineWidth = 8; c.strokeRect(-200, -50, 400, 100); c.font = `700 56px ${SERIF}`; c.textAlign = 'center'; c.textBaseline = 'middle'; c.fillStyle = GOLD; c.fillText('CEREMONIAL', 0, 4); c.restore(); }
+  if (t >= C.pelear) label(c, 'no para la guerra', 800, 640, { size: 34, color: BLUE, font: HAND, rot: -.18, prog: span(t, C.pelear, C.pelear + .3) });
+}
+// the horns as a loose object: lifted off the plate, carried to the poster, put on the singer by Doepler
+const HOVER = [540, 700], SINGER = [440, 770];
+function hornsObjectPos(t) {
+  if (t < C.l6 - .55) return null;
+  const lift = easeOut(span(t, C.l6 - .55, C.l6 - .2)), a = [VX, VY - 60 * VS], pos = lerp2(a, HOVER, lift);
+  const place = easeIO(span(t, C.doepler + .75, C.doepler + 1.3));
+  return { p: lerp2(pos, SINGER, place), s: lerp(1.05 * lerp(VS, 1, lift), .7, place), rot: lerp(-.06 * lift, 0, place) };
+}
+function drawHornsObject(c, t) {
+  const h = hornsObjectPos(t); if (!h) return; c.save(); c.translate(h.p[0], h.p[1]); c.rotate(h.rot);
+  for (const pth of hornPair(0, 0, h.s)) { c.save(); c.translate(6, 8); c.fillStyle = 'rgba(0,0,0,.18)'; c.fill(pth); c.restore(); screenFill(c, pth, [-150, -220, 300, 240], { color: GOLD, paper: POSTER, seed: 7, wear: .03 }); c.strokeStyle = INK; c.lineWidth = 5; c.stroke(pth); }
+  c.restore();
+}
+// ---------- screen-print poster: Bayreuth 1876 ----------
+function posterScene(c, t) {
+  paper(c, POSTER, null, 21); const [cx, cy, z] = camFor(t); cam(c, cx, cy, z);
+  const fr = span(t, C.l6, C.l6 + .5);
+  c.save(); c.strokeStyle = INK; c.lineWidth = 14; c.beginPath(); c.rect(56, 120, 968, 1340); c.clip(); c.restore();
+  c.save(); c.beginPath(); c.rect(0, 0, W * fr, H); c.clip(); c.strokeStyle = INK; c.lineWidth = 14; c.strokeRect(56, 120, 968, 1340); c.lineWidth = 3; c.strokeRect(80, 144, 920, 1292); c.restore();
+  const sun = span(t, C.famosos, C.famosos + .4);
+  if (sun > 0) { const p = new Path2D(); p.arc(440, 860, 330 * easeOut(sun), 0, TAU); screenFill(c, p, [100, 520, 700, 700], { color: PRED, paper: POSTER, seed: 2, wear: .04 }); }
+  label(c, 'BAYREUTH · 1876', 540, 230, { size: 64, color: INK, font: SERIF, prog: span(t, C.alemania, C.alemania + .35) });
+  label(c, 'DER RING DES NIBELUNGEN', 540, 310, { size: 50, color: PRED, font: SERIF, prog: span(t, C.wagner - .1, C.wagner + .35) });
+  label(c, 'R. WAGNER', 540, 372, { size: 34, color: INK, font: SERIF, weight: '400', prog: span(t, C.wagner, C.wagner + .3) });
+  // the singer: a solid black print rising from the bottom
+  const sg = span(t, C.vestuario - .1, C.vestuario + .5);
+  if (sg > 0) { c.save(); c.beginPath(); c.rect(0, 1440 - 760 * sg, W, 900); c.clip();
+    const body = curvePath([[440, 840], [520, 870], [600, 1060], [650, 1420], [230, 1420], [280, 1060], [360, 870]], true, .5);
+    screenFill(c, body, [200, 820, 480, 620], { color: INK, paper: POSTER, seed: 4, wear: .02 });
+    const head = new Path2D(); head.arc(440, 800, 46, 0, TAU); screenFill(c, head, [390, 750, 100, 100], { color: INK, paper: POSTER, seed: 5 });
+    const helm = new Path2D(); helm.ellipse(440, 780, 56, 46, 0, Math.PI, TAU); helm.closePath(); screenFill(c, helm, [380, 730, 120, 60], { color: INK, paper: POSTER, seed: 6 });
+    c.strokeStyle = INK; c.lineWidth = 10; c.beginPath(); c.moveTo(620, 620); c.lineTo(640, 1420); c.stroke(); c.fillStyle = INK; c.beginPath(); c.moveTo(620, 560); c.lineTo(600, 630); c.lineTo(642, 630); c.closePath(); c.fill();
+    const sh = new Path2D(); sh.arc(330, 1080, 95, 0, TAU); screenFill(c, sh, [230, 980, 200, 200], { color: PRED, paper: POSTER, seed: 8 }); c.lineWidth = 8; c.stroke(sh); c.restore(); }
+  label(c, 'VESTUARIO:', 540, 1380, { size: 36, color: INK, font: SERIF, prog: span(t, C.vestuario, C.vestuario + .3) });
+  label(c, 'CARL EMIL DOEPLER', 540, 1426, { size: 40, color: PRED, font: SERIF, prog: span(t, C.carl, C.carl + .4) });
+  drawHornsObject(c, t);
+  if (t >= C.divinos) for (let i = 0; i < 6; i++) { const a = i / 6 * TAU + .3, r = 170, k = span(t, C.divinos + i * .06, C.divinos + i * .06 + .2), x = 440 + Math.cos(a) * r, y = 760 + Math.sin(a) * r * .8; if (k > 0) brush(c, [[x - 18 * k, y], [x + 18 * k, y]], { w: 4, color: INK, seed: 60 + i }), brush(c, [[x, y - 18 * k], [x, y + 18 * k]], { w: 4, color: INK, seed: 70 + i }); }
+  // Doepler: walks in on "Doepler", lifts the horns, sets them on the singer; offended fan in l7
+  if (t >= C.doepler - .1) {
+    const walk = span(t, C.doepler - .1, C.doepler + .6), x = lerp(1250, DX, easeOut(walk)), tw = twos(t);
+    const f = Math.floor(tw * 30), mv = (M.doepler || [])[f] || 0, mouth = mv < .15 ? 0 : mv < .5 ? 1 : 2;
+    let L = 'hover', R = 'scis', legs = walk < 1 ? 1 + Math.floor(tw * 6) % 2 : 0, fanA = 0;
+    const place = span(t, C.doepler + .75, C.doepler + 1.3);
+    if (place > 0) L = place < .5 ? 'hover' : 'place';
+    if (t >= C.l7 - .1) { L = 'chest'; R = 'fan'; fanA = Math.floor(tw * 4) % 2; }
+    if (t >= C.l7 - .1 && place >= 1) {}
+    if (place > 0 && place < 1) { // contact: the gloved hand rides on the horn tip while it moves
+      const h = hornsObjectPos(t), cl = inbetweenCel(doeplerCel('hover', R, mouth, 0, 0), doeplerCel('place', R, mouth, 0, 0), easeIO(place));
+      c.save(); c.translate(x, DY); c.scale(DSC, DSC); wash(c, coatPath, '#55607A', { al: .5, off: 3, seed: 8 }); gouache(c, rectPath(-32, -444, 64, 82), '#2a2a33', .92); drawCel(c, compileCel(cl, { id: 'doe/mid' }), { material: 'ink', color: INK }); c.restore();
+    } else blitSprite(c, doeplerSprite(L, R, mouth, legs, fanA), x, DY);
+  }
+  if (t >= C.gorrito) { const k = span(t, C.gorrito, C.gorrito + .25); c.save(); c.translate(860, 560 - 20 * k); c.scale(.55 * easeOutBack(k), .55 * easeOutBack(k)); c.translate(0, 300); blitSprite(c, helmSprite('hat'), 0, 0, 1 / SC * 1.6); c.restore(); label(c, '?', 960, 470, { size: 70, color: GRAPH, prog: k }); }
+}
+// ---------- notebook again ----------
+function notebook2(c, t) {
+  notebookPaper(c); const [cx, cy, z] = camFor(t); cam(c, cx, cy, z);
+  bjornAt(c, t, { pose: 'sad' });
+  blitSprite(c, helmSprite('hat'), BX, BY);
+  // three generic horned-viking doodles: cartoon / movie / costume — each crossed out
+  const cue = [C.caricaturas, C.peliculas, C.disfraces], name = ['caricaturas', 'películas', 'disfraces'];
+  MINI.forEach((b, i) => { const p = span(t, cue[i] - .05, cue[i] + .25); if (p <= 0) return; const cx2 = (b[0] + b[2]) / 2, by2 = b[3] - 30;
+    c.save(); c.beginPath(); c.rect(b[0], b[1], (b[2] - b[0]) * p, b[3] - b[1] + 60); c.clip(); brush(c, [[b[0], b[1]], [b[2], b[1]], [b[2], b[3]], [b[0], b[3]], [b[0], b[1] + 3]], { w: 3, color: GRAPH, seed: 80 + i });
+    const s = [.3, .36, .26][i]; blitSprite(c, bjornSprite(['stand', 'axe', 'point'][i], 0, 0), cx2, by2 + 22, s); blitSprite(c, helmSprite('pencil'), cx2, by2 + 22, s);
+    c.save(); c.translate(cx2, by2 + 22); c.scale(SC * s, SC * s); drawHorns(c, [1.3, 1.8, 1.0][i], -1); drawHorns(c, [1.3, 1.8, 1.0][i], 1); c.restore();
+    label(c, name[i], cx2, b[3] + 34, { size: 30, color: GRAPH }); c.restore();
+    const a = T['mx' + i]; marks(c, [a.tip(0), a.tip(1)], prog('mx' + i, t), 9); marks(c, [[b[2] - 20, b[1] + 20], [b[0] + 20, b[3] - 20]], prog('mx' + i, t), 9, RED, 9); });
+  // the pencil draws horns on the beanie again… the eraser takes them back
+  const g = _hornLayer.getContext('2d'); resetT(g); g.clearRect(0, 0, W, H); g.save(); cam(g, cx, cy, z); g.translate(BX, BY); g.scale(SC, SC);
+  const hp = prog('horns2', t); if (hp > 0) { drawHorns(g, K0, -1, { prog: clamp(hp * 2, 0, 1) }); drawHorns(g, K0, 1, { prog: clamp(hp * 2 - 1, 0, 1) }); }
+  g.restore(); resetT(g); if (t >= T.erase2.t0) { cam(g, cx, cy, z); eraseStamps(g, 'erase2', t); }
+  c.save(); resetT(c); c.drawImage(_hornLayer, 0, 0, W, H); c.restore(); cam(c, cx, cy, z);
+  if (t >= T.erase2.t0) crumbs(c, 'erase2', t);
+  if (t >= C.tu) label(c, '¿y tú?', 540, 620, { size: 84, color: RED, rot: -.04, prog: span(t, C.tu, C.tu + .3) });
+  resetT(c); spiral(c); cam(c, cx, cy, z);
+  drawHand(c, handState(t));
+}
+// ---------- page turns (the binding is at the top) ----------
+const _pageL = layer();
+function flip(c, t, t0, oldFn, newFn, carry) {
+  const f = span(t, t0, t0 + .55);
+  newFn(c, t); resetT(c);
+  if (f < 1) { const g = _pageL.getContext('2d'); resetT(g); g.clearRect(0, 0, W, H); oldFn(g, Math.min(t, t0)); resetT(g);
+    const e = easeIn(f), sy = Math.cos(e * Math.PI / 2);
+    c.save(); const sh = c.createLinearGradient(0, H * sy, 0, H * sy + 160); sh.addColorStop(0, 'rgba(0,0,0,.28)'); sh.addColorStop(1, 'rgba(0,0,0,0)'); c.fillStyle = sh; c.fillRect(0, H * sy, W, 160);
+    c.translate(0, 0); c.scale(1, sy); c.drawImage(_pageL, 0, 0, W, H); c.fillStyle = `rgba(255,250,240,${.5 * e})`; c.fillRect(0, 0, W, H); c.restore(); }
+  if (carry) { resetT(c); carry(c, t); }
+}
+const T1 = C.l5 - .4, T2 = C.l6 - .3, T3 = C.l8 - .35;
+function film(c, t) {
+  if (t < T1) return notebook1(c, t);
+  if (t < T1 + .55) return flip(c, t, T1, notebook1, plateScene);
+  if (t < T2) { plateScene(c, t, { detached: t >= C.l6 - .55 }); resetT(c); drawHornsObject(c, t); return; }
+  if (t < T2 + .55) return flip(c, t, T2, (g, tt) => plateScene(g, tt, { detached: true }), (g, tt) => { posterScene(g, tt); }, (g, tt) => { if (tt < T2 + .55) { resetT(g); drawHornsObject(g, tt); } });
+  if (t < T3) return posterScene(c, t);
+  if (t < T3 + .55) return flip(c, t, T3, posterScene, notebook2);
+  return notebook2(c, t);
+}
+defineFilm({ palette: { ...PALETTES.pencilMinimal, paper: PAPER }, format: { ar: '9:16', width: 1080 }, fps: 24, timeline: [{ name: 'vikingos', dur: C.end, fn: (c, tau) => film(c, tau) }] });
+</script>

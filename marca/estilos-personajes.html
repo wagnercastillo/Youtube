@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Estilos de personaje — Puro Chisme</title>
+<style>
+  :root { --ink:#1B1B2F; --pink:#E23E8B; --yellow:#FFD23F; --paper:#FFF8EC; --muted:#5b5b70; --green:#2E9E5B; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink); font-family:"Segoe UI", system-ui, sans-serif; line-height:1.5; }
+  header { background:var(--pink); color:#fff; padding:2.2rem 1rem 2rem; border-bottom:6px solid var(--ink); }
+  .wrap { width:min(1240px, 100% - 2rem); margin:0 auto; }
+  h1 { margin:0; font-family:"Arial Black", Impact, sans-serif; font-size:clamp(2rem, 6vw, 3.2rem); letter-spacing:-.02em; }
+  header p { margin:.6rem 0 0; max-width:820px; font-size:1.08rem; }
+  .how { background:#fff; border:4px solid var(--ink); border-radius:18px; padding:1rem 1.2rem; margin:1.6rem 0; box-shadow:6px 6px 0 var(--ink); }
+  .how p, .how li { margin:.3rem 0; }
+  .how ul { margin:.3rem 0 0 1.2rem; padding:0; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(360px, 1fr)); gap:1.6rem; margin:1.6rem 0 2rem; }
+  .card { background:#fff; border:4px solid var(--ink); border-radius:22px; overflow:hidden; box-shadow:7px 7px 0 var(--ink); display:flex; flex-direction:column; min-width:0; }
+  .art { border-bottom:4px solid var(--ink); display:grid; place-items:center; aspect-ratio:1; }
+  .art svg { width:100%; height:100%; display:block; }
+  .body { padding:1rem 1.2rem 1.3rem; display:flex; flex-direction:column; gap:.5rem; }
+  .tag { display:inline-block; font-size:.72rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:#fff; background:var(--ink); padding:.2rem .55rem; border-radius:999px; width:max-content; }
+  .tag.new { background:var(--green); }
+  .tag.avoid { background:var(--pink); }
+  h2 { margin:.1rem 0 0; font-family:"Arial Black", Impact, sans-serif; font-size:1.45rem; }
+  .desc { margin:0; }
+  dl { margin:0; display:grid; grid-template-columns:4.4rem 1fr; gap:.25rem .6rem; font-size:.9rem; }
+  dt { font-weight:800; }
+  dd { margin:0; }
+  footer { padding:1rem 0 3rem; color:var(--muted); font-size:.92rem; }
+  svg g { transform-box: view-box; }
+
+  @keyframes bob   { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+  @keyframes jit   { 0%,49%{transform:rotate(-1.5deg)} 50%,100%{transform:rotate(1.5deg) translate(1px,-1px)} }
+  @keyframes smear { 0%,72%{transform:skewX(0)} 80%{transform:skewX(-14deg) translateX(10px)} 88%{transform:skewX(6deg) translateX(-3px)} 100%{transform:skewX(0)} }
+  @keyframes draw  { 0%{stroke-dashoffset:1} 55%,100%{stroke-dashoffset:0} }
+  @keyframes sway  { 0%,100%{transform:rotate(-8deg)} 50%{transform:rotate(10deg)} }
+  @keyframes wipe  { 0%{transform:translateX(0)} 50%,100%{transform:translateX(300px)} }
+  @keyframes flap  { 0%,15%{transform:translateY(0)} 20%,30%{transform:translateY(14px)} 35%,45%{transform:translateY(0)} 50%,60%{transform:translateY(10px)} 65%,100%{transform:translateY(0)} }
+  @keyframes poseA { 0%,49%{opacity:1} 50%,100%{opacity:0} }
+  @keyframes pop   { 0%{transform:scale(0)} 12%{transform:scale(1.2)} 20%,70%{transform:scale(1)} 80%,100%{transform:scale(0)} }
+  @keyframes hinge { 0%,40%{transform:rotate(0)} 45%,55%{transform:rotate(12deg)} 60%,70%{transform:rotate(0)} 75%,85%{transform:rotate(8deg)} 90%,100%{transform:rotate(0)} }
+  @keyframes grow  { 0%{transform:scale(0)} 30%,80%{transform:scale(1)} 100%{transform:scale(0)} }
+
+  .bob   { animation: bob 1.2s ease-in-out infinite; }
+  .bob2  { animation: bob 1.4s steps(2,end) infinite; }
+  .jit   { animation: jit .5s linear infinite; }
+  .smear { animation: smear 2.4s ease-in-out infinite; }
+  .draw path { stroke-dasharray:1; stroke-dashoffset:1; animation: draw 3.2s ease-out infinite; }
+  .draw path:nth-child(2){animation-delay:.2s} .draw path:nth-child(3){animation-delay:.4s} .draw path:nth-child(4){animation-delay:.6s}
+  .draw path:nth-child(5){animation-delay:.8s} .draw path:nth-child(6){animation-delay:1s} .draw path:nth-child(7){animation-delay:1.2s}
+  .draw path:nth-child(8){animation-delay:1.4s} .draw path:nth-child(9){animation-delay:1.6s}
+  .sway  { animation: sway 1.6s ease-in-out infinite; }
+  .wipe  { animation: wipe 3s ease-out infinite; }
+  .flap  { animation: flap 1.4s steps(1,end) infinite; }
+  .poseA { animation: poseA .6s linear infinite; }
+  .poseB { animation: poseA .6s linear infinite reverse; }
+  .pop   { animation: pop 2.2s ease-out infinite; }
+  .armL  { animation: sway 1.2s ease-in-out infinite; }
+  .armR  { animation: sway 1.2s ease-in-out infinite reverse; }
+  .jaw   { animation: hinge 1.6s steps(1,end) infinite; }
+  .hand  { animation: sway 1.6s steps(2,end) infinite; }
+  .virgula { animation: grow 2s steps(4,end) infinite; }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>Estilos de personaje</h1>
+  <p>Catálogo para dejar de dibujar siempre al mismo monito redondito. Cada estilo está dibujado aquí en SVG/CSS puro,
+  o sea, se puede meter tal cual en <code>compositions/stage.html</code> de HyperFrames con la boca de <code>mouth.json</code>.
+  Cada tarjeta muestra además el movimiento típico del estilo.</p>
+</div></header>
+
+<div class="wrap">
+  <div class="how">
+    <p><b>Regla de rotación:</b> anotar el estilo en el <code>SPEC.md</code> del episodio y no repetir el del episodio anterior
+    ni el de hace dos. Los redonditos quedan como máximo 1 de cada 5.</p>
+    <ul>
+      <li><b>Ya usados (no cuentan como nuevos):</b> redonditos (EP01–03 y la mayoría de los 2D), pinturas reales (EP05),
+      mapa 3D (EP06), híbrido 3D+2D (EP07), chat de celular (EP08), pixel art (EP09), vaso griego (EP10), juguetes Blender (EP10).</li>
+      <li><b>Boca:</b> en cada tarjeta dice cómo se sincroniza con <code>mouth.json</code>. Los mejores para lip-sync: títeres, collage, recorte.</li>
+      <li><b>Movimiento:</b> los estilos "a saltos" (recorte, palitos, collage, códice) usan <code>steps()</code>; nunca easing suave ahí.
+      Ningún estilo usa line boil ni temblor constante (filtros con <code>seed</code> fijo).</li>
+    </ul>
+  </div>
+
+  <div class="grid">
+
+  <!-- 0 BOLITAS -->
+  <article class="card">
+    <div class="art" style="background:#FFD23F">
+      <svg viewBox="0 0 300 300">
+        <g class="bob">
+          <ellipse cx="150" cy="235" rx="62" ry="52" fill="#E23E8B" stroke="#1B1B2F" stroke-width="6"/>
+          <circle cx="82" cy="240" r="16" fill="#F6C9A0" stroke="#1B1B2F" stroke-width="6"/>
+          <circle cx="218" cy="240" r="16" fill="#F6C9A0" stroke="#1B1B2F" stroke-width="6"/>
+          <circle cx="150" cy="125" r="62" fill="#F6C9A0" stroke="#1B1B2F" stroke-width="6"/>
+          <path d="M92 110 Q150 40 208 110 Q150 85 92 110Z" fill="#4a2c17" stroke="#1B1B2F" stroke-width="6"/>
+          <circle cx="128" cy="128" r="7" fill="#1B1B2F"/><circle cx="172" cy="128" r="7" fill="#1B1B2F"/>
+          <path d="M132 152 Q150 168 168 152" fill="none" stroke="#1B1B2F" stroke-width="6" stroke-linecap="round"/>
+          <circle cx="110" cy="150" r="9" fill="#F49AB5" opacity=".7"/><circle cx="190" cy="150" r="9" fill="#F49AB5" opacity=".7"/>
+        </g>
+      </svg>
+    </div>
+    <div class="body">
+      <span class="tag avoid">Lo actual · evitar</span>
+      <h2>Monitos redonditos</h2>
+      <p class="desc">Cabeza círculo, ojos de punto, cuerpo óvalo, contorno uniforme, cachetes rosas. Es lo que tienen casi todos los episodios 2D y lo que hace que el canal se vea igual en la cuadrícula.</p>
+      <dl>
+        <dt>Cómo</dt><dd>El rig SVG actual.</dd>
+        <dt>Boca</dt><dd>3 bocas intercambiadas por <code>mouth.json</code>.</dd>
+        <dt>Uso</dt><dd>Máximo 1 de cada 5 episodios; y entonces cambiar al menos la paleta y el grosor de línea.</dd>
+      </dl>
+    </div>
+  </article>
+
+  <!-- 1 RECORTE DE PAPEL -->
+  <article class="card">
+    <div class="art" style="background:#cfe0ee">
+      <svg viewBox="0 0 300 300">
+        <defs><filter id="ds" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="3" dy="4" stdDeviation="0" flood-color="#000" flood-opacity=".35"/></filter></defs>
+        <rect width="300" height="300" fill="#cfe0ee"/>
+        <polygon points="0,250 40,244 90,252 150,246 210,253 260,245 300,250 300,300 0,300" fill="#7fb86a" filter="url(#ds)"/>
+        <g class="jit" style="transform-origin:150px 260px">
+          <polygon points="105,190 195,188 205,270 95,272" fill="#E23E8B" filter="url(#ds)"/>
+          <polygon points="100,195 70,230 80,236 110,205" fill="#F6C9A0" filter="url(#ds)"/>
+          <polygon points="200,195 232,228 224,235 192,205" fill="#F6C9A0" filter="url(#ds)"/>
+          <polygon points="110,80 150,72 190,82 200,120 192,165 150,175 108,165 100,120" fill="#F2C49B" filter="url(#ds)"/>
+          <polygon points="104,100 120,68 150,58 182,66 198,100 170,88 150,92 128,88" fill="#3b2415" filter="url(#ds)"/>
+          <ellipse cx="132" cy="122" rx="11" ry="13" fill="#fff" filter="url(#ds)"/><ellipse cx="168" cy="122" rx="11" ry="13" fill="#fff" filter="url(#ds)"/>
+          <circle cx="134" cy="124" r="5" fill="#1B1B2F"/><circle cx="170" cy="124" r="5" fill="#1B1B2F"/>
+          <polygon points="134,145 168,146 160,160 140,159" fill="#b3202e" filter="url(#ds)"/>
+        </g>
+      </svg>
+    </div>
+    <div class="body">
+      <span class="tag new">Nuevo</span>
+      <h2>Recorte de papel</h2>
+      <p class="desc">Piezas planas con sombra dura y bordes irregulares: cabeza, ojos, boca y brazos son pedazos pegados uno encima de otro. Se mueve a saltos de 2 poses, como stop-motion casero.</p>
+      <dl>
+        <dt>Cómo</dt><dd>Polígonos SVG con <code>feDropShadow</code> (sin blur); GSAP con <code>ease: "steps(2)"</code>.</dd>
+        <dt>Boca</dt><dd>3 recortes (cerrada, media, abierta) que se cambian según <code>mouth.json</code>. Muy fácil.</dd>
+        <dt>Va con</dt><dd>Chismes de pueblo, familias, cuentos, "dicen que…".</dd>
+        <dt>Ojo</dt><dd>Nada de easing suave; todo a saltos o se pierde la gracia.</dd>
+      </dl>
+    </div>
+  </article>
+
+  <!-- 2 UPA GEOMÉTRICO -->
+  <article class="card">
+    <div class="art" style="background:#F3E9D2">
+      <svg viewBox="0 0 300 300">
+        <rect width="300" height="300" fill="#F3E9D2"/>
+        <circle cx="236" cy="66" r="40" fill="#E8B04B"/>
+        <circle cx="242" cy="72" r="40" fill="#E23E8B" opacity=".3" style="mix-blend-mode:multiply"/>
+        <g class="smear" style="transform-origin:150px 290px">
+          <polygon points="150,150 95,290 205,290" fill="#1F7A8C"/>
+          <polygon points="156,156 101,296 211,296" fill="#E23E8B" opacity=".35" style="mix-blend-mode:multiply"/>
+          <rect x="148" y="112" width="4" height="40" fill="#1B1B2F"/>
+          <circle cx="152" cy="92" r="26" fill="#F2C49B"/>
+          <polygon points="124,84 128,62 182,58 186,84" fill="#1B1B2F"/>
+          <polygon points="176,92 200,100 176,104" fill="#F2C49B"/>
+          <circle cx="166" cy="88" r="3" fill="#1B1B2F"/>
+          <line x1="156" y1="78" x2="176" y2="80" stroke="#1B1B2F" stroke-width="2"/>
+          <line x1="150" y1="180" x2="230" y2="150" stroke="#1B1B2F" stroke-width="3"/>
+          <circle cx="234" cy="148" r="6" fill="#F2C49B"/>
+        </g>
+      </svg>
+    </div>
+    <div class="body">
+      <span class="tag new">Nuevo</span>
+      <h2>Geométrico años 50 (UPA)</h2>
+      <p class="desc">Triángulos y trapecios, cuello larguísimo, nariz de pico, sin contorno, 3-4 colores con bloques desfasados como impresión mal registrada. Al moverse se estira (smear) y luego frena en seco.</p>
+      <dl>
+        <dt>Cómo</dt><dd>SVG sin <code>stroke</code>, paleta mostaza/teal/coral, <code>mix-blend-mode: multiply</code> para el desfase; <code>skewX</code> en los movimientos.</dd>
+        <dt>Boca</dt><dd>Forma geométrica: línea, triángulo, rombo. 3 estados.</dd>
+        <dt>Va con</dt><dd>Guerra Fría, años 50-60, ciencia, política, espías.</dd>
+        <dt>Ojo</dt><dd>Fondos lisos con un solo objeto; no llenar la escena.</dd>
+      </dl>
+    </div>
+  </article>
+
+  <!-- 3 TINTA -->
+  <article class="card">
+    <div class="art" style="background:#FFFDF7">
+      <svg viewBox="0 0 300 300">
+        <defs>
+          <filter id="rough"><feTurbulence baseFrequency=".04" numOctaves="2" seed="3" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="3"/></filter>
+          <filter id="wc"><feGaussianBlur stdDeviation="2"/></filter>
+        </defs>
+        <rect width="300" height="300" fill="#FFFDF7"/>
+        <ellipse cx="150" cy="150" rx="70" ry="90" fill="#E23E8B" opacity=".25" filter="url(#wc)" transform="rotate(-12 150 150)"/>
+        <g class="draw" fill="none" stroke="#1B1B2F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" filter="url(#rough)">
+          <path pathLength="1" d="M118 70 C 95 95, 100 150, 130 165 C 160 180, 200 160, 198 115 C 196 75, 150 55, 118 70 Z"/>
+          <path pathLength="1" d="M112 95 C 130 70, 170 60, 205 90"/>
+          <path pathLength="1" d="M138 118 q6 -6 12 0 M166 116 q6 -6 12 0"/>
+          <path pathLength="1" d="M150 140 q10 10 22 0"/>
+          <path pathLength="1" d="M130 170 C 110 200, 100 250, 105 290 M175 170 C 200 200, 205 250, 200 290"/>
+          <path pathLength="1" d="M105 200 C 80 210, 70 230, 90 240"/>
+          <path pathLength="1" d="M200 205 C 225 200, 240 215, 230 230 l -10 -4"/>
+          <path pathLength="1" d="M215 95 c 10 -30, 40 -30, 50 -10 c 8 15, -5 30, -25 28 l -10 10 l -2 -12 c -15 -3, -20 -15, -13 -16"/>
+        </g>
+      </svg>
+    </div>
+    <div class="body">
+      <span class="tag new">Nuevo</span>
+      <h2>Tinta a mano (garabato)</h2>
+      <p class="desc">Un solo trazo irregular de pluma, sin relleno, con una mancha de acuarela detrás. El personaje se dibuja frente al espectador conforme habla.</p>
+      <dl>
+        <dt>Cómo</dt><dd><code>pathLength="1"</code> + <code>stroke-dashoffset</code> anclado a <code>W()</code>; <code>feTurbulence</code> con <code>seed</code> fijo para el temblor del trazo.</dd>
+        <dt>Boca</dt><dd>3 trazos alternados (línea, "o", sonrisa).</dd>
+        <dt>Va con</dt><dd>Diarios, cartas, biografías íntimas, espías (Garbo, Onoda).</dd>
+        <dt>Ojo</dt><dd>El filtro no se anima: nada de line boil (regla del canal).</dd>
+      </dl>
+    </div>
+  </article>
+
+  <!-- 4 SOMBRAS CHINESCAS -->
+  <article class="card">
+    <div class="art" style="background:#C9641E">
+      <svg viewBox="0 0 300 300">
+        <defs><radialGradient id="lamp" cx="50%" cy="45%" r="70%"><stop offset="0" stop-color="#FFE39A"/><stop offset="1" stop-color="#C9641E"/></radialGradient></defs>
+        <rect width="300" height="300" fill="url(#lamp)"/>
+        <g fill="#111">
+          <path d="M120 170 L 95 295 L 215 295 L 185 170 Z"/>
+          <g fill="#F2B45C"><circle cx="140" cy="230" r="6"/><circle cx="170" cy="230" r="6"/><circle cx="155" cy="260" r="6"/><circle cx="125" cy="270" r="4"/><circle cx="185" cy="270" r="4"/><path d="M148 200 l7 -10 l7 10 l-7 10z"/></g>
+          <path d="M140 170 L 142 140 C 120 130, 115 95, 135 80 C 150 68, 175 72, 182 88 L 192 100 L 184 104 L 188 118 L 180 122 C 182 136, 170 145, 160 142 L 162 170 Z"/>
+          <path d="M128 85 C 120 60, 150 40, 165 55 C 175 35, 200 45, 190 70 C 205 72, 200 95, 185 88 C 170 70, 145 70, 128 85 Z"/>
+          <g fill="#F2B45C"><circle cx="150" cy="62" r="4"/><circle cx="178" cy="58" r="4"/><circle cx="162" cy="78" r="3"/></g>
+          <path d="M168 98 c 4 -4, 10 -4, 12 2 c -4 2, -9 2, -12 -2z" fill="#F2B45C"/>
+        </g>
+        <g class="sway" style="transform-origin:122px 185px">
+          <path d="M122 185 L 60 230 L 40 215" stroke="#111" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M40 215 l -14 -6 l 6 12 z" fill="#111"/>
+          <line x1="40" y1="215" x2="10" y2="300" stroke="#111" stroke-width="3" opacity=".6"/>
+        </g>
+        <circle cx="122" cy="185" r="4" fill="#C9641E"/>
+      </svg>
+    </div>
+    <div class="body">
+      <span class="tag new">Nuevo</span>
+      <h2>Sombras chinescas</h2>
+      <p class="desc">Siluetas negras con calados ornamentales sobre una luz cálida de lámpara. Brazos articulados con remache visible y varilla; todo pasa de perfil.</p>
+      <dl>
+        <dt>Cómo</dt><dd>Paths negros, calados rellenos con el color del fondo, rotación por articulación; fondo <code>radialGradient</code> que respira.</dd>
+        <dt>Boca</dt><dd>Mandíbula articulada (rotate) o sin boca: habla el narrador y la pose actúa.</dd>
+        <dt>Va con</dt><dd>Asia, leyendas, misterio, cuentos antiguos, crímenes nocturnos.</dd>
+        <dt>Ojo</dt><dd>Toda la expresión va en la pose y el ritmo, no en la cara.</dd>
+      </dl>
+    </div>
+  </article>
+
+  <!-- 5 GRABADO -->
+  <article class="card">
+    <div class="art" style="background:#EADFC6">
+      <svg viewBox="0 0 300 300">
+        <defs>
+          <pattern id="h1" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(40)"><line x1="0" y1="0" x2="0" y2="5" stroke="#3b2a1a" stroke-width="1"/></pattern>
+          <pattern id="h2" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(-50)"><line x1="0" y1="0" x2="0" y2="5" stroke="#3b2a1a" stroke-width="1"/></pattern>
+          <pattern id="h3" width="4" height="4" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="4" y2="4" stroke="#3b2a1a" stroke-width="1"/><line x1="4" y1="0" x2="0" y2="4" stroke="#3b2a1a" stroke-width="1"/></pattern>
+          <clipPath id="face"><ellipse cx="150" cy="150" rx="48" ry="58"/></clipPath>
+        </defs>
+        <rect width="300" height="300" fill="#EADFC6"/>
+        <ellipse cx="150" cy="160" rx="110" ry="125" fill="none" stroke="#3b2a1a" stroke-width="2"/>
+        <ellipse cx="150" cy="160" rx="104" ry="119" fill="none" stroke="#3b2a1a" stroke-width=".7"/>
+        <g>
+          <path d="M60 285 C 80 230, 120 225, 150 225 C 180 225, 220 230, 240 285 Z" fill="url(#h1)" stroke="#3b2a1a" stroke-width="1.5"/>
+          <path d="M150 225 C 180 225, 220 230, 240 285 L 150 285 Z" fill="url(#h3)"/>
+          <rect x="136" y="195" width="28" height="35" fill="#EADFC6" stroke="#3b2a1a" stroke-width="1.2"/>
+          <path d="M130 225 L 150 250 L 170 225 Z" fill="#EADFC6" stroke="#3b2a1a" stroke-width="1.2"/>
+          <ellipse cx="150" cy="150" rx="48" ry="58" fill="#EADFC6" stroke="#3b2a1a" stroke-width="1.5"/>
+          <path d="M150 92 C 185 95, 200 160, 165 205 C 150 205, 150 150, 150 92 Z" fill="url(#h2)" clip-path="url(#face)"/>
+          <path d="M122 140 q 12 -8 24 0 M154 140 q 12 -8 24 0" fill="none" stroke="#3b2a1a" stroke-width="1.5"/>
+          <circle cx="134" cy="146" r="3" fill="#3b2a1a"/><circle cx="166" cy="146" r="3" fill="#3b2a1a"/>
+          <path d="M150 150 l -6 22 l 10 2" fill="none" stroke="#3b2a1a" stroke-width="1.2"/>
+          <path d="M126 176 q 24 -14 48 0 q -24 8 -48 0z" fill="url(#h3)"/>
+          <path d="M134 186 q 16 10 32 0" fill="none" stroke="#3b2a1a" stroke-width="1.5"/>
+          <path d="M110 100 L 112 40 L 188 40 L 190 100 Z" fill="url(#h3)" stroke="#3b2a1a" stroke-width="1.5"/>
+          <path d="M92 102 L 208 102 L 206 108 L 94 108 Z" fill="#3b2a1a"/>
+          <path d="M110 88 h 80" stroke="#EADFC6" stroke-width="3"/>
+        </g>
+        <g class="wipe"><rect x="0" y="0" width="300" height="300" fill="#EADFC6"/></g>
+        <rect x="40" y="281" width="220" height="19" fill="#EADFC6"/>
+        <text x="150" y="294" text-anchor="middle" font-family="Georgia, serif" font-size="11" font-style="italic" fill="#3b2a1a" letter-spacing="2">FIG. 7 — EL CHISMOSO</text>
+      </svg>
+    </div>
+    <div class="body">
+      <span class="tag new">Nuevo</span>
+      <h2>Grabado victoriano</h2>
+      <p class="desc">Achurado sepia como ilustración de periódico del siglo XIX, retrato en óvalo, pie de figura. Aparece por barrido de máscara, como si lo imprimieran.</p>
+      <dl>
+        <dt>Cómo</dt><dd><code>pattern</code> de líneas como relleno, sombra por <code>clipPath</code>, revelado con <code>clip-path: inset()</code> (regla 1 de motion).</dd>
+        <dt>Boca</dt><dd>Casi estática; 2 grabados alternos + bocadillo de prensa. Compensar con zoom/pan de cámara y sellos "EXTRA".</dd>
+        <dt>Va con</dt><dd>Siglo XIX, inventores, crímenes, prensa amarilla, Jack el Destripador, Tesla vs Edison.</dd>
+        <dt>Ojo</dt><dd>Poco movimiento de personaje; el ritmo lo pone la cámara y los cortes.</dd>
+      </dl>
+    </div>
+  </article>
+
+  <!-- 6 TÍTERES -->
+  <article class="card">
+    <div class="art" style="background:#1d3f5e">
+      <svg viewBox="0 0 300 300">
+        <defs><filter id="fur" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency=".6" numOctaves="2" seed="7" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="9"/></filter></defs>
+        <rect width="300" height="300" fill="#1d3f5e"/>
+        <rect x="0" y="265" width="300" height="35" fill="#8a1c33"/><rect x="0" y="260" width="300" height="8" fill="#c9a24a"/>
+        <g class="bob2">
+          <path d="M100 300 C 95 200, 205 200, 200 300 Z" fill="#F58A2B" filter="url(#fur)"/>
+          <path d="M105 230 C 70 240, 50 250, 40 275" stroke="#F58A2B" stroke-width="14" fill="none" stroke-linecap="round"/>
+          <path d="M195 230 C 230 240, 250 250, 260 275" stroke="#F58A2B" stroke-width="14" fill="none" stroke-linecap="round"/>
+          <line x1="40" y1="275" x2="30" y2="300" stroke="#999" stroke-width="2"/><line x1="260" y1="275" x2="270" y2="300" stroke="#999" stroke-width="2"/>
+          <path d="M95 178 L 205 178 L 200 215 L 100 215 Z" fill="#2a0a12"/>
+          <ellipse cx="150" cy="205" rx="30" ry="9" fill="#E23E8B"/>
+          <g class="flap">
+            <path d="M95 178 L 205 178 C 210 215, 90 215, 95 178 Z" fill="#F58A2B" filter="url(#fur)"/>
+          </g>
+          <path d="M90 175 C 80 90, 220 90, 210 175 L 205 180 L 95 180 Z" fill="#F58A2B" filter="url(#fur)"/>
+          <circle cx="132" cy="120" r="22" fill="#fff"/><circle cx="170" cy="120" r="22" fill="#fff"/>
+          <circle cx="140" cy="124" r="7" fill="#111"/><circle cx="164" cy="124" r="7" fill="#111"/>
+          <ellipse cx="152" cy="152" rx="16" ry="12" fill="#D62839"/>
+          <path d="M120 100 C 110 70, 135 60, 140 85 C 150 55, 175 60, 170 90 C 185 70, 200 85, 190 102" fill="#9B5DE5" filter="url(#fur)"/>
+        </g>
+      </svg>
+    </div>
+    <div class="body">
+      <span class="tag new">Nuevo</span>
+      <h2>Títeres de tela</h2>
+      <p class="desc">Peluche con borde de pelusa, ojos de ping-pong pegados, bocota que se abre y cierra, varillas en los brazos y escenario con telón. Rebota al hablar.</p>
+      <dl>
+        <dt>Cómo</dt><dd><code>feTurbulence</code> + <code>feDisplacementMap</code> con <code>seed</code> fijo para la pelusa; mandíbula = <code>translateY</code> con <code>steps()</code>.</dd>
+        <dt>Boca</dt><dd>La mejor del catálogo: <code>mouth.json</code> mueve la mandíbula directo, sin bocas intercambiadas.</dd>
+        <dt>Va con</dt><dd>Comedia, peleas de pareja (Sócrates vs Xantipa), entrevistas, "noticiero".</dd>
+        <dt>Ojo</dt><dd>Colores saturados sobre fondo oscuro; cada títere con una sola prenda que lo identifique.</dd>
+      </dl>
+    </div>
+  </article>
+
+  <!-- 7 PALITOS -->
+  <article class="card">
+    <div class="art" style="background:#fff">
+      <svg viewBox="0 0 300 300">
+        <rect width="300" height="300" fill="#fff"/>
+        <g fill="none" stroke="#111" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="110" cy="90" r="18"/>
+          <path d="M112 108 L 125 190 M125 190 L 100 260 M125 190 L 150 258 M116 130 L 85 165"/>
+          <g class="poseA"><path d="M116 130 L 150 120 L 160 110"/></g>
+          <g class="poseB"><path d="M116 130 L 145 150 L 160 140"/></g>
+          <circle cx="200" cy="95" r="18"/>
+          <path d="M200 113 L 198 190 M198 190 L 175 262 M198 190 L 222 262 M200 135 L 230 160 M200 135 L 175 170"/>
+          <path d="M160 36 h 60 a 10 10 0 0 1 10 10 v 18 a 10 10 0 0 1 -10 10 h -40 l -14 12 l 2 -12 h -8 a 10 10 0 0 1 -10 -10 v -18 a 10 10 0 0 1 10 -10 z" fill="#fff"/>
+          <g class="poseB" stroke-width="2"><path d="M222 72 l 8 -8 M226 84 l 10 -2 M214 66 l 2 -10"/></g>
+        </g>
+        <text x="190" y="60" text-anchor="middle" font-family="Comic Sans MS, Segoe Print, cursive" font-size="14" fill="#111">psst…</text>
+      </svg>
+    </div>
+    <div class="body">
+      <span class="tag new">Nuevo</span>
+      <h2>Monitos de palitos</h2>
+      <p class="desc">Línea fina, cabeza círculo, cuerpo de rayas (xkcd / Alan Becker). Toda la gracia está en la pose y el timing; se ve "hecho en 5 minutos" a propósito.</p>
+      <dl>
+        <dt>Cómo</dt><dd>Paths con <code>stroke-width 2.5</code>; intercambio de 2 poses por <code>steps()</code>; cámara casi fija.</dd>
+        <dt>Boca</dt><dd>No hay: habla el bocadillo con texto o un puntito que parpadea.</dd>
+        <dt>Va con</dt><dd>Explicaciones, cifras, "lo que pasó en realidad", quiz.</dd>
+        <dt>Ojo</dt><dd>Pide mucha acción física (correr, caer, pelear) porque el dibujo solo no entretiene.</dd>
+      </dl>
+    </div>
+  </article>
+
+  <!-- 8 CÓMIC HALFTONE -->
+  <article class="card">
+    <div class="art" style="background:#FFD23F">
+      <svg viewBox="0 0 300 300">
+        <defs>
+          <pattern id="dots" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="4" cy="4" r="2.2" fill="#E23E8B"/></pattern>
+          <pattern id="dots2" width="6" height="6" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.4" fill="#1B1B2F" opacity=".5"/></pattern>
+        </defs>
+        <rect width="300" height="300" fill="#FFD23F"/>
+        <rect width="300" height="300" fill="url(#dots)" opacity=".5"/>
+        <g stroke="#1B1B2F" stroke-width="2"><path d="M150 150 L 0 40 M150 150 L 60 0 M150 150 L 300 60 M150 150 L 290 0 M150 150 L 0 170 M150 150 L 300 200 M150 150 L 40 300 M150 150 L 240 300"/></g>
+        <g stroke="#1B1B2F" stroke-width="6" stroke-linejoin="round">
+          <path d="M70 300 C 75 230, 110 215, 150 215 C 190 215, 225 230, 230 300 Z" fill="#2E6BD6"/>
+          <path d="M150 215 C 190 215, 225 230, 230 300 L 150 300 Z" fill="url(#dots2)" stroke="none"/>
+          <path d="M108 100 C 100 60, 200 60, 192 100 L 196 150 C 200 190, 100 190, 104 150 Z" fill="#F6C9A0"/>
+          <path d="M104 130 C 100 70, 200 70, 196 130 L 200 150 C 190 110, 110 110, 100 150 Z" fill="#1B1B2F"/>
+          <path d="M160 150 C 175 150, 190 165, 196 185 C 170 195, 150 180, 160 150 Z" fill="url(#dots2)" stroke="none"/>
+          <ellipse cx="128" cy="140" rx="12" ry="15" fill="#fff"/><ellipse cx="172" cy="140" rx="12" ry="15" fill="#fff"/>
+          <circle cx="130" cy="143" r="5" fill="#1B1B2F" stroke="none"/><circle cx="170" cy="143" r="5" fill="#1B1B2F" stroke="none"/>
+          <ellipse cx="150" cy="175" rx="14" ry="10" fill="#1B1B2F"/>
+        </g>
+        <g class="pop" style="transform-origin:225px 70px">
+          <polygon points="225,20 238,45 268,38 252,62 280,80 250,86 255,116 232,96 212,120 208,90 178,92 200,72 172,52 204,56 206,28" fill="#fff" stroke="#1B1B2F" stroke-width="5" stroke-linejoin="round"/>
+          <text x="226" y="78" text-anchor="middle" font-family="Impact, Arial Black, sans-serif" font-size="22" fill="#E23E8B" stroke="#1B1B2F" stroke-width="1">¡¿QUÉ?!</text>
+        </g>
+        <rect x="3" y="3" width="294" height="294" fill="none" stroke="#1B1B2F" stroke-width="6"/>
+      </svg>
+    </div>
+    <div class="body">
+      <span class="tag new">Nuevo</span>
+      <h2>Cómic con tramas</h2>
+      <p class="desc">Contorno gordo, puntos de trama (halftone) en las sombras, líneas de velocidad, onomatopeyas en explosión y borde de viñeta. Cada frase es una viñeta nueva.</p>
+      <dl>
+        <dt>Cómo</dt><dd><code>pattern</code> de círculos; entradas con overshoot (<code>back.out</code>); los cortes de cámara son cambios de viñeta.</dd>
+        <dt>Boca</dt><dd>3 bocas de cómic (cerrada, grito, sonrisa) por <code>mouth.json</code>.</dd>
+        <dt>Va con</dt><dd>Peleas, escándalos, héroes y villanos (Adidas vs Puma, Tesla vs Edison).</dd>
+        <dt>Ojo</dt><dd>Fondo de puntos con opacidad baja o los subtítulos no se leen.</dd>
+      </dl>
+    </div>
+  </article>
+
+  <!-- 9 RUBBER HOSE -->
+  <article class="card">
+    <div class="art" style="background:#bbb">
+      <svg viewBox="0 0 300 300">
+        <defs>
+          <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="1" seed="2"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".18"/></feComponentTransfer></filter>
+          <radialGradient id="vig" cx="50%" cy="50%" r="70%"><stop offset=".5" stop-color="#e9e9e9"/><stop offset="1" stop-color="#8a8a8a"/></radialGradient>
+        </defs>
+        <rect width="300" height="300" fill="url(#vig)"/>
+        <path d="M20 270 q 65 -10 130 0 t 130 0" stroke="#222" stroke-width="2" fill="none"/>
+        <g class="bob" style="transform-origin:150px 270px">
+          <path d="M135 225 C 130 250, 120 262, 110 268 M165 225 C 170 250, 180 262, 190 268" stroke="#111" stroke-width="7" fill="none" stroke-linecap="round"/>
+          <ellipse cx="102" cy="268" rx="16" ry="7" fill="#111"/><ellipse cx="198" cy="268" rx="16" ry="7" fill="#111"/>
+          <ellipse cx="150" cy="200" rx="34" ry="32" fill="#111"/>
+          <circle cx="140" cy="208" r="4" fill="#fff"/><circle cx="160" cy="208" r="4" fill="#fff"/>
+          <g class="armL" style="transform-origin:120px 185px">
+            <path d="M120 185 C 80 190, 60 160, 75 135" stroke="#111" stroke-width="7" fill="none" stroke-linecap="round"/>
+            <path d="M75 135 c -14 -6, -14 -18, -4 -20 c 2 -8, 12 -8, 14 0 c 10 -2, 14 10, 2 14 c 0 6, -6 8, -12 6 z" fill="#fff" stroke="#111" stroke-width="3"/>
+          </g>
+          <g class="armR" style="transform-origin:180px 185px">
+            <path d="M180 185 C 220 195, 240 170, 225 150" stroke="#111" stroke-width="7" fill="none" stroke-linecap="round"/>
+            <path d="M225 150 c 14 -6, 16 -16, 6 -18 c 0 -8, -12 -8, -14 0 c -10 -2, -14 10, -2 14 c 0 6, 6 8, 10 4 z" fill="#fff" stroke="#111" stroke-width="3"/>
+          </g>
+          <circle cx="112" cy="90" r="14" fill="#111"/><circle cx="188" cy="90" r="14" fill="#111"/>
+          <circle cx="150" cy="120" r="46" fill="#fff" stroke="#111" stroke-width="4"/>
+          <ellipse cx="133" cy="112" rx="9" ry="12" fill="#111"/><path d="M133 112 L133 100 A9 12 0 0 1 142 108Z" fill="#fff"/>
+          <ellipse cx="167" cy="112" rx="9" ry="12" fill="#111"/><path d="M167 112 L167 100 A9 12 0 0 1 176 108Z" fill="#fff"/>
+          <ellipse cx="150" cy="130" rx="6" ry="4" fill="#111"/>
+          <path d="M126 138 q 24 24 48 0" stroke="#111" stroke-width="3" fill="none"/>
+        </g>
+        <rect width="300" height="300" filter="url(#grain)" opacity=".5" style="pointer-events:none"/>
+      </svg>
+    </div>
+    <div class="body">
+      <span class="tag new">Nuevo</span>
+      <h2>Rubber hose años 30</h2>
+      <p class="desc">Blanco y negro, ojos de pastel (pie-eyes), brazos de manguera sin codos, guantes blancos, grano y viñeta de película. Rebota al ritmo todo el tiempo.</p>
+      <dl>
+        <dt>Cómo</dt><dd>Paths curvos; loop <code>bob</code> + brazos en contrafase (un solo tween con <code>repeat:-1, yoyo</code>); grano con <code>seed</code> fijo.</dd>
+        <dt>Boca</dt><dd>Sonrisa en 3 estados; la cabeza rebota con cada sílaba.</dd>
+        <dt>Va con</dt><dd>Crack del 29, Prohibición, jazz, Hollywood viejo, años 20-30.</dd>
+        <dt>Ojo</dt><dd>Diseño propio: nada que se confunda con personajes con derechos.</dd>
+      </dl>
+    </div>
+  </article>
+
+  <!-- 10 COLLAGE GILLIAM -->
+  <article class="card">
+    <div class="art" style="background:#7fa7a3">
+      <svg viewBox="0 0 300 300">
+        <defs>
+          <linearGradient id="sep" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d9c4a1"/><stop offset="1" stop-color="#8b6b45"/></linearGradient>
+          <clipPath id="cutHead"><polygon points="100,40 150,30 200,42 212,100 205,150 100,150 92,100"/></clipPath>
+          <clipPath id="cutJaw"><polygon points="100,150 205,150 200,185 150,196 108,186"/></clipPath>
+        </defs>
+        <rect width="300" height="300" fill="#7fa7a3"/>
+        <path d="M20 60 l 30 -12 l 40 8 l 30 -14 l 20 18 l -120 10z" fill="#fff" opacity=".8"/>
+        <path d="M85 300 L 95 190 L 150 180 L 205 190 L 215 300 Z" fill="#B23A48" stroke="#2b1a10" stroke-width="5"/>
+        <path d="M120 200 L 150 240 L 180 200" fill="#fff" stroke="#2b1a10" stroke-width="4"/>
+        <g class="hand" style="transform-origin:215px 230px"><path d="M215 230 L 265 215 L 290 218 L 268 232 L 240 250 Z" fill="#E8C39E" stroke="#2b1a10" stroke-width="4" stroke-linejoin="round"/></g>
+        <g>
+          <g clip-path="url(#cutHead)">
+            <rect x="80" y="20" width="150" height="140" fill="url(#sep)"/>
+            <ellipse cx="152" cy="105" rx="42" ry="52" fill="#c9a97f"/>
+            <path d="M110 80 C 115 45, 190 45, 195 80 C 180 70, 125 70, 110 80 Z" fill="#3a2a1a"/>
+            <path d="M126 100 q 12 -6 24 0 M154 100 q 12 -6 24 0" stroke="#3a2a1a" stroke-width="3" fill="none"/>
+            <circle cx="138" cy="106" r="4" fill="#2a1a10"/><circle cx="166" cy="106" r="4" fill="#2a1a10"/>
+            <path d="M152 110 l -6 24 l 10 2" stroke="#6b4a2a" stroke-width="2" fill="none"/>
+          </g>
+          <polygon points="100,40 150,30 200,42 212,100 205,150 100,150 92,100" fill="none" stroke="#fff" stroke-width="4"/>
+        </g>
+        <g class="jaw" style="transform-origin:100px 150px">
+          <g clip-path="url(#cutJaw)">
+            <rect x="80" y="140" width="150" height="70" fill="url(#sep)"/>
+            <ellipse cx="152" cy="105" rx="42" ry="52" fill="#c9a97f"/>
+            <path d="M134 160 q 18 12 36 0" stroke="#3a2a1a" stroke-width="3" fill="none"/>
+          </g>
+          <polygon points="100,150 205,150 200,185 150,196 108,186" fill="none" stroke="#fff" stroke-width="4"/>
+        </g>
+      </svg>
+    </div>
+    <div class="body">
+      <span class="tag new">Nuevo</span>
+      <h2>Collage de recortes (Gilliam)</h2>
+      <p class="desc">Cabeza = retrato real de dominio público recortado con tijeras (borde blanco), cuerpo pintado plano con contorno gordo, mano gigante. La mandíbula es un pedazo aparte que abre a bisagra.</p>
+      <dl>
+        <dt>Cómo</dt><dd><code>&lt;image&gt;</code> con <code>clip-path: polygon()</code> dentado; mandíbula = mitad inferior rotada con <code>steps(1)</code>.</dd>
+        <dt>Boca</dt><dd>La bisagra de la mandíbula directo con <code>mouth.json</code>. Facilísimo y muy gracioso.</dd>
+        <dt>Va con</dt><dd>Personajes con retrato real: Napoleón, reyes, Pujol, Garbo, bustos de Cleopatra.</dd>
+        <dt>Ojo</dt><dd>Fuente de la imagen en la descripción (Wikimedia Commons, dominio público).</dd>
+      </dl>
+    </div>
+  </article>
+
+  <!-- 11 CÓDICE -->
+  <article class="card">
+    <div class="art" style="background:#E9D7A8">
+      <svg viewBox="0 0 300 300">
+        <rect width="300" height="300" fill="#E9D7A8"/>
+        <rect x="8" y="8" width="284" height="284" fill="none" stroke="#B5332A" stroke-width="6"/>
+        <rect x="18" y="18" width="264" height="264" fill="none" stroke="#1B1B2F" stroke-width="2"/>
+        <g stroke="#1B1B2F" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+          <path d="M95 250 L 95 170 C 95 140, 150 135, 170 160 L 180 250 Z" fill="#2BB3B1"/>
+          <path d="M130 250 L 125 200 C 135 180, 175 185, 185 205 L 190 250 Z" fill="#E8C39E"/>
+          <path d="M185 205 L 215 215 L 215 232 L 190 228 Z" fill="#E8C39E"/>
+          <path d="M150 165 L 205 150 L 215 160 L 160 182 Z" fill="#E8C39E"/>
+          <path d="M118 130 C 110 90, 160 80, 175 100 L 190 112 L 178 116 L 186 126 L 176 128 L 176 138 L 160 142 L 160 160 L 125 160 Z" fill="#E8C39E"/>
+          <path d="M112 118 C 100 80, 150 60, 185 80 L 190 98 C 165 80, 130 90, 120 125 Z" fill="#1B1B2F"/>
+          <path d="M150 62 L 160 30 L 170 62 Z M165 62 L 185 36 L 190 66 Z" fill="#2E9E5B"/>
+          <path d="M150 108 c 8 -8, 20 -8, 26 0 c -6 8, -18 8, -26 0 z" fill="#fff"/>
+          <circle cx="164" cy="108" r="4" fill="#1B1B2F" stroke="none"/>
+          <g class="virgula" style="transform-origin:190px 122px">
+            <path d="M190 122 c 20 -4, 40 2, 42 22 c 1 12, -12 18, -20 10 c -6 -6, 0 -14, 8 -10" fill="#B5332A"/>
+          </g>
+        </g>
+        <g fill="#1B1B2F">
+          <path d="M40 270 c -2 -8, 10 -10, 11 -2 c 1 6, -3 8, -5 10 c -3 0, -5 -3, -6 -8z"/><circle cx="52" cy="258" r="2"/><circle cx="48" cy="256" r="1.5"/>
+          <path d="M70 262 c -2 -8, 10 -10, 11 -2 c 1 6, -3 8, -5 10 c -3 0, -5 -3, -6 -8z"/><circle cx="82" cy="250" r="2"/>
+          <rect x="225" y="258" width="40" height="7"/><circle cx="230" cy="248" r="4"/><circle cx="244" cy="248" r="4"/><circle cx="258" cy="248" r="4"/>
+        </g>
+      </svg>
+    </div>
+    <div class="body">
+      <span class="tag new">Nuevo</span>
+      <h2>Códice mexica</h2>
+      <p class="desc">Figuras de perfil con el ojo de frente, contorno negro grueso, colores planos (rojo, turquesa, ocre), vírgula del habla, huellas de pie como camino y numerales de barras y puntos sobre papel amate.</p>
+      <dl>
+        <dt>Cómo</dt><dd>Paths con <code>stroke-width 4</code>; la vírgula aparece con <code>steps(4)</code>; el personaje avanza a saltos por las huellas.</dd>
+        <dt>Boca</dt><dd>La vírgula crece y encoge con el audio; sin boca animada.</dd>
+        <dt>Va con</dt><dd>Mexicas, mayas, Conquista. Máximo 1 de cada 5 (regla de temas mundiales).</dd>
+        <dt>Ojo</dt><dd>Referencia real: Códice Mendoza y Florentino, no "azteca" de souvenir.</dd>
+      </dl>
+    </div>
+  </article>
+
+  <!-- 12 PIZARRA -->
+  <article class="card">
+    <div class="art" style="background:#8a5a2b">
+      <svg viewBox="0 0 300 300">
+        <defs><filter id="chalk"><feTurbulence baseFrequency=".9" numOctaves="1" seed="5" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2"/><feComponentTransfer><feFuncA type="table" tableValues="0 .9"/></feComponentTransfer></filter></defs>
+        <rect width="300" height="300" fill="#8a5a2b"/>
+        <rect x="10" y="10" width="280" height="280" fill="#2f4f3a"/>
+        <ellipse cx="200" cy="230" rx="60" ry="20" fill="#fff" opacity=".06"/>
+        <ellipse cx="90" cy="60" rx="40" ry="14" fill="#fff" opacity=".05"/>
+        <g class="draw" fill="none" stroke="#f3f1e6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" filter="url(#chalk)">
+          <path pathLength="1" d="M110 110 C 100 60, 170 55, 170 105 C 172 140, 110 145, 110 110 Z"/>
+          <path pathLength="1" d="M100 95 L 180 92 L 165 60 L 140 70 L 115 60 Z" stroke="#FFD23F"/>
+          <path pathLength="1" d="M128 112 l 6 0 M150 110 l 6 0"/>
+          <path pathLength="1" d="M132 128 q 10 8 20 0"/>
+          <path pathLength="1" d="M140 145 L 140 230 M140 160 L 105 200 M140 160 L 160 150 L 150 175"/>
+          <path pathLength="1" d="M140 230 L 125 280 M140 230 L 160 280"/>
+          <path pathLength="1" d="M40 110 L 40 280 M34 110 h 12 M34 280 h 12" stroke="#E23E8B"/>
+          <path pathLength="1" d="M205 120 l 30 -40 M225 82 l 10 -2 l -2 10" stroke="#FFD23F"/>
+        </g>
+        <text x="20" y="100" font-family="Comic Sans MS, Segoe Print, cursive" font-size="13" fill="#E23E8B" filter="url(#chalk)">1.68 m</text>
+        <text x="196" y="68" font-family="Comic Sans MS, Segoe Print, cursive" font-size="14" fill="#FFD23F" filter="url(#chalk)">¿bajito?</text>
+      </svg>
+    </div>
+    <div class="body">
+      <span class="tag new">Nuevo</span>
+      <h2>Pizarra de gis</h2>
+      <p class="desc">Trazos de tiza blanca con grano, acentos de gis rosa y amarillo, flechas y medidas como clase de profe. Todo se dibuja en vivo conforme la narración lo menciona.</p>
+      <dl>
+        <dt>Cómo</dt><dd><code>stroke-dashoffset</code> anclado a <code>W()</code> + filtro de tiza; textos manuscritos. También sale natural en Manim (EP04).</dd>
+        <dt>Boca</dt><dd>Trazo que se redibuja (2-3 bocas) o sin boca: la tiza "explica".</dd>
+        <dt>Va con</dt><dd>Datos, comparaciones, "¿era bajito?", quiz, cronologías.</dd>
+        <dt>Ojo</dt><dd>El pizarrón se llena: borrar con una mano (máscara) antes del siguiente punto.</dd>
+      </dl>
+    </div>
+  </article>
+
+  </div>
+
+  <footer>
+    <p><b>Fuera de este catálogo (requieren Blender, no SVG):</b> plastilina / stop-motion (skill <code>stop-motion-craft-style</code>),
+    papercraft low-poly, marionetas 3D de madera. Juguetes de plástico ya se hizo en EP10.</p>
+    <p>Para producir: elegir estilo → copiarlo en <code>SPEC.md</code> → dibujar el rig en <code>audio/build_video.py</code> con el SVG de la tarjeta como base → bocas y entradas ancladas con <code>W()</code>/<code>L()</code>.</p>
+  </footer>
+</div>
+</body>
+</html>

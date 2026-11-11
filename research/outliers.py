@@ -47,6 +47,7 @@ def main():
     ap.add_argument("--days", type=int, default=30)
     ap.add_argument("--region", default="MX")
     ap.add_argument("--top", type=int, default=25)
+    ap.add_argument("--lang", default="es")
     ap.add_argument("--selftest", action="store_true")
     a = ap.parse_args()
     if a.selftest:
@@ -57,7 +58,7 @@ def main():
     vids = {}
     for q in a.topics:
         r = get("search", key, part="snippet", q=q + " #shorts", type="video", videoDuration="short", order="viewCount",
-                publishedAfter=after, regionCode=a.region, relevanceLanguage="es", maxResults=50)
+                publishedAfter=after, regionCode=a.region, relevanceLanguage=a.lang, maxResults=50)
         for it in r.get("items", []):
             vids[it["id"]["videoId"]] = q
     ids = list(vids)

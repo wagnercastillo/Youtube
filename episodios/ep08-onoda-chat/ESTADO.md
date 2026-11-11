@@ -16,3 +16,4 @@ Pipeline: gen_audio_el.py → gen_music_sfx.py → build.py → build_video.py �
 ## Para subir (youtube_description.txt, youtube_tags.txt)
 Título: Peleó una guerra 29 años… porque nadie le avisó que terminó 📱🪖
 Subido 2026-11-06 y PROGRAMADO: https://youtu.be/IzUKGpuf30k · se publica 2026-11-08T01:00:00Z (sáb 7 nov 7:00 pm CDMX / 8:00 pm Ecuador). Miniatura: renders/miniatura.jpg (la API la rechazó: el canal aún no tiene permiso de miniaturas personalizadas; ponerla a mano).
+Miniatura v2 (2026-11-11, episodios/miniaturas.py) SUBIDA por API con set-thumbnail.ts.

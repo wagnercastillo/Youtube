@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Nichos en inglés parecidos a Puro Chisme</title>
+  <style>
+    :root {
+      --canvas: #08090b;
+      --surface: rgba(28, 29, 33, 0.76);
+      --surface-strong: #191a1e;
+      --line: rgba(255, 255, 255, 0.11);
+      --text: #f7f7f8;
+      --muted: #b7b8bf;
+      --red: #ff3347;
+      --red-soft: rgba(255, 51, 71, 0.16);
+      --green: #4fd1a1;
+      --amber: #ffc45b;
+      --blue: #78a9ff;
+      --radius: 22px;
+      --shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 16% -8%, rgba(255, 51, 71, 0.19), transparent 32rem),
+        radial-gradient(circle at 96% 24%, rgba(120, 169, 255, 0.10), transparent 30rem),
+        var(--canvas);
+      font-family: Aptos, "Segoe UI Variable Text", "Trebuchet MS", sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    a { color: #a9c8ff; text-underline-offset: 0.2em; }
+    a:hover { color: #d7e5ff; }
+    a:focus-visible, button:focus-visible { outline: 3px solid var(--amber); outline-offset: 4px; }
+
+    .skip-link {
+      position: fixed;
+      left: 1rem;
+      top: 1rem;
+      z-index: 20;
+      padding: 0.65rem 0.9rem;
+      border-radius: 999px;
+      color: #111;
+      background: #fff;
+      transform: translateY(-180%);
+    }
+    .skip-link:focus { transform: translateY(0); }
+
+    .shell { width: min(1180px, calc(100% - 2rem)); margin: 0 auto; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid var(--line);
+      background: rgba(8, 9, 11, 0.76);
+      backdrop-filter: blur(18px) saturate(125%);
+    }
+
+    .topbar-inner {
+      min-height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand { display: flex; align-items: center; gap: 0.75rem; font-weight: 760; letter-spacing: 0.01em; }
+    .brand-mark {
+      width: 34px;
+      height: 24px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      background: var(--red);
+      box-shadow: 0 0 28px rgba(255, 51, 71, 0.35);
+    }
+    .brand-mark::after {
+      content: "";
+      width: 0;
+      height: 0;
+      margin-left: 2px;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-left: 8px solid #fff;
+    }
+
+    .meta-line { color: var(--muted); font-size: 0.88rem; }
+
+    .hero { padding: clamp(3.8rem, 8vw, 7.6rem) 0 2.5rem; }
+    .eyebrow {
+      margin: 0 0 1rem;
+      color: #ff7d89;
+      font-size: 0.78rem;
+      font-weight: 760;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3 { font-family: Bahnschrift, "Arial Narrow", sans-serif; line-height: 1.08; text-wrap: balance; }
+    h1 { max-width: 900px; margin: 0; font-size: clamp(2.7rem, 7vw, 6.8rem); letter-spacing: -0.055em; }
+    h2 { margin: 0 0 1.1rem; font-size: clamp(1.65rem, 3vw, 2.55rem); letter-spacing: -0.025em; }
+    h3 { margin: 0 0 0.7rem; font-size: 1.22rem; }
+    .lede { max-width: 760px; margin: 1.5rem 0 0; color: var(--muted); font-size: clamp(1.05rem, 2vw, 1.28rem); }
+
+    .chips { display: flex; flex-wrap: wrap; gap: 0.65rem; margin-top: 2rem; }
+    .chip {
+      padding: 0.55rem 0.78rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: #dedee2;
+      background: rgba(255, 255, 255, 0.045);
+      font-size: 0.87rem;
+    }
+
+    main { padding-bottom: 5rem; }
+    .section { margin-top: clamp(2rem, 5vw, 4rem); scroll-margin-top: 90px; }
+    .section-head { max-width: 790px; margin-bottom: 1.4rem; }
+    .section-note { margin: -0.5rem 0 0; color: var(--muted); }
+
+    .glass {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.025));
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(16px) saturate(120%);
+    }
+
+    .glass, .panel, .card, .fact, .grid > *, .facts > * { min-width: 0; overflow-wrap: anywhere; }
+    code { white-space: normal; }
+    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1rem; }
+    .card { grid-column: span 4; min-height: 220px; padding: 1.35rem; }
+    .card p:last-child { margin-bottom: 0; }
+    .card-number { color: var(--muted); font-size: 0.8rem; font-variant-numeric: tabular-nums; }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      margin-bottom: 1.1rem;
+      font-size: 0.76rem;
+      font-weight: 760;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .status::before { content: ""; width: 0.58rem; height: 0.58rem; border-radius: 50%; background: currentColor; }
+    .status-best { color: var(--green); }
+    .status-experimental { color: var(--amber); }
+    .status-avoid { color: #ff7180; }
+
+    .panel { padding: clamp(1.2rem, 3vw, 2rem); }
+    .facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.8rem; margin: 1.2rem 0 0; }
+    .fact { padding: 1rem; border-radius: 16px; background: rgba(0, 0, 0, 0.22); border: 1px solid var(--line); }
+    .fact-label { display: block; color: var(--muted); font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.08em; }
+    .fact-value { display: block; margin-top: 0.3rem; font-weight: 720; }
+
+    .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 18px; background: rgba(5, 6, 8, 0.4); }
+    table { width: 100%; min-width: 760px; border-collapse: collapse; font-size: 0.9rem; }
+    caption { padding: 1rem; color: var(--muted); text-align: left; }
+    th, td { padding: 0.85rem 0.95rem; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { position: sticky; top: 64px; color: #ededf0; background: #17181c; font-size: 0.76rem; letter-spacing: 0.055em; text-transform: uppercase; }
+    tbody tr:hover { background: rgba(255, 255, 255, 0.035); }
+
+    .callout { padding: 1.25rem 1.35rem; border-left: 4px solid var(--red); }
+    .callout p { margin: 0; }
+    .unknown { color: var(--amber); font-weight: 700; }
+    .source-list { columns: 2; column-gap: 2rem; }
+    .source-list li { break-inside: avoid; margin-bottom: 0.7rem; }
+
+    footer { padding: 2rem 0 4rem; color: var(--muted); border-top: 1px solid var(--line); }
+    .copyright {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.45rem 0.8rem;
+      margin-top: 1.2rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid var(--line);
+      color: #e7e7ea;
+      font-size: 0.92rem;
+    }
+    .channel-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-weight: 760;
+      color: #fff;
+      text-decoration-color: var(--red);
+      text-decoration-thickness: 2px;
+    }
+    .channel-link::before { content: "▶"; color: var(--red); font-size: 0.72rem; }
+
+    @media (max-width: 900px) {
+      .card { grid-column: span 6; }
+      .facts { grid-template-columns: repeat(2, 1fr); }
+      .source-list { columns: 1; }
+    }
+
+    @media (max-width: 620px) {
+      .shell { width: min(100% - 1.1rem, 1180px); }
+      .meta-line { display: none; }
+      .hero { padding-top: 3rem; }
+      .card { grid-column: 1 / -1; min-height: auto; }
+      .facts { grid-template-columns: 1fr; }
+      .panel { border-radius: 18px; }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .hero > * { animation: rise 520ms both; }
+      .hero > *:nth-child(2) { animation-delay: 80ms; }
+      .hero > *:nth-child(3) { animation-delay: 140ms; }
+      .hero > *:nth-child(4) { animation-delay: 200ms; }
+      @keyframes rise { from { opacity: 0; transform: translateY(16px); } }
+    }
+
+    @media print {
+      :root { --text: #111; --muted: #555; --line: #ccc; }
+      body { color: #111; background: #fff; font-size: 10.5pt; }
+      .topbar { position: static; background: #fff; backdrop-filter: none; }
+      .glass, .panel, .card { box-shadow: none; background: #fff; backdrop-filter: none; break-inside: avoid; }
+      .hero { padding: 2rem 0 1rem; }
+      h1 { font-size: 32pt; }
+      a { color: #111; }
+      th { position: static; color: #111; background: #eee; }
+      .table-wrap { overflow: visible; }
+      table { min-width: 0; font-size: 8pt; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#report">Ir al informe</a>
+  <header class="topbar">
+    <div class="shell topbar-inner">
+      <div class="brand"><span class="brand-mark" aria-hidden="true"></span><span>Puro Chisme · investigación de nichos</span></div>
+      <div class="meta-line">Solo datos verificados · 2026-11-08 01:12 UTC</div>
+    </div>
+  </header>
+
+  <div class="shell">
+    <section class="hero" aria-labelledby="report-title">
+      <p class="eyebrow">Nichos para canales sin cara</p>
+      <h1 id="report-title">Nichos en inglés parecidos a Puro Chisme</h1>
+      <p class="lede">Qué hacen los canales de historia y curiosidades animadas en inglés que más crecen en Shorts, y qué conviene copiar o evitar para dirigir Puro Chisme.</p>
+      <div class="chips" aria-label="Parámetros de búsqueda">
+        <span class="chip">Idioma · Inglés</span>
+        <span class="chip">Región · Global (búsquedas US)</span>
+        <span class="chip">Formato · Shorts</span>
+        <span class="chip">Políticas revisadas · 2026-11-08 01:12 UTC</span>
+      </div>
+    </section>
+
+    <main id="report">
+      <section class="section" id="encabezado" aria-labelledby="h-encabezado">
+  <div class="section-head">
+    <h2 id="h-encabezado">Cómo se hizo esta investigación</h2>
+    <p class="section-note">Lo que se midió, con qué, y lo que no se pudo medir.</p>
+  </div>
+  <div class="glass panel">
+    <div class="facts">
+      <div class="fact"><span class="fact-label">Fecha</span><span class="fact-value">2026-11-07 (Ecuador, UTC−5) · 2026-11-08 01:12 UTC</span></div>
+      <div class="fact"><span class="fact-label">Mercado</span><span class="fact-value">Inglés · búsquedas con región US</span></div>
+      <div class="fact"><span class="fact-label">Formato</span><span class="fact-value">Shorts (≤180 s)</span></div>
+      <div class="fact"><span class="fact-label">Ventanas</span><span class="fact-value">Descubrimiento 30 días · señal Shorts 90 días</span></div>
+    </div>
+    <h3 style="margin-top:1.4rem">Herramientas</h3>
+    <ul>
+      <li><strong>Usadas:</strong> YouTube Data API v3 con los scripts del repo: <code>outliers.py</code> (14 búsquedas, 657 Shorts), <code>yt_niches.py</code> (12 búsquedas, canales de ≤365 días) y el nuevo <code>canal_stats.py</code> (Shorts de 90 días por canal, 201 canales). También se leyeron títulos recientes para descartar canales que no son del nicho ni en inglés.</li>
+      <li><strong>No disponibles:</strong> Google Trends, volumen de búsqueda de palabras clave, vidIQ/NexLev, TikTok e Instagram. Por eso el volumen de búsqueda y la tendencia de Google figuran como <span class="unknown">desconocido</span>. Si conectas vidIQ o NexLev, se podrían estimar volumen de palabras clave, edad real de los canales y su estado de monetización.</li>
+    </ul>
+    <h3>Límites importantes</h3>
+    <ul>
+      <li><strong>"Vistas en 90 días"</strong> = vistas actuales de los Shorts <em>subidos</em> en los últimos 90 días. La API no da vistas por periodo, así que es un <em>mínimo</em>: no cuenta las vistas nuevas de videos más viejos.</li>
+      <li>Por canal se leen solo los <strong>últimos 50 uploads</strong>. Los canales marcados "≥" subieron 50 o más en menos de 90 días: su ritmo y sus vistas reales son mayores que lo mostrado.</li>
+      <li>El filtro <code>relevanceLanguage=en</code> no excluye otros idiomas: muchos resultados eran en hindi, telugu, indonesio o ruso (p. ej., <em>keymood</em>, <em>Teluque</em>). Se descartaron a mano y no cuentan en las conclusiones.</li>
+      <li><strong>Outlier</strong> (definición usada): un Short de los últimos 90 días con ≥5 veces la mediana de vistas de su propio canal en esa ventana.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="resumen" aria-labelledby="h-resumen">
+  <div class="section-head">
+    <h2 id="h-resumen">Resumen: qué funciona en inglés y qué significa para Puro Chisme</h2>
+    <p class="section-note">Tres direcciones con buena evidencia, dos para probar y tres que conviene evitar.</p>
+  </div>
+  <div class="grid">
+    <article class="glass card">
+      <span class="status status-best">Mejor oportunidad</span>
+      <h3>1. Personaje que "entrevista" o chismea con la historia</h3>
+      <p><strong>Tesis:</strong> un anfitrión fijo con voz propia que entrevista a figuras históricas o animales es el formato en inglés más cercano al "chisme" y el que tiene mejores números.</p>
+      <p><strong>Evidencia:</strong> <em>Hoodie Guy</em>: 22 de 22 Shorts de 90 días pasan de 1M; mediana de 10.8M; "Interviewing The Pyramid Builders…" tiene 17.7M y "Interviewing a Wombat…" 18.3M, con 9,886 comentarios.</p>
+      <p><strong>Riesgo:</strong> hay un solo competidor fuerte en la muestra (la confianza depende de él) y choca con la regla de "nunca un video igual".</p>
+      <p><strong>Confianza:</strong> media.</p>
+    </article>
+    <article class="glass card">
+      <span class="status status-best">Mejor oportunidad</span>
+      <h3>2. Micro-historia de una persona y un acto absurdo</h3>
+      <p><strong>Tesis:</strong> títulos tipo "The man who… / She went to war disguised… / Why X…" en 50–85 s, con narración animada.</p>
+      <p><strong>Evidencia:</strong> canales nuevos que ya superan 10M en 90 días: <em>MrPasserby</em> (12 días, 11.8M), <em>Squire Explains</em> (6 semanas, ≥16.8M), <em>PolySoldier</em> (2 meses, ≥17.5M) y <em>Timeline History</em> (≥20.5M).</p>
+      <p><strong>Riesgo:</strong> los temas militares (WWII, armas) dominan y están muy competidos; algunos canales suben hasta 5 videos al día.</p>
+      <p><strong>Confianza:</strong> alta.</p>
+    </article>
+    <article class="glass card">
+      <span class="status status-best">Mejor oportunidad</span>
+      <h3>3. Serie fija con la misma pregunta</h3>
+      <p><strong>Tesis:</strong> una franquicia con nombre y pregunta repetida ("Was X Useless?", "The Invention of X") vuelve al canal reconocible y fácil de seguir.</p>
+      <p><strong>Evidencia:</strong> <em>Circle Toon History</em>: 70.4M en 90 días, 26 de 44 Shorts pasan de 1M; "Was Bar Shot Useless?" tiene 10.4M. <em>MapLore</em> ("why did…?" sobre WWII): 8 de 11 pasan de 1M.</p>
+      <p><strong>Riesgo:</strong> una plantilla demasiado igual puede caer en la política de contenido "inauténtico" (repetitivo). Hay que variar guion y visuales.</p>
+      <p><strong>Confianza:</strong> alta.</p>
+    </article>
+    <article class="glass card">
+      <span class="status status-experimental">Para probar</span>
+      <h3>4. Versión en inglés de Puro Chisme ("history tea")</h3>
+      <p><strong>Tesis:</strong> doblar al inglés los mejores episodios, en un segundo canal.</p>
+      <p><strong>Evidencia:</strong> la búsqueda "historical gossip" solo devolvió edits de k-dramas y c-dramas: <span class="unknown">no apareció</span> ningún canal directo de "historia contada como chisme". <em>Backfire Toons</em> abrió el 6 de noviembre con una historia cómica de un rey y llegó a 354K en su primer video.</p>
+      <p><strong>Riesgo:</strong> créditos de ElevenLabs y voces en inglés; los temas militares no son nuestro fuerte; no hay datos de volumen de búsqueda.</p>
+      <p><strong>Confianza:</strong> baja.</p>
+    </article>
+    <article class="glass card">
+      <span class="status status-experimental">Para probar</span>
+      <h3>5. Chisme de la realeza (Tudor, Isabel I, Ana Bolena)</h3>
+      <p><strong>Tesis:</strong> intriga real y secretos de palacio: chisme puro.</p>
+      <p><strong>Evidencia:</strong> <em>Nightmare archives</em> ("Elizabeth I… ring hid a portrait of her mother", 5.8M) y la búsqueda "royal family history", con la mediana más alta de la muestra (204,845 vistas/día entre canales nuevos).</p>
+      <p><strong>Riesgo:</strong> casi todos los competidores usan fotos, películas o metraje ajeno (contenido reutilizado). Solo sirve con animación propia.</p>
+      <p><strong>Confianza:</strong> media-baja.</p>
+    </article>
+    <article class="glass card">
+      <span class="status status-avoid">Evitar</span>
+      <h3>6. "Dark history" de impacto, clips de 5–10 s y edits de series</h3>
+      <p><strong>Tesis:</strong> alto volumen aparente, pero con riesgo de política o resultados de un solo golpe.</p>
+      <p><strong>Evidencia:</strong> <em>History Snap92</em>: un video con 9.7M y mediana de 10.7K (anomalía). <em>Dark History</em> (1,570 subs): 0.98M en 90 días. Los edits de realeza o de series (<em>Kochou-Kim</em>, <em>movie-Aveline</em>) usan metraje ajeno.</p>
+      <p><strong>Riesgo:</strong> contenido reutilizado o repetitivo; violencia o gore con anuncios limitados.</p>
+      <p><strong>Confianza:</strong> alta.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section" id="direccion" aria-labelledby="h-direccion">
+  <div class="section-head">
+    <h2 id="h-direccion">Recomendaciones para dirigir el canal</h2>
+    <p class="section-note">Son interpretaciones a partir de los datos de arriba, no hechos medidos. Todas se pueden revertir.</p>
+  </div>
+  <div class="glass panel">
+    <ol>
+      <li><strong>Crear un anfitrión recurrente: "la Comadre".</strong> En inglés, los canales que más repiten éxitos tienen algo fijo y reconocible: un personaje (<em>Hoodie Guy</em>) o una pregunta (<em>Circle Toon</em>). Puro Chisme cambia de formato, de elenco y de look en cada video. Propuesta: mantener la variedad de estilo animado y de temas, pero con una presentadora o voz fija que aparezca en todos (por ejemplo, abre con "¿Ya te contaron…?" y cierra en la tarjeta final). Esto requiere ajustar la regla de "nunca igual": la decisión es tuya.</li>
+      <li><strong>Lanzar 1 o 2 series con nombre fijo</strong> además de los episodios sueltos. Ejemplos: "Entrevista con…" (la Comadre entrevista a Cleopatra, Napoleón…), "El peor negocio de la historia" o "¿Chisme o mentira?". Circle Toon History pasa de 1M en el 59 % de sus Shorts con una sola pregunta repetida.</li>
+      <li><strong>Títulos centrados en una persona y un acto absurdo</strong>, como los que mejor funcionan en inglés: "El hombre que le pidió prestadas 100,000 flechas a su enemigo" (en inglés, 3.4M), "Se fue a la guerra disfrazada de su hermano" (4.7M), "¿Por qué Alejandro ordenó a su ejército acostarse?" (2.6M). Ya lo hacemos en parte; conviene que siempre haya un "quién" concreto en el título.</li>
+      <li><strong>Mantener 50–65 s en historias y bajar a 20–30 s en una serie rápida.</strong> Duraciones medianas observadas: historias 54–84 s (MrPasserby 60 s, Squire 69 s, Timeline 84 s, Hoodie Guy 63 s); serie de pregunta, 25 s (Circle Toon).</li>
+      <li><strong>Temas que más rinden en inglés</strong> (para la lista de ideas, verificando cada dato): ingenio o absurdo militar (sin gore), Roma y Alejandro Magno, la vida cotidiana antigua ("How Romans solved…", "How people pooped in ancient times"), secretos de la realeza, y oficios o negocios raros ("The movers who make you disappear in Japan", 4.5M).</li>
+      <li><strong>No acelerar con plantillas para subir más.</strong> Algunos canales suben hasta 5 al día (PolySoldier: 50 videos en 9 días), pero la política de contenido "inauténtico" (julio 2025) excluye lo masivo y repetitivo. Las 3 por día de Puro Chisme son defendibles porque cada episodio tiene guion, voces y animación propios; hay que mantenerlo así.</li>
+      <li><strong>Probar inglés con 3 episodios</strong> antes de abrir un canal: doblar EP10 Diógenes, EP13 Torre Eiffel y EP14 Garbo (temas universales) y medir durante 2 semanas.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="section" id="perfiles" aria-labelledby="h-perfiles">
+  <div class="section-head">
+    <h2 id="h-perfiles">Perfil de cada dirección</h2>
+    <p class="section-note">Todos los campos que pide el método. "Desconocido" significa que no hubo datos para decirlo.</p>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <caption>Perfiles de nicho (inglés, Shorts)</caption>
+      <thead><tr><th>Campo</th><th>1. Anfitrión que entrevista</th><th>2. Micro-historia absurda</th><th>3. Serie de pregunta fija</th><th>4. Puro Chisme en inglés</th><th>5. Chisme de realeza</th><th>6. Dark history / clips cortos / edits</th></tr></thead>
+      <tbody>
+        <tr><td>Clasificación</td><td>Mejor oportunidad</td><td>Mejor oportunidad</td><td>Mejor oportunidad</td><td>Para probar</td><td>Para probar</td><td>Evitar</td></tr>
+        <tr><td>Tendencia y tipo</td><td><span class="unknown">no clara</span> · evergreen (sin Google Trends)</td><td>en alza (muchos canales de &lt;3 meses superan 10M en 90 días) · evergreen</td><td>estable · evergreen</td><td><span class="unknown">no clara</span> · híbrido</td><td><span class="unknown">no clara</span> · híbrido (picos con noticias de la realeza)</td><td><span class="unknown">no clara</span> · hype</td></tr>
+        <tr><td>Evidencia de demanda</td><td>Hoodie Guy: ≥248.9M en 90 días; 22/22 Shorts &gt;1M</td><td>MrPasserby 11.8M (12 días), Squire ≥16.8M, PolySoldier ≥17.5M, Timeline ≥20.5M, Blipstory 5.7M</td><td>Circle Toon 70.4M; MapLore 26.7M; Pure Logic ≥13.6M</td><td>Indirecta: la demanda de las direcciones 1–3. No hay competidor directo de "history gossip"</td><td>Nightmare archives ≥14.9M; "royal family history" con mediana de 204,845 vistas/día en canales nuevos</td><td>History Snap92: 1 video de 9.7M y el resto en ~10K; Dark History 0.98M</td></tr>
+        <tr><td>Competencia</td><td>Media: pocos con este formato, pero el líder es muy fuerte (2.2M subs)</td><td>Alta en WWII y armas; media en anécdotas humanas</td><td>Alta en temas militares</td><td><span class="unknown">desconocida</span>: no aparecieron competidores directos, lo que puede significar poca demanda</td><td>Media: casi todo es metraje ajeno</td><td>Alta y con baja calidad</td></tr>
+        <tr><td>Rasgos del formato</td><td>Personaje fijo, humor, preguntas al "entrevistado"</td><td>Título con persona y acto, narración 50–85 s, animación 2D/3D</td><td>Misma pregunta y estructura, 20–30 s</td><td>Doblaje de episodios existentes; título adaptado</td><td>Secreto de palacio, intriga familiar</td><td>Dato impactante de 5–20 s</td></tr>
+        <tr><td>Público</td><td>Adolescentes y jóvenes adultos (estimado por el tono; edad real <span class="unknown">desconocida</span>), global en inglés</td><td>Hombres jóvenes interesados en historia militar y antigua (interpretación por los temas)</td><td>Igual que el 2</td><td>Público angloparlante joven</td><td>Mujeres y hombres adultos interesados en la realeza (interpretación)</td><td>General</td></tr>
+        <tr><td>Evidencia de búsqueda</td><td colspan="6">Volumen absoluto <span class="unknown">desconocido</span> (sin herramienta de palabras clave). Hay evidencia relativa en la tabla de palabras clave (vistas/día de canales nuevos en el top de cada búsqueda).</td></tr>
+        <tr><td>Monetización</td><td>Hoodie Guy: probablemente elegible</td><td>MrPasserby, Squire, PolySoldier, Timeline: probablemente elegibles; Blipstory: desconocido</td><td>Circle Toon, MapLore, Pure Logic: probablemente elegibles</td><td>No aplica (no existe todavía)</td><td>Nightmare archives: probablemente elegible</td><td>History Snap92: probablemente elegible; Dark History: desconocido</td></tr>
+        <tr><td>Velocidad de monetización observada</td><td colspan="6"><span class="unknown">desconocida</span>: no hay fechas públicas de ingreso al programa de socios (YPP). No se hace ninguna predicción.</td></tr>
+        <tr><td>Duración típica</td><td>63 s (mediana, 22 Shorts)</td><td>54–84 s (medianas por canal)</td><td>25 s (Circle Toon); 145 s (MapLore)</td><td>≈ la nuestra (50–65 s)</td><td>18 s (Nightmare archives)</td><td>6–8 s</td></tr>
+        <tr><td>Ángulos poco atendidos</td><td>Entrevistas a figuras históricas con tono de chisme: solo hay 1 competidor fuerte y entrevista sobre todo a animales</td><td>Anécdotas no militares (negocios, inventos, matrimonios, engaños): menos canales que WWII</td><td>Series con pregunta de chisme ("¿Quién traicionó a quién?")</td><td>"History tea" con voces de personajes: no apareció nadie</td><td>Realeza animada (sin metraje ajeno)</td><td>—</td></tr>
+        <tr><td>Apto sin cara</td><td>Fuerte (personaje animado)</td><td>Fuerte</td><td>Fuerte</td><td>Fuerte</td><td>Condicional (solo con animación propia)</td><td>Débil (depende de clips ajenos)</td></tr>
+        <tr><td>Complejidad de producción</td><td>Media: diseñar el personaje una vez y luego reutilizar el rig</td><td>Media (ya la tenemos)</td><td>Baja-media</td><td>Baja (doblaje + subtítulos) + costo de voces</td><td>Media</td><td>Baja</td></tr>
+        <tr><td>Economía de producción</td><td colspan="6">Costos de CPM/RPM e ingresos: <span class="unknown">desconocidos</span> (no se inventan). Insumo conocido: ~900–1,050 créditos de ElevenLabs por episodio en español (research/PLAN_CREDITOS_Y_BANCOS.md); un doblaje al inglés costaría algo similar por episodio (estimado con el mismo largo de guion).</td></tr>
+        <tr><td>Suministro de temas</td><td>Ilimitado (cualquier figura histórica)</td><td>Muy alto</td><td>Alto</td><td>Igual que nuestro banco de ideas</td><td>Medio</td><td>—</td></tr>
+        <tr><td>Señal de canales nuevos</td><td>Backfire Toons (1 día, 354K)</td><td>MrPasserby (12 días), Squire (≈6 semanas), PolySoldier (≈2 meses), Battles Animated (12 días)</td><td>Circle Toon (enero 2025)</td><td>Backfire Toons</td><td>Nightmare archives (jun. 2025)</td><td>Varios con poca tracción</td></tr>
+        <tr><td>Repetibilidad / densidad de outliers (≥5× la mediana)</td><td>Hoodie Guy 0/22: no hay outliers porque todos rinden parejo (repetible)</td><td>MrPasserby 5/17, Squire 7/44, Timeline 4/50, PolySoldier 4/50</td><td>Circle Toon 1/44 (parejo y alto); MapLore 1/11</td><td><span class="unknown">desconocida</span></td><td>Nightmare archives 2/50</td><td>History Snap92 4/50 con mediana de 10.7K (anomalía)</td></tr>
+        <tr><td>Riesgo de política</td><td>Bajo: original, sin metraje ajeno; personajes no realistas, así que no requieren aviso de IA</td><td>Bajo-medio: la guerra se puede tratar sin gore (contexto educativo); a mayor ritmo, mayor riesgo de "inauténtico"</td><td>Medio: riesgo de plantilla repetitiva</td><td>Bajo: doblar contenido propio no es reutilizar contenido ajeno; aviso de IA solo si se vuelve realista</td><td>Medio: derechos de imagen y metraje</td><td>Alto: contenido reutilizado; gore con anuncios limitados o sin anuncios</td></tr>
+        <tr><td>Confianza</td><td>Media (un solo líder)</td><td>Alta</td><td>Alta</td><td>Baja</td><td>Media-baja</td><td>Alta</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section" id="competidores" aria-labelledby="h-competidores">
+  <div class="section-head">
+    <h2 id="h-competidores">Competidores en inglés (Shorts, 90 días)</h2>
+    <p class="section-note">17 canales relevantes calificaron; no se rellenó la lista para llegar a un número. "≥" = el valor real es mayor (tope de 50 uploads). "Probablemente elegible" = las métricas públicas cumplen la ruta de Shorts del YPP (≥1,000 suscriptores y ≥10M vistas en 90 días); la aceptación real se desconoce.</p>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <caption>Muestra: últimos 50 uploads por canal; Shorts ≤180 s publicados en los 90 días anteriores al 2026-11-08.</caption>
+      <thead><tr><th>Canal</th><th>Relevancia</th><th>Vistas 90 d</th><th>Señal 30M+</th><th>Ritmo</th><th>Shorts &gt;1M</th><th>Constancia</th><th>Monetización</th><th>Evidencia</th><th>Límites</th></tr></thead>
+      <tbody>
+        <tr><td><a href="https://youtube.com/channel/UCL3rV5PZK_5UYAwmwvyuSqw">Hoodie Guy</a></td><td>Alta: anfitrión que entrevista ("Interviewing The Pyramid Builders")</td><td>248.9M</td><td>Sí</td><td>22 en 90 d (1.7/sem)</td><td>22/22</td><td>Muy pareja; mediana 10.8M; 3,293 comentarios de mediana</td><td>probablemente elegible</td><td>2.2M subs; ≥10M en 90 d</td><td>Mezcla historia con animales y ciencia</td></tr>
+        <tr><td><a href="https://youtube.com/channel/UCRV40zHbA7Xm2Cr3gaj9WSg">Circle Toon History</a></td><td>Alta: serie animada "Was X Useless?"</td><td>70.4M</td><td>Sí</td><td>44 en 90 d (3.4/sem)</td><td>26/44</td><td>Pareja; mediana 1.18M</td><td>probablemente elegible</td><td>159K subs (US)</td><td>Solo temas militares</td></tr>
+        <tr><td><a href="https://youtube.com/channel/UCvi8HuBzJ9sasUx2x7uLaVQ">MORGAR | Human History</a></td><td>Media: datos rápidos de 8 s</td><td>≥32.5M</td><td>Sí</td><td>50 en 42 d</td><td>8/50</td><td>Dispareja; 10 outliers sobre una mediana de 72.7K</td><td>probablemente elegible</td><td>89K subs</td><td>Clips muy cortos, en parte de metraje (riesgo de reutilización)</td></tr>
+        <tr><td><a href="https://youtube.com/channel/UC6SMANr0NH7I8wsHGkF-oKw">MapLore</a></td><td>Alta: "why did…?" sobre WWII, animado</td><td>26.7M</td><td>No</td><td>11 en 90 d</td><td>8/11</td><td>Pareja; mediana 1.48M; 490 comentarios de mediana</td><td>probablemente elegible</td><td>99.5K subs; canal de abr. 2026</td><td>Shorts largos (145 s)</td></tr>
+        <tr><td><a href="https://youtube.com/channel/UCjnnB7H8zkKmFWEcfvMswsg">Timeline History</a></td><td>Alta: anécdotas antiguas ("Why Alexander ordered his army to lie down")</td><td>≥20.5M</td><td>No (mínimo medido)</td><td>50 en 68 d</td><td>6/50</td><td>Media; 4 outliers</td><td>probablemente elegible</td><td>143K subs (US)</td><td>Tope de 50 uploads</td></tr>
+        <tr><td><a href="https://youtube.com/channel/UCYX4GSn6dNM-nrYa0TkphUg">PolySoldier</a></td><td>Media-alta: absurdos militares</td><td>≥17.5M</td><td>No (mínimo medido)</td><td>50 en 9 d (~5.5 al día)</td><td>4/50</td><td>Media; 4 outliers</td><td>probablemente elegible</td><td>24.9K subs; canal del 31 ago. 2026</td><td>Ritmo masivo, con riesgo de "inauténtico"</td></tr>
+        <tr><td><a href="https://youtube.com/channel/UCx04mh80FmICMZCes1t-VUw">Squire Explains</a></td><td>Alta: "She Went to War Disguised as Her Brother" (4.65M)</td><td>≥16.8M</td><td>No</td><td>44 en 39 d</td><td>3/44</td><td>Media; 7 outliers</td><td>probablemente elegible</td><td>18.2K subs; canal del 28 sep. 2026</td><td>Edad del canal según fecha de creación</td></tr>
+        <tr><td><a href="https://youtube.com/channel/UCHZIig8VyRzUAHc2db3YuSw">Pure Logic</a></td><td>Media: serie "The Invention Of X"</td><td>≥13.6M</td><td>No</td><td>50 en 25 d</td><td>2/50</td><td>Pareja; mediana 201K</td><td>probablemente elegible</td><td>185K subs</td><td>Temas militares</td></tr>
+        <tr><td><a href="https://youtube.com/channel/UCar8i4ytvFSTI8sB3suKUxA">MrPasserby</a></td><td>Alta: anécdotas humanas ("The Man Who Borrowed 100,000 Arrows")</td><td>11.8M</td><td>No</td><td>17 en 12 d</td><td>3/17</td><td>Media; 5 outliers</td><td>probablemente elegible</td><td>5.4K subs; canal del 26 oct. 2026</td><td>Solo 12 días de historia</td></tr>
+        <tr><td><a href="https://youtube.com/channel/UCDyrG8n7Qig4XKImEMq1cxg">Nightmare archives</a></td><td>Media: secretos Tudor</td><td>≥14.9M</td><td>No</td><td>50 en 81 d</td><td>2/50</td><td>Dispareja (5.8M en un video)</td><td>probablemente elegible</td><td>10.1K subs</td><td>Usa fotos y metraje ajeno</td></tr>
+        <tr><td><a href="https://youtube.com/channel/UCB4Ax6_lLQJyC5djKk-xNaA">Blipstory</a></td><td>Alta: Roma con humor ("How Romans Solved The Women Problem", 2.8M)</td><td>5.7M</td><td>No</td><td>21 en 90 d</td><td>2/21</td><td>Dispareja; 5 outliers</td><td>desconocido</td><td>7.3K subs; vistas por debajo de 10M</td><td>Mínimo medido</td></tr>
+        <tr><td><a href="https://youtube.com/channel/UCnVDE_2a7044qo2MckuxMjg">3D velvet</a></td><td>Media: "How ancient people…" en 3D</td><td>29.1M</td><td>No</td><td>37 en 90 d</td><td>8/37</td><td>Dispareja; 10 outliers</td><td>probablemente elegible</td><td>83K subs</td><td>Formato muy replicado</td></tr>
+        <tr><td><a href="https://youtube.com/channel/UCFbPsPjAKiEgTbl11fDSiKQ">CoreMine 3D</a></td><td>Media: procesos antiguos en 3D</td><td>≥51.9M</td><td>Sí</td><td>50 en 64 d</td><td>13/50</td><td>Dispareja; 17 outliers; 4 comentarios de mediana</td><td>probablemente elegible</td><td>67.9K subs (PK)</td><td>Pocos comentarios; riesgo de "producción masiva"</td></tr>
+        <tr><td><a href="https://youtube.com/channel/UCS4uc8cHDqcwwro8lGChaQQ">FactoHolic</a></td><td>Referencia grande: curiosidades históricas ("How People Poop in Ancient Times")</td><td>600.4M</td><td>Sí</td><td>25 en 90 d</td><td>25/25</td><td>Muy pareja; mediana 23.5M</td><td>probablemente elegible</td><td>23.3M subs (IN)</td><td>Canal grande, de 2021; no es un entrante</td></tr>
+        <tr><td><a href="https://youtube.com/channel/UC60hF3O0lYhuM7amaquoHBw">Battles Animated</a></td><td>Media: batallas animadas</td><td>1.3M</td><td>No</td><td>13 en 12 d</td><td>0/13</td><td>Pareja y baja</td><td>no elegible (790 subs &lt; 1,000 al 2026-11-08)</td><td>Suscriptores públicos</td><td>Canal de 12 días</td></tr>
+        <tr><td><a href="https://youtube.com/channel/UCcGL-WBawyJcW6SSY_EerOw">Backfire Toons</a></td><td>Muy alta: historia cómica ("The King Who Thought It Was Just a Puddle")</td><td>354K</td><td>No</td><td>1 video</td><td>0/1</td><td><span class="unknown">desconocida</span></td><td>no elegible (170 subs al 2026-11-08)</td><td>Suscriptores públicos</td><td>Canal de 1 día</td></tr>
+        <tr><td><a href="https://youtube.com/channel/UCc8xYSB4a5JMPD7wL1tU3Hg">History Snap92</a></td><td>Baja: clips de 7 s</td><td>≥10.6M</td><td>No</td><td>50 en 28 d</td><td>1/50</td><td>Un solo golpe (9.7M; mediana 10.7K)</td><td>probablemente elegible</td><td>4.4K subs</td><td>Anomalía; metraje ajeno</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section" id="palabras" aria-labelledby="h-palabras">
+  <div class="section-head">
+    <h2 id="h-palabras">Palabras clave buscadas</h2>
+    <p class="section-note">No hay volumen de búsqueda (no hay herramienta). La señal relativa es: de los canales en el top de cada búsqueda (Shorts de 30 días, región US), cuántos tienen ≤365 días y la mediana de vistas por día de esos canales nuevos.</p>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <caption>Fuente: research/yt_niches.py → canales_20261108_en.csv (2026-11-08)</caption>
+      <thead><tr><th>Palabra clave</th><th>Idioma</th><th>Geografía</th><th>Superficie</th><th>Ventana</th><th>Volumen mensual</th><th>Estado</th><th>Canales nuevos / total</th><th>Mediana vistas/día (nuevos)</th></tr></thead>
+      <tbody>
+        <tr><td>royal family history</td><td>en</td><td>US</td><td>YouTube</td><td>30 d</td><td class="unknown">desconocido</td><td>observado</td><td>11/30</td><td>204,845</td></tr>
+        <tr><td>history explained</td><td>en</td><td>US</td><td>YouTube</td><td>30 d</td><td class="unknown">desconocido</td><td>observado</td><td>13/40</td><td>131,878</td></tr>
+        <tr><td>history cartoon</td><td>en</td><td>US</td><td>YouTube</td><td>30 d</td><td class="unknown">desconocido</td><td>observado</td><td>18/41</td><td>103,836</td></tr>
+        <tr><td>history shorts</td><td>en</td><td>US</td><td>YouTube</td><td>30 d</td><td class="unknown">desconocido</td><td>observado</td><td>17/45</td><td>99,746</td></tr>
+        <tr><td>dark history</td><td>en</td><td>US</td><td>YouTube</td><td>30 d</td><td class="unknown">desconocido</td><td>observado</td><td>17/39</td><td>86,407</td></tr>
+        <tr><td>animated history</td><td>en</td><td>US</td><td>YouTube</td><td>30 d</td><td class="unknown">desconocido</td><td>observado</td><td>15/39</td><td>85,517</td></tr>
+        <tr><td>ancient history facts</td><td>en</td><td>US</td><td>YouTube</td><td>30 d</td><td class="unknown">desconocido</td><td>observado</td><td>17/45</td><td>67,997</td></tr>
+        <tr><td>history animation</td><td>en</td><td>US</td><td>YouTube</td><td>30 d</td><td class="unknown">desconocido</td><td>observado</td><td>14/36</td><td>40,550</td></tr>
+        <tr><td>history facts</td><td>en</td><td>US</td><td>YouTube</td><td>30 d</td><td class="unknown">desconocido</td><td>observado</td><td>11/44</td><td>36,854</td></tr>
+        <tr><td>weird history</td><td>en</td><td>US</td><td>YouTube</td><td>30 d</td><td class="unknown">desconocido</td><td>observado</td><td>15/44</td><td>8,410</td></tr>
+        <tr><td>crazy history stories</td><td>en</td><td>US</td><td>YouTube</td><td>30 d</td><td class="unknown">desconocido</td><td>observado</td><td>25/49</td><td>700</td></tr>
+        <tr><td>spy stories history</td><td>en</td><td>US</td><td>YouTube</td><td>30 d</td><td class="unknown">desconocido</td><td>observado</td><td>28/44</td><td>738</td></tr>
+        <tr><td>historical gossip</td><td>en</td><td>US</td><td>YouTube (outliers.py)</td><td>30 d</td><td class="unknown">desconocido</td><td>observado</td><td colspan="2">Solo devolvió edits de k-dramas y c-dramas: ningún canal de historia contada como chisme</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="section-note" style="margin-top:1rem">Lectura: "crazy history stories" y "spy stories history" tienen muchos canales nuevos pero muy pocas vistas, es decir, mucha oferta para poca demanda. "Royal family history", "history explained" y "history cartoon" combinan canales nuevos con muchas vistas. Los resultados incluyen canales en otros idiomas, así que las medianas son aproximadas.</p>
+</section>
+
+<section class="section" id="politicas" aria-labelledby="h-politicas">
+  <div class="section-head">
+    <h2 id="h-politicas">Revisión de políticas de YouTube</h2>
+    <p class="section-note">Revisadas el 2026-11-08 a las 01:12 UTC, en las páginas oficiales.</p>
+  </div>
+  <div class="glass panel">
+    <ul>
+      <li><a href="https://support.google.com/youtube/answer/72851">Programa de socios (YPP)</a>: ruta de Shorts = 1,000 suscriptores + 10 millones de vistas de Shorts en 90 días. <strong>Cambio próximo:</strong> el YPP se actualiza el 1 de febrero de 2027 (hay que aceptar los términos nuevos antes del 31 de enero de 2027; la página no detalla los cambios).</li>
+      <li><a href="https://support.google.com/youtube/answer/1311392">Políticas de monetización</a>: "contenido reutilizado" sin aporte propio no monetiza; desde el 15 de julio de 2025, lo "repetitivo" se llama "contenido inauténtico" e incluye lo masivo o hecho con plantilla. Esto afecta las direcciones 3 y 6.</li>
+      <li><a href="https://support.google.com/youtube/answer/14328491">Contenido sintético o alterado</a>: el aviso de IA solo es obligatorio si el contenido parece realista. Lo animado o no realista no lo requiere. Las voces de IA de personajes animados entran en "no realista", salvo que imiten a una persona real.</li>
+      <li><a href="https://support.google.com/youtube/answer/6162278">Contenido apto para anunciantes</a>: la guerra tratada de forma educativa y no gráfica es apta. Cadáveres con heridas, aunque sea en un canal de historia, reciben anuncios limitados. Las ejecuciones o torturas mostradas directamente no reciben anuncios en ningún contexto. Por eso "dark history" está en Evitar.</li>
+      <li><a href="https://support.google.com/youtube/answer/9725604">Cambios recientes</a>: agosto de 2026 (aclaración sobre muertes en contenido educativo), septiembre y octubre de 2026 (drogas, gaming, temas de interés público). Ninguno afecta negativamente al nicho.</li>
+      <li><a href="https://www.youtube.com/howyoutubeworks/policies/community-guidelines/">Normas de la comunidad</a>: se permiten excepciones con contexto educativo, documental, científico o artístico (EDSA).</li>
+      <li>Derechos de autor: no se revisó una página específica. Puro Chisme usa assets propios y música de Eleven Music, así que el riesgo es bajo. Las direcciones que usan metraje ajeno (realeza y edits) quedan en Para probar o Evitar.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="huecos" aria-labelledby="h-huecos">
+  <div class="section-head">
+    <h2 id="h-huecos">Lo que falta saber y próximos pasos</h2>
+  </div>
+  <div class="glass panel">
+    <ul>
+      <li><strong>Volumen de búsqueda y tendencia:</strong> <span class="unknown">desconocidos</span>. Con vidIQ, NexLev o Google Trends se podría confirmar si "history tea" o "history gossip" tiene demanda propia.</li>
+      <li><strong>Vistas reales en 90 días</strong> de los canales con tope de 50 uploads: requieren una herramienta de terceros o paginar más uploads (cuesta más cuota de la API).</li>
+      <li><strong>Estado real de monetización:</strong> no hay evidencia directa. Todas las etiquetas son "probablemente elegible" o "desconocido".</li>
+      <li><strong>Prueba sugerida (reversible):</strong> 2 semanas con la Comadre como anfitriona fija en 6 episodios, comparados con 6 episodios sin anfitriona, midiendo la retención en Studio. En paralelo, 3 doblajes al inglés en un canal de prueba.</li>
+      <li><strong>Repetir</strong> esta medición en 30 días con <code>python -I canal_stats.py canales_*_en.csv outliers_*_en.csv</code>.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="fuentes" aria-labelledby="h-fuentes">
+  <div class="section-head"><h2 id="h-fuentes">Fuentes y archivos</h2></div>
+  <div class="glass panel">
+    <ul class="source-list">
+      <li>YouTube Data API v3, consultas del 2026-11-07/08 (región US, idioma en)</li>
+      <li>research/outliers_20261107_en.csv: 657 Shorts, 14 búsquedas</li>
+      <li>research/canales_20261108_en.csv: 201 canales jóvenes, 12 búsquedas</li>
+      <li>research/canal_stats_en_20261107.csv: métricas de 90 días por canal</li>
+      <li>research/cohorte_en_20261107.json: cohorte final, outliers ≥5× y comentarios</li>
+      <li><a href="https://support.google.com/youtube/answer/72851">YPP: requisitos</a> (consultado el 2026-11-08)</li>
+      <li><a href="https://support.google.com/youtube/answer/1311392">Políticas de monetización</a> (2026-11-08)</li>
+      <li><a href="https://support.google.com/youtube/answer/14328491">Contenido sintético</a> (2026-11-08)</li>
+      <li><a href="https://support.google.com/youtube/answer/6162278">Apto para anunciantes</a> (2026-11-08)</li>
+      <li><a href="https://support.google.com/youtube/answer/9725604">Actualizaciones de las guías</a> (2026-11-08)</li>
+      <li><a href="https://www.youtube.com/howyoutubeworks/policies/community-guidelines/">Normas de la comunidad</a> (2026-11-08)</li>
+    </ul>
+  </div>
+</section>
+
+    </main>
+  </div>
+
+  <footer>
+    <div class="shell">
+      <strong>Importante.</strong>
+      Este informe muestra señales respaldadas por datos, no garantías. No promete vistas, viralidad, aceptación en el YPP, tiempos de monetización ni ingresos. Las políticas, la demanda y la competencia cambian; el creador es responsable de la originalidad, los derechos, el cumplimiento, la producción y sus decisiones.
+      <div class="copyright">
+        <span>© 2026 АВТОНОМИКА. Все права защищены.</span>
+        <a class="channel-link" href="https://www.youtube.com/@avtonomica" target="_blank" rel="noopener noreferrer">YouTube-канал «АВТОНОМИКА»</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

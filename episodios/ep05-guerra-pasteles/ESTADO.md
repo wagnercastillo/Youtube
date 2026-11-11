@@ -22,3 +22,4 @@ Título: ¿Una GUERRA por PASTELES? 🥐💥 Le costó una pierna a Santa Anna
 Categoría 27 · No es para niños · Contenido alterado: No · Lista: Chismes de la historia
 
 Publicado 2026-11-06: https://youtu.be/GkWldQHAopY (público, categoría 27, es-419, 14 etiquetas).
+Miniatura v2 (2026-11-11, episodios/miniaturas.py) SUBIDA por API con set-thumbnail.ts.

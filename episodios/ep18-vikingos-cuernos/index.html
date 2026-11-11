@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #F2EADB; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="59.06" data-width="1080" data-height="1920">
+      <video id="dibujo" class="clip" src="assets/dibujo.mp4" data-start="0" data-duration="54.66" data-track-index="0" muted playsinline style="z-index: 0"></video>
+      <div id="captions" data-composition-id="captions" data-composition-src="compositions/captions.html"
+        data-start="0" data-duration="54.66" data-track-index="2" data-track-kind="captions"
+        data-width="1080" data-height="1920" style="z-index: 2"></div>
+      <div id="endcard" data-composition-id="endcard" data-composition-src="compositions/endcard.html"
+        data-start="54.61" data-duration="4.4" data-track-index="1" data-track-kind="graphics"
+        data-width="1080" data-height="1920" style="z-index: 3"></div>
+
+      <audio id="vo" class="clip" src="assets/voz.wav" data-start="0" data-track-index="3" data-volume="1"></audio>
+      <audio id="music" class="clip" src="assets/music.mp3" data-start="0" data-duration="54.66" data-track-index="4" data-volume="0.4" data-fade-out="0.15"></audio>
+      <audio id="music-end" class="clip" src="assets/music.mp3" data-start="54.66" data-media-start="54.66" data-duration="4.35" data-track-index="12" data-volume="0.8" data-fade-in="0.15" data-fade-out="0.6"></audio>
+      <audio id="sfx-horn0" class="clip" src="assets/sfx/el_horn.mp3" data-start="0.15" data-duration="1.4" data-track-index="5" data-volume="0.3"></audio>
+      <audio id="sfx-mk0" class="clip" src="assets/sfx/el_marker.mp3" data-start="1.96" data-duration="0.8" data-track-index="6" data-volume="0.6"></audio>
+      <audio id="sfx-buzz0" class="clip" src="assets/sfx/el_buzz.mp3" data-start="2.31" data-duration="0.8" data-track-index="7" data-volume="0.25"></audio>
+      <audio id="sfx-pen0" class="clip" src="assets/sfx/el_pencil.mp3" data-start="4.496" data-duration="1.2" data-track-index="8" data-volume="0.45"></audio>
+      <audio id="sfx-pen1" class="clip" src="assets/sfx/el_pencil.mp3" data-start="6.662" data-duration="1.2" data-track-index="9" data-volume="0.5"></audio>
+      <audio id="sfx-er2" class="clip" src="assets/sfx/el_eraser.mp3" data-start="9.006" data-duration="1.2" data-track-index="10" data-volume="0.35"></audio>
+      <audio id="sfx-pen2" class="clip" src="assets/sfx/el_pencil.mp3" data-start="11.586" data-duration="1.2" data-track-index="5" data-volume="0.4"></audio>
+      <audio id="sfx-pen2b" class="clip" src="assets/sfx/el_pencil.mp3" data-start="12.888" data-duration="1.2" data-track-index="6" data-volume="0.45"></audio>
+      <audio id="sfx-er2b" class="clip" src="assets/sfx/el_eraser.mp3" data-start="16.536" data-duration="1.2" data-track-index="7" data-volume="0.65"></audio>
+      <audio id="sfx-st2" class="clip" src="assets/sfx/el_stamp.mp3" data-start="17.536" data-duration="0.7" data-track-index="8" data-volume="0.45"></audio>
+      <audio id="sfx-stomp3" class="clip" src="assets/sfx/el_stomp.mp3" data-start="17.558" data-duration="1.4" data-track-index="9" data-volume="0.5"></audio>
+      <audio id="sfx-axe4" class="clip" src="assets/sfx/el_axe.mp3" data-start="19.927" data-duration="0.8" data-track-index="10" data-volume="0.5"></audio>
+      <audio id="sfx-buzz4" class="clip" src="assets/sfx/el_buzz.mp3" data-start="24.139" data-duration="0.8" data-track-index="5" data-volume="0.25"></audio>
+      <audio id="sfx-pg5" class="clip" src="assets/sfx/el_page.mp3" data-start="24.228" data-duration="0.8" data-track-index="6" data-volume="0.55"></audio>
+      <audio id="sfx-st5" class="clip" src="assets/sfx/el_stamp.mp3" data-start="26.402" data-duration="0.7" data-track-index="7" data-volume="0.35"></audio>
+      <audio id="sfx-st5b" class="clip" src="assets/sfx/el_stamp.mp3" data-start="26.852" data-duration="0.7" data-track-index="8" data-volume="0.3"></audio>
+      <audio id="sfx-w5" class="clip" src="assets/sfx/whoosh.mp3" data-start="28.634" data-duration="0.57" data-track-index="9" data-volume="0.35"></audio>
+      <audio id="sfx-st5c" class="clip" src="assets/sfx/el_stamp.mp3" data-start="31.218" data-duration="0.7" data-track-index="10" data-volume="0.45"></audio>
+      <audio id="sfx-ding5" class="clip" src="assets/sfx/el_ding.mp3" data-start="31.368" data-duration="0.7" data-track-index="5" data-volume="0.3"></audio>
+      <audio id="sfx-pg6" class="clip" src="assets/sfx/el_page.mp3" data-start="32.63" data-duration="0.8" data-track-index="6" data-volume="0.5"></audio>
+      <audio id="sfx-w6" class="clip" src="assets/sfx/whoosh.mp3" data-start="33.03" data-duration="0.57" data-track-index="7" data-volume="0.35"></audio>
+      <audio id="sfx-st6" class="clip" src="assets/sfx/el_stamp.mp3" data-start="36.562" data-duration="0.7" data-track-index="8" data-volume="0.35"></audio>
+      <audio id="sfx-sc6" class="clip" src="assets/sfx/el_scissors.mp3" data-start="41.766" data-duration="0.8" data-track-index="9" data-volume="0.5"></audio>
+      <audio id="sfx-gasp6" class="clip" src="assets/sfx/el_gasp.mp3" data-start="43.002" data-duration="1.2" data-track-index="10" data-volume="0.3"></audio>
+      <audio id="sfx-ap7" class="clip" src="assets/sfx/el_applause.mp3" data-start="44.448" data-duration="1.8" data-track-index="5" data-volume="0.35"></audio>
+      <audio id="sfx-pop7" class="clip" src="assets/sfx/pop.mp3" data-start="46.976" data-duration="0.72" data-track-index="6" data-volume="0.45"></audio>
+      <audio id="sfx-pg8" class="clip" src="assets/sfx/el_page.mp3" data-start="47.241" data-duration="0.8" data-track-index="7" data-volume="0.5"></audio>
+      <audio id="sfx-mk8a" class="clip" src="assets/sfx/el_marker.mp3" data-start="48.866" data-duration="0.8" data-track-index="8" data-volume="0.45"></audio>
+      <audio id="sfx-mk8b" class="clip" src="assets/sfx/el_marker.mp3" data-start="49.421" data-duration="0.8" data-track-index="9" data-volume="0.45"></audio>
+      <audio id="sfx-mk8c" class="clip" src="assets/sfx/el_marker.mp3" data-start="49.986" data-duration="0.8" data-track-index="10" data-volume="0.45"></audio>
+      <audio id="sfx-pen8" class="clip" src="assets/sfx/el_pencil.mp3" data-start="52.881" data-duration="1.2" data-track-index="5" data-volume="0.45"></audio>
+      <audio id="sfx-er8" class="clip" src="assets/sfx/el_eraser.mp3" data-start="53.815" data-duration="1.2" data-track-index="6" data-volume="0.5"></audio>
+      <audio id="sfx-end" class="clip" src="assets/sfx/whoosh.mp3" data-start="54.61" data-duration="0.57" data-track-index="7" data-volume="0.4"></audio>
+      <audio id="sfx-end-logo" class="clip" src="assets/sfx/pop.mp3" data-start="54.91" data-duration="0.72" data-track-index="8" data-volume="0.5"></audio>
+      <audio id="sfx-end-title" class="clip" src="assets/sfx/sparkle.mp3" data-start="55.21" data-duration="1.8" data-track-index="9" data-volume="0.35"></audio>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = gsap.timeline({ paused: true });
+    </script>
+  </body>
+</html>

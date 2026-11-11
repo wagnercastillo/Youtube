@@ -23,3 +23,4 @@ si ya pasó, el siguiente libre):
 
 SUBIDO 2026-11-07 (cola): https://youtu.be/Vbu5ML0NVdM · publishAt 2026-11-07T18:00:00Z · update ERROR
 Reintento del update 14:10Z: OK, programado 2026-11-07T18:00:00Z (12 pm CDMX) con etiquetas.
+Miniatura v2 (2026-11-11, episodios/miniaturas.py) SUBIDA por API con set-thumbnail.ts (reintento tras cuota diaria).

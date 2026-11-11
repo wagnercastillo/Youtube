@@ -8,3 +8,4 @@ Datos verificados: Diógenes Laercio II (36-37): Xantipa lo regañó y le echó 
 Título: Sócrates vs su ESPOSA: ¡le echó una cubeta de agua! 💦🏛️
 
 SUBIDO 2026-11-07 (cola): https://youtu.be/93dwScPP1go · publishAt 2026-11-09T22:00:00Z · update ok
+Miniatura v2 (2026-11-11, episodios/miniaturas.py) SUBIDA por API con set-thumbnail.ts.

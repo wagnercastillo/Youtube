@@ -21,3 +21,4 @@ Subido MANUALMENTE por el dueño 2026-11-06. Copia por API https://youtu.be/OjQL
 
 SUBIDO 2026-11-07 (cola): https://youtu.be/LpFhBIDnlKs · publishAt 2026-11-08T18:00:00Z · update ok
 Re-subido 2026-11-07 (el dueño borró el anterior): https://youtu.be/LpFhBIDnlKs · publishAt 2026-11-08T18:00:00Z (dom 12 pm CDMX) · 13 etiquetas.
+Miniatura v2 (2026-11-11, episodios/miniaturas.py) SUBIDA por API con set-thumbnail.ts.
